@@ -1,9 +1,9 @@
 window.PORTFOLIO_DATA = {
-  meta:{title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-28 11:43 Europe/Tallinn",note:"Paper trading only — no real money is traded."},
-  summary:{initial:1000,value:996.13,cash:732.65,realized:-11.43,unrealized:7.57,total:-3.87,totalPct:-0.39},
+  meta:{title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-28 12:25 Europe/Tallinn",lastTrade:"2026-09-28 11:42 Europe/Tallinn",marketSource:"BTC real-time; QCOM latest pre-market; EUR/USD spot",note:"Paper trading only — no real money is traded."},
+  summary:{initial:1000,value:993.79,cash:732.65,realized:-11.43,unrealized:5.22,total:-6.21,totalPct:-0.62},
   positions:[
-    {symbol:"BTC",name:"Bitcoin",qty:0.00225168,cost:155.92,avgUsd:79940,lastUsd:83058.71,value:164.30,pnl:8.38,pnlPct:5.37,status:"OPEN"},
-    {symbol:"QCOM",name:"Qualcomm",qty:0.557025,cost:100,avgUsd:204.12,lastUsd:202.70,value:99.19,pnl:-0.81,pnlPct:-0.81,status:"OPEN"}
+    {symbol:"BTC",name:"Bitcoin",qty:0.00225168,cost:155.92,avgUsd:79940,lastUsd:82865.23,value:164.01,pnl:8.09,pnlPct:5.19,status:"OPEN"},
+    {symbol:"QCOM",name:"Qualcomm",qty:0.557025,cost:100,avgUsd:204.12,lastUsd:198.37,value:97.13,pnl:-2.87,pnlPct:-2.87,status:"OPEN"}
   ],
   trades:[
     {date:"2026-09-10 13:28",symbol:"BTC",side:"BUY",qty:0.00148382,priceUsd:78425.80,eur:100,pnl:null,note:"Initial position"},
@@ -25,6 +25,6 @@ window.PORTFOLIO_DATA = {
   ],
   snapshots:[
     {date:"2026-09-10",value:1000},
-    {date:"2026-09-28",value:996.13}
+    {date:"2026-09-18",value:994.65},{date:"2026-09-21",value:1001.84},{date:"2026-09-23",value:998.72},{date:"2026-09-24",value:1000.91},{date:"2026-09-25",value:999.42},{date:"2026-09-28 11:43",value:996.13},{date:"2026-09-28 12:25",value:993.79}
   ]
 };
