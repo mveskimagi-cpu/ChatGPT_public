@@ -1,8 +1,9 @@
 window.PORTFOLIO_DATA = {
-  meta:{title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-28 15:16 Europe/Tallinn",lastTrade:"2026-09-28 15:16 Europe/Tallinn",marketSource:"BTC mark at trade time; QCOM execution $196.15; EUR/USD 1.1377",note:"Paper trading only — no real money is traded."},
-  summary:{initial:1000,value:992.89,cash:828.69,realized:-15.39,unrealized:8.28,total:-7.11,totalPct:-0.71},
+  meta:{title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-28 19:24 Europe/Tallinn",lastTrade:"2026-09-28 19:24 Europe/Tallinn",marketSource:"Marks at XLE paper-trade execution time",note:"Paper trading only — no real money is traded."},
+  summary:{initial:1000,value:994.44,cash:678.69,realized:-15.39,unrealized:9.83,total:-5.56,totalPct:-0.56},
   positions:[
-    {symbol:"BTC",name:"Bitcoin",qty:0.00225168,cost:155.92,avgUsd:79940,lastUsd:82967.00,value:164.20,pnl:8.28,pnlPct:5.31,status:"OPEN"}
+    {symbol:"BTC",name:"Bitcoin",qty:0.00225168,cost:155.92,avgUsd:79940,lastUsd:83645.74,value:165.75,pnl:9.83,pnlPct:6.30,status:"OPEN"},
+    {symbol:"XLE",name:"Energy Select Sector SPDR Fund",qty:2.725812,cost:150,avgUsd:62.53,lastUsd:62.53,value:150.00,pnl:0.00,pnlPct:0.00,status:"OPEN"}
   ],
   trades:[
     {date:"2026-09-10 13:28",symbol:"BTC",side:"BUY",qty:0.00148382,priceUsd:78425.80,eur:100,pnl:null,note:"Initial position"},
@@ -21,10 +22,11 @@ window.PORTFOLIO_DATA = {
     {date:"2026-09-24 11:13",symbol:"BTC",side:"SELL",qty:0.00135852,priceUsd:83900.00,eur:100,pnl:5.92,note:"Reduce; cost basis €94.08"},
     {date:"2026-09-25 21:17",symbol:"QCOM",side:"BUY",qty:0.557025,priceUsd:204.12,eur:100,pnl:null,note:"New position"},
     {date:"2026-09-28 11:42",symbol:"ETH",side:"SELL",qty:0.1335214,priceUsd:2518.27,eur:295.39,pnl:-4.61,note:"Full exit; cost basis €300"},
-    {date:"2026-09-28 15:16",symbol:"QCOM",side:"SELL",qty:0.557025,priceUsd:196.15,eur:96.04,pnl:-3.96,note:"Full exit; EUR/USD 1.1377"}
+    {date:"2026-09-28 15:16",symbol:"QCOM",side:"SELL",qty:0.557025,priceUsd:196.15,eur:96.04,pnl:-3.96,note:"Full exit; EUR/USD 1.1377"},
+    {date:"2026-09-28 19:24",symbol:"XLE",side:"BUY",qty:2.725812,priceUsd:62.53,eur:150.00,pnl:null,note:"New position"}
   ],
   snapshots:[
     {date:"2026-09-10",value:1000},
-    {date:"2026-09-18",value:994.65},{date:"2026-09-21",value:1001.84},{date:"2026-09-23",value:998.72},{date:"2026-09-24",value:1000.91},{date:"2026-09-25",value:999.42},{date:"2026-09-28 11:43",value:996.13},{date:"2026-09-28 12:25",value:993.79},{date:"2026-09-28 15:16",value:992.89}
+    {date:"2026-09-18",value:994.65},{date:"2026-09-21",value:1001.84},{date:"2026-09-23",value:998.72},{date:"2026-09-24",value:1000.91},{date:"2026-09-25",value:999.42},{date:"2026-09-28 11:43",value:996.13},{date:"2026-09-28 12:25",value:993.79},{date:"2026-09-28 15:16",value:992.89},{date:"2026-09-28 19:24",value:994.44}
   ]
 };
