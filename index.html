@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="et">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TaskFlow – mini ülesannete haldur</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header><div><h1>TaskFlow</h1><p>Lihtne ülesannete haldur, mis töötab otse brauseris.</p></div><button id="clearDone">Kustuta tehtud</button></header>
+  <form id="taskForm">
+    <input id="taskInput" maxlength="120" placeholder="Lisa uus ülesanne…" autocomplete="off" required>
+    <button type="submit">Lisa</button>
+  </form>
+  <nav>
+    <button class="filter active" data-filter="all">Kõik</button>
+    <button class="filter" data-filter="open">Tegemata</button>
+    <button class="filter" data-filter="done">Tehtud</button>
+  </nav>
+  <p id="stats"></p>
+  <ul id="taskList"></ul>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
