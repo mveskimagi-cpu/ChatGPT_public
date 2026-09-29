@@ -1,6 +1,6 @@
 window.PORTFOLIO_DATA = {
-  meta:{"lastSystemTest":{"timestamp":"2026-09-29T23:00:30+03:00","status":"OK","environment":"ChatGPT Work"},title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-29 18:21 Europe/Tallinn",lastTrade:"2026-09-29 18:21 Europe/Tallinn",marketSource:"XLE exit mark; BTC/NVDA carried from trade-day marks",note:"Paper trading only — no real money is traded."},
-  summary:{initial:1000,value:992.49,cash:676.74,realized:-17.34,unrealized:9.83,total:-7.51,totalPct:-0.75},
+  meta:{"lastSystemTest":{"timestamp":"2026-09-29T23:00:30+03:00","status":"OK","environment":"ChatGPT Work"},title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-29 18:21 Europe/Tallinn",lastTrade:"2026-09-29 18:21 Europe/Tallinn",marketSource:"XLE exit mark; BTC/NVDA carried from trade-day marks",note:"Paper trading only — no real money is traded. Ledger forensically reconciled 2026-09-29; recovered missing BTC BUY from 2026-09-18 22:33."},
+  summary:{initial:1000,value:996.63,cash:680.88,realized:-13.20,unrealized:9.83,total:-3.37,totalPct:-0.34},
   positions:[
     {symbol:"BTC",name:"Bitcoin",qty:0.00225168,cost:155.92,avgUsd:79940,lastUsd:83645.74,value:165.75,pnl:9.83,pnlPct:6.30,status:"OPEN"},
     {symbol:"NVDA",name:"NVIDIA",qty:0.741391,cost:150,avgUsd:229.98,lastUsd:229.98,value:150.00,pnl:0.00,pnlPct:0.00,status:"OPEN"}
@@ -15,6 +15,7 @@ window.PORTFOLIO_DATA = {
     {date:"2026-09-18 14:34",symbol:"ETH",side:"BUY",qty:0.045846,priceUsd:2506.23,eur:100,pnl:null,note:"Re-entry"},
     {date:"2026-09-18",symbol:"BTC",side:"BUY",qty:0.00214363,priceUsd:80191.00,eur:150,pnl:null,note:"Add"},
     {date:"2026-09-18 17:58",symbol:"BTC",side:"SELL",qty:0.00214363,priceUsd:77746.64,eur:145.39,pnl:-4.61,note:"Risk reduction"},
+    {date:"2026-09-18 22:33",symbol:"BTC",side:"BUY",qty:0.00212638,priceUsd:80997.00,eur:150.00,pnl:null,note:"Recovered historical trade; forensic reconciliation 2026-09-29"},
     {date:"2026-09-19 01:30",symbol:"ETH",side:"BUY",qty:0.0442975,priceUsd:2592.02,eur:100,pnl:null,note:"Add"},
     {date:"2026-09-21 05:57",symbol:"ETH",side:"BUY",qty:0.0433779,priceUsd:2641.90,eur:100,pnl:null,note:"Add"},
     {date:"2026-09-21",symbol:"BTC",side:"BUY",qty:0.00134885,priceUsd:85117.00,eur:100,pnl:null,note:"Add"},
