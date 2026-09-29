@@ -1,5 +1,5 @@
 window.PORTFOLIO_DATA = {
-  meta:{title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-29 18:21 Europe/Tallinn",lastTrade:"2026-09-29 18:21 Europe/Tallinn",marketSource:"XLE exit mark; BTC/NVDA carried from trade-day marks",note:"Paper trading only — no real money is traded."},
+  meta:{"lastSystemTest":{"timestamp":"2026-09-29T23:00:30+03:00","status":"OK","environment":"ChatGPT Work"},title:"€1000 Quant Challenge",currency:"EUR",asOf:"2026-09-29 18:21 Europe/Tallinn",lastTrade:"2026-09-29 18:21 Europe/Tallinn",marketSource:"XLE exit mark; BTC/NVDA carried from trade-day marks",note:"Paper trading only — no real money is traded."},
   summary:{initial:1000,value:992.49,cash:676.74,realized:-17.34,unrealized:9.83,total:-7.51,totalPct:-0.75},
   positions:[
     {symbol:"BTC",name:"Bitcoin",qty:0.00225168,cost:155.92,avgUsd:79940,lastUsd:83645.74,value:165.75,pnl:9.83,pnlPct:6.30,status:"OPEN"},
