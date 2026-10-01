@@ -27,6 +27,50 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Verify GitHub-native scheduled write capability
+        shell: bash
+        run: |
+          mkdir -p quant
+          node - <<'NODE'
+          const fs = require('fs');
+          const now = new Date();
+          const tallinn = new Intl.DateTimeFormat('sv-SE', {
+            timeZone: 'Europe/Tallinn',
+            year: 'numeric', month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit', second: '2-digit',
+            hour12: false
+          }).format(now).replace(' ', 'T');
+          const offsetMinutes = (() => {
+            const parts = new Intl.DateTimeFormat('en-US', {
+              timeZone: 'Europe/Tallinn', timeZoneName: 'longOffset'
+            }).formatToParts(now);
+            const z = parts.find(p => p.type === 'timeZoneName')?.value || 'GMT+00:00';
+            return z.replace('GMT', '');
+          })();
+          const payload = {
+            status: 'OK',
+            environment: 'github-actions-scheduled',
+            timestampEuropeTallinn: tallinn + offsetMinutes
+          };
+          fs.writeFileSync('quant/scheduled-write-test.json', JSON.stringify(payload, null, 2) + '\n');
+          NODE
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add quant/scheduled-write-test.json
+          if git diff --cached --quiet; then
+            echo "Scheduled-write test unchanged; nothing to commit."
+          else
+            git commit -m "Verify GitHub-native scheduled write capability"
+            git push origin HEAD:main
+          fi
+
+          git fetch origin main
+          EXPECTED=$(cat quant/scheduled-write-test.json)
+          ACTUAL=$(git show origin/main:quant/scheduled-write-test.json)
+          test "$EXPECTED" = "$ACTUAL"
+          echo "GitHub-native scheduled write + read-back verified."
+
       - name: Run trigger engine
         run: node quant/trigger-engine.js
 
