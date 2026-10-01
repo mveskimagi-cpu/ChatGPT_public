@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "eventType": "QUANT_DECISION_REQUIRED",
+  "publishedAt": "2026-10-01T17:44:25.435Z",
+  "baseRef": "main",
+  "triggerKey": "44c574258dbcdf7f",
+  "trigger": {
+    "schemaVersion": 2,
+    "mode": "PR_BRIDGE_SHADOW",
+    "triggeredAt": "2026-10-01T17:44:25.062Z",
+    "needsDecision": true,
+    "triggerKey": "44c574258dbcdf7f",
+    "triggers": [
+      {
+        "type": "WATCHLIST_TRIGGER_LEVEL",
+        "symbol": "ETH",
+        "setup": "Conditional range breakout",
+        "setupId": "ETH-20260929-range-breakout",
+        "condition": "BELOW $2742.56",
+        "observedPrice": 2705.74,
+        "source": "Coinbase spot",
+        "shadow": true
+      },
+      {
+        "type": "WATCHLIST_TRIGGER_LEVEL",
+        "symbol": "HPE",
+        "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
+        "setupId": "HPE-20260930-networking-reclaim",
+        "condition": "BELOW $65.76",
+        "observedPrice": 65.0885009765625,
+        "source": "Yahoo Finance chart",
+        "shadow": true
+      },
+      {
+        "type": "WATCHLIST_TRIGGER_LEVEL",
+        "symbol": "HPE",
+        "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
+        "setupId": "HPE-20260930-networking-reclaim",
+        "condition": "ABOVE $63.59",
+        "observedPrice": 65.0885009765625,
+        "source": "Yahoo Finance chart",
+        "shadow": true
+      },
+      {
+        "type": "WATCHLIST_TRIGGER_LEVEL",
+        "symbol": "HPE",
+        "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
+        "setupId": "HPE-20260930-networking-reclaim",
+        "condition": "ABOVE $63.44",
+        "observedPrice": 65.0885009765625,
+        "source": "Yahoo Finance chart",
+        "shadow": true
+      }
+    ],
+    "observations": [
+      {
+        "symbol": "ETH",
+        "price": 2705.74,
+        "source": "Coinbase spot",
+        "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot"
+      },
+      {
+        "symbol": "HPE",
+        "price": 65.0885009765625,
+        "source": "Yahoo Finance chart",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d"
+      }
+    ],
+    "errors": [],
+    "note": "Sensor only. No trade is performed. Positive events are routed through a dedicated GitHub PR bridge."
+  },
+  "instructions": {
+    "sourceOfTruth": "main/data.js",
+    "requiredAction": "Re-read current main/data.js and fresh market evidence before deciding HOLD/BUY/SELL/REDUCE.",
+    "tradeRule": "No paper trade exists until data.js is atomically committed to main and read back successfully.",
+    "staleStateRule": "Reject any proposed mutation if main changed since the decision was based on it."
+  }
+}
