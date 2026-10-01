@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: quant-trigger-pr-bridge
+  group: quant-trigger-event-bridge
   cancel-in-progress: true
 
 env:
