@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const fs=require("fs"), https=require("https"), vm=require("vm");
+const fs=require("fs"), https=require("https"), vm=require("vm"), crypto=require("crypto");
 
 function fetchJson(url){
   return new Promise((resolve,reject)=>{
@@ -76,7 +76,9 @@ async function price(symbol){
   }
   const unique=[]; const seen=new Set();
   for(const t of triggers){const k=[t.type,t.symbol,t.condition,t.setupId||""].join("|");if(!seen.has(k)){seen.add(k);unique.push(t)}}
-  const out={schemaVersion:1,mode:"SHADOW",triggeredAt:now,needsDecision:unique.length>0,triggers:unique,observations,errors,note:"Shadow sensor only. No trade and no Work invocation is performed by this workflow."};
+  const keyMaterial=unique.map(t=>[t.type,t.symbol,t.condition,t.setupId||""].join("|")).sort().join("\n");
+  const triggerKey=unique.length?crypto.createHash("sha256").update(keyMaterial).digest("hex").slice(0,16):null;
+  const out={schemaVersion:2,mode:"PR_BRIDGE_SHADOW",triggeredAt:now,needsDecision:unique.length>0,triggerKey,triggers:unique,observations,errors,note:"Sensor only. No trade is performed. Positive events are routed through a dedicated GitHub PR bridge."};
   fs.mkdirSync("quant",{recursive:true});
   fs.writeFileSync("quant/trigger.json",JSON.stringify(out,null,2)+"\n");
   console.log(JSON.stringify(out,null,2));
