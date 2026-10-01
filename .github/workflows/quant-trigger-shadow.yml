@@ -1,4 +1,4 @@
-name: Quant Trigger PR Bridge
+name: Quant Trigger Event Bridge
 
 on:
   schedule:
@@ -7,14 +7,12 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: quant-trigger-pr-bridge
   cancel-in-progress: true
 
 env:
-  TRIGGER_BRANCH: quant-trigger-event
   TRIGGER_COOLDOWN_MINUTES: "60"
 
 jobs:
@@ -27,116 +25,70 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Verify GitHub-native scheduled write capability
-        shell: bash
-        run: |
-          mkdir -p quant
-          node - <<'NODE'
-          const fs = require('fs');
-          const now = new Date();
-          const tallinn = new Intl.DateTimeFormat('sv-SE', {
-            timeZone: 'Europe/Tallinn',
-            year: 'numeric', month: '2-digit', day: '2-digit',
-            hour: '2-digit', minute: '2-digit', second: '2-digit',
-            hour12: false
-          }).format(now).replace(' ', 'T');
-          const offsetMinutes = (() => {
-            const parts = new Intl.DateTimeFormat('en-US', {
-              timeZone: 'Europe/Tallinn', timeZoneName: 'longOffset'
-            }).formatToParts(now);
-            const z = parts.find(p => p.type === 'timeZoneName')?.value || 'GMT+00:00';
-            return z.replace('GMT', '');
-          })();
-          const payload = {
-            status: 'OK',
-            environment: 'github-actions-scheduled',
-            timestampEuropeTallinn: tallinn + offsetMinutes
-          };
-          fs.writeFileSync('quant/scheduled-write-test.json', JSON.stringify(payload, null, 2) + '\n');
-          NODE
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add quant/scheduled-write-test.json
-          if git diff --cached --quiet; then
-            echo "Scheduled-write test unchanged; nothing to commit."
-          else
-            git commit -m "Verify GitHub-native scheduled write capability"
-            git push origin HEAD:main
-          fi
-
-          git fetch origin main
-          EXPECTED=$(cat quant/scheduled-write-test.json)
-          ACTUAL=$(git show origin/main:quant/scheduled-write-test.json)
-          test "$EXPECTED" = "$ACTUAL"
-          echo "GitHub-native scheduled write + read-back verified."
-
       - name: Run trigger engine
         run: node quant/trigger-engine.js
 
       - name: Show trigger result
         run: cat quant/trigger.json
 
-      - name: Stop when there is no trigger
-        id: gate
+      - name: Publish decision event on main
+        id: publish
         shell: bash
         run: |
           NEEDS=$(node -e "const x=require('./quant/trigger.json'); process.stdout.write(String(x.needsDecision))")
           if [ "$NEEDS" != "true" ]; then
-            echo "publish=false" >> "$GITHUB_OUTPUT"
-            echo "No trigger. No branch/PR activity."
+            echo "No trigger. No repository mutation."
             exit 0
           fi
 
-          cp quant/trigger.json /tmp/trigger.json
-          NEW_KEY=$(node -e "const x=require('/tmp/trigger.json'); process.stdout.write(x.triggerKey||'')")
+          NEW_KEY=$(node -e "const x=require('./quant/trigger.json'); process.stdout.write(x.triggerKey||'')")
           NOW_MS=$(node -e "process.stdout.write(String(Date.now()))")
+          OLD_KEY=""
+          OLD_TS=""
 
-          git fetch origin "$TRIGGER_BRANCH" 2>/dev/null || true
-
-          if git show-ref --verify --quiet "refs/remotes/origin/$TRIGGER_BRANCH"; then
-            git show "origin/$TRIGGER_BRANCH:quant/trigger.json" > /tmp/previous-trigger.json 2>/dev/null || true
+          if git cat-file -e "origin/main:quant/decision-event.json" 2>/dev/null; then
+            git show "origin/main:quant/decision-event.json" > /tmp/previous-event.json
+            OLD_KEY=$(node -e "const x=require('/tmp/previous-event.json'); process.stdout.write(x.triggerKey||'')")
+            OLD_TS=$(node -e "const x=require('/tmp/previous-event.json'); process.stdout.write(x.publishedAt||'')")
           fi
 
-          if [ -s /tmp/previous-trigger.json ]; then
-            OLD_KEY=$(node -e "const x=require('/tmp/previous-trigger.json'); process.stdout.write(x.triggerKey||'')")
-            OLD_TS=$(node -e "const x=require('/tmp/previous-trigger.json'); process.stdout.write(x.triggeredAt||'')")
+          if [ -n "$OLD_TS" ]; then
             OLD_MS=$(node -e "const d=Date.parse(process.argv[1]); process.stdout.write(String(Number.isFinite(d)?d:0))" "$OLD_TS")
             AGE_MIN=$(( (NOW_MS - OLD_MS) / 60000 ))
-
             if [ "$NEW_KEY" = "$OLD_KEY" ] && [ "$AGE_MIN" -lt "$TRIGGER_COOLDOWN_MINUTES" ]; then
-              echo "publish=false" >> "$GITHUB_OUTPUT"
-              echo "Same trigger key within cooldown (${AGE_MIN}m). No PR update."
+              echo "Same trigger key within cooldown ($AGE_MIN min). No event update."
               exit 0
             fi
           fi
 
-          echo "publish=true" >> "$GITHUB_OUTPUT"
+          node - <<'NODE'
+          const fs=require('fs');
+          const t=JSON.parse(fs.readFileSync('quant/trigger.json','utf8'));
+          const out={
+            schemaVersion:1,
+            eventType:'QUANT_DECISION_REQUIRED',
+            publishedAt:new Date().toISOString(),
+            baseRef:'main',
+            triggerKey:t.triggerKey,
+            trigger:t,
+            instructions:{
+              sourceOfTruth:'main/data.js',
+              requiredAction:'Re-read current main/data.js and fresh market evidence before deciding HOLD/BUY/SELL/REDUCE.',
+              tradeRule:'No paper trade exists until data.js is atomically committed to main and read back successfully.',
+              staleStateRule:'Reject any proposed mutation if main changed since the decision was based on it.'
+            }
+          };
+          fs.writeFileSync('quant/decision-event.json',JSON.stringify(out,null,2)+'\n');
+          NODE
 
-      - name: Publish trigger to dedicated branch
-        if: steps.gate.outputs.publish == 'true'
-        shell: bash
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add quant/decision-event.json
+          git commit -m "Publish quant decision event $NEW_KEY"
+          git push origin HEAD:main
 
-          git checkout -B "$TRIGGER_BRANCH" origin/main
-          mkdir -p quant
-          cp /tmp/trigger.json quant/trigger.json
-
-          git add quant/trigger.json
-          git commit -m "Quant trigger event $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          git push --force-with-lease origin "$TRIGGER_BRANCH"
-
-      - name: Create or reuse trigger PR
-        if: steps.gate.outputs.publish == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
-        run: |
-          PR=$(gh pr list --head "$TRIGGER_BRANCH" --base main --state open --json number --jq '.[0].number // empty')
-          if [ -z "$PR" ]; then
-            gh pr create               --base main               --head "$TRIGGER_BRANCH"               --title "Quant trigger event — decision required"               --body "Automated shadow sensor detected a market condition that requires Quant Trader review. The authoritative event payload is in `quant/trigger.json` on this PR branch. This PR MUST NOT be merged as a trade. A decision workflow should re-read current `main/data.js`, re-fetch fresh market data, and only then decide HOLD/BUY/SELL/REDUCE."
-          else
-            gh pr comment "$PR" --body "Trigger bridge updated at $(date -u +%Y-%m-%dT%H:%M:%SZ). Re-read `quant/trigger.json` from the PR head and current `main/data.js` before any decision."
-          fi
+          git fetch origin main
+          EXPECTED=$(cat quant/decision-event.json)
+          ACTUAL=$(git show origin/main:quant/decision-event.json)
+          test "$EXPECTED" = "$ACTUAL"
+          echo "Decision event committed and read-back verified."
