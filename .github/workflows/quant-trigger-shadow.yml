@@ -1,0 +1,48 @@
+name: Quant Trigger Shadow
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quant-trigger-shadow
+  cancel-in-progress: true
+
+jobs:
+  trigger-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run trigger engine
+        run: node quant/trigger-engine.js
+
+      - name: Show trigger result
+        run: cat quant/trigger.json
+
+      - name: Commit only a positive trigger
+        shell: bash
+        run: |
+          NEEDS=$(node -e "const x=require('./quant/trigger.json'); process.stdout.write(String(x.needsDecision))")
+          if [ "$NEEDS" != "true" ]; then
+            echo "No trigger. Shadow check ends without repository write."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add quant/trigger.json
+          if git diff --cached --quiet; then
+            echo "Trigger state unchanged."
+            exit 0
+          fi
+
+          git commit -m "Quant shadow trigger detected"
+          git push
