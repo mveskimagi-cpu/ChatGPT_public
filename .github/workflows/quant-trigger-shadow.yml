@@ -18,7 +18,7 @@ env:
 jobs:
   trigger-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 6
+    timeout-minutes: 10
     steps:
       - name: Checkout main
         uses: actions/checkout@v4
@@ -31,64 +31,54 @@ jobs:
       - name: Show trigger result
         run: cat quant/trigger.json
 
-      - name: Publish decision event on main
-        id: publish
+      - name: Check whether decision is required
+        id: trigger
         shell: bash
         run: |
           NEEDS=$(node -e "const x=require('./quant/trigger.json'); process.stdout.write(String(x.needsDecision))")
-          if [ "$NEEDS" != "true" ]; then
-            echo "No trigger. No repository mutation."
-            exit 0
+          echo "needs=$NEEDS" >> "$GITHUB_OUTPUT"
+
+      - name: Run Quant Trader decision consumer
+        if: steps.trigger.outputs.needs == 'true'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        shell: bash
+        run: |
+          test -n "$OPENAI_API_KEY"
+          node quant/decision-consumer.js
+
+      - name: Commit verified decision artifacts
+        if: steps.trigger.outputs.needs == 'true'
+        shell: bash
+        run: |
+          git fetch origin main
+          BASE_SHA=$(node -e "const x=require('./quant/decision-result.json'); process.stdout.write(x.baseCommitSha)")
+          REMOTE_SHA=$(git rev-parse origin/main)
+          if [ "$BASE_SHA" != "$REMOTE_SHA" ]; then
+            echo "Authoritative main changed during decision; fail closed."
+            exit 1
           fi
-
-          NEW_KEY=$(node -e "const x=require('./quant/trigger.json'); process.stdout.write(x.triggerKey||'')")
-          NOW_MS=$(node -e "process.stdout.write(String(Date.now()))")
-          OLD_KEY=""
-          OLD_TS=""
-
-          if git cat-file -e "origin/main:quant/decision-event.json" 2>/dev/null; then
-            git show "origin/main:quant/decision-event.json" > /tmp/previous-event.json
-            OLD_KEY=$(node -e "const x=require('/tmp/previous-event.json'); process.stdout.write(x.triggerKey||'')")
-            OLD_TS=$(node -e "const x=require('/tmp/previous-event.json'); process.stdout.write(x.publishedAt||'')")
-          fi
-
-          if [ -n "$OLD_TS" ]; then
-            OLD_MS=$(node -e "const d=Date.parse(process.argv[1]); process.stdout.write(String(Number.isFinite(d)?d:0))" "$OLD_TS")
-            AGE_MIN=$(( (NOW_MS - OLD_MS) / 60000 ))
-            if [ "$NEW_KEY" = "$OLD_KEY" ] && [ "$AGE_MIN" -lt "$TRIGGER_COOLDOWN_MINUTES" ]; then
-              echo "Same trigger key within cooldown ($AGE_MIN min). No event update."
-              exit 0
-            fi
-          fi
-
-          node - <<'NODE'
-          const fs=require('fs');
-          const t=JSON.parse(fs.readFileSync('quant/trigger.json','utf8'));
-          const out={
-            schemaVersion:1,
-            eventType:'QUANT_DECISION_REQUIRED',
-            publishedAt:new Date().toISOString(),
-            baseRef:'main',
-            triggerKey:t.triggerKey,
-            trigger:t,
-            instructions:{
-              sourceOfTruth:'main/data.js',
-              requiredAction:'Re-read current main/data.js and fresh market evidence before deciding HOLD/BUY/SELL/REDUCE.',
-              tradeRule:'No paper trade exists until data.js is atomically committed to main and read back successfully.',
-              staleStateRule:'Reject any proposed mutation if main changed since the decision was based on it.'
-            }
-          };
-          fs.writeFileSync('quant/decision-event.json',JSON.stringify(out,null,2)+'\n');
-          NODE
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add quant/decision-event.json
-          git commit -m "Publish quant decision event $NEW_KEY"
+
+          git add quant/decision-event.json quant/decision-result.json
+          if node -e "const x=require('./quant/decision-result.json'); process.exit(x.portfolioMutation ? 0 : 1)"; then
+            git add data.js
+          fi
+
+          git commit -m "Quant decision $(node -e "const x=require('./quant/decision-result.json'); process.stdout.write(x.decision)") $(node -e "const x=require('./quant/decision-result.json'); process.stdout.write(x.triggerKey)")"
           git push origin HEAD:main
 
           git fetch origin main
-          EXPECTED=$(cat quant/decision-event.json)
-          ACTUAL=$(git show origin/main:quant/decision-event.json)
-          test "$EXPECTED" = "$ACTUAL"
-          echo "Decision event committed and read-back verified."
+          for f in quant/decision-event.json quant/decision-result.json; do
+            EXPECTED=$(cat "$f")
+            ACTUAL=$(git show "origin/main:$f")
+            test "$EXPECTED" = "$ACTUAL"
+          done
+          if node -e "const x=require('./quant/decision-result.json'); process.exit(x.portfolioMutation ? 0 : 1)"; then
+            EXPECTED=$(cat data.js)
+            ACTUAL=$(git show origin/main:data.js)
+            test "$EXPECTED" = "$ACTUAL"
+          fi
+          echo "Quant decision commit and exact read-back verified."
