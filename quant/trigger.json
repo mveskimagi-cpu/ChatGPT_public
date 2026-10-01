@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 2,
+  "mode": "PR_BRIDGE_SHADOW",
+  "triggeredAt": "2026-10-01T17:08:38.568Z",
+  "needsDecision": true,
+  "triggerKey": "44c574258dbcdf7f",
+  "triggers": [
+    {
+      "type": "WATCHLIST_TRIGGER_LEVEL",
+      "symbol": "ETH",
+      "setup": "Conditional range breakout",
+      "setupId": "ETH-20260929-range-breakout",
+      "condition": "BELOW $2742.56",
+      "observedPrice": 2688.125,
+      "source": "Coinbase spot",
+      "shadow": true
+    },
+    {
+      "type": "WATCHLIST_TRIGGER_LEVEL",
+      "symbol": "HPE",
+      "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
+      "setupId": "HPE-20260930-networking-reclaim",
+      "condition": "BELOW $65.76",
+      "observedPrice": 64.52839660644531,
+      "source": "Yahoo Finance chart",
+      "shadow": true
+    },
+    {
+      "type": "WATCHLIST_TRIGGER_LEVEL",
+      "symbol": "HPE",
+      "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
+      "setupId": "HPE-20260930-networking-reclaim",
+      "condition": "ABOVE $63.59",
+      "observedPrice": 64.52839660644531,
+      "source": "Yahoo Finance chart",
+      "shadow": true
+    },
+    {
+      "type": "WATCHLIST_TRIGGER_LEVEL",
+      "symbol": "HPE",
+      "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
+      "setupId": "HPE-20260930-networking-reclaim",
+      "condition": "ABOVE $63.44",
+      "observedPrice": 64.52839660644531,
+      "source": "Yahoo Finance chart",
+      "shadow": true
+    }
+  ],
+  "observations": [
+    {
+      "symbol": "ETH",
+      "price": 2688.125,
+      "source": "Coinbase spot",
+      "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot"
+    },
+    {
+      "symbol": "HPE",
+      "price": 64.52839660644531,
+      "source": "Yahoo Finance chart",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d"
+    }
+  ],
+  "errors": [],
+  "note": "Sensor only. No trade is performed. Positive events are routed through a dedicated GitHub PR bridge."
+}
