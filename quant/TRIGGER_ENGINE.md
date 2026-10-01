@@ -1,28 +1,44 @@
-# Quant Trigger Engine — Shadow Mode
+# Quant Trigger Engine — PR Bridge Shadow Mode
 
-Purpose: cheaply monitor the Quant Challenge between expensive ChatGPT Work runs.
+Purpose: monitor the Quant Challenge cheaply between expensive ChatGPT Work runs and emit a GitHub pull-request event only when a mechanical trigger needs review.
 
-## What it does
-- Runs every 15 minutes in GitHub Actions.
-- Reads the authoritative `data.js`.
-- Fetches public spot/intraday prices for symbols already present in open positions, watchlist, or pending setups.
-- Checks simple mechanical conditions only:
-  - >=2% move versus the stored `lastUsd` mark,
-  - numeric USD levels found in position invalidation/target text,
-  - numeric USD levels found in watchlist/pending setup trigger text.
-- Produces `quant/trigger.json`.
+## Flow
 
-## Shadow-mode safety
-- It never buys, sells, sizes, or changes portfolio accounting.
-- It never edits `data.js`.
-- It does not invoke ChatGPT Work.
-- When there is no trigger, it makes no repository commit.
-- A positive trigger only records sensor evidence in `quant/trigger.json`.
+`GitHub Actions every 15 min → trigger-engine.js → no trigger = stop → trigger = update quant-trigger-event branch → open/update one PR`
 
-## Data sources
-- BTC/ETH: Coinbase public spot endpoint.
-- US-listed symbols: Yahoo Finance chart endpoint.
-These are monitoring sources, not guaranteed executable prices. Work must re-fetch reliable current prices before any paper-trade decision.
+The PR is an **event envelope**, not a trade and not a portfolio-state change.
 
-## Next promotion step
-After observing false-positive/false-negative behavior, a later version can route a positive trigger to a supported event-driven decision workflow. Promotion out of SHADOW mode must be explicit.
+## What the sensor checks
+
+- Open positions, watchlist and pending setups are read from authoritative `main/data.js`.
+- BTC/ETH monitoring prices come from Coinbase public spot.
+- US-listed symbols use Yahoo Finance chart data.
+- Mechanical conditions currently include:
+  - absolute move of at least 2% versus the stored `lastUsd`,
+  - numeric USD levels parsed from open-position invalidation/target text,
+  - numeric USD levels parsed from watchlist/pending setup trigger text.
+
+Monitoring prices are not execution prices.
+
+## PR bridge behavior
+
+- Branch: `quant-trigger-event`.
+- A positive trigger writes `quant/trigger.json` only on that branch.
+- The workflow opens one PR to `main`, or updates/comments the existing open trigger PR.
+- A stable `triggerKey` fingerprints the active mechanical conditions.
+- Identical trigger keys are suppressed for 60 minutes to reduce repeated PR activity.
+- The workflow never merges the PR automatically.
+
+## Safety
+
+- No BUY/SELL/REDUCE is executed here.
+- `main/data.js` is never edited by the sensor.
+- Cash, positions, cost bases, P/L, trade history and strategic memory remain untouched.
+- Any downstream decision engine must re-read current `main/data.js` and fresh market evidence.
+- A paper trade exists only after the existing atomic GitHub commit + read-back rules succeed.
+
+## Intended downstream use
+
+A GitHub-connected event-driven ChatGPT Work workflow can watch pull-request activity. On a trigger PR create/update, it should inspect the PR-head `quant/trigger.json`, then run the normal Quant Trader decision pipeline against current `main/data.js`.
+
+This repository-side bridge does not itself configure or invoke ChatGPT Work.
