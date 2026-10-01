@@ -1,100 +1,42 @@
-const fs = require('fs');
-const vm = require('vm');
-const crypto = require('crypto');
-const { execFileSync } = require('child_process');
-
-const API_KEY = process.env.OPENAI_API_KEY;
-if (!API_KEY) throw new Error('OPENAI_API_KEY is missing');
-
-function readPortfolio() {
-  const src = fs.readFileSync('data.js','utf8');
-  const sandbox = { window: {} };
-  vm.createContext(sandbox);
-  vm.runInContext(src, sandbox);
-  return { src, data: sandbox.window.PORTFOLIO_DATA };
+const fs=require('fs'),vm=require('vm'),crypto=require('crypto'); const {execFileSync}=require('child_process');
+const KEY=process.env.OPENAI_API_KEY; if(!KEY) throw Error('OPENAI_API_KEY missing');
+const git=(...a)=>execFileSync('git',a,{encoding:'utf8'}).trim();
+function ledger(){const src=fs.readFileSync('data.js','utf8'),s={window:{}};vm.createContext(s);vm.runInContext(src,s);return{src,data:s.window.PORTFOLIO_DATA}}
+async function j(url){const r=await fetch(url,{headers:{'User-Agent':'quant-consumer-production/1.0'}});if(!r.ok)throw Error('HTTP '+r.status+' '+url);return r.json()}
+async function quote(sym){
+ if(sym==='BTC'||sym==='ETH'){const x=await j('https://api.coinbase.com/v2/prices/'+sym+'-USD/spot');return{symbol:sym,priceUsd:+x.data.amount,provider:'Coinbase',url:'https://api.coinbase.com/v2/prices/'+sym+'-USD/spot',retrievedAt:new Date().toISOString()}}
+ const x=await j('https://query1.finance.yahoo.com/v8/finance/chart/'+encodeURIComponent(sym)+'?interval=5m&range=1d');const r=x.chart?.result?.[0];if(!r)throw Error('No quote '+sym);const q=r.indicators?.quote?.[0]?.close||[];let p=[...q].reverse().find(Number.isFinite)??r.meta?.regularMarketPrice;if(!Number.isFinite(p))throw Error('No price '+sym);return{symbol:sym,priceUsd:p,provider:'Yahoo Finance chart',url:'https://query1.finance.yahoo.com/v8/finance/chart/'+sym+'?interval=5m&range=1d',marketTime:r.meta?.regularMarketTime?new Date(r.meta.regularMarketTime*1000).toISOString():null,retrievedAt:new Date().toISOString()}}
+async function fx(){const x=await j('https://query1.finance.yahoo.com/v8/finance/chart/EURUSD=X?interval=5m&range=1d');const r=x.chart?.result?.[0],q=r?.indicators?.quote?.[0]?.close||[];const p=[...q].reverse().find(Number.isFinite)??r?.meta?.regularMarketPrice;if(!Number.isFinite(p))throw Error('No EURUSD');return{usdPerEur:p,provider:'Yahoo Finance chart',retrievedAt:new Date().toISOString()}}
+function outText(r){return r.output_text||((r.output||[]).flatMap(i=>i.content||[]).filter(x=>x.type==='output_text').map(x=>x.text).join('\n'))}
+async function ai(input){const r=await fetch('https://api.openai.com/v1/responses',{method:'POST',headers:{Authorization:'Bearer '+KEY,'Content-Type':'application/json'},body:JSON.stringify({model:'gpt-5.4',input,reasoning:{effort:'medium'},text:{format:{type:'json_object'}}})});const t=await r.text();if(!r.ok)throw Error('OpenAI '+r.status+': '+t.slice(0,500));return JSON.parse(outText(JSON.parse(t)).replace(/^\s*```(?:json)?|\```\s*$/g,'').trim())}
+function n2(x){return Math.round(x*100)/100} function n8(x){return Math.round(x*1e8)/1e8}
+function validate(d,D,quotes,F){
+ if(!['HOLD','BUY','SELL','REDUCE'].includes(d.decision))throw Error('bad decision');
+ if(!d.reason||typeof d.reason!=='string')throw Error('missing reason');
+ if(d.decision==='HOLD')return null;
+ if(!d.symbol||!quotes[d.symbol])throw Error('decision symbol lacks fresh quote');
+ if(!Number.isFinite(d.eurAmount)||d.eurAmount<=0)throw Error('invalid eurAmount');
+ const p=quotes[d.symbol].priceUsd, qty=n8(d.eurAmount*F.usdPerEur/p);
+ if(d.decision==='BUY'){if(d.eurAmount>D.summary.cash+0.005)throw Error('BUY exceeds cash');if(d.eurAmount>250)throw Error('BUY > EUR250 guardrail');return{side:'BUY',qty,priceUsd:p,eur:n2(d.eurAmount)}}
+ const pos=(D.positions||[]).find(x=>x.symbol===d.symbol);if(!pos)throw Error('SELL without position');
+ const maxQty=+pos.qty;if(!Number.isFinite(maxQty)||qty>maxQty+1e-8)throw Error('SELL exceeds position');
+ if(d.decision==='SELL'&&Math.abs(qty-maxQty)>Math.max(1e-8,maxQty*.01))throw Error('SELL must close position; use REDUCE');
+ return{side:'SELL',qty:d.decision==='SELL'?maxQty:qty,priceUsd:p,eur:n2((d.decision==='SELL'?maxQty:qty)*p/F.usdPerEur)}
 }
-function git(...args){ return execFileSync('git',args,{encoding:'utf8'}).trim(); }
-function stableKey(x){ return crypto.createHash('sha256').update(JSON.stringify(x)).digest('hex').slice(0,16); }
-function extractOutputText(resp){
-  if (typeof resp.output_text === 'string' && resp.output_text.trim()) return resp.output_text.trim();
-  const parts=[];
-  for (const item of resp.output||[]) for (const c of item.content||[]) if(c.type==='output_text' && c.text) parts.push(c.text);
-  return parts.join('\n').trim();
+function mutate(D,d,e,q,F){
+ const now=new Date(),stamp=now.toISOString().slice(0,16).replace('T',' '); const positions=D.positions||[];
+ if(e.side==='BUY'){let p=positions.find(x=>x.symbol===d.symbol);if(p){const oldCost=+p.costEur||(+p.qty*+p.avgUsd/F.usdPerEur);const nq=n8(+p.qty+e.qty),cost=oldCost+e.eur;p.qty=nq;p.costEur=n2(cost);p.avgUsd=n2((+p.avgUsd*+p.qty+e.priceUsd*e.qty)/nq);p.lastUsd=e.priceUsd}else positions.push({symbol:d.symbol,qty:e.qty,avgUsd:e.priceUsd,lastUsd:e.priceUsd,costEur:e.eur,entryReason:d.reason,openedAt:now.toISOString(),timeHorizon:d.timeHorizon||'tactical',riskLevel:d.riskLevel||'HIGH'});D.summary.cash=n2(D.summary.cash-e.eur)}
+ else {const p=positions.find(x=>x.symbol===d.symbol),oldQty=+p.qty,cost=+p.costEur||(+p.avgUsd*oldQty/F.usdPerEur),soldFrac=e.qty/oldQty,basis=cost*soldFrac,pnl=e.eur-basis;D.summary.cash=n2(D.summary.cash+e.eur);D.summary.realized=n2((D.summary.realized||0)+pnl);p.qty=n8(oldQty-e.qty);p.costEur=n2(cost-basis);p.lastUsd=e.priceUsd;if(p.qty<=1e-8)D.positions=positions.filter(x=>x!==p);e.pnl=n2(pnl)}
+ D.trades=D.trades||[];D.trades.push({date:stamp,symbol:d.symbol,side:e.side,qty:e.qty,priceUsd:e.priceUsd,eur:e.eur,pnl:e.pnl??null,note:d.reason,execution:{priceProvider:q.provider,priceSourceUrl:q.url,quotedAt:q.marketTime||null,retrievedAt:q.retrievedAt,fxUsdPerEur:F.usdPerEur,fxProvider:F.provider,paperTrade:true}});
+ const unreal=(D.positions||[]).reduce((s,p)=>s+((+p.lastUsd-(+p.avgUsd))*+p.qty/F.usdPerEur),0);D.summary.unrealized=n2(unreal);D.summary.value=n2(D.summary.cash+(D.positions||[]).reduce((s,p)=>s+(+p.qty*+p.lastUsd/F.usdPerEur),0));D.summary.total=n2(D.summary.value-D.summary.initial);D.summary.totalPct=n2(100*D.summary.total/D.summary.initial);D.meta.asOf=stamp+' UTC';D.meta.lastTrade=stamp+' UTC';D.meta.note='Paper trading only — no real money is traded.';
 }
-function stripFence(s){ return s.replace(/^\s*```(?:json)?\s*/i,'').replace(/\s*```\s*$/,'').trim(); }
-function assertDecision(d){
-  if (!d || !['HOLD','BUY','SELL','REDUCE'].includes(d.decision)) throw new Error('Invalid decision');
-  if (!d.reason || typeof d.reason!=='string') throw new Error('Missing reason');
-  if (d.decision!=='HOLD') throw new Error('Fail closed: autonomous portfolio mutations are not enabled until execution validation is implemented');
-}
-async function callOpenAI(payload){
-  const res=await fetch('https://api.openai.com/v1/responses',{
-    method:'POST',
-    headers:{'Authorization':`Bearer ${API_KEY}`,'Content-Type':'application/json'},
-    body:JSON.stringify(payload)
-  });
-  const txt=await res.text();
-  if(!res.ok) throw new Error(`OpenAI API ${res.status}: ${txt.slice(0,500)}`);
-  return JSON.parse(txt);
-}
-(async()=>{
-  git('fetch','origin','main');
-  const baseCommitSha=git('rev-parse','origin/main');
-  const {src,data}=readPortfolio();
-  const trigger=JSON.parse(fs.readFileSync('quant/trigger.json','utf8'));
-  if(!trigger.needsDecision) process.exit(0);
-
-  const event={
-    schemaVersion:2,eventType:'QUANT_DECISION_REQUIRED',publishedAt:new Date().toISOString(),
-    baseRef:'main',baseCommitSha,triggerKey:trigger.triggerKey,trigger,
-    instructions:{
-      sourceOfTruth:'main/data.js',
-      requiredAction:'Use the supplied current portfolio and trigger observations to decide HOLD/BUY/SELL/REDUCE. Do not assume a trigger is an order.',
-      tradeRule:'Paper trading only. Repository mutation is independently validated and fail-closed.',
-      staleStateRule:'The workflow rejects output if main changes before commit.'
-    }
-  };
-  fs.writeFileSync('quant/decision-event.json',JSON.stringify(event,null,2)+'\n');
-
-  const compact={
-    meta:data.meta,summary:data.summary,positions:data.positions,
-    strategyState:data.strategyState,strategyMemory:data.strategyMemory,
-    trigger
-  };
-  const prompt=`You are the decision consumer for a PAPER-TRADING €1000 Quant Challenge.
-Return JSON only with keys decision, symbol, reason, confidence, evidenceLimitations.
-Allowed decision values: HOLD, BUY, SELL, REDUCE.
-A mechanical trigger is only a request for review, never an order.
-Use only the supplied repository state and trigger observations. Do not invent current news or prices.
-Because this consumer currently has no independent fresh-news retrieval, choose HOLD unless the supplied evidence alone is sufficient for a safe decision.
-Do not output code or data.js.
-
-STATE:
-${JSON.stringify(compact)}`;
-
-  const response=await callOpenAI({
-    model:'gpt-5.4',
-    input:prompt,
-    reasoning:{effort:'medium'},
-    text:{format:{type:'json_object'}}
-  });
-  const raw=extractOutputText(response);
-  if(!raw) throw new Error('No model output');
-  const decision=JSON.parse(stripFence(raw));
-  assertDecision(decision);
-
-  const result={
-    schemaVersion:1,processedAt:new Date().toISOString(),baseCommitSha,
-    triggerKey:trigger.triggerKey,decision:decision.decision,symbol:decision.symbol||null,
-    reason:decision.reason,confidence:decision.confidence??null,
-    evidenceLimitations:decision.evidenceLimitations||[],
-    portfolioMutation:false,
-    model:'gpt-5.4',
-    consumerMode:'PRODUCTION_FAIL_CLOSED_HOLD_ONLY',
-    note:'Autonomous model consumer is live. BUY/SELL/REDUCE are deliberately blocked until fresh evidence and deterministic portfolio mutation validation are implemented.'
-  };
-  result.decisionKey=stableKey({baseCommitSha,triggerKey:result.triggerKey,decision:result.decision,symbol:result.symbol,reason:result.reason});
-  fs.writeFileSync('quant/decision-result.json',JSON.stringify(result,null,2)+'\n');
-
-  if(fs.readFileSync('data.js','utf8')!==src) throw new Error('Unexpected data.js mutation');
-})().catch(e=>{ console.error(e.stack||e); process.exit(1); });
+(async()=>{git('fetch','origin','main');const base=git('rev-parse','origin/main'),{src,data:D}=ledger(),T=JSON.parse(fs.readFileSync('quant/trigger.json'));if(!T.needsDecision)return;
+ const syms=[...new Set([...(D.positions||[]).map(x=>x.symbol),...T.triggers.map(x=>x.symbol)])],Q={};for(const s of syms)Q[s]=await quote(s);const F=await fx();
+ const prompt='You are an autonomous PAPER-TRADING quant decision engine. Return JSON only: decision(HOLD|BUY|SELL|REDUCE), symbol, eurAmount, reason, confidence, timeHorizon, riskLevel, evidenceLimitations. Use ONLY supplied fresh quotes, trigger observations and portfolio strategic memory. A trigger is review, not an order. Prefer HOLD when evidence is insufficient. Never exceed EUR250 on a new BUY. SELL means full exit; REDUCE partial. No real trading. STATE='+JSON.stringify({summary:D.summary,positions:D.positions,strategyState:D.strategyState,strategyMemory:D.strategyMemory,trigger:T,freshQuotes:Q,fx:F});
+ const d=await ai(prompt),e=validate(d,D,Q,F);if(e)mutate(D,d,e,Q[d.symbol],F);
+ const event={schemaVersion:3,eventType:'QUANT_DECISION_REQUIRED',publishedAt:new Date().toISOString(),baseRef:'main',baseCommitSha:base,triggerKey:T.triggerKey,trigger:T,freshEvidence:{quotes:Q,fx:F}};
+ fs.writeFileSync('quant/decision-event.json',JSON.stringify(event,null,2)+'\n');
+ if(e)fs.writeFileSync('data.js','window.PORTFOLIO_DATA = '+JSON.stringify(D,null,2)+';\n');else if(fs.readFileSync('data.js','utf8')!==src)throw Error('unexpected mutation');
+ const R={schemaVersion:2,processedAt:new Date().toISOString(),baseCommitSha:base,triggerKey:T.triggerKey,decision:d.decision,symbol:d.symbol||null,eurAmount:d.eurAmount||null,reason:d.reason,confidence:d.confidence??null,evidenceLimitations:d.evidenceLimitations||[],portfolioMutation:!!e,execution:e||null,model:'gpt-5.4',consumerMode:'PRODUCTION_PAPER_TRADING',decisionKey:crypto.createHash('sha256').update(base+T.triggerKey+JSON.stringify(d)).digest('hex').slice(0,16)};
+ fs.writeFileSync('quant/decision-result.json',JSON.stringify(R,null,2)+'\n');
+})().catch(e=>{console.error(e.stack||e);process.exit(1)});
