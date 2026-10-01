@@ -3,7 +3,7 @@ const fs=require("fs"), https=require("https"), vm=require("vm"), crypto=require
 
 function fetchJson(url){
   return new Promise((resolve,reject)=>{
-    const req=https.get(url,{headers:{"User-Agent":"quant-trigger-shadow/1.0","Accept":"application/json"}},res=>{
+    const req=https.get(url,{headers:{"User-Agent":"quant-trigger-production/1.0","Accept":"application/json"}},res=>{
       let d=""; res.on("data",c=>d+=c); res.on("end",()=>{
         if(res.statusCode<200||res.statusCode>=300) return reject(new Error("HTTP "+res.statusCode+" "+url));
         try{resolve(JSON.parse(d))}catch(e){reject(e)}
@@ -78,7 +78,7 @@ async function price(symbol){
   for(const t of triggers){const k=[t.type,t.symbol,t.condition,t.setupId||""].join("|");if(!seen.has(k)){seen.add(k);unique.push(t)}}
   const keyMaterial=unique.map(t=>[t.type,t.symbol,t.condition,t.setupId||""].join("|")).sort().join("\n");
   const triggerKey=unique.length?crypto.createHash("sha256").update(keyMaterial).digest("hex").slice(0,16):null;
-  const out={schemaVersion:2,mode:"PR_BRIDGE_SHADOW",triggeredAt:now,needsDecision:unique.length>0,triggerKey,triggers:unique,observations,errors,note:"Sensor only. No trade is performed. Positive events are routed through a dedicated GitHub PR bridge."};
+  const out={schemaVersion:2,mode:"EVENT_BRIDGE_PRODUCTION",triggeredAt:now,needsDecision:unique.length>0,triggerKey,triggers:unique,observations,errors,note:"Production sensor. No trade is performed by the sensor. Positive events are committed to main/quant/decision-event.json for the downstream Quant Trader decision consumer."};
   fs.mkdirSync("quant",{recursive:true});
   fs.writeFileSync("quant/trigger.json",JSON.stringify(out,null,2)+"\n");
   console.log(JSON.stringify(out,null,2));
