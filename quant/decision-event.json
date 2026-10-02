@@ -1,24 +1,24 @@
 {
   "schemaVersion": 3,
   "eventType": "QUANT_DECISION_REQUIRED",
-  "publishedAt": "2026-10-02T07:54:41.200Z",
+  "publishedAt": "2026-10-02T08:29:46.759Z",
   "baseRef": "main",
-  "baseCommitSha": "b483a5479b5d6c272a454024c5a80ef93d01654c",
-  "triggerKey": "44c574258dbcdf7f",
+  "baseCommitSha": "c18e457ff07bcc8b7dd715051d0a404c9f537d58",
+  "triggerKey": "f151dac93e9de914",
   "trigger": {
     "schemaVersion": 2,
     "mode": "EVENT_BRIDGE_PRODUCTION",
-    "triggeredAt": "2026-10-02T07:54:34.485Z",
+    "triggeredAt": "2026-10-02T08:29:41.838Z",
     "needsDecision": true,
-    "triggerKey": "44c574258dbcdf7f",
+    "triggerKey": "f151dac93e9de914",
     "triggers": [
       {
         "type": "WATCHLIST_TRIGGER_LEVEL",
         "symbol": "ETH",
         "setup": "Conditional range breakout",
         "setupId": "ETH-20260929-range-breakout",
-        "condition": "BELOW $2742.56",
-        "observedPrice": 2731.88,
+        "condition": "ABOVE $2742.56",
+        "observedPrice": 2759.275,
         "source": "Coinbase spot",
         "shadow": true
       },
@@ -56,7 +56,7 @@
     "observations": [
       {
         "symbol": "ETH",
-        "price": 2731.88,
+        "price": 2759.275,
         "source": "Coinbase spot",
         "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot"
       },
@@ -74,10 +74,10 @@
     "quotes": {
       "ETH": {
         "symbol": "ETH",
-        "priceUsd": 2731.88,
+        "priceUsd": 2759.115,
         "provider": "Coinbase",
         "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
-        "retrievedAt": "2026-10-02T07:54:35.485Z"
+        "retrievedAt": "2026-10-02T08:29:42.417Z"
       },
       "HPE": {
         "symbol": "HPE",
@@ -85,13 +85,13 @@
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d",
         "marketTime": "2026-10-01T20:04:42.000Z",
-        "retrievedAt": "2026-10-02T07:54:35.539Z"
+        "retrievedAt": "2026-10-02T08:29:42.467Z"
       }
     },
     "fx": {
-      "usdPerEur": 1.1263798475265503,
+      "usdPerEur": 1.1257457733154297,
       "provider": "Yahoo Finance chart",
-      "retrievedAt": "2026-10-02T07:54:35.583Z"
+      "retrievedAt": "2026-10-02T08:29:42.503Z"
     }
   }
 }

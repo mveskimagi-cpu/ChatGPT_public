@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T07:54:41.200Z",
-  "baseCommitSha": "b483a5479b5d6c272a454024c5a80ef93d01654c",
-  "triggerKey": "44c574258dbcdf7f",
+  "processedAt": "2026-10-02T08:29:46.760Z",
+  "baseCommitSha": "c18e457ff07bcc8b7dd715051d0a404c9f537d58",
+  "triggerKey": "f151dac93e9de914",
   "portfolioFingerprint": "38cf1ada98eb7875",
-  "gateReason": "REEVALUATION_DUE",
+  "gateReason": "NEW_TRIGGER_KEY",
   "decision": "HOLD",
-  "symbol": "HPE",
+  "symbol": "ETH",
   "eurAmount": null,
-  "reason": "No candidate-specific entry is confirmed. HPE at $64.58 is above the recorded support levels but remains below the required $65.76 reclaim trigger, and the required two completed 15-minute closes with volume confirmation are not supplied. ETH at $2,731.88 remains below its $2,742.56 breakout threshold and lacks the required two completed hourly closes and participation confirmation. Portfolio strategy remains 100% cash pending strict confirmation.",
-  "confidence": 0.94,
-  "evidenceLimitations": "Quotes are point-in-time only. No completed 15-minute/30-minute HPE candle series, volume participation, current SPY condition, completed ETH hourly closes, BTC confirmation, or fresh broad-market/volatility evidence was supplied. HPE market timestamp is from the prior session and trigger observations are shadow/review signals, not orders.",
+  "reason": "ETH spot is above the $2,742.56 price level, but the recorded setup requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Only a single spot quote is supplied, with no candle-close, volume/participation, or BTC confirmation. HPE remains unconfirmed and its recorded setup had prior support-break/invalidation risk.",
+  "confidence": 0.91,
+  "evidenceLimitations": "Trigger observations are shadow/review signals, not orders. ETH quote alone cannot establish two completed hourly closes or participation. No fresh BTC, ETH volume, broader-market, or completed HPE candle/invalidation evidence was supplied.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "62b0d393b9e741b0"
+  "decisionKey": "c11d2082088696ec"
 }
