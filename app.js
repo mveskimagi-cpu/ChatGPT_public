@@ -17,7 +17,7 @@ const cards=[
 ];
 document.querySelector("#cards").innerHTML=cards.map(x=>`<div class="card"><div class="label">${x[0]}</div><div class="value ${x[2]||""}">${x[1]}</div></div>`).join("");
 
-document.querySelector("#positions").innerHTML=D.positions.map(p=>`<tr><td><span class="symbol">${esc(p.symbol)}</span><br><span class="label">${esc(p.name)}</span></td><td>${p.qty}</td><td>${eur(p.costEur ?? p.cost)}</td><td>$${Number(p.lastUsd).toLocaleString()}</td><td>${eur(p.value ?? ((+p.qty||0)*(+p.lastUsd||0)/(+p.fxUsdPerEur||1)))}</td><td class="${cls(p.pnl)}">${sign(p.pnl)}<br><span class="label">${Number(p.pnlPct).toFixed(2)}%</span></td></tr>`).join("");
+document.querySelector("#positions").innerHTML=D.positions.map(p=>{const cost=+(p.costEur??p.cost)||0,pct=(+p.avgUsd&&+p.lastUsd)?((+p.lastUsd/+p.avgUsd)-1)*100:(+p.pnlPct||0),pnl=Number.isFinite(+p.pnl)?+p.pnl:cost*pct/100,value=Number.isFinite(+p.value)?+p.value:cost+pnl;return `<tr><td><span class="symbol">${esc(p.symbol)}</span><br><span class="label">${esc(p.name)}</span></td><td>${p.qty}</td><td>${eur(cost)}</td><td>${Number(p.lastUsd).toLocaleString()}</td><td>${eur(value)}</td><td class="${cls(pnl)}">${sign(pnl)}<br><span class="label">${pct.toFixed(2)}%</span></td></tr>`}).join("");
 
 const S=D.strategyState||{};
 document.querySelector("#strategyReviewed").textContent=S.lastReviewedAt?"Reviewed "+shortDate(S.lastReviewedAt):"";
