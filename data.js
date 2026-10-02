@@ -543,10 +543,10 @@ window.PORTFOLIO_DATA = {
   ],
   "strategyState": {
     "schemaVersion": 1,
-    "regime": "mixed early regular session / flat broad equity trend with firmer equal-weight breadth, weak regional banks and tight liquidity proxy",
-    "regimeReason": "SPY, QQQ and DIA were approximately +0.15%, +0.16% and -0.06%; RSP improved to +0.06%, but KRE lagged SPY by about 1.12 percentage points. The US 10-year yield was 5.327%, DXY +0.34%, WTI +1.29% and delayed VIX 16.71.",
-    "riskPosture": "Remain 100% cash and require candidate-specific confirmation. ETH stayed below its two-hour breakout trigger; HPE failed to sustain the reclaim area and broke the $63.59-$63.44 support zone intraday; no other candidate supplied a superior confirmed entry.",
-    "marketView": "Early US index performance was mildly positive but internally uneven: equal-weight breadth improved while regional banks materially lagged, credit ETFs remained weak, the 10-year yield stayed above 5.3%, the dollar strengthened and oil rose. Technology strength was selective; crypto remained below breakout levels.",
+    "regime": "Daily quant cross-asset momentum / volatility selection",
+    "regimeReason": "The 2026-10-02 daily selector ranked 36 liquid instruments using 5-day and 20-day momentum, 10-day realized volatility and volume expansion, then applied an absolute 10-day correlation cap of 0.80. Today’s diversified top 5: MSTR, ON, MU, AMD, HPE.",
+    "riskPosture": "Active paper position: ON. New exposure remains trigger-driven; watchlist selection alone is not an order. ON and all new positions remain subject to their stored invalidation and fresh-price controls.",
+    "marketView": "Today’s quantitative opportunity set is MSTR, ON, MU, AMD and HPE. Rankings favor the strongest combination of short-horizon momentum, realized movement and abnormal volume while penalizing highly correlated duplicates.",
     "evaluationUniverse": [
       "AAPL",
       "MSFT",
@@ -828,7 +828,7 @@ window.PORTFOLIO_DATA = {
       "BTC and ETH remained below their breakout levels and vulnerable to further range failure.",
       "Cboe VIX was delayed and several macro page clock times lacked explicit timezones; SHADOW output remains research only."
     ],
-    "lastReviewedAt": "2026-10-01T17:12:45.435+03:00",
+    "lastReviewedAt": "2026-10-02T13:13:32.224Z",
     "evidence": [
       {
         "id": "current-market-review",
