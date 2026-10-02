@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T17:07:27.650Z",
-  "baseCommitSha": "231018b6b4c91eb161c323b9d7084e46ec3a78e6",
+  "processedAt": "2026-10-02T17:27:56.449Z",
+  "baseCommitSha": "f94c2e64ba0bc0bd26b0c49b9b2cc1f90ed6b475",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "5e6a43ea2fd45f71",
+  "portfolioFingerprint": "012923649a0d02bb",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "Maintain the existing ON position: the fresh $84.47 quote remains above the $81.05 breakout trigger and $79.11 invalidation, with no supplied evidence of a failed breakout or ranked-momentum reversal. AMD and HPE are above their trigger levels, but the stored setups remain WATCH_ONLY and no fresh sustained-participation evidence supports new entries.",
-  "confidence": 0.82,
-  "evidenceLimitations": "Only fresh prices and trigger-level observations were supplied; there is no current volume, closing confirmation, intraday trend, or updated momentum/volatility data. Trigger observations are reviews rather than orders.",
+  "reason": "Maintain the existing ON position: the fresh quote is $83.88, above the $81.05 breakout trigger and $79.11 stored invalidation. The position is modestly below entry, but no supplied fresh reversal or invalidation evidence supports a reduction or exit. AMD and HPE are above their trigger levels, but their required sustained-participation confirmation is not supplied and both remain WATCH_ONLY; do not add exposure.",
+  "confidence": 0.8,
+  "evidenceLimitations": "Fresh inputs provide only price-level observations, not updated volume/participation, intraday closing confirmation, momentum ranking, or broader-regime validation. Trigger observations are reviews rather than orders.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "24f8d9573d2f3c00"
+  "decisionKey": "1e12669743050ecf"
 }
