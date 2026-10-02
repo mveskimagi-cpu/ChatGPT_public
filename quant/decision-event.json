@@ -1,14 +1,14 @@
 {
   "schemaVersion": 3,
   "eventType": "QUANT_DECISION_REQUIRED",
-  "publishedAt": "2026-10-02T18:31:27.585Z",
+  "publishedAt": "2026-10-02T18:55:25.997Z",
   "baseRef": "main",
-  "baseCommitSha": "fff92dec80871b1a1153ae620ed5a20762f2093f",
+  "baseCommitSha": "1b84d0f0cc72068808997034bdc26938a7287f03",
   "triggerKey": "59100b09774908ba",
   "trigger": {
     "schemaVersion": 3,
     "mode": "EVENT_BRIDGE_PRODUCTION",
-    "triggeredAt": "2026-10-02T18:31:21.268Z",
+    "triggeredAt": "2026-10-02T18:55:20.935Z",
     "needsDecision": true,
     "triggerKey": "59100b09774908ba",
     "triggers": [
@@ -18,7 +18,7 @@
         "setup": "Daily quant momentum / volatility breakout",
         "setupId": "ON-20261002-daily-quant",
         "condition": "ABOVE $81.05",
-        "observedPrice": 83.38999938964844,
+        "observedPrice": 83.58499908447266,
         "source": "Yahoo Finance chart",
         "shadow": true
       },
@@ -28,7 +28,7 @@
         "setup": "Daily quant momentum / volatility breakout",
         "setupId": "AMD-20261002-daily-quant",
         "condition": "ABOVE $627.14",
-        "observedPrice": 631.4013061523438,
+        "observedPrice": 632.9600219726562,
         "source": "Yahoo Finance chart",
         "shadow": true
       },
@@ -38,7 +38,7 @@
         "setup": "Daily quant momentum / volatility breakout",
         "setupId": "HPE-20261002-daily-quant",
         "condition": "ABOVE $65.19",
-        "observedPrice": 69.88999938964844,
+        "observedPrice": 70.1500015258789,
         "source": "Yahoo Finance chart",
         "shadow": true
       }
@@ -46,31 +46,31 @@
     "observations": [
       {
         "symbol": "ON",
-        "price": 83.38999938964844,
+        "price": 83.58499908447266,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=5m&range=1d"
       },
       {
         "symbol": "MSTR",
-        "price": 156.7100067138672,
+        "price": 156.52940368652344,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?interval=5m&range=1d"
       },
       {
         "symbol": "MU",
-        "price": 1074.75,
+        "price": 1077.849853515625,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?interval=5m&range=1d"
       },
       {
         "symbol": "AMD",
-        "price": 631.4013061523438,
+        "price": 632.9600219726562,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=5m&range=1d"
       },
       {
         "symbol": "HPE",
-        "price": 69.88999938964844,
+        "price": 70.1500015258789,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d"
       }
@@ -82,33 +82,33 @@
     "quotes": {
       "ON": {
         "symbol": "ON",
-        "priceUsd": 83.38999938964844,
+        "priceUsd": 83.58499908447266,
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=5m&range=1d",
-        "marketTime": "2026-10-02T18:31:16.000Z",
-        "retrievedAt": "2026-10-02T18:31:22.478Z"
+        "marketTime": "2026-10-02T18:55:19.000Z",
+        "retrievedAt": "2026-10-02T18:55:21.906Z"
       },
       "AMD": {
         "symbol": "AMD",
-        "priceUsd": 631.4013061523438,
+        "priceUsd": 632.7150268554688,
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=5m&range=1d",
-        "marketTime": "2026-10-02T18:31:20.000Z",
-        "retrievedAt": "2026-10-02T18:31:22.613Z"
+        "marketTime": "2026-10-02T18:55:20.000Z",
+        "retrievedAt": "2026-10-02T18:55:21.950Z"
       },
       "HPE": {
         "symbol": "HPE",
-        "priceUsd": 69.88999938964844,
+        "priceUsd": 70.1500015258789,
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d",
-        "marketTime": "2026-10-02T18:31:20.000Z",
-        "retrievedAt": "2026-10-02T18:31:22.689Z"
+        "marketTime": "2026-10-02T18:55:19.000Z",
+        "retrievedAt": "2026-10-02T18:55:21.991Z"
       }
     },
     "fx": {
-      "usdPerEur": 1.1254924535751343,
+      "usdPerEur": 1.1252391338348389,
       "provider": "Yahoo Finance chart",
-      "retrievedAt": "2026-10-02T18:31:22.762Z"
+      "retrievedAt": "2026-10-02T18:55:22.040Z"
     }
   }
 }

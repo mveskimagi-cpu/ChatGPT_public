@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T18:31:27.585Z",
-  "baseCommitSha": "fff92dec80871b1a1153ae620ed5a20762f2093f",
+  "processedAt": "2026-10-02T18:55:25.998Z",
+  "baseCommitSha": "1b84d0f0cc72068808997034bdc26938a7287f03",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "9589270ac783fd0b",
+  "portfolioFingerprint": "f182193fe7a3e574",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger at $83.39 and above the stored $79.11 invalidation, so the active 1-3 trading-day thesis is not invalidated. The fresh quote alone does not establish a momentum reversal warranting reduction or exit. AMD and HPE are above trigger levels, but no fresh sustained-participation or volume confirmation is supplied, so their trigger observations remain reviews rather than new orders.",
-  "confidence": 0.78,
-  "evidenceLimitations": "Only fresh price quotes are supplied; there is no current volume, intraday trend, close confirmation, broader-market update, or refreshed momentum/volatility data. Trigger-level observations are explicitly shadow/watchlist signals, not confirmed entry orders.",
+  "reason": "ON remains above its $81.05 breakout trigger at $83.58 and above the stored $79.11 invalidation. The position is modestly below entry, but supplied evidence shows no confirmed momentum failure or reversal. AMD and HPE are above trigger levels, but these are review-only observations without fresh sustained-participation evidence, so no new exposure is warranted.",
+  "confidence": 0.82,
+  "evidenceLimitations": "Only fresh intraday prices and trigger-level observations are supplied; no updated volume, close confirmation, momentum ranking, market-regime, or reversal data is available. Trigger observations are explicitly shadow/review-only.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "42cb78695cb44094"
+  "decisionKey": "892f0435d3dfc7a1"
 }
