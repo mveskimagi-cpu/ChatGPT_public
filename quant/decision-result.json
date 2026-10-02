@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T13:55:42.098Z",
-  "baseCommitSha": "aac8294792c0ce4d341cc1caae343492259ceb36",
-  "triggerKey": "c515ab9dde841664",
+  "processedAt": "2026-10-02T14:30:21.356Z",
+  "baseCommitSha": "43d2ec521e237edd1bd79f05bc5543a06846d17e",
+  "triggerKey": "7ba03a9516535628",
   "portfolioFingerprint": "65277edcf2fca9c4",
-  "gateReason": "PORTFOLIO_CHANGED",
+  "gateReason": "NEW_SEMANTIC_TRIGGER",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
-  "confidence": 0.72,
-  "evidenceLimitations": "Only 5-minute fresh price quotes are supplied; there is no updated volume, close confirmation, broader-market data, or intraday support assessment.",
+  "reason": "ON is down 2.46% from entry but remains above its $81.05 breakout trigger and $79.11 invalidation. The supplied trigger is a price-move review only; it provides no fresh volume, momentum-rank reversal, or participation evidence to justify reducing or exiting. AMD and HPE are above watch levels, but remain WATCH_ONLY and lack supplied sustained-participation confirmation, so no new purchase is warranted.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Fresh data contain only intraday prices and trigger observations. No updated volume, closing confirmation, broader breadth, volatility, or momentum metrics are supplied; AMD/HPE watchlist signals are explicitly shadow/review observations rather than actionable entries.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "49d9f41a6bc8bd47"
+  "decisionKey": "6115909a3e57bd19"
 }
