@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T21:07:25.954Z",
-  "baseCommitSha": "3bc39c7391fd40d7601affeeb0d70ebcb1d0b68a",
+  "processedAt": "2026-10-02T21:26:32.965Z",
+  "baseCommitSha": "a4c3fdf735148c2e6be8a3f4f6cacca10e8bd8e4",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "c2e646388573ea3f",
+  "portfolioFingerprint": "b8c2b3b27744f3f1",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger at $84.89 and above the stored $79.11 invalidation. The modest loss versus entry does not by itself invalidate the 1-3 day breakout thesis. AMD and HPE are above their trigger levels, but the supplied quotes do not confirm sustained participation; triggers are reviews rather than buy orders.",
+  "reason": "Maintain the existing ON position: the fresh $84.89 quote remains above the $81.05 breakout trigger and well above the $79.11 invalidation, so there is no supplied failure evidence requiring a reduction or exit. Do not add exposure: the quote is below the $85.35 entry and no fresh volume/participation confirmation is supplied. AMD and HPE crossing watch levels are review triggers only; their recorded participation metrics were below sustained-confirmation thresholds and do not justify new orders.",
   "confidence": 0.78,
-  "evidenceLimitations": "Only latest price quotes are supplied; no fresh volume, closing-structure, intraday reversal, or updated cross-asset regime data are available. Quotes are near/after the regular-session close and trigger observations are marked shadow.",
+  "evidenceLimitations": "Only end-of-session Yahoo chart quotes and prior recorded quant metrics are supplied. No fresh volume, intraday trend, close confirmation, broader-market update, or post-trigger momentum validation is available.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "3ca211904291f123"
+  "decisionKey": "5be4bfab396d77de"
 }
