@@ -1,13 +1,14 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 3,
   "eventType": "QUANT_DECISION_REQUIRED",
-  "publishedAt": "2026-10-01T17:44:25.435Z",
+  "publishedAt": "2026-10-02T05:24:36.459Z",
   "baseRef": "main",
+  "baseCommitSha": "2171b44fa8ef2aec2a542bbdd7139d13bcb5f64d",
   "triggerKey": "44c574258dbcdf7f",
   "trigger": {
     "schemaVersion": 2,
-    "mode": "PR_BRIDGE_SHADOW",
-    "triggeredAt": "2026-10-01T17:44:25.062Z",
+    "mode": "EVENT_BRIDGE_PRODUCTION",
+    "triggeredAt": "2026-10-02T05:24:19.259Z",
     "needsDecision": true,
     "triggerKey": "44c574258dbcdf7f",
     "triggers": [
@@ -17,7 +18,7 @@
         "setup": "Conditional range breakout",
         "setupId": "ETH-20260929-range-breakout",
         "condition": "BELOW $2742.56",
-        "observedPrice": 2705.74,
+        "observedPrice": 2728.805,
         "source": "Coinbase spot",
         "shadow": true
       },
@@ -27,7 +28,7 @@
         "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
         "setupId": "HPE-20260930-networking-reclaim",
         "condition": "BELOW $65.76",
-        "observedPrice": 65.0885009765625,
+        "observedPrice": 64.58000183105469,
         "source": "Yahoo Finance chart",
         "shadow": true
       },
@@ -37,7 +38,7 @@
         "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
         "setupId": "HPE-20260930-networking-reclaim",
         "condition": "ABOVE $63.59",
-        "observedPrice": 65.0885009765625,
+        "observedPrice": 64.58000183105469,
         "source": "Yahoo Finance chart",
         "shadow": true
       },
@@ -47,7 +48,7 @@
         "setup": "Event-driven pullback/reclaim after networking outlook and $1.2bn AI order",
         "setupId": "HPE-20260930-networking-reclaim",
         "condition": "ABOVE $63.44",
-        "observedPrice": 65.0885009765625,
+        "observedPrice": 64.58000183105469,
         "source": "Yahoo Finance chart",
         "shadow": true
       }
@@ -55,24 +56,42 @@
     "observations": [
       {
         "symbol": "ETH",
-        "price": 2705.74,
+        "price": 2728.805,
         "source": "Coinbase spot",
         "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot"
       },
       {
         "symbol": "HPE",
-        "price": 65.0885009765625,
+        "price": 64.58000183105469,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d"
       }
     ],
     "errors": [],
-    "note": "Sensor only. No trade is performed. Positive events are routed through a dedicated GitHub PR bridge."
+    "note": "Production sensor. No trade is performed by the sensor. Positive events are committed to main/quant/decision-event.json for the downstream Quant Trader decision consumer."
   },
-  "instructions": {
-    "sourceOfTruth": "main/data.js",
-    "requiredAction": "Re-read current main/data.js and fresh market evidence before deciding HOLD/BUY/SELL/REDUCE.",
-    "tradeRule": "No paper trade exists until data.js is atomically committed to main and read back successfully.",
-    "staleStateRule": "Reject any proposed mutation if main changed since the decision was based on it."
+  "freshEvidence": {
+    "quotes": {
+      "ETH": {
+        "symbol": "ETH",
+        "priceUsd": 2728.67,
+        "provider": "Coinbase",
+        "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
+        "retrievedAt": "2026-10-02T05:24:20.432Z"
+      },
+      "HPE": {
+        "symbol": "HPE",
+        "priceUsd": 64.58000183105469,
+        "provider": "Yahoo Finance chart",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d",
+        "marketTime": "2026-10-01T20:04:42.000Z",
+        "retrievedAt": "2026-10-02T05:24:20.491Z"
+      }
+    },
+    "fx": {
+      "usdPerEur": 1.1254924535751343,
+      "provider": "Yahoo Finance chart",
+      "retrievedAt": "2026-10-02T05:24:20.531Z"
+    }
   }
 }
