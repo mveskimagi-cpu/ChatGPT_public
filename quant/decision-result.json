@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T15:11:17.154Z",
-  "baseCommitSha": "4876b91d4bccb54022cf81d1ac4e09879cfa656c",
+  "processedAt": "2026-10-02T15:31:04.014Z",
+  "baseCommitSha": "ec2cc449f2035d5a2e8f3ce49c80364aaabb5200",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "dfdcdaca154c29f9",
+  "portfolioFingerprint": "c213dce907160f38",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON is at $84.11, still above its $81.05 breakout trigger and $79.11 invalidation, but below the $85.35 entry. The supplied quote alone does not establish a failed breakout or renewed sustained participation. AMD and HPE are above their trigger levels, but their trigger observations are reviews rather than entry orders and no fresh volume/participation confirmation is supplied.",
+  "reason": "ON remains above its $81.05 breakout trigger and $79.11 invalidation, but is below the $85.35 entry and the fresh quote supplies no volume, breadth, or momentum-confirmation update to support adding. AMD and HPE are above watch triggers, but triggers are review signals only and their recorded setups lack confirmed sustained participation; HPE also conflicts with prior noted support-failure risk. Maintain the existing reduced ON position without increasing exposure.",
   "confidence": 0.78,
-  "evidenceLimitations": "Only intraday Yahoo prices and trigger-level observations are fresh. No fresh volume, closing confirmation, breadth, volatility, or reversal data is supplied; broader strategy memory notes mixed conditions and fragile liquidity.",
+  "evidenceLimitations": "Only 5-minute fresh prices and prior setup statistics are supplied; no fresh volume, closing confirmation, intraday trend context, updated volatility/correlation, or broad-market/credit confirmation is available. Watchlist triggers are marked shadow/review-only.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "89bd7f44881bfac6"
+  "decisionKey": "1c4d41b3ca6ca882"
 }
