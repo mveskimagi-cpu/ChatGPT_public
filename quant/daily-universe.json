@@ -1,0 +1,63 @@
+{
+  "selectedAt": "2026-10-02T13:13:32.224Z",
+  "method": "35% 5d momentum + 20% 20d momentum + 30% realized volatility + 15% volume expansion; abs 10d correlation <= 0.80",
+  "universeSize": 36,
+  "topN": 5,
+  "selected": [
+    {
+      "symbol": "MSTR",
+      "quantScore": 1.515,
+      "metrics": {
+        "momentum5d": -0.687,
+        "momentum20d": 28.523,
+        "realizedVol10dAnnualized": 94.52,
+        "volumeRatio": 1.121,
+        "maxSelectedCorrelation": 0
+      }
+    },
+    {
+      "symbol": "ON",
+      "quantScore": 1.453,
+      "metrics": {
+        "momentum5d": 9.474,
+        "momentum20d": 10.227,
+        "realizedVol10dAnnualized": 34.95,
+        "volumeRatio": 1.123,
+        "maxSelectedCorrelation": 0.274
+      }
+    },
+    {
+      "symbol": "MU",
+      "quantScore": 0.997,
+      "metrics": {
+        "momentum5d": 1.56,
+        "momentum20d": 17.564,
+        "realizedVol10dAnnualized": 37.75,
+        "volumeRatio": 1.963,
+        "maxSelectedCorrelation": 0.589
+      }
+    },
+    {
+      "symbol": "AMD",
+      "quantScore": 0.73,
+      "metrics": {
+        "momentum5d": -2.15,
+        "momentum20d": 33.968,
+        "realizedVol10dAnnualized": 53.48,
+        "volumeRatio": 0.869,
+        "maxSelectedCorrelation": 0.596
+      }
+    },
+    {
+      "symbol": "HPE",
+      "quantScore": 0.64,
+      "metrics": {
+        "momentum5d": 1.669,
+        "momentum20d": 26.951,
+        "realizedVol10dAnnualized": 27.42,
+        "volumeRatio": 0.846,
+        "maxSelectedCorrelation": 0.26
+      }
+    }
+  ]
+}
