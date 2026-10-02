@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T18:55:25.998Z",
-  "baseCommitSha": "1b84d0f0cc72068808997034bdc26938a7287f03",
+  "processedAt": "2026-10-02T19:08:52.677Z",
+  "baseCommitSha": "a4c25bfbf5b0b0deaec5981463716ffecae1eb94",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "f182193fe7a3e574",
+  "portfolioFingerprint": "5c48042ea8fdf8e3",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger at $83.58 and above the stored $79.11 invalidation. The position is modestly below entry, but supplied evidence shows no confirmed momentum failure or reversal. AMD and HPE are above trigger levels, but these are review-only observations without fresh sustained-participation evidence, so no new exposure is warranted.",
-  "confidence": 0.82,
-  "evidenceLimitations": "Only fresh intraday prices and trigger-level observations are supplied; no updated volume, close confirmation, momentum ranking, market-regime, or reversal data is available. Trigger observations are explicitly shadow/review-only.",
+  "reason": "ON at $83.68 remains above its $81.05 breakout trigger and $79.11 invalidation, so the active position's structure has not failed. The modest decline from the $85.35 entry does not alone justify reduction. AMD and HPE are above quoted trigger levels, but no fresh sustained-participation or volume confirmation is supplied, so their alerts remain reviews rather than new orders.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Fresh inputs provide only intraday prices and trigger-level observations. There is no updated volume, close confirmation, momentum ranking, volatility, or broader-market data to validate sustained breakouts or support adding exposure.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "892f0435d3dfc7a1"
+  "decisionKey": "04b37ac38a430f8d"
 }
