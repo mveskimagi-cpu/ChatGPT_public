@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "processedAt": "2026-10-02T06:08:56.468Z",
-  "baseCommitSha": "bd36467485d8955f51e3b37d14270c42979af037",
+  "processedAt": "2026-10-02T06:32:42.508Z",
+  "baseCommitSha": "3db400519e6b58ede1be4c55bc1c07feb376292a",
   "triggerKey": "44c574258dbcdf7f",
   "decision": "HOLD",
   "symbol": "ETH",
   "eurAmount": null,
-  "reason": "No candidate-specific entry is confirmed. ETH at $2,721.51 remains below the required $2,742.56 breakout level, and the required two completed 60-minute closes above that level with improved participation and supportive BTC behavior were not supplied. HPE at $64.58 is above the noted support markers but remains below its $65.76 reclaim trigger; required completed 15-minute closes, volume confirmation, and market-condition confirmation are absent. Portfolio remains appropriately flat under the stated cash-first risk posture.",
-  "confidence": 0.93,
-  "evidenceLimitations": "Quotes are point-in-time only. No completed ETH 60-minute candles, HPE 15-/30-minute close verification, volume/participation data, BTC confirmation, SPY condition, or updated macro/liquidity evidence was supplied. Trigger observations are review signals, not orders.",
+  "reason": "ETH at $2,730.17 remains below the required $2,742.56 breakout level, and the mandated confirmation of two completed 60-minute closes above that level with improving participation and supportive BTC behavior is not supplied. HPE's price recovery above support does not satisfy its separate two 15-minute-close reclaim trigger above $65.76. Portfolio remains appropriately flat under the stated risk posture.",
+  "confidence": 0.94,
+  "evidenceLimitations": "Only spot/latest-price observations are supplied. No completed ETH hourly candles, BTC confirmation, participation/volume data, HPE completed 15-minute or 30-minute candle verification, or updated broad-market/liquidity evidence is available. Trigger notifications are reviews, not trade authorization.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "fc71d8121cd2953e"
+  "decisionKey": "a4aa91132532d217"
 }
