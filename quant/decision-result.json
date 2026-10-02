@@ -1,17 +1,19 @@
 {
-  "schemaVersion": 2,
-  "processedAt": "2026-10-02T06:32:42.508Z",
-  "baseCommitSha": "3db400519e6b58ede1be4c55bc1c07feb376292a",
+  "schemaVersion": 3,
+  "processedAt": "2026-10-02T07:54:41.200Z",
+  "baseCommitSha": "b483a5479b5d6c272a454024c5a80ef93d01654c",
   "triggerKey": "44c574258dbcdf7f",
+  "portfolioFingerprint": "38cf1ada98eb7875",
+  "gateReason": "REEVALUATION_DUE",
   "decision": "HOLD",
-  "symbol": "ETH",
+  "symbol": "HPE",
   "eurAmount": null,
-  "reason": "ETH at $2,730.17 remains below the required $2,742.56 breakout level, and the mandated confirmation of two completed 60-minute closes above that level with improving participation and supportive BTC behavior is not supplied. HPE's price recovery above support does not satisfy its separate two 15-minute-close reclaim trigger above $65.76. Portfolio remains appropriately flat under the stated risk posture.",
+  "reason": "No candidate-specific entry is confirmed. HPE at $64.58 is above the recorded support levels but remains below the required $65.76 reclaim trigger, and the required two completed 15-minute closes with volume confirmation are not supplied. ETH at $2,731.88 remains below its $2,742.56 breakout threshold and lacks the required two completed hourly closes and participation confirmation. Portfolio strategy remains 100% cash pending strict confirmation.",
   "confidence": 0.94,
-  "evidenceLimitations": "Only spot/latest-price observations are supplied. No completed ETH hourly candles, BTC confirmation, participation/volume data, HPE completed 15-minute or 30-minute candle verification, or updated broad-market/liquidity evidence is available. Trigger notifications are reviews, not trade authorization.",
+  "evidenceLimitations": "Quotes are point-in-time only. No completed 15-minute/30-minute HPE candle series, volume participation, current SPY condition, completed ETH hourly closes, BTC confirmation, or fresh broad-market/volatility evidence was supplied. HPE market timestamp is from the prior session and trigger observations are shadow/review signals, not orders.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "a4aa91132532d217"
+  "decisionKey": "62b0d393b9e741b0"
 }
