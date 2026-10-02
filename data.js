@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-02 18:09 UTC",
+    "asOf": "2026-10-02 18:31 UTC",
     "lastTrade": "2026-10-02 13:33 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -36,19 +36,19 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 993.25,
+    "value": 993.99,
     "cash": 798.57,
     "realized": -1.43,
-    "unrealized": -5.32,
-    "total": -6.75,
-    "totalPct": -0.67
+    "unrealized": -4.58,
+    "total": -6.01,
+    "totalPct": -0.6
   },
   "positions": [
     {
       "symbol": "ON",
       "qty": 2.6375123,
       "avgUsd": 85.34500122070312,
-      "lastUsd": 83.09459686279297,
+      "lastUsd": 83.38999938964844,
       "costEur": 200,
       "entryReason": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
       "openedAt": "2026-10-02T13:33:00.322Z",
@@ -60,10 +60,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 194.68,
-      "pnl": -5.32,
-      "pnlPct": -2.66,
-      "fxUsdPerEur": 1.1257457733154297
+      "value": 195.42,
+      "pnl": -4.58,
+      "pnlPct": -2.29,
+      "fxUsdPerEur": 1.1254924535751343
     }
   ],
   "trades": [

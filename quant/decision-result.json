@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T18:09:12.042Z",
-  "baseCommitSha": "8aa913ba187454e2c42713b6284d9c4109744e82",
+  "processedAt": "2026-10-02T18:31:27.585Z",
+  "baseCommitSha": "fff92dec80871b1a1153ae620ed5a20762f2093f",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "bd1046486feab01e",
+  "portfolioFingerprint": "9589270ac783fd0b",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger at $83.09 and above the stored $79.11 invalidation. The position is modestly below entry, but supplied fresh data show no invalidation or confirmed momentum reversal. AMD and HPE are above watch triggers, but the trigger observations alone do not establish sustained participation for a new order.",
-  "confidence": 0.82,
-  "evidenceLimitations": "Fresh inputs contain only intraday prices and trigger-level observations; no updated volume, momentum ranking, closing confirmation, or broader-regime evidence is supplied. Trigger events are explicitly review-only.",
+  "reason": "ON remains above its $81.05 breakout trigger at $83.39 and above the stored $79.11 invalidation, so the active 1-3 trading-day thesis is not invalidated. The fresh quote alone does not establish a momentum reversal warranting reduction or exit. AMD and HPE are above trigger levels, but no fresh sustained-participation or volume confirmation is supplied, so their trigger observations remain reviews rather than new orders.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Only fresh price quotes are supplied; there is no current volume, intraday trend, close confirmation, broader-market update, or refreshed momentum/volatility data. Trigger-level observations are explicitly shadow/watchlist signals, not confirmed entry orders.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "d023e08823262434"
+  "decisionKey": "42cb78695cb44094"
 }
