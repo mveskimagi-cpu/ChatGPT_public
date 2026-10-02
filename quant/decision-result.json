@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T14:30:21.356Z",
-  "baseCommitSha": "43d2ec521e237edd1bd79f05bc5543a06846d17e",
-  "triggerKey": "7ba03a9516535628",
-  "portfolioFingerprint": "65277edcf2fca9c4",
-  "gateReason": "NEW_SEMANTIC_TRIGGER",
+  "processedAt": "2026-10-02T14:56:30.577Z",
+  "baseCommitSha": "241633c7efd4c985d139d4a8b9dfe8d9597d1699",
+  "triggerKey": "59100b09774908ba",
+  "portfolioFingerprint": "ee594880d876d778",
+  "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON is down 2.46% from entry but remains above its $81.05 breakout trigger and $79.11 invalidation. The supplied trigger is a price-move review only; it provides no fresh volume, momentum-rank reversal, or participation evidence to justify reducing or exiting. AMD and HPE are above watch levels, but remain WATCH_ONLY and lack supplied sustained-participation confirmation, so no new purchase is warranted.",
+  "reason": "ON is $84.25, above its $81.05 breakout trigger and $79.11 invalidation, so the existing breakout thesis has not failed. The modest decline from the $85.35 entry alone is not sufficient to reduce or exit. Although AMD and HPE are above their stated trigger levels, the supplied data do not confirm sustained participation, so no new purchase is justified.",
   "confidence": 0.78,
-  "evidenceLimitations": "Fresh data contain only intraday prices and trigger observations. No updated volume, closing confirmation, broader breadth, volatility, or momentum metrics are supplied; AMD/HPE watchlist signals are explicitly shadow/review observations rather than actionable entries.",
+  "evidenceLimitations": "Only intraday price quotes are fresh; no fresh volume, closing confirmation, ranked-momentum update, or broader-market participation data are supplied. Trigger observations are reviews rather than orders.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "6115909a3e57bd19"
+  "decisionKey": "848c68d731aa3334"
 }
