@@ -47,8 +47,20 @@ jobs:
           test -n "$OPENAI_API_KEY"
           node quant/decision-consumer.js
 
-      - name: Commit verified decision artifacts
+      - name: Check whether consumer produced a decision
+        id: consumer
         if: steps.trigger.outputs.needs == 'true'
+        shell: bash
+        run: |
+          if git diff --quiet -- quant/decision-event.json quant/decision-result.json data.js; then
+            echo "produced=false" >> "$GITHUB_OUTPUT"
+            echo "Duplicate/immaterial trigger suppressed; no model decision artifact to commit."
+          else
+            echo "produced=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit verified decision artifacts
+        if: steps.trigger.outputs.needs == 'true' && steps.consumer.outputs.produced == 'true'
         shell: bash
         run: |
           git fetch origin main
