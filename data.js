@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-02 16:07 UTC",
+    "asOf": "2026-10-02 16:28 UTC",
     "lastTrade": "2026-10-02 13:33 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -48,7 +48,7 @@ window.PORTFOLIO_DATA = {
       "symbol": "ON",
       "qty": 2.6375123,
       "avgUsd": 85.34500122070312,
-      "lastUsd": 84.2699966430664,
+      "lastUsd": 84.23999786376953,
       "costEur": 200,
       "entryReason": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
       "openedAt": "2026-10-02T13:33:00.322Z",
@@ -63,7 +63,7 @@ window.PORTFOLIO_DATA = {
       "value": 197.41,
       "pnl": -2.59,
       "pnlPct": -1.29,
-      "fxUsdPerEur": 1.1258726119995117
+      "fxUsdPerEur": 1.1254924535751343
     }
   ],
   "trades": [
