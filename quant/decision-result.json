@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T10:27:08.405Z",
-  "baseCommitSha": "5941e0554bd2e2eb0de5dd57d8a981b009096a74",
-  "triggerKey": "44c574258dbcdf7f",
+  "processedAt": "2026-10-02T10:43:02.865Z",
+  "baseCommitSha": "3b98acf5185aac180cefbe03bf11374c67ea570f",
+  "triggerKey": "f151dac93e9de914",
   "portfolioFingerprint": "38cf1ada98eb7875",
   "gateReason": "NEW_TRIGGER_KEY",
   "decision": "HOLD",
   "symbol": "ETH",
   "eurAmount": null,
-  "reason": "ETH at $2,739.72 remains below the required $2,742.56 breakout level, and the strategy requires two completed 60-minute closes above that level with improving participation and supportive BTC behavior. Those confirmations are not supplied. HPE likewise lacks its required two completed 15-minute closes above $65.76 and is based on a stale prior-session market timestamp. Remain fully in cash.",
-  "confidence": 0.96,
-  "evidenceLimitations": "Only spot/last-price observations are supplied; no completed candle series, volume/participation confirmation, BTC confirmation, current HPE regular-session data, or refreshed broad-market conditions are available. Trigger observations are reviews rather than orders.",
+  "reason": "ETH spot is above the $2,742.56 price level, but the setup explicitly requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Only a single fresh spot quote is supplied. HPE does not qualify: its required reclaim confirmation was not verified and its setup expired at the 2026-10-01 close under the recorded rule.",
+  "confidence": 0.93,
+  "evidenceLimitations": "No completed ETH hourly candles, volume/participation data, BTC confirmation, or fresh broad-market context were supplied. HPE quote market time is from the prior session and cannot establish a valid reclaim.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "2f1925ae642891c6"
+  "decisionKey": "fb159388d8984658"
 }
