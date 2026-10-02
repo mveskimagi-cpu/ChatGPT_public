@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T14:56:30.577Z",
-  "baseCommitSha": "241633c7efd4c985d139d4a8b9dfe8d9597d1699",
+  "processedAt": "2026-10-02T15:11:17.154Z",
+  "baseCommitSha": "4876b91d4bccb54022cf81d1ac4e09879cfa656c",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "ee594880d876d778",
+  "portfolioFingerprint": "dfdcdaca154c29f9",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON is $84.25, above its $81.05 breakout trigger and $79.11 invalidation, so the existing breakout thesis has not failed. The modest decline from the $85.35 entry alone is not sufficient to reduce or exit. Although AMD and HPE are above their stated trigger levels, the supplied data do not confirm sustained participation, so no new purchase is justified.",
+  "reason": "ON is at $84.11, still above its $81.05 breakout trigger and $79.11 invalidation, but below the $85.35 entry. The supplied quote alone does not establish a failed breakout or renewed sustained participation. AMD and HPE are above their trigger levels, but their trigger observations are reviews rather than entry orders and no fresh volume/participation confirmation is supplied.",
   "confidence": 0.78,
-  "evidenceLimitations": "Only intraday price quotes are fresh; no fresh volume, closing confirmation, ranked-momentum update, or broader-market participation data are supplied. Trigger observations are reviews rather than orders.",
+  "evidenceLimitations": "Only intraday Yahoo prices and trigger-level observations are fresh. No fresh volume, closing confirmation, breadth, volatility, or reversal data is supplied; broader strategy memory notes mixed conditions and fragile liquidity.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "848c68d731aa3334"
+  "decisionKey": "89bd7f44881bfac6"
 }
