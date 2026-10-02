@@ -33,14 +33,14 @@ function classifyRule(text){
 }
 function crossed(price,rule){return rule.op==="BELOW"?price<rule.level:price>rule.level}
 
-async function completedHourlyCloses(symbol,count=2){
+async function completedCloses(symbol,count,timeframeMinutes){
   if(symbol!=="BTC"&&symbol!=="ETH") return null;
-  const end=Math.floor(Date.now()/1000), start=end-6*3600;
-  const a=await fetchJson("https://api.exchange.coinbase.com/products/"+symbol+"-USD/candles?granularity=3600&start="+new Date(start*1000).toISOString()+"&end="+new Date(end*1000).toISOString());
-  const currentHour=Math.floor(end/3600)*3600;
-  return (Array.isArray(a)?a:[]).filter(x=>Array.isArray(x)&&x.length>=5&&Number(x[0])+3600<=currentHour).sort((a,b)=>b[0]-a[0]).slice(0,count).map(x=>({start:new Date(Number(x[0])*1000).toISOString(),close:Number(x[4])}));
+  const granularity=timeframeMinutes*60,end=Math.floor(Date.now()/1000), start=end-Math.max(6*3600,(count+3)*granularity);
+  const a=await fetchJson("https://api.exchange.coinbase.com/products/"+symbol+"-USD/candles?granularity="+granularity+"&start="+new Date(start*1000).toISOString()+"&end="+new Date(end*1000).toISOString());
+  const currentBucket=Math.floor(end/granularity)*granularity;
+  return (Array.isArray(a)?a:[]).filter(x=>Array.isArray(x)&&x.length>=5&&Number(x[0])+granularity<=currentBucket).sort((a,b)=>b[0]-a[0]).slice(0,count).map(x=>({start:new Date(Number(x[0])*1000).toISOString(),close:Number(x[4])}));
 }
-function requiresTwoHourlyCloses(s){return /two completed 60-minute closes|two completed hourly closes/i.test(String(s.trigger||""))}
+function confirmationSpec(s,C){const t=String(s.trigger||"");let m=t.match(/(\d+)\s+completed\s+(\d+)[- ]minute\s+closes?/i);if(m)return{count:+m[1],timeframeMinutes:+m[2]};m=t.match(/(\d+)\s+completed\s+hourly\s+closes?/i);if(m)return{count:+m[1],timeframeMinutes:60};return s.confirmation||null}
 async function price(symbol){
   if(symbol==="BTC"||symbol==="ETH"){
     const x=await fetchJson("https://api.coinbase.com/v2/prices/"+symbol+"-USD/spot");
@@ -57,7 +57,7 @@ async function price(symbol){
 }
 
 (async()=>{
-  const D=loadLedger("data.js"), now=new Date().toISOString(), triggers=[], observations=[], errors=[];
+  const D=loadLedger("data.js"), C={positionPriceMovePct:2,defaultConfirmation:{timeframeMinutes:60,completedCloses:2},quote:{equityInterval:"5m",equityRange:"1d"},...((D.automationConfig||{}).trigger||{})}, now=new Date().toISOString(), triggers=[], observations=[], errors=[];
   const symbols=new Set([...(D.positions||[]).map(p=>p.symbol),...((D.strategyState||{}).watchlist||[]).map(x=>x.symbol),...((D.strategyState||{}).pendingSetups||[]).map(x=>x.symbol)]);
   for(const symbol of symbols){
     try{
@@ -65,8 +65,8 @@ async function price(symbol){
       const pos=(D.positions||[]).find(p=>p.symbol===symbol);
       if(pos){
         const movePct=pos.lastUsd?((q.price/pos.lastUsd)-1)*100:null;
-        if(Number.isFinite(movePct)&&Math.abs(movePct)>=2){
-          triggers.push({type:"PRICE_MOVE",symbol,condition:"abs(move from stored lastUsd) >= 2%",observedPrice:q.price,referencePrice:pos.lastUsd,movePct:Number(movePct.toFixed(3)),source:q.source});
+        if(Number.isFinite(movePct)&&Math.abs(movePct)>=C.positionPriceMovePct){
+          triggers.push({type:"PRICE_MOVE",symbol,condition:"abs(move from stored lastUsd) >= "+C.positionPriceMovePct+"%",observedPrice:q.price,referencePrice:pos.lastUsd,movePct:Number(movePct.toFixed(3)),source:q.source});
         }
         for(const field of ["invalidation","target"]){
           for(const rule of classifyRule(pos[field])){
@@ -77,10 +77,11 @@ async function price(symbol){
       const setups=[...((D.strategyState||{}).watchlist||[]),...((D.strategyState||{}).pendingSetups||[])].filter(x=>x.symbol===symbol);
       for(const s of setups){
         for(const rule of classifyRule(s.trigger)){
-          if(requiresTwoHourlyCloses(s)&&rule.op==="ABOVE"&&(symbol==="BTC"||symbol==="ETH")){
-            const candles=await completedHourlyCloses(symbol,2),confirmed=Array.isArray(candles)&&candles.length===2&&candles.every(x=>x.close>rule.level);
-            observations.push({symbol,setupId:s.setupId||null,type:"HOURLY_CLOSE_CONFIRMATION",level:rule.level,requiredCloses:2,completedCloses:candles||[],confirmed,source:"Coinbase Exchange candles"});
-            if(confirmed) triggers.push({type:"WATCHLIST_BREAKOUT_CONFIRMED",symbol,setup:s.setup||null,setupId:s.setupId||null,condition:"2 completed 60m closes ABOVE $"+rule.level,observedPrice:q.price,completedCloses:candles,source:"Coinbase Exchange candles",shadow:true});
+          const spec=confirmationSpec(s,C);
+          if(spec&&rule.op==="ABOVE"&&(symbol==="BTC"||symbol==="ETH")){
+            const count=spec.count||spec.completedCloses||C.defaultConfirmation.completedCloses,timeframe=spec.timeframeMinutes||C.defaultConfirmation.timeframeMinutes,candles=await completedCloses(symbol,count,timeframe),confirmed=Array.isArray(candles)&&candles.length===count&&candles.every(x=>x.close>rule.level);
+            observations.push({symbol,setupId:s.setupId||null,type:"CANDLE_CLOSE_CONFIRMATION",level:rule.level,timeframeMinutes:timeframe,requiredCloses:count,completedCloses:candles||[],confirmed,source:"Coinbase Exchange candles"});
+            if(confirmed) triggers.push({type:"WATCHLIST_BREAKOUT_CONFIRMED",symbol,setup:s.setup||null,setupId:s.setupId||null,condition:count+" completed "+timeframe+"m closes ABOVE $"+rule.level,observedPrice:q.price,completedCloses:candles,source:"Coinbase Exchange candles",shadow:true});
           }else if(crossed(q.price,rule)) triggers.push({type:"WATCHLIST_TRIGGER_LEVEL",symbol,setup:s.setup||null,setupId:s.setupId||null,condition:rule.op+" $"+rule.level,observedPrice:q.price,source:q.source,shadow:true});
         }
       }
