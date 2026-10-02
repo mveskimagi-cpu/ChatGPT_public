@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T16:28:26.551Z",
-  "baseCommitSha": "af22d4e15d2f91f0f8e3b1d1c913dab4ee440693",
+  "processedAt": "2026-10-02T17:07:27.650Z",
+  "baseCommitSha": "231018b6b4c91eb161c323b9d7084e46ec3a78e6",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "779d2f246813d7d9",
+  "portfolioFingerprint": "5e6a43ea2fd45f71",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger and $79.11 invalidation at the fresh $84.24 quote. The position is modestly below its $85.35 entry, but no supplied fresh reversal, participation deterioration, or invalidation evidence supports a reduction or full exit. AMD and HPE trigger observations are watchlist reviews only; their quoted breakouts lack fresh sustained-participation confirmation, so no new purchase is justified.",
-  "confidence": 0.78,
-  "evidenceLimitations": "Only fresh intraday price quotes are supplied; there is no current volume/participation, close confirmation, updated momentum ranking, or broader-market/sector confirmation. Trigger observations are explicitly shadow/watch-only and are not orders.",
+  "reason": "Maintain the existing ON position: the fresh $84.47 quote remains above the $81.05 breakout trigger and $79.11 invalidation, with no supplied evidence of a failed breakout or ranked-momentum reversal. AMD and HPE are above their trigger levels, but the stored setups remain WATCH_ONLY and no fresh sustained-participation evidence supports new entries.",
+  "confidence": 0.82,
+  "evidenceLimitations": "Only fresh prices and trigger-level observations were supplied; there is no current volume, closing confirmation, intraday trend, or updated momentum/volatility data. Trigger observations are reviews rather than orders.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "6ed898ebc5633941"
+  "decisionKey": "24f8d9573d2f3c00"
 }
