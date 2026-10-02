@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T09:46:04.532Z",
-  "baseCommitSha": "fc4d73af3bb0227bac32eaa1c85a3cd08f136f22",
-  "triggerKey": "f151dac93e9de914",
+  "processedAt": "2026-10-02T10:27:08.405Z",
+  "baseCommitSha": "5941e0554bd2e2eb0de5dd57d8a981b009096a74",
+  "triggerKey": "44c574258dbcdf7f",
   "portfolioFingerprint": "38cf1ada98eb7875",
-  "gateReason": "REEVALUATION_DUE",
+  "gateReason": "NEW_TRIGGER_KEY",
   "decision": "HOLD",
   "symbol": "ETH",
   "eurAmount": null,
-  "reason": "ETH spot is marginally above the $2,742.56 breakout level, but the recorded setup requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Only a single fresh spot quote is supplied, with no hourly-close, volume/participation, or BTC-confirmation evidence. HPE remains below its $65.76 reclaim trigger and its setup had already deteriorated materially.",
-  "confidence": 0.93,
-  "evidenceLimitations": "Trigger observations are shadow/review-only, not orders. ETH quote is a point-in-time Coinbase spot price; no completed candle data, volume metrics, BTC quote, or broader market/liquidity update was supplied. HPE quote market time is prior-session and does not verify current regular-session reclaim or invalidation conditions.",
+  "reason": "ETH at $2,739.72 remains below the required $2,742.56 breakout level, and the strategy requires two completed 60-minute closes above that level with improving participation and supportive BTC behavior. Those confirmations are not supplied. HPE likewise lacks its required two completed 15-minute closes above $65.76 and is based on a stale prior-session market timestamp. Remain fully in cash.",
+  "confidence": 0.96,
+  "evidenceLimitations": "Only spot/last-price observations are supplied; no completed candle series, volume/participation confirmation, BTC confirmation, current HPE regular-session data, or refreshed broad-market conditions are available. Trigger observations are reviews rather than orders.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "e673c328e0141410"
+  "decisionKey": "2f1925ae642891c6"
 }
