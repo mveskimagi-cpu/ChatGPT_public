@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T19:08:52.677Z",
-  "baseCommitSha": "a4c25bfbf5b0b0deaec5981463716ffecae1eb94",
+  "processedAt": "2026-10-02T19:28:09.323Z",
+  "baseCommitSha": "9fcc4103cd04f5cf39845cf8fb5612b1ec027e60",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "5c48042ea8fdf8e3",
+  "portfolioFingerprint": "33a25f9506b5308d",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON at $83.68 remains above its $81.05 breakout trigger and $79.11 invalidation, so the active position's structure has not failed. The modest decline from the $85.35 entry does not alone justify reduction. AMD and HPE are above quoted trigger levels, but no fresh sustained-participation or volume confirmation is supplied, so their alerts remain reviews rather than new orders.",
+  "reason": "Maintain the existing ON position: the fresh $84.15 quote remains above its $81.05 breakout trigger and $79.11 invalidation, so the stored breakout thesis is not invalidated. Do not add. AMD and HPE are above their watch triggers, but these trigger observations lack fresh sustained-participation/volume and reversal-confirmation evidence; watchlist triggers are reviews rather than orders.",
   "confidence": 0.78,
-  "evidenceLimitations": "Fresh inputs provide only intraday prices and trigger-level observations. There is no updated volume, close confirmation, momentum ranking, volatility, or broader-market data to validate sustained breakouts or support adding exposure.",
+  "evidenceLimitations": "Only fresh intraday prices and trigger-level observations were supplied. No current volume, closing confirmation, updated momentum/volatility, broader-market, or sector-participation data was provided; AMD and HPE therefore do not meet sufficient evidence for a new buy.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "04b37ac38a430f8d"
+  "decisionKey": "f3361995524bc369"
 }
