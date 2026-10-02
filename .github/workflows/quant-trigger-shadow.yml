@@ -25,6 +25,38 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check daily universe refresh
+        id: universe
+        shell: bash
+        run: |
+          TODAY=$(date -u +%F)
+          LAST=$(node -e "const fs=require('fs'),vm=require('vm');const s={window:{}};vm.createContext(s);vm.runInContext(fs.readFileSync('data.js','utf8'),s);process.stdout.write((s.window.PORTFOLIO_DATA.strategyState?.dailyUniverseSelection?.selectedAt||'').slice(0,10))")
+          HOUR=$(date -u +%H)
+          if [ "$LAST" != "$TODAY" ] && [ "$HOUR" -ge 12 ]; then echo "refresh=true" >> "$GITHUB_OUTPUT"; else echo "refresh=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Run daily universe selector
+        if: steps.universe.outputs.refresh == 'true'
+        run: node quant/daily-universe-selector.js
+
+      - name: Commit daily universe selection
+        if: steps.universe.outputs.refresh == 'true'
+        shell: bash
+        run: |
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo "main changed; fail closed"; exit 1; }
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.js quant/daily-universe.json
+          git commit -m "Daily Quant universe selection $(date -u +%F)"
+          git push origin HEAD:main
+          git fetch origin main
+          test "$(cat data.js)" = "$(git show origin/main:data.js)"
+          test "$(cat quant/daily-universe.json)" = "$(git show origin/main:quant/daily-universe.json)"
+
+      - name: Refresh checkout after universe commit
+        if: steps.universe.outputs.refresh == 'true'
+        run: git reset --hard origin/main
+
       - name: Run trigger engine
         run: node quant/trigger-engine.js
 
