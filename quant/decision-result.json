@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T10:43:02.865Z",
-  "baseCommitSha": "3b98acf5185aac180cefbe03bf11374c67ea570f",
+  "processedAt": "2026-10-02T11:55:49.949Z",
+  "baseCommitSha": "6b78972b8192f622d2769252d7821496a33274b3",
   "triggerKey": "f151dac93e9de914",
   "portfolioFingerprint": "38cf1ada98eb7875",
-  "gateReason": "NEW_TRIGGER_KEY",
+  "gateReason": "REEVALUATION_DUE",
   "decision": "HOLD",
   "symbol": "ETH",
   "eurAmount": null,
-  "reason": "ETH spot is above the $2,742.56 price level, but the setup explicitly requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Only a single fresh spot quote is supplied. HPE does not qualify: its required reclaim confirmation was not verified and its setup expired at the 2026-10-01 close under the recorded rule.",
-  "confidence": 0.93,
-  "evidenceLimitations": "No completed ETH hourly candles, volume/participation data, BTC confirmation, or fresh broad-market context were supplied. HPE quote market time is from the prior session and cannot establish a valid reclaim.",
+  "reason": "ETH spot is marginally above the $2,742.56 price threshold, but the recorded setup requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Those confirmations are not supplied. HPE remains unconfirmed and its quote is stale relative to the review trigger, with no verified reclaim sequence. Maintain cash.",
+  "confidence": 0.91,
+  "evidenceLimitations": "Only a single ETH spot observation is provided; no hourly candle-close history, volume/participation data, BTC confirmation, or current broad-market context is supplied. HPE market timestamp is from the prior session and cannot validate its required regular-session closes.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "fb159388d8984658"
+  "decisionKey": "f7b1b2588aafab77"
 }
