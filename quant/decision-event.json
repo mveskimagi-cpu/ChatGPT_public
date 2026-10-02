@@ -1,14 +1,14 @@
 {
   "schemaVersion": 3,
   "eventType": "QUANT_DECISION_REQUIRED",
-  "publishedAt": "2026-10-02T08:29:46.759Z",
+  "publishedAt": "2026-10-02T09:46:04.531Z",
   "baseRef": "main",
-  "baseCommitSha": "c18e457ff07bcc8b7dd715051d0a404c9f537d58",
+  "baseCommitSha": "fc4d73af3bb0227bac32eaa1c85a3cd08f136f22",
   "triggerKey": "f151dac93e9de914",
   "trigger": {
     "schemaVersion": 2,
     "mode": "EVENT_BRIDGE_PRODUCTION",
-    "triggeredAt": "2026-10-02T08:29:41.838Z",
+    "triggeredAt": "2026-10-02T09:45:58.666Z",
     "needsDecision": true,
     "triggerKey": "f151dac93e9de914",
     "triggers": [
@@ -18,7 +18,7 @@
         "setup": "Conditional range breakout",
         "setupId": "ETH-20260929-range-breakout",
         "condition": "ABOVE $2742.56",
-        "observedPrice": 2759.275,
+        "observedPrice": 2746.595,
         "source": "Coinbase spot",
         "shadow": true
       },
@@ -56,7 +56,7 @@
     "observations": [
       {
         "symbol": "ETH",
-        "price": 2759.275,
+        "price": 2746.595,
         "source": "Coinbase spot",
         "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot"
       },
@@ -74,10 +74,10 @@
     "quotes": {
       "ETH": {
         "symbol": "ETH",
-        "priceUsd": 2759.115,
+        "priceUsd": 2746.595,
         "provider": "Coinbase",
         "url": "https://api.coinbase.com/v2/prices/ETH-USD/spot",
-        "retrievedAt": "2026-10-02T08:29:42.417Z"
+        "retrievedAt": "2026-10-02T09:45:59.375Z"
       },
       "HPE": {
         "symbol": "HPE",
@@ -85,13 +85,13 @@
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d",
         "marketTime": "2026-10-01T20:04:42.000Z",
-        "retrievedAt": "2026-10-02T08:29:42.467Z"
+        "retrievedAt": "2026-10-02T09:45:59.482Z"
       }
     },
     "fx": {
-      "usdPerEur": 1.1257457733154297,
+      "usdPerEur": 1.1252391338348389,
       "provider": "Yahoo Finance chart",
-      "retrievedAt": "2026-10-02T08:29:42.503Z"
+      "retrievedAt": "2026-10-02T09:45:59.547Z"
     }
   }
 }

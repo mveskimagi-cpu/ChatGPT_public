@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T08:29:46.760Z",
-  "baseCommitSha": "c18e457ff07bcc8b7dd715051d0a404c9f537d58",
+  "processedAt": "2026-10-02T09:46:04.532Z",
+  "baseCommitSha": "fc4d73af3bb0227bac32eaa1c85a3cd08f136f22",
   "triggerKey": "f151dac93e9de914",
   "portfolioFingerprint": "38cf1ada98eb7875",
-  "gateReason": "NEW_TRIGGER_KEY",
+  "gateReason": "REEVALUATION_DUE",
   "decision": "HOLD",
   "symbol": "ETH",
   "eurAmount": null,
-  "reason": "ETH spot is above the $2,742.56 price level, but the recorded setup requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Only a single spot quote is supplied, with no candle-close, volume/participation, or BTC confirmation. HPE remains unconfirmed and its recorded setup had prior support-break/invalidation risk.",
-  "confidence": 0.91,
-  "evidenceLimitations": "Trigger observations are shadow/review signals, not orders. ETH quote alone cannot establish two completed hourly closes or participation. No fresh BTC, ETH volume, broader-market, or completed HPE candle/invalidation evidence was supplied.",
+  "reason": "ETH spot is marginally above the $2,742.56 breakout level, but the recorded setup requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Only a single fresh spot quote is supplied, with no hourly-close, volume/participation, or BTC-confirmation evidence. HPE remains below its $65.76 reclaim trigger and its setup had already deteriorated materially.",
+  "confidence": 0.93,
+  "evidenceLimitations": "Trigger observations are shadow/review-only, not orders. ETH quote is a point-in-time Coinbase spot price; no completed candle data, volume metrics, BTC quote, or broader market/liquidity update was supplied. HPE quote market time is prior-session and does not verify current regular-session reclaim or invalidation conditions.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "c11d2082088696ec"
+  "decisionKey": "e673c328e0141410"
 }
