@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T20:55:32.420Z",
-  "baseCommitSha": "fd458d2ed678ba07bc7beb45902b64ce79e8d084",
+  "processedAt": "2026-10-02T21:07:25.954Z",
+  "baseCommitSha": "3bc39c7391fd40d7601affeeb0d70ebcb1d0b68a",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "f6ed59df6c2f1971",
+  "portfolioFingerprint": "c2e646388573ea3f",
   "gateReason": "PORTFOLIO_CHANGED",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "Maintain the existing ON position: the fresh $84.89 quote remains above the recorded $81.05 breakout trigger and $79.11 invalidation, despite a modest loss versus the $85.35 entry. AMD and HPE are above their watch triggers, but their triggers are review signals rather than orders and no fresh participation/volume confirmation is supplied for a new allocation. The stored regime remains fragile, favoring no change.",
-  "confidence": 0.84,
-  "evidenceLimitations": "Only fresh price quotes and trigger-level observations are supplied; no fresh volume, closing confirmation, intraday reversal data, updated momentum/volatility metrics, or broader-market confirmation is available. Quotes are near/after the stated market close and trigger observations are marked shadow.",
+  "reason": "ON remains above its $81.05 breakout trigger at $84.89 and above the stored $79.11 invalidation. The modest loss versus entry does not by itself invalidate the 1-3 day breakout thesis. AMD and HPE are above their trigger levels, but the supplied quotes do not confirm sustained participation; triggers are reviews rather than buy orders.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Only latest price quotes are supplied; no fresh volume, closing-structure, intraday reversal, or updated cross-asset regime data are available. Quotes are near/after the regular-session close and trigger observations are marked shadow.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "091cce8c0437b152"
+  "decisionKey": "3ca211904291f123"
 }
