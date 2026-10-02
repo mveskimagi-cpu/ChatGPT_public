@@ -41,19 +41,19 @@ async function completedCloses(symbol,count,timeframeMinutes){
   return (Array.isArray(a)?a:[]).filter(x=>Array.isArray(x)&&x.length>=5&&Number(x[0])+granularity<=currentBucket).sort((a,b)=>b[0]-a[0]).slice(0,count).map(x=>({start:new Date(Number(x[0])*1000).toISOString(),close:Number(x[4])}));
 }
 function confirmationSpec(s,C){const t=String(s.trigger||"");let m=t.match(/(\d+)\s+completed\s+(\d+)[- ]minute\s+closes?/i);if(m)return{count:+m[1],timeframeMinutes:+m[2]};m=t.match(/(\d+)\s+completed\s+hourly\s+closes?/i);if(m)return{count:+m[1],timeframeMinutes:60};return s.confirmation||null}
-async function price(symbol){
+async function price(symbol,C){
   if(symbol==="BTC"||symbol==="ETH"){
     const x=await fetchJson("https://api.coinbase.com/v2/prices/"+symbol+"-USD/spot");
     return {price:Number(x.data.amount),source:"Coinbase spot",url:"https://api.coinbase.com/v2/prices/"+symbol+"-USD/spot"};
   }
-  const y=await fetchJson("https://query1.finance.yahoo.com/v8/finance/chart/"+encodeURIComponent(symbol)+"?interval=5m&range=1d");
+  const y=await fetchJson("https://query1.finance.yahoo.com/v8/finance/chart/"+encodeURIComponent(symbol)+"?interval="+encodeURIComponent(C.quote.equityInterval)+"&range="+encodeURIComponent(C.quote.equityRange));
   const r=y.chart&&y.chart.result&&y.chart.result[0];
   if(!r) throw new Error("No Yahoo chart result for "+symbol);
   const meta=r.meta||{}, q=r.indicators&&r.indicators.quote&&r.indicators.quote[0], closes=(q&&q.close)||[];
   let p=null; for(let i=closes.length-1;i>=0;i--) if(Number.isFinite(closes[i])){p=closes[i];break}
   if(!Number.isFinite(p)) p=Number(meta.regularMarketPrice);
   if(!Number.isFinite(p)) throw new Error("No price for "+symbol);
-  return {price:p,source:"Yahoo Finance chart",url:"https://query1.finance.yahoo.com/v8/finance/chart/"+symbol+"?interval=5m&range=1d"};
+  return {price:p,source:"Yahoo Finance chart",url:"https://query1.finance.yahoo.com/v8/finance/chart/"+symbol+"?interval="+C.quote.equityInterval+"&range="+C.quote.equityRange};
 }
 
 (async()=>{
@@ -61,7 +61,7 @@ async function price(symbol){
   const symbols=new Set([...(D.positions||[]).map(p=>p.symbol),...((D.strategyState||{}).watchlist||[]).map(x=>x.symbol),...((D.strategyState||{}).pendingSetups||[]).map(x=>x.symbol)]);
   for(const symbol of symbols){
     try{
-      const q=await price(symbol); observations.push({symbol,...q});
+      const q=await price(symbol,C); observations.push({symbol,...q});
       const pos=(D.positions||[]).find(p=>p.symbol===symbol);
       if(pos){
         const movePct=pos.lastUsd?((q.price/pos.lastUsd)-1)*100:null;
