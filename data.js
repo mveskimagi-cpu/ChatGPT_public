@@ -7,10 +7,10 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-09-30 18:04 Europe/Tallinn",
-    "lastTrade": "2026-09-30 17:51 Europe/Tallinn",
+    "asOf": "2026-10-02 13:33 UTC",
+    "lastTrade": "2026-10-02 13:33 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
-    "note": "Paper trading only — no real money is traded. Ledger forensically reconciled 2026-09-29; recovered missing BTC BUY from 2026-09-18 22:33."
+    "note": "Paper trading only — no real money is traded."
   },
   "automationConfig": {
     "schemaVersion": 1,
@@ -37,13 +37,25 @@ window.PORTFOLIO_DATA = {
   "summary": {
     "initial": 1000,
     "value": 998.57,
-    "cash": 998.57,
+    "cash": 798.57,
     "realized": -1.43,
     "unrealized": 0,
     "total": -1.43,
     "totalPct": -0.14
   },
-  "positions": [],
+  "positions": [
+    {
+      "symbol": "ON",
+      "qty": 2.6375123,
+      "avgUsd": 85.34500122070312,
+      "lastUsd": 85.34500122070312,
+      "costEur": 200,
+      "entryReason": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
+      "openedAt": "2026-10-02T13:33:00.322Z",
+      "timeHorizon": "1-3 trading days",
+      "riskLevel": "MEDIUM"
+    }
+  ],
   "trades": [
     {
       "date": "2026-09-10 13:28",
@@ -439,6 +451,25 @@ window.PORTFOLIO_DATA = {
           "reason": "The recorded $230.94-$232.75 reassessment zone was reached intraday at $232.37. The timestamped $230.55 quote then fell below the lower boundary, satisfying the recorded failed-rebound exit condition; close the full small position rather than retain a micro-lot.",
           "originalEntryAttribution": "UNKNOWN; the result confirms only that the prospective migration-era rebound objective was reached, not the unrecorded historical entry thesis."
         }
+      }
+    },
+    {
+      "date": "2026-10-02 13:33",
+      "symbol": "ON",
+      "side": "BUY",
+      "qty": 2.6375123,
+      "priceUsd": 85.34500122070312,
+      "eur": 200,
+      "pnl": null,
+      "note": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
+      "execution": {
+        "priceProvider": "Yahoo Finance chart",
+        "priceSourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=5m&range=1d",
+        "quotedAt": "2026-10-02T13:32:52.000Z",
+        "retrievedAt": "2026-10-02T13:32:53.962Z",
+        "fxUsdPerEur": 1.1254924535751343,
+        "fxProvider": "Yahoo Finance chart",
+        "paperTrade": true
       }
     }
   ],

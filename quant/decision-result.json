@@ -1,19 +1,24 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T12:57:25.647Z",
-  "baseCommitSha": "8415c0cce2b06d5f30c48c780db9857d4cd6d2d3",
-  "triggerKey": "2b79b184bba17c7e",
+  "processedAt": "2026-10-02T13:33:00.323Z",
+  "baseCommitSha": "854f08b2402ea391a60cfb58cb7685e7086b3b9b",
+  "triggerKey": "c515ab9dde841664",
   "portfolioFingerprint": "38cf1ada98eb7875",
   "gateReason": "NEW_SEMANTIC_TRIGGER",
-  "decision": "HOLD",
-  "symbol": "ETH",
-  "eurAmount": null,
-  "reason": "The required two completed 60-minute closes above $2,742.56 were supplied ($2,742.62 and $2,746.20), with spot near $2,755.42. However, the recorded setup also requires verified improving participation and supportive BTC behavior; neither is supplied in fresh evidence. Given the cash-only posture and mixed/tight-liquidity regime, the breakout confirmation alone is insufficient for a new position.",
-  "confidence": 0.78,
-  "evidenceLimitations": "No fresh BTC quote or trend confirmation, no ETH volume/participation data, no post-breakout candle follow-through beyond the two listed closes, and the trigger is labeled shadow/research-only.",
-  "portfolioMutation": false,
-  "execution": null,
+  "decision": "BUY",
+  "symbol": "ON",
+  "eurAmount": 200,
+  "reason": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
+  "confidence": 0.62,
+  "evidenceLimitations": "Only a single intraday quote confirms the level; no fresh post-trigger volume, candle-close, bid/ask, market breadth, or stop-execution data is supplied. Trigger observations are explicitly shadow/research signals, and broad-market conditions remain adverse for momentum exposure.",
+  "portfolioMutation": true,
+  "execution": {
+    "side": "BUY",
+    "qty": 2.6375123,
+    "priceUsd": 85.34500122070312,
+    "eur": 200
+  },
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "93c5295d44dd1a58"
+  "decisionKey": "adeb5ab16fe0e1e7"
 }
