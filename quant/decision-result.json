@@ -1,17 +1,17 @@
 {
   "schemaVersion": 2,
-  "processedAt": "2026-10-02T05:42:01.293Z",
-  "baseCommitSha": "0a2df0de8f7eb3d9df30a7f9c9f448ba8fddea50",
+  "processedAt": "2026-10-02T05:55:05.191Z",
+  "baseCommitSha": "170fdd1f187fef399b256496169fb6a56dddfcfa",
   "triggerKey": "44c574258dbcdf7f",
   "decision": "HOLD",
   "symbol": "ETH",
   "eurAmount": null,
-  "reason": "ETH at $2,714.94 remains below the recorded $2,742.56 breakout threshold. The required confirmation—two completed 60-minute closes above that level with improving participation and supportive BTC behavior—was not supplied. HPE's partial reclaim of support does not meet its separate two 15-minute closes above $65.76 requirement and the recorded setup expired at the prior session close absent a reclaim.",
+  "reason": "Remain fully in cash. ETH at $2,716.14 is still below the required $2,742.56 breakout level, and supplied evidence does not verify two completed 60-minute closes above that level, improving participation, or supportive BTC confirmation. HPE's price recovery above its support references does not satisfy its required two completed 15-minute closes above $65.76 and its setup had prior support-break uncertainty. No candidate-specific confirmed entry is present.",
   "confidence": 0.94,
-  "evidenceLimitations": "Only point-in-time ETH and HPE quotes were supplied. No completed candle series, volume/participation data, BTC confirmation, current broad-market context, or verified HPE 30-minute close was provided. Trigger observations are review-only shadow alerts, not trade confirmations.",
+  "evidenceLimitations": "Quotes are point-in-time only. No completed ETH hourly candles, BTC behavior, volume/participation data, or completed HPE 15-/30-minute candle verification was supplied. Trigger observations are reviews, not trade orders, and are marked shadow.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "184f6b1e1e2e9aaa"
+  "decisionKey": "f70b327a2975d271"
 }
