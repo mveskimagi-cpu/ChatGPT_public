@@ -1,24 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T13:33:00.323Z",
-  "baseCommitSha": "854f08b2402ea391a60cfb58cb7685e7086b3b9b",
+  "processedAt": "2026-10-02T13:55:42.098Z",
+  "baseCommitSha": "aac8294792c0ce4d341cc1caae343492259ceb36",
   "triggerKey": "c515ab9dde841664",
-  "portfolioFingerprint": "38cf1ada98eb7875",
-  "gateReason": "NEW_SEMANTIC_TRIGGER",
-  "decision": "BUY",
+  "portfolioFingerprint": "65277edcf2fca9c4",
+  "gateReason": "PORTFOLIO_CHANGED",
+  "decision": "HOLD",
   "symbol": "ON",
-  "eurAmount": 200,
-  "reason": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
-  "confidence": 0.62,
-  "evidenceLimitations": "Only a single intraday quote confirms the level; no fresh post-trigger volume, candle-close, bid/ask, market breadth, or stop-execution data is supplied. Trigger observations are explicitly shadow/research signals, and broad-market conditions remain adverse for momentum exposure.",
-  "portfolioMutation": true,
-  "execution": {
-    "side": "BUY",
-    "qty": 2.6375123,
-    "priceUsd": 85.34500122070312,
-    "eur": 200
-  },
+  "eurAmount": null,
+  "reason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
+  "confidence": 0.72,
+  "evidenceLimitations": "Only 5-minute fresh price quotes are supplied; there is no updated volume, close confirmation, broader-market data, or intraday support assessment.",
+  "portfolioMutation": false,
+  "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "adeb5ab16fe0e1e7"
+  "decisionKey": "49d9f41a6bc8bd47"
 }
