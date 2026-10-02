@@ -1,19 +1,19 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-02T11:55:49.949Z",
-  "baseCommitSha": "6b78972b8192f622d2769252d7821496a33274b3",
-  "triggerKey": "f151dac93e9de914",
+  "processedAt": "2026-10-02T12:57:25.647Z",
+  "baseCommitSha": "8415c0cce2b06d5f30c48c780db9857d4cd6d2d3",
+  "triggerKey": "2b79b184bba17c7e",
   "portfolioFingerprint": "38cf1ada98eb7875",
-  "gateReason": "REEVALUATION_DUE",
+  "gateReason": "NEW_SEMANTIC_TRIGGER",
   "decision": "HOLD",
   "symbol": "ETH",
   "eurAmount": null,
-  "reason": "ETH spot is marginally above the $2,742.56 price threshold, but the recorded setup requires two completed 60-minute closes above that level plus verified improving participation and supportive BTC behavior. Those confirmations are not supplied. HPE remains unconfirmed and its quote is stale relative to the review trigger, with no verified reclaim sequence. Maintain cash.",
-  "confidence": 0.91,
-  "evidenceLimitations": "Only a single ETH spot observation is provided; no hourly candle-close history, volume/participation data, BTC confirmation, or current broad-market context is supplied. HPE market timestamp is from the prior session and cannot validate its required regular-session closes.",
+  "reason": "The required two completed 60-minute closes above $2,742.56 were supplied ($2,742.62 and $2,746.20), with spot near $2,755.42. However, the recorded setup also requires verified improving participation and supportive BTC behavior; neither is supplied in fresh evidence. Given the cash-only posture and mixed/tight-liquidity regime, the breakout confirmation alone is insufficient for a new position.",
+  "confidence": 0.78,
+  "evidenceLimitations": "No fresh BTC quote or trend confirmation, no ETH volume/participation data, no post-breakout candle follow-through beyond the two listed closes, and the trigger is labeled shadow/research-only.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "f7b1b2588aafab77"
+  "decisionKey": "93c5295d44dd1a58"
 }
