@@ -36,13 +36,18 @@ function mutate(D,d,e,q,F){
  D.trades=D.trades||[];D.trades.push({date:stamp,symbol:d.symbol,side:e.side,qty:e.qty,priceUsd:e.priceUsd,eur:e.eur,pnl:e.pnl??null,note:d.reason,execution:{priceProvider:q.provider,priceSourceUrl:q.url,quotedAt:q.marketTime||null,retrievedAt:q.retrievedAt,fxUsdPerEur:F.usdPerEur,fxProvider:F.provider,paperTrade:true}});
  const unreal=(D.positions||[]).reduce((s,p)=>s+((+p.lastUsd-(+p.avgUsd))*+p.qty/F.usdPerEur),0);D.summary.unrealized=n2(unreal);D.summary.value=n2(D.summary.cash+(D.positions||[]).reduce((s,p)=>s+(+p.qty*+p.lastUsd/F.usdPerEur),0));D.summary.total=n2(D.summary.value-D.summary.initial);D.summary.totalPct=n2(100*D.summary.total/D.summary.initial);D.meta.asOf=stamp+' UTC';D.meta.lastTrade=stamp+' UTC';D.meta.note='Paper trading only — no real money is traded.';
 }
+function markToMarket(D,Q,F){
+ let unreal=0,value=+D.summary.cash||0;
+ for(const p of D.positions||[]){const q=Q[p.symbol];if(q&&Number.isFinite(+q.priceUsd))p.lastUsd=+q.priceUsd;const cost=+p.costEur||0,current=+p.qty*+p.lastUsd/F.usdPerEur,pnl=current-cost;p.value=n2(current);p.pnl=n2(pnl);p.pnlPct=cost?n2(100*pnl/cost):0;p.fxUsdPerEur=F.usdPerEur;unreal+=pnl;value+=current}
+ D.summary.unrealized=n2(unreal);D.summary.value=n2(value);D.summary.total=n2(D.summary.value-D.summary.initial);D.summary.totalPct=n2(100*D.summary.total/D.summary.initial);D.meta.asOf=new Date().toISOString().slice(0,16).replace('T',' ')+' UTC';return true
+}
 (async()=>{git('fetch','origin','main');const base=git('rev-parse','origin/main'),{src,data:D}=ledger(),T=JSON.parse(fs.readFileSync('quant/trigger.json'));if(!T.needsDecision)return;
- const C={model:'gpt-5.6-terra',reasoningEffort:'medium',promptCacheTtl:'30m',maxBuyEur:250,reevaluationMinutes:240,materialPriceMovePct:1,...(D.automationConfig?.decision||{})};const syms=[...new Set([...(D.positions||[]).map(x=>x.symbol),...T.triggers.map(x=>x.symbol)])],Q={};for(const s of syms)Q[s]=await quote(s);const G=gate(T,D,Q,C);if(!G.call){console.log(JSON.stringify({decisionApiCall:false,...G}));return}const F=await fx();
+ const C={model:'gpt-5.6-terra',reasoningEffort:'medium',promptCacheTtl:'30m',maxBuyEur:250,reevaluationMinutes:240,materialPriceMovePct:1,...(D.automationConfig?.decision||{})};const syms=[...new Set([...(D.positions||[]).map(x=>x.symbol),...T.triggers.map(x=>x.symbol)])],Q={};for(const s of syms)Q[s]=await quote(s);const G=gate(T,D,Q,C),F=await fx();markToMarket(D,Q,F);if(!G.call){fs.writeFileSync('data.js','window.PORTFOLIO_DATA = '+JSON.stringify(D,null,2)+';\n');console.log(JSON.stringify({decisionApiCall:false,markToMarket:true,...G}));return}
  const state=decisionState(D,T,Q,F);
  const d=await ai(state,C),e=validate(d,D,Q,F,C);if(e)mutate(D,d,e,Q[d.symbol],F);
  const event={schemaVersion:3,eventType:'QUANT_DECISION_REQUIRED',publishedAt:new Date().toISOString(),baseRef:'main',baseCommitSha:base,triggerKey:T.triggerKey,trigger:T,freshEvidence:{quotes:Q,fx:F}};
  fs.writeFileSync('quant/decision-event.json',JSON.stringify(event,null,2)+'\n');
- if(e)fs.writeFileSync('data.js','window.PORTFOLIO_DATA = '+JSON.stringify(D,null,2)+';\n');else if(fs.readFileSync('data.js','utf8')!==src)throw Error('unexpected mutation');
+ markToMarket(D,Q,F);fs.writeFileSync('data.js','window.PORTFOLIO_DATA = '+JSON.stringify(D,null,2)+';\n');
  const R={schemaVersion:3,processedAt:new Date().toISOString(),baseCommitSha:base,triggerKey:T.triggerKey,portfolioFingerprint:G.portfolioFingerprint,gateReason:G.reason,decision:d.decision,symbol:d.symbol||null,eurAmount:d.eurAmount||null,reason:d.reason,confidence:d.confidence??null,evidenceLimitations:d.evidenceLimitations||[],portfolioMutation:!!e,execution:e||null,model:C.model,consumerMode:'PRODUCTION_PAPER_TRADING',decisionKey:crypto.createHash('sha256').update(base+T.triggerKey+JSON.stringify(d)).digest('hex').slice(0,16)};
  fs.writeFileSync('quant/decision-result.json',JSON.stringify(R,null,2)+'\n');
 })().catch(e=>{console.error(e.stack||e);process.exit(1)});
