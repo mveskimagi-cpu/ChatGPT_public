@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-03T07:32:14.792Z",
-  "baseCommitSha": "dad02f14728d107b9b6051be76825945fa8378bc",
+  "processedAt": "2026-10-03T08:46:05.657Z",
+  "baseCommitSha": "90e52af1db4bc43b0d17a71b396c4851a87d61b7",
   "triggerKey": "59100b09774908ba",
   "portfolioFingerprint": "2ff8fdfe7d0ff7f9",
   "portfolioFingerprintVersion": 2,
@@ -9,12 +9,12 @@
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger at $84.89 and above the stored $79.11 invalidation, so the active 1-3 trading-day thesis is not invalidated. The price is modestly below entry, but no supplied fresh reversal or participation-failure evidence supports a reduction or full exit. AMD and HPE trigger observations are reviews only; sustained participation confirmation is not supplied, so no new purchases are warranted.",
-  "confidence": 0.84,
-  "evidenceLimitations": "Quotes are end-of-session and the trigger observations are marked shadow. No fresh volume, intraday trend, updated momentum/volatility, broader market, or confirmation of sustained participation data is supplied. The prevailing regime remains vulnerable to tight financial conditions and fragile market breadth.",
+  "reason": "Maintain the existing ON position: the fresh quote of $84.89 remains above the $81.05 breakout trigger and $79.11 invalidation, despite being modestly below the $85.35 entry. No fresh volume, momentum-reversal, or participation data supports adding or reducing. AMD and HPE are above their watch triggers, but triggers are review-only and their stored participation measures were below 1x, so no new purchase is justified.",
+  "confidence": 0.8,
+  "evidenceLimitations": "Fresh data contains only end-of-session prices and no updated volume, momentum ranking, intraday close confirmation, broader-market confirmation, or news. Quotes are from the prior market close relative to review time; AMD/HPE trigger observations are shadow/watchlist signals, not independently validated entry orders.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "66e0391a41369e5c"
+  "decisionKey": "f018558e30f10077"
 }
