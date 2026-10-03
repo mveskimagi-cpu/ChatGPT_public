@@ -1513,5 +1513,112 @@ window.PORTFOLIO_DATA = {
   },
   "strategyMemory": {
     "observations": []
+  },
+  "strategyFeedback": {
+    "schemaVersion": 1,
+    "selections": [
+      {
+        "selectedAt": "2026-10-02T13:13:32.224Z",
+        "method": "35% 5d momentum + 20% 20d momentum + 30% realized volatility + 15% volume expansion; abs 10d correlation <= 0.80",
+        "setups": [
+          {
+            "symbol": "MSTR",
+            "quantScore": 1.515,
+            "entryPrice": null,
+            "entryRule": null,
+            "invalidationRule": null,
+            "metrics": {
+              "momentum5d": -0.687,
+              "momentum20d": 28.523,
+              "realizedVol10dAnnualized": 94.52,
+              "volumeRatio": 1.121,
+              "maxSelectedCorrelation": 0
+            },
+            "outcomes": {
+              "h1": -1.359,
+              "h4": -3.788
+            },
+            "selectionPrice": 163
+          },
+          {
+            "symbol": "ON",
+            "quantScore": 1.453,
+            "entryPrice": null,
+            "entryRule": null,
+            "invalidationRule": null,
+            "metrics": {
+              "momentum5d": 9.474,
+              "momentum20d": 10.227,
+              "realizedVol10dAnnualized": 34.95,
+              "volumeRatio": 1.123,
+              "maxSelectedCorrelation": 0.274
+            },
+            "outcomes": {
+              "h1": 1.231,
+              "h4": 0.109
+            },
+            "selectionPrice": 83.2699966430664
+          },
+          {
+            "symbol": "MU",
+            "quantScore": 0.997,
+            "entryPrice": null,
+            "entryRule": null,
+            "invalidationRule": null,
+            "metrics": {
+              "momentum5d": 1.56,
+              "momentum20d": 17.564,
+              "realizedVol10dAnnualized": 37.75,
+              "volumeRatio": 1.963,
+              "maxSelectedCorrelation": 0.589
+            },
+            "outcomes": {
+              "h1": -1.784,
+              "h4": -1.901
+            },
+            "selectionPrice": 1095.72998046875
+          },
+          {
+            "symbol": "AMD",
+            "quantScore": 0.73,
+            "entryPrice": null,
+            "entryRule": null,
+            "invalidationRule": null,
+            "metrics": {
+              "momentum5d": -2.15,
+              "momentum20d": 33.968,
+              "realizedVol10dAnnualized": 53.48,
+              "volumeRatio": 0.869,
+              "maxSelectedCorrelation": 0.596
+            },
+            "outcomes": {
+              "h1": -1.329,
+              "h4": -1.845
+            },
+            "selectionPrice": 643.1901245117188
+          },
+          {
+            "symbol": "HPE",
+            "quantScore": 0.64,
+            "entryPrice": null,
+            "entryRule": null,
+            "invalidationRule": null,
+            "metrics": {
+              "momentum5d": 1.669,
+              "momentum20d": 26.951,
+              "realizedVol10dAnnualized": 27.42,
+              "volumeRatio": 0.846,
+              "maxSelectedCorrelation": 0.26
+            },
+            "outcomes": {
+              "h1": 0.649,
+              "h4": 2.043
+            },
+            "selectionPrice": 68.5199966430664
+          }
+        ]
+      }
+    ],
+    "lastUpdatedAt": "2026-10-03T04:01:42.279Z"
   }
 };
