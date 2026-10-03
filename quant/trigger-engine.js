@@ -69,15 +69,18 @@ async function price(symbol,C){
           triggers.push({type:"PRICE_MOVE",symbol,condition:"abs(move from stored lastUsd) >= "+C.positionPriceMovePct+"%",observedPrice:q.price,referencePrice:pos.lastUsd,movePct:Number(movePct.toFixed(3)),source:q.source});
         }
         for(const field of ["invalidation","target"]){
-          for(const rule of classifyRule(pos[field])){
+          const structured=field==="invalidation"&&pos.invalidationRule?[{op:pos.invalidationRule.operator,level:+pos.invalidationRule.level}]:null;
+          for(const rule of structured||classifyRule(pos[field])){
             if(crossed(q.price,rule)) triggers.push({type:field==="invalidation"?"POSITION_INVALIDATION_LEVEL":"POSITION_TARGET_LEVEL",symbol,field,condition:rule.op+" $"+rule.level,observedPrice:q.price,source:q.source,shadow:true});
           }
         }
       }
       const setups=[...((D.strategyState||{}).watchlist||[]),...((D.strategyState||{}).pendingSetups||[])].filter(x=>x.symbol===symbol);
       for(const s of setups){
-        for(const rule of classifyRule(s.trigger)){
-          const spec=confirmationSpec(s,C);
+        if(s.expiresAt&&Date.parse(s.expiresAt)<=Date.now()){observations.push({symbol,setupId:s.setupId||null,type:"SETUP_EXPIRED",expiresAt:s.expiresAt});continue}
+        const entryRules=s.entryRule?[{op:s.entryRule.operator,level:+s.entryRule.level,structured:true}]:classifyRule(s.trigger);
+        for(const rule of entryRules){
+          const spec=s.entryRule?{count:+s.entryRule.requiredCloses||1,timeframeMinutes:+s.entryRule.timeframeMinutes||C.defaultConfirmation.timeframeMinutes}:confirmationSpec(s,C);
           if(spec&&rule.op==="ABOVE"&&(symbol==="BTC"||symbol==="ETH")){
             const count=spec.count||spec.completedCloses||C.defaultConfirmation.completedCloses,timeframe=spec.timeframeMinutes||C.defaultConfirmation.timeframeMinutes,candles=await completedCloses(symbol,count,timeframe),confirmed=Array.isArray(candles)&&candles.length===count&&candles.every(x=>x.close>rule.level);
             observations.push({symbol,setupId:s.setupId||null,type:"CANDLE_CLOSE_CONFIRMATION",level:rule.level,timeframeMinutes:timeframe,requiredCloses:count,completedCloses:candles||[],confirmed,source:"Coinbase Exchange candles"});
