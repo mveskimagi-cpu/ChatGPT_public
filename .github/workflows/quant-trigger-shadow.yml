@@ -25,6 +25,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Validate universe selector and matrix contract
+        run: |
+          node --check quant/daily-universe-selector.js
+          node --check universe-matrix.js
+          node --test quant/tests/universe-matrix.test.js
+
       - name: Check daily universe refresh
         id: universe
         shell: bash
