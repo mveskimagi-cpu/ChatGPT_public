@@ -1,14 +1,14 @@
 {
   "schemaVersion": 3,
   "eventType": "QUANT_DECISION_REQUIRED",
-  "publishedAt": "2026-10-03T06:14:23.047Z",
+  "publishedAt": "2026-10-03T07:32:14.791Z",
   "baseRef": "main",
-  "baseCommitSha": "0db6a8b78fe9e0b2219245df24ad026a148dfb05",
+  "baseCommitSha": "dad02f14728d107b9b6051be76825945fa8378bc",
   "triggerKey": "59100b09774908ba",
   "trigger": {
     "schemaVersion": 3,
     "mode": "EVENT_BRIDGE_PRODUCTION",
-    "triggeredAt": "2026-10-03T06:14:18.196Z",
+    "triggeredAt": "2026-10-03T07:32:09.342Z",
     "needsDecision": true,
     "triggerKey": "59100b09774908ba",
     "triggers": [
@@ -86,7 +86,7 @@
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=5m&range=1d",
         "marketTime": "2026-10-02T20:00:01.000Z",
-        "retrievedAt": "2026-10-03T06:14:18.985Z"
+        "retrievedAt": "2026-10-03T07:32:10.349Z"
       },
       "AMD": {
         "symbol": "AMD",
@@ -94,7 +94,7 @@
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=5m&range=1d",
         "marketTime": "2026-10-02T20:00:01.000Z",
-        "retrievedAt": "2026-10-03T06:14:19.036Z"
+        "retrievedAt": "2026-10-03T07:32:10.427Z"
       },
       "HPE": {
         "symbol": "HPE",
@@ -102,13 +102,13 @@
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d",
         "marketTime": "2026-10-02T20:04:07.000Z",
-        "retrievedAt": "2026-10-03T06:14:19.132Z"
+        "retrievedAt": "2026-10-03T07:32:10.505Z"
       }
     },
     "fx": {
       "usdPerEur": 1.1257457733154297,
       "provider": "Yahoo Finance chart",
-      "retrievedAt": "2026-10-03T06:14:19.184Z"
+      "retrievedAt": "2026-10-03T07:32:10.589Z"
     }
   }
 }
