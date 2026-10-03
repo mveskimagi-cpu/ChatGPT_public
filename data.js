@@ -19,8 +19,10 @@ window.PORTFOLIO_DATA = {
       "reasoningEffort": "medium",
       "promptCacheTtl": "30m",
       "maxBuyEur": 250,
-      "reevaluationMinutes": 240,
-      "materialPriceMovePct": 1
+      "positionReviewMovePct": 2,
+      "watchlistMaterialMovePct": 2,
+      "positionReevaluationMinutes": 60,
+      "watchlistReevaluationMinutes": 240
     },
     "trigger": {
       "positionPriceMovePct": 2,
