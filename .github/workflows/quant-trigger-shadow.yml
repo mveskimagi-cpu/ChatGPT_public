@@ -57,6 +57,26 @@ jobs:
         if: steps.universe.outputs.refresh == 'true'
         run: git reset --hard origin/main
 
+      - name: Update strategy feedback
+        run: node quant/strategy-feedback.js
+
+      - name: Commit strategy feedback
+        shell: bash
+        run: |
+          if ! git diff --quiet -- data.js quant/strategy-feedback.json; then
+            git fetch origin main
+            test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo "main changed; fail closed"; exit 1; }
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data.js quant/strategy-feedback.json
+            git commit -m "Update Quant strategy feedback"
+            git push origin HEAD:main
+            git fetch origin main
+            test "$(cat data.js)" = "$(git show origin/main:data.js)"
+            test "$(cat quant/strategy-feedback.json)" = "$(git show origin/main:quant/strategy-feedback.json)"
+            git reset --hard origin/main
+          fi
+
       - name: Run trigger engine
         run: node quant/trigger-engine.js
 
