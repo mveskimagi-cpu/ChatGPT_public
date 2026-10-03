@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-03T05:06:52.827Z",
-  "baseCommitSha": "37b4f314ab02793d6bdf08834f4edbc054146e6c",
+  "processedAt": "2026-10-03T06:14:23.048Z",
+  "baseCommitSha": "0db6a8b78fe9e0b2219245df24ad026a148dfb05",
   "triggerKey": "59100b09774908ba",
   "portfolioFingerprint": "2ff8fdfe7d0ff7f9",
   "portfolioFingerprintVersion": 2,
@@ -9,12 +9,12 @@
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger at $84.89 and above the $79.11 stored invalidation. The modest decline from the $85.35 entry does not constitute supplied evidence of breakout failure. AMD and HPE are above trigger levels, but the trigger observations are reviews rather than orders and lack fresh sustained-participation confirmation; no new exposure is justified.",
-  "confidence": 0.8,
-  "evidenceLimitations": "Quotes are end-of-session Yahoo chart observations and do not include fresh volume, intraday trend confirmation, broader-market updates, or confirmation of sustained participation. The stored macro regime remains mixed and fragile.",
+  "reason": "Maintain the existing ON position: the fresh close of $84.89 remains above the stored $81.05 breakout trigger and well above the $79.11 invalidation, despite being modestly below the $85.35 entry. AMD and HPE are above their watch triggers, but trigger observations alone do not establish sustained participation; no fresh volume, momentum-confirmation, or reversal data supports a new purchase.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Quotes are end-of-session Yahoo chart observations and the trigger outputs are explicitly shadow/review-only. Fresh volume, intraday structure, updated momentum/volatility metrics, and broader market confirmation are not supplied; macro and participation risks in strategy memory remain unresolved.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "688805635c469973"
+  "decisionKey": "010bc7bb3ac038be"
 }
