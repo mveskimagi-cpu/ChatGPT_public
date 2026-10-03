@@ -1,19 +1,20 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-03T01:40:33.595Z",
-  "baseCommitSha": "f7bbffbf1d990048282138ba0341eb05ec3bfbaf",
+  "processedAt": "2026-10-03T04:01:50.763Z",
+  "baseCommitSha": "e0083430ee8bbcbeacf6a6cbcf8dbfda305a02ba",
   "triggerKey": "59100b09774908ba",
-  "portfolioFingerprint": "b8c2b3b27744f3f1",
-  "gateReason": "REEVALUATION_DUE",
+  "portfolioFingerprint": "2ff8fdfe7d0ff7f9",
+  "portfolioFingerprintVersion": 2,
+  "gateReason": "POSITION_REEVALUATION_DUE",
   "decision": "HOLD",
   "symbol": "ON",
   "eurAmount": null,
-  "reason": "ON remains above its $81.05 breakout trigger and $79.11 invalidation, but the fresh $84.89 quote is below the $85.35 entry and no new volume, momentum-confirmation, or reversal data support changing the existing position. AMD and HPE are above watch triggers, but trigger observations alone are reviews rather than buy orders and their supplied participation confirmation is stale/insufficient.",
-  "confidence": 0.79,
-  "evidenceLimitations": "Fresh inputs provide closing-price trigger status only; no fresh volume, intraday structure, updated momentum/volatility metrics, or broad-market confirmation is supplied. Quotes are also after the referenced market session, so no action is warranted solely from watchlist level breaches.",
+  "reason": "Maintain the existing ON position: the fresh $84.89 quote remains above the $81.05 breakout trigger and $79.11 invalidation, with no supplied fresh reversal evidence. AMD and HPE are above their price triggers, but their recorded participation measures were below 1.0x and no fresh volume/sustained-participation confirmation is supplied; triggers are reviews, not orders.",
+  "confidence": 0.82,
+  "evidenceLimitations": "Fresh data contains closing-price quotes only; no updated volume, intraday trend/close confirmation, broader-market confirmation, or new momentum/volatility measurements were supplied. Quotes are also retrieved after the relevant market close.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "bb31721aa2c72096"
+  "decisionKey": "dde93d456c01b1a0"
 }
