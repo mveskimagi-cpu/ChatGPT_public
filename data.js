@@ -7,8 +7,8 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-05 17:58 UTC",
-    "lastTrade": "2026-10-02 13:33 UTC",
+    "asOf": "2026-10-05 18:46 UTC",
+    "lastTrade": "2026-10-05 18:46 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
   },
@@ -38,11 +38,11 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 1001.13,
-    "cash": 798.57,
+    "value": 1001.07,
+    "cash": 648.57,
     "realized": -1.43,
-    "unrealized": 2.56,
-    "total": 1.13,
+    "unrealized": 2.5,
+    "total": 1.07,
     "totalPct": 0.11
   },
   "positions": [
@@ -62,10 +62,45 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 202.56,
-      "pnl": 2.56,
-      "pnlPct": 1.28,
-      "fxUsdPerEur": 1.1212018728256226
+      "value": 202.5,
+      "pnl": 2.5,
+      "pnlPct": 1.25,
+      "fxUsdPerEur": 1.1215791702270508
+    },
+    {
+      "symbol": "MSTR",
+      "qty": 1.02771459,
+      "avgUsd": 163.6999969482422,
+      "lastUsd": 163.6999969482422,
+      "costEur": 150,
+      "entryReason": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
+      "openedAt": "2026-10-05T18:46:52.781Z",
+      "timeHorizon": "1-3 trading days",
+      "riskLevel": "HIGH",
+      "thesis": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
+      "target": "Break above $163.17 with sustained participation.",
+      "invalidation": "Loss of $156.85 or failed breakout/reversal of the ranked momentum signal.",
+      "lastDecision": "BUY",
+      "lastDecisionReason": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
+      "setupId": "MSTR-20261005-daily-quant",
+      "entryRule": {
+        "operator": "ABOVE",
+        "level": 163.17,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "requireParticipation": true
+      },
+      "invalidationRule": {
+        "operator": "BELOW",
+        "level": 156.85,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1
+      },
+      "setupExpiresAt": "2026-10-08T12:10:16.000Z",
+      "value": 150,
+      "pnl": 0,
+      "pnlPct": 0,
+      "fxUsdPerEur": 1.1215791702270508
     }
   ],
   "trades": [
@@ -480,6 +515,25 @@ window.PORTFOLIO_DATA = {
         "quotedAt": "2026-10-02T13:32:52.000Z",
         "retrievedAt": "2026-10-02T13:32:53.962Z",
         "fxUsdPerEur": 1.1254924535751343,
+        "fxProvider": "Yahoo Finance chart",
+        "paperTrade": true
+      }
+    },
+    {
+      "date": "2026-10-05 18:46",
+      "symbol": "MSTR",
+      "side": "BUY",
+      "qty": 1.02771459,
+      "priceUsd": 163.6999969482422,
+      "eur": 150,
+      "pnl": null,
+      "note": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
+      "execution": {
+        "priceProvider": "Yahoo Finance chart",
+        "priceSourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?interval=5m&range=1d",
+        "quotedAt": "2026-10-05T18:46:42.000Z",
+        "retrievedAt": "2026-10-05T18:46:44.050Z",
+        "fxUsdPerEur": 1.1215791702270508,
         "fxProvider": "Yahoo Finance chart",
         "paperTrade": true
       }

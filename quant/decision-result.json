@@ -1,20 +1,25 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-05T17:58:41.920Z",
-  "baseCommitSha": "a06f5f1b25011885b55d897d836b8f5d25debe3b",
-  "triggerKey": "9cacf88565c77f65",
+  "processedAt": "2026-10-05T18:46:52.784Z",
+  "baseCommitSha": "b7416eeda2235921310210c7fac69a58095768ee",
+  "triggerKey": "4771dec17e017060",
   "portfolioFingerprint": "2ff8fdfe7d0ff7f9",
   "portfolioFingerprintVersion": 2,
   "gateReason": "NEW_SEMANTIC_TRIGGER",
-  "decision": "HOLD",
-  "symbol": "ON",
-  "eurAmount": null,
-  "reason": "ON has confirmed the watch breakout by one completed 5-minute close above $86.09 with 1.45x participation, and the existing position is modestly profitable. However, the confirmation is only marginally above the trigger ($86.11), is based on a single bar, and the setup is explicitly WATCH_ONLY/shadow research. Maintain the current position rather than add; reassess if price loses the recorded $83.69 invalidation or if the breakout gains further confirmed follow-through.",
-  "confidence": 0.78,
-  "evidenceLimitations": "Only one completed 5-minute confirmation bar is supplied; no broader fresh market, sector, volume-trend, or subsequent-bar follow-through data is available. The trigger is a review signal rather than an order instruction, and the supplied setup is marked shadow/WATCH_ONLY.",
-  "portfolioMutation": false,
-  "execution": null,
+  "decision": "BUY",
+  "symbol": "MSTR",
+  "eurAmount": 150,
+  "reason": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
+  "confidence": 0.58,
+  "evidenceLimitations": "The breakout observation is marked shadow/research-only, participation exceeded the threshold only modestly, and no fresh broader-market, credit, or intraday reversal data were supplied beyond the trigger snapshot.",
+  "portfolioMutation": true,
+  "execution": {
+    "side": "BUY",
+    "qty": 1.02771459,
+    "priceUsd": 163.6999969482422,
+    "eur": 150
+  },
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "dc2bf7296eecf858"
+  "decisionKey": "f1498a4d8c5704e2"
 }
