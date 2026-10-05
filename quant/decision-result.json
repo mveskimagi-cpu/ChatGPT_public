@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-05T21:58:04.969Z",
-  "baseCommitSha": "0eb43dffb4aa5ec997152ff5e5eb9eecb40a7b41",
+  "processedAt": "2026-10-05T22:12:37.047Z",
+  "baseCommitSha": "31f9685c8690a9d4442f4dba3634ab40c3ff240c",
   "triggerKey": "c3d75e106e0d7373",
   "portfolioFingerprint": "bc6df6598f8e407a",
   "portfolioFingerprintVersion": 2,
@@ -9,12 +9,12 @@
   "decision": "HOLD",
   "symbol": "MSTR",
   "eurAmount": null,
-  "reason": "MSTR remains above its confirmed $163.17 breakout trigger at $164.43, while no supplied fresh quote or trigger observation indicates a failure of the $156.85 invalidation level. The target-level trigger is a review event, not an exit instruction, and there is insufficient fresh participation or reversal evidence to reduce or sell.",
-  "confidence": 0.78,
-  "evidenceLimitations": "Only the latest 5-minute quote and a target-level observation were supplied; no fresh volume/participation, completed-candle confirmation beyond the quote, broader-market update, or new momentum data were provided.",
+  "reason": "MSTR remains above its confirmed $163.17 breakout level at $164.43 and is far above the $156.85 invalidation. The target-level trigger is a review event rather than a sell instruction, and no supplied fresh reversal, failed-close, or participation deterioration evidence supports reducing or exiting.",
+  "confidence": 0.82,
+  "evidenceLimitations": "Only a latest 5-minute quote is supplied; there is no fresh completed-candle participation/volume confirmation, broader-market update, or new momentum/volatility measurement. The quote is from the market close and may not reflect subsequent trading.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "3f216ac15cd8ec5f"
+  "decisionKey": "9ac0fcc7b28899af"
 }
