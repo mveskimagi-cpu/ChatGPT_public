@@ -1,25 +1,20 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-05T18:46:52.784Z",
-  "baseCommitSha": "b7416eeda2235921310210c7fac69a58095768ee",
-  "triggerKey": "4771dec17e017060",
-  "portfolioFingerprint": "2ff8fdfe7d0ff7f9",
+  "processedAt": "2026-10-05T21:31:34.537Z",
+  "baseCommitSha": "e795a9c889827abe43a2bb0dd7cd9f6a95e75a30",
+  "triggerKey": "c3d75e106e0d7373",
+  "portfolioFingerprint": "bc6df6598f8e407a",
   "portfolioFingerprintVersion": 2,
-  "gateReason": "NEW_SEMANTIC_TRIGGER",
-  "decision": "BUY",
+  "gateReason": "PORTFOLIO_CHANGED",
+  "decision": "HOLD",
   "symbol": "MSTR",
-  "eurAmount": 150,
-  "reason": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
-  "confidence": 0.58,
-  "evidenceLimitations": "The breakout observation is marked shadow/research-only, participation exceeded the threshold only modestly, and no fresh broader-market, credit, or intraday reversal data were supplied beyond the trigger snapshot.",
-  "portfolioMutation": true,
-  "execution": {
-    "side": "BUY",
-    "qty": 1.02771459,
-    "priceUsd": 163.6999969482422,
-    "eur": 150
-  },
+  "eurAmount": null,
+  "reason": "MSTR remains above its confirmed $163.17 breakout trigger at $164.43, but the supplied target is the same breakout level rather than a separate profit-taking target. No fresh reversal, invalidation, or sustained-participation update supports reducing or exiting; no additional confirmation supports adding.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Latest quote is a single 5-minute Yahoo Finance observation after market close. No fresh volume/participation, completed-candle confirmation, broader-market update, or new momentum data were supplied. The trigger is explicitly shadow/review-only, not an order.",
+  "portfolioMutation": false,
+  "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "f1498a4d8c5704e2"
+  "decisionKey": "a4a8481c068aabd4"
 }
