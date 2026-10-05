@@ -33,12 +33,30 @@ function classifyRule(text){
 }
 function crossed(price,rule){return rule.op==="BELOW"?price<rule.level:price>rule.level}
 
-async function completedCloses(symbol,count,timeframeMinutes){
-  if(symbol!=="BTC"&&symbol!=="ETH") return null;
-  const granularity=timeframeMinutes*60,end=Math.floor(Date.now()/1000), start=end-Math.max(6*3600,(count+3)*granularity);
-  const a=await fetchJson("https://api.exchange.coinbase.com/products/"+symbol+"-USD/candles?granularity="+granularity+"&start="+new Date(start*1000).toISOString()+"&end="+new Date(end*1000).toISOString());
-  const currentBucket=Math.floor(end/granularity)*granularity;
-  return (Array.isArray(a)?a:[]).filter(x=>Array.isArray(x)&&x.length>=5&&Number(x[0])+granularity<=currentBucket).sort((a,b)=>b[0]-a[0]).slice(0,count).map(x=>({start:new Date(Number(x[0])*1000).toISOString(),close:Number(x[4])}));
+async function completedCloses(symbol,count,timeframeMinutes,C){
+  const granularity=timeframeMinutes*60,end=Math.floor(Date.now()/1000), currentBucket=Math.floor(end/granularity)*granularity;
+  if(symbol==="BTC"||symbol==="ETH"){
+    const start=end-Math.max(6*3600,(count+3)*granularity);
+    const a=await fetchJson("https://api.exchange.coinbase.com/products/"+symbol+"-USD/candles?granularity="+granularity+"&start="+new Date(start*1000).toISOString()+"&end="+new Date(end*1000).toISOString());
+    return (Array.isArray(a)?a:[]).filter(x=>Array.isArray(x)&&x.length>=5&&Number(x[0])+granularity<=currentBucket).sort((a,b)=>b[0]-a[0]).slice(0,count).map(x=>({start:new Date(Number(x[0])*1000).toISOString(),close:Number(x[4]),volume:Number(x[5])}));
+  }
+  if(timeframeMinutes!==5) return null;
+  const y=await fetchJson("https://query1.finance.yahoo.com/v8/finance/chart/"+encodeURIComponent(symbol)+"?interval=5m&range="+encodeURIComponent(C.quote.equityRange));
+  const r=y.chart&&y.chart.result&&y.chart.result[0], q=r&&r.indicators&&r.indicators.quote&&r.indicators.quote[0], ts=(r&&r.timestamp)||[];
+  if(!r||!q) return null;
+  return ts.map((t,i)=>({t:Number(t),start:new Date(Number(t)*1000).toISOString(),close:Number(q.close&&q.close[i]),volume:Number(q.volume&&q.volume[i])}))
+    .filter(x=>Number.isFinite(x.t)&&x.t+granularity<=currentBucket&&Number.isFinite(x.close))
+    .sort((a,b)=>b.t-a.t).slice(0,Math.max(count+12,13));
+}
+function equityConfirmation(candles,count,rule,requireParticipation){
+  if(!Array.isArray(candles)||candles.length<count) return {confirmed:false,closeConfirmed:false,participationConfirmed:!requireParticipation,participationRatio:null,reason:"INSUFFICIENT_COMPLETED_CANDLES"};
+  const confirming=candles.slice(0,count), closeConfirmed=confirming.every(x=>crossed(x.close,rule));
+  if(!requireParticipation) return {confirmed:closeConfirmed,closeConfirmed,participationConfirmed:true,participationRatio:null,reason:closeConfirmed?"CONFIRMED":"CLOSE_NOT_CONFIRMED"};
+  const baseline=candles.slice(count,count+12).map(x=>x.volume).filter(v=>Number.isFinite(v)&&v>0);
+  const active=confirming.map(x=>x.volume).filter(v=>Number.isFinite(v)&&v>0);
+  if(active.length!==count||baseline.length<3) return {confirmed:false,closeConfirmed,participationConfirmed:false,participationRatio:null,reason:"INSUFFICIENT_VOLUME_BASELINE"};
+  const avg=a=>a.reduce((x,y)=>x+y,0)/a.length, ratio=avg(active)/avg(baseline), participationConfirmed=ratio>=1;
+  return {confirmed:closeConfirmed&&participationConfirmed,closeConfirmed,participationConfirmed,participationRatio:Number(ratio.toFixed(3)),baselineBars:baseline.length,reason:closeConfirmed?(participationConfirmed?"CONFIRMED":"PARTICIPATION_NOT_CONFIRMED"):"CLOSE_NOT_CONFIRMED"};
 }
 function confirmationSpec(s,C){const t=String(s.trigger||"");let m=t.match(/(\d+)\s+completed\s+(\d+)[- ]minute\s+closes?/i);if(m)return{count:+m[1],timeframeMinutes:+m[2]};m=t.match(/(\d+)\s+completed\s+hourly\s+closes?/i);if(m)return{count:+m[1],timeframeMinutes:60};return s.confirmation||null}
 async function price(symbol,C){
@@ -81,10 +99,17 @@ async function price(symbol,C){
         const entryRules=s.entryRule?[{op:s.entryRule.operator,level:+s.entryRule.level,structured:true}]:classifyRule(s.trigger);
         for(const rule of entryRules){
           const spec=s.entryRule?{count:+s.entryRule.requiredCloses||1,timeframeMinutes:+s.entryRule.timeframeMinutes||C.defaultConfirmation.timeframeMinutes}:confirmationSpec(s,C);
-          if(spec&&rule.op==="ABOVE"&&(symbol==="BTC"||symbol==="ETH")){
-            const count=spec.count||spec.completedCloses||C.defaultConfirmation.completedCloses,timeframe=spec.timeframeMinutes||C.defaultConfirmation.timeframeMinutes,candles=await completedCloses(symbol,count,timeframe),confirmed=Array.isArray(candles)&&candles.length===count&&candles.every(x=>x.close>rule.level);
-            observations.push({symbol,setupId:s.setupId||null,type:"CANDLE_CLOSE_CONFIRMATION",level:rule.level,timeframeMinutes:timeframe,requiredCloses:count,completedCloses:candles||[],confirmed,source:"Coinbase Exchange candles"});
-            if(confirmed) triggers.push({type:"WATCHLIST_BREAKOUT_CONFIRMED",symbol,setup:s.setup||null,setupId:s.setupId||null,condition:count+" completed "+timeframe+"m closes ABOVE $"+rule.level,observedPrice:q.price,completedCloses:candles,source:"Coinbase Exchange candles",shadow:true});
+          if(spec&&rule.op==="ABOVE"){
+            const count=spec.count||spec.completedCloses||C.defaultConfirmation.completedCloses,timeframe=spec.timeframeMinutes||C.defaultConfirmation.timeframeMinutes,candles=await completedCloses(symbol,count,timeframe,C);
+            if(symbol==="BTC"||symbol==="ETH"){
+              const completed=(candles||[]).slice(0,count),confirmed=completed.length===count&&completed.every(x=>x.close>rule.level);
+              observations.push({symbol,setupId:s.setupId||null,type:"CANDLE_CLOSE_CONFIRMATION",level:rule.level,timeframeMinutes:timeframe,requiredCloses:count,completedCloses:completed,confirmed,source:"Coinbase Exchange candles"});
+              if(confirmed) triggers.push({type:"WATCHLIST_BREAKOUT_CONFIRMED",symbol,setup:s.setup||null,setupId:s.setupId||null,condition:count+" completed "+timeframe+"m closes ABOVE $"+rule.level,observedPrice:q.price,completedCloses:completed,source:"Coinbase Exchange candles",shadow:true});
+            }else{
+              const check=equityConfirmation(candles,count,rule,Boolean(s.entryRule&&s.entryRule.requireParticipation)),completed=(candles||[]).slice(0,count);
+              observations.push({symbol,setupId:s.setupId||null,type:"EQUITY_BREAKOUT_CONFIRMATION",level:rule.level,timeframeMinutes:timeframe,requiredCloses:count,completedCloses:completed,requireParticipation:Boolean(s.entryRule&&s.entryRule.requireParticipation),...check,source:"Yahoo Finance 5m chart"});
+              if(check.confirmed) triggers.push({type:"WATCHLIST_BREAKOUT_CONFIRMED",symbol,setup:s.setup||null,setupId:s.setupId||null,condition:count+" completed "+timeframe+"m closes ABOVE $"+rule.level+(s.entryRule&&s.entryRule.requireParticipation?" with participation >= 1.0x prior completed-bar baseline":""),observedPrice:q.price,completedCloses:completed,participationRatio:check.participationRatio,source:"Yahoo Finance 5m chart",shadow:true});
+            }
           }else if(crossed(q.price,rule)) triggers.push({type:"WATCHLIST_TRIGGER_LEVEL",symbol,setup:s.setup||null,setupId:s.setupId||null,condition:rule.op+" $"+rule.level,observedPrice:q.price,source:q.source,shadow:true});
         }
       }
