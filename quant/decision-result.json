@@ -1,20 +1,20 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-05T21:31:34.537Z",
-  "baseCommitSha": "e795a9c889827abe43a2bb0dd7cd9f6a95e75a30",
+  "processedAt": "2026-10-05T21:44:15.333Z",
+  "baseCommitSha": "150feb0dace8ec77b309eece452456a8c8a08f68",
   "triggerKey": "c3d75e106e0d7373",
   "portfolioFingerprint": "bc6df6598f8e407a",
   "portfolioFingerprintVersion": 2,
-  "gateReason": "PORTFOLIO_CHANGED",
+  "gateReason": "POSITION_TARGET_LEVEL",
   "decision": "HOLD",
   "symbol": "MSTR",
   "eurAmount": null,
-  "reason": "MSTR remains above its confirmed $163.17 breakout trigger at $164.43, but the supplied target is the same breakout level rather than a separate profit-taking target. No fresh reversal, invalidation, or sustained-participation update supports reducing or exiting; no additional confirmation supports adding.",
-  "confidence": 0.78,
-  "evidenceLimitations": "Latest quote is a single 5-minute Yahoo Finance observation after market close. No fresh volume/participation, completed-candle confirmation, broader-market update, or new momentum data were supplied. The trigger is explicitly shadow/review-only, not an order.",
+  "reason": "MSTR remains above its confirmed $163.17 breakout level at $164.43, and no supplied fresh quote or observation indicates a failed breakout or breach of the $156.85 invalidation. The target-level trigger is a review event, not a sell instruction; there is no validated profit-taking rule or adverse evidence supporting a reduction.",
+  "confidence": 0.8,
+  "evidenceLimitations": "Only a latest 5-minute-derived quote is supplied; no fresh participation/volume confirmation, completed-candle sequence, broader-market update, or new momentum/volatility measures are available. Quote is after the recorded market close and target is not a defined exit level.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "a4a8481c068aabd4"
+  "decisionKey": "95598e330c51a18c"
 }
