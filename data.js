@@ -5752,7 +5752,8 @@ window.PORTFOLIO_DATA = {
               "d1": 0
             },
             "selectionPrice": 540.0399780273438,
-            "triggeredAt": "2026-10-05T13:30:00.000Z"
+            "triggeredAt": "2026-10-05T13:30:00.000Z",
+            "invalidatedAt": "2026-10-05T13:30:00.000Z"
           },
           {
             "symbol": "MSTR",
@@ -5937,7 +5938,8 @@ window.PORTFOLIO_DATA = {
               "h4": 0
             },
             "selectionPrice": 540.0399780273438,
-            "triggeredAt": "2026-10-05T13:30:00.000Z"
+            "triggeredAt": "2026-10-05T13:30:00.000Z",
+            "invalidatedAt": "2026-10-05T13:30:00.000Z"
           },
           {
             "symbol": "MSTR",
@@ -6117,7 +6119,8 @@ window.PORTFOLIO_DATA = {
               "h1": 0
             },
             "selectionPrice": 540.0399780273438,
-            "triggeredAt": "2026-10-05T13:30:00.000Z"
+            "triggeredAt": "2026-10-05T13:30:00.000Z",
+            "invalidatedAt": "2026-10-05T13:30:00.000Z"
           },
           {
             "symbol": "MSTR",
@@ -6157,6 +6160,6 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-05T13:33:51.526Z"
+    "lastUpdatedAt": "2026-10-05T13:58:30.282Z"
   }
 };
