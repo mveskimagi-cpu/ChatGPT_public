@@ -1,58 +1,307 @@
 {
   "schemaVersion": 3,
   "eventType": "QUANT_DECISION_REQUIRED",
-  "publishedAt": "2026-10-05T13:34:00.634Z",
+  "publishedAt": "2026-10-05T17:58:41.918Z",
   "baseRef": "main",
-  "baseCommitSha": "5c9257b9aa5258ec3ea7420c31021c48ecff651f",
-  "triggerKey": "517c97336df00677",
+  "baseCommitSha": "a06f5f1b25011885b55d897d836b8f5d25debe3b",
+  "triggerKey": "9cacf88565c77f65",
   "trigger": {
     "schemaVersion": 3,
     "mode": "EVENT_BRIDGE_PRODUCTION",
-    "triggeredAt": "2026-10-05T13:33:53.531Z",
+    "triggeredAt": "2026-10-05T17:58:33.442Z",
     "needsDecision": true,
-    "triggerKey": "517c97336df00677",
+    "triggerKey": "9cacf88565c77f65",
     "triggers": [
       {
-        "type": "WATCHLIST_TRIGGER_LEVEL",
-        "symbol": "MSTR",
+        "type": "WATCHLIST_BREAKOUT_CONFIRMED",
+        "symbol": "ON",
         "setup": "Daily quant momentum / volatility breakout",
-        "setupId": "MSTR-20261005-daily-quant",
-        "condition": "ABOVE $163.17",
-        "observedPrice": 163.8000030517578,
-        "source": "Yahoo Finance chart",
+        "setupId": "ON-20261005-daily-quant",
+        "condition": "1 completed 5m closes ABOVE $86.09 with participation >= 1.0x prior completed-bar baseline",
+        "observedPrice": 86.12000274658203,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 86.11000061035156,
+            "volume": 88061
+          }
+        ],
+        "participationRatio": 1.454,
+        "source": "Yahoo Finance 5m chart",
         "shadow": true
       }
     ],
     "observations": [
       {
         "symbol": "ON",
-        "price": 84.9000015258789,
+        "price": 86.12000274658203,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=5m&range=1d"
       },
       {
+        "symbol": "ON",
+        "setupId": "ON-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 86.09,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 86.11000061035156,
+            "volume": 88061
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": true,
+        "closeConfirmed": true,
+        "participationConfirmed": true,
+        "participationRatio": 1.454,
+        "baselineBars": 12,
+        "reason": "CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
+        "symbol": "ON",
+        "setupId": "ON-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 86.09,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 86.11000061035156,
+            "volume": 88061
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": true,
+        "closeConfirmed": true,
+        "participationConfirmed": true,
+        "participationRatio": 1.454,
+        "baselineBars": 12,
+        "reason": "CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
         "symbol": "HPE",
-        "price": 67.6176986694336,
+        "price": 68.63899993896484,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/HPE?interval=5m&range=1d"
       },
       {
+        "symbol": "HPE",
+        "setupId": "HPE-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 70.33,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 68.62000274658203,
+            "volume": 79243
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": false,
+        "participationRatio": 0.883,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
+        "symbol": "HPE",
+        "setupId": "HPE-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 70.33,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 68.62000274658203,
+            "volume": 79243
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": false,
+        "participationRatio": 0.883,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
         "symbol": "ARM",
-        "price": 306.6549987792969,
+        "price": 300.42498779296875,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?interval=5m&range=1d"
       },
       {
+        "symbol": "ARM",
+        "setupId": "ARM-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 319.08,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 300.385009765625,
+            "volume": 10441
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": false,
+        "participationRatio": 0.474,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
+        "symbol": "ARM",
+        "setupId": "ARM-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 319.08,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 300.385009765625,
+            "volume": 10441
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": false,
+        "participationRatio": 0.474,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
         "symbol": "AMAT",
-        "price": 545.2849731445312,
+        "price": 539.635009765625,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?interval=5m&range=1d"
       },
       {
+        "symbol": "AMAT",
+        "setupId": "AMAT-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 545.37,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 539.5750122070312,
+            "volume": 18087
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": false,
+        "participationRatio": 0.713,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
+        "symbol": "AMAT",
+        "setupId": "AMAT-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 545.37,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 539.5750122070312,
+            "volume": 18087
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": false,
+        "participationRatio": 0.713,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
         "symbol": "MSTR",
-        "price": 163.8000030517578,
+        "price": 162.6300048828125,
         "source": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?interval=5m&range=1d"
+      },
+      {
+        "symbol": "MSTR",
+        "setupId": "MSTR-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 163.17,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 162.21499633789062,
+            "volume": 132573
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": true,
+        "participationRatio": 1.396,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
+      },
+      {
+        "symbol": "MSTR",
+        "setupId": "MSTR-20261005-daily-quant",
+        "type": "EQUITY_BREAKOUT_CONFIRMATION",
+        "level": 163.17,
+        "timeframeMinutes": 5,
+        "requiredCloses": 1,
+        "completedCloses": [
+          {
+            "t": 1791222600,
+            "start": "2026-10-05T17:50:00.000Z",
+            "close": 162.21499633789062,
+            "volume": 132573
+          }
+        ],
+        "requireParticipation": true,
+        "confirmed": false,
+        "closeConfirmed": false,
+        "participationConfirmed": true,
+        "participationRatio": 1.396,
+        "baselineBars": 12,
+        "reason": "CLOSE_NOT_CONFIRMED",
+        "source": "Yahoo Finance 5m chart"
       }
     ],
     "errors": [],
@@ -62,25 +311,17 @@
     "quotes": {
       "ON": {
         "symbol": "ON",
-        "priceUsd": 84.9000015258789,
+        "priceUsd": 86.11000061035156,
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=5m&range=1d",
-        "marketTime": "2026-10-05T13:33:52.000Z",
-        "retrievedAt": "2026-10-05T13:33:54.338Z"
-      },
-      "MSTR": {
-        "symbol": "MSTR",
-        "priceUsd": 163.7899932861328,
-        "provider": "Yahoo Finance chart",
-        "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?interval=5m&range=1d",
-        "marketTime": "2026-10-05T13:33:53.000Z",
-        "retrievedAt": "2026-10-05T13:33:54.386Z"
+        "marketTime": "2026-10-05T17:58:33.000Z",
+        "retrievedAt": "2026-10-05T17:58:34.191Z"
       }
     },
     "fx": {
-      "usdPerEur": 1.1200717687606812,
+      "usdPerEur": 1.1212018728256226,
       "provider": "Yahoo Finance chart",
-      "retrievedAt": "2026-10-05T13:33:54.439Z"
+      "retrievedAt": "2026-10-05T17:58:34.271Z"
     }
   }
 }

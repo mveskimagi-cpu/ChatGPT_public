@@ -1,20 +1,20 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-05T13:34:00.636Z",
-  "baseCommitSha": "5c9257b9aa5258ec3ea7420c31021c48ecff651f",
-  "triggerKey": "517c97336df00677",
+  "processedAt": "2026-10-05T17:58:41.920Z",
+  "baseCommitSha": "a06f5f1b25011885b55d897d836b8f5d25debe3b",
+  "triggerKey": "9cacf88565c77f65",
   "portfolioFingerprint": "2ff8fdfe7d0ff7f9",
   "portfolioFingerprintVersion": 2,
   "gateReason": "NEW_SEMANTIC_TRIGGER",
   "decision": "HOLD",
-  "symbol": "MSTR",
+  "symbol": "ON",
   "eurAmount": null,
-  "reason": "MSTR's fresh quote ($163.79) is above the $163.17 watch trigger, but the required sustained participation confirmation is not supplied. The trigger is explicitly a review signal and marked shadow, not an order. No change is warranted for ON: $84.90 remains above its $81.05 breakout trigger and $79.11 invalidation.",
-  "confidence": 0.9,
-  "evidenceLimitations": "Only a single fresh MSTR price observation is available; there is no fresh volume/participation evidence to satisfy the entry rule. Broader regime remains fragile, with tightening-financial-condition and participation risks noted in strategy memory.",
+  "reason": "ON has confirmed the watch breakout by one completed 5-minute close above $86.09 with 1.45x participation, and the existing position is modestly profitable. However, the confirmation is only marginally above the trigger ($86.11), is based on a single bar, and the setup is explicitly WATCH_ONLY/shadow research. Maintain the current position rather than add; reassess if price loses the recorded $83.69 invalidation or if the breakout gains further confirmed follow-through.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Only one completed 5-minute confirmation bar is supplied; no broader fresh market, sector, volume-trend, or subsequent-bar follow-through data is available. The trigger is a review signal rather than an order instruction, and the supplied setup is marked shadow/WATCH_ONLY.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "5235f51f54db99d0"
+  "decisionKey": "dc2bf7296eecf858"
 }
