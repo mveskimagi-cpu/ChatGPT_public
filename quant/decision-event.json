@@ -1,14 +1,14 @@
 {
   "schemaVersion": 3,
   "eventType": "QUANT_DECISION_REQUIRED",
-  "publishedAt": "2026-10-05T22:28:10.569Z",
+  "publishedAt": "2026-10-05T22:42:02.574Z",
   "baseRef": "main",
-  "baseCommitSha": "56522399ddfb3244f26e9acab100b8825fb43f8d",
+  "baseCommitSha": "0dc3e8b1160d17523aa12a422a60fe1e09709478",
   "triggerKey": "c3d75e106e0d7373",
   "trigger": {
     "schemaVersion": 3,
     "mode": "EVENT_BRIDGE_PRODUCTION",
-    "triggeredAt": "2026-10-05T22:28:05.642Z",
+    "triggeredAt": "2026-10-05T22:41:57.493Z",
     "needsDecision": true,
     "triggerKey": "c3d75e106e0d7373",
     "triggers": [
@@ -295,7 +295,7 @@
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/ON?interval=5m&range=1d",
         "marketTime": "2026-10-05T20:00:00.000Z",
-        "retrievedAt": "2026-10-05T22:28:06.624Z"
+        "retrievedAt": "2026-10-05T22:41:58.339Z"
       },
       "MSTR": {
         "symbol": "MSTR",
@@ -303,13 +303,13 @@
         "provider": "Yahoo Finance chart",
         "url": "https://query1.finance.yahoo.com/v8/finance/chart/MSTR?interval=5m&range=1d",
         "marketTime": "2026-10-05T20:00:02.000Z",
-        "retrievedAt": "2026-10-05T22:28:06.682Z"
+        "retrievedAt": "2026-10-05T22:41:58.382Z"
       }
     },
     "fx": {
-      "usdPerEur": 1.1223344802856445,
+      "usdPerEur": 1.1224603652954102,
       "provider": "Yahoo Finance chart",
-      "retrievedAt": "2026-10-05T22:28:06.759Z"
+      "retrievedAt": "2026-10-05T22:41:58.433Z"
     }
   }
 }
