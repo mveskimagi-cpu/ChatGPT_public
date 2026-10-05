@@ -5927,6 +5927,6 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-05T10:12:14.407Z"
+    "lastUpdatedAt": "2026-10-05T10:32:19.041Z"
   }
 };
