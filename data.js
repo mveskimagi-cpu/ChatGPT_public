@@ -5679,7 +5679,8 @@ window.PORTFOLIO_DATA = {
               "h4": 0,
               "d1": 0
             },
-            "selectionPrice": 84.88999938964844
+            "selectionPrice": 84.88999938964844,
+            "triggeredAt": "2026-10-05T17:30:00.000Z"
           },
           {
             "symbol": "ARM",
@@ -5869,7 +5870,8 @@ window.PORTFOLIO_DATA = {
               "h4": 0,
               "d1": 1.191
             },
-            "selectionPrice": 84.88999938964844
+            "selectionPrice": 84.88999938964844,
+            "triggeredAt": "2026-10-05T17:30:00.000Z"
           },
           {
             "symbol": "ARM",
@@ -6057,7 +6059,8 @@ window.PORTFOLIO_DATA = {
               "h1": 0,
               "h4": 0.89
             },
-            "selectionPrice": 84.88999938964844
+            "selectionPrice": 84.88999938964844,
+            "triggeredAt": "2026-10-05T17:30:00.000Z"
           },
           {
             "symbol": "ARM",
@@ -6170,6 +6173,6 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-05T17:44:19.666Z"
+    "lastUpdatedAt": "2026-10-05T17:58:31.599Z"
   }
 };
