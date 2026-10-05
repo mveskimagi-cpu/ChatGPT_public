@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-05 23:06 UTC",
+    "asOf": "2026-10-05 23:24 UTC",
     "lastTrade": "2026-10-05 18:46 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -38,12 +38,12 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 1001.15,
+    "value": 1001.08,
     "cash": 648.57,
     "realized": -1.43,
-    "unrealized": 2.58,
-    "total": 1.15,
-    "totalPct": 0.12
+    "unrealized": 2.51,
+    "total": 1.08,
+    "totalPct": 0.11
   },
   "positions": [
     {
@@ -62,10 +62,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 201.98,
-      "pnl": 1.98,
-      "pnlPct": 0.99,
-      "fxUsdPerEur": 1.1220825910568237
+      "value": 201.94,
+      "pnl": 1.94,
+      "pnlPct": 0.97,
+      "fxUsdPerEur": 1.1223344802856445
     },
     {
       "symbol": "MSTR",
@@ -97,10 +97,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 150.6,
-      "pnl": 0.6,
-      "pnlPct": 0.4,
-      "fxUsdPerEur": 1.1220825910568237
+      "value": 150.57,
+      "pnl": 0.57,
+      "pnlPct": 0.38,
+      "fxUsdPerEur": 1.1223344802856445
     }
   ],
   "trades": [
