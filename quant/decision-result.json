@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-05T22:54:15.413Z",
-  "baseCommitSha": "534fe5a0c13a7c71f73c01a1bad5f2fed473f6e4",
+  "processedAt": "2026-10-05T23:06:19.042Z",
+  "baseCommitSha": "71dabae5dc0319f9566a07aa21538f52155124ed",
   "triggerKey": "c3d75e106e0d7373",
   "portfolioFingerprint": "bc6df6598f8e407a",
   "portfolioFingerprintVersion": 2,
@@ -9,12 +9,12 @@
   "decision": "HOLD",
   "symbol": "MSTR",
   "eurAmount": null,
-  "reason": "MSTR remains above its confirmed $163.17 breakout level at $164.43, and no supplied evidence shows failure of the $156.85 invalidation or reversal of the momentum signal. The target-level trigger is a review event, not an exit instruction; the recorded target is the breakout condition rather than a profit-taking level.",
-  "confidence": 0.82,
-  "evidenceLimitations": "Only the latest quote is supplied; there is no fresh completed-candle participation/volume confirmation, intraday momentum trajectory, or updated market-regime data. The quote is at/after the stated market close, and the trigger is explicitly shadow/review-only.",
+  "reason": "MSTR remains above its $163.17 breakout trigger at $164.43, but the supplied target is the original breakout condition rather than a profit-taking level. No fresh reversal, invalidation, or participation deterioration is supplied; retain the existing high-risk position and reassess if price approaches or breaches the $156.85 invalidation.",
+  "confidence": 0.78,
+  "evidenceLimitations": "Only the latest 5-minute quote is supplied; there is no fresh completed-bar participation/volume confirmation, intraday trend context, or updated volatility/regime data. The trigger is explicitly shadow/review-only and not an order.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "4f74f7c6a4e9cb5e"
+  "decisionKey": "ae2cf7aaa4264ff8"
 }
