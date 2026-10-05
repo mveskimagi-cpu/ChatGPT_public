@@ -6013,7 +6013,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": 0.161
             },
             "selectionPrice": 69.33000183105469,
             "invalidatedAt": "2026-10-05T13:30:00.000Z"
@@ -6048,7 +6049,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.322
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": 0.89
             },
             "selectionPrice": 84.88999938964844
           },
@@ -6082,7 +6084,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.536
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": -0.965
             },
             "selectionPrice": 307.489990234375
           },
@@ -6116,7 +6119,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.716
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": -0.001
             },
             "selectionPrice": 540.0399780273438,
             "triggeredAt": "2026-10-05T13:30:00.000Z",
@@ -6152,7 +6156,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.658
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": -1.457
             },
             "selectionPrice": 160.00999450683594,
             "triggeredAt": "2026-10-05T13:30:00.000Z"
@@ -6160,6 +6165,6 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-05T15:56:20.202Z"
+    "lastUpdatedAt": "2026-10-05T16:10:25.463Z"
   }
 };
