@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-06 02:57 UTC",
+    "asOf": "2026-10-06 03:12 UTC",
     "lastTrade": "2026-10-05 18:46 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -38,12 +38,12 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 1001.27,
+    "value": 1001.19,
     "cash": 648.57,
     "realized": -1.43,
-    "unrealized": 2.7,
-    "total": 1.27,
-    "totalPct": 0.13
+    "unrealized": 2.62,
+    "total": 1.19,
+    "totalPct": 0.12
   },
   "positions": [
     {
@@ -62,10 +62,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 202.05,
-      "pnl": 2.05,
-      "pnlPct": 1.03,
-      "fxUsdPerEur": 1.1217050552368164
+      "value": 202.01,
+      "pnl": 2.01,
+      "pnlPct": 1,
+      "fxUsdPerEur": 1.121956706047058
     },
     {
       "symbol": "MSTR",
@@ -97,10 +97,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 150.65,
-      "pnl": 0.65,
-      "pnlPct": 0.43,
-      "fxUsdPerEur": 1.1217050552368164
+      "value": 150.62,
+      "pnl": 0.62,
+      "pnlPct": 0.41,
+      "fxUsdPerEur": 1.121956706047058
     }
   ],
   "trades": [
@@ -597,8 +597,8 @@ window.PORTFOLIO_DATA = {
       "value": 998.57
     },
     {
-      "date": "2026-10-06 02:57",
-      "value": 1001.27
+      "date": "2026-10-06 03:12",
+      "value": 1001.19
     }
   ],
   "strategyState": {

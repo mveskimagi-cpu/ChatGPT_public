@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-06T02:57:25.348Z",
-  "baseCommitSha": "38a6fc6c2a5811cfcce4a858a0fcdfb369f54c7c",
+  "processedAt": "2026-10-06T03:12:00.244Z",
+  "baseCommitSha": "100db0318d70e5f2cf9ee4b86a15f97800d14313",
   "triggerKey": "c3d75e106e0d7373",
   "portfolioFingerprint": "bc6df6598f8e407a",
   "portfolioFingerprintVersion": 2,
@@ -9,12 +9,12 @@
   "decision": "HOLD",
   "symbol": "MSTR",
   "eurAmount": null,
-  "reason": "MSTR remains above its $163.17 breakout trigger at $164.43, but the supplied observation is only a target-level review and provides no fresh sustained-participation, completed-close, or reversal evidence to justify adding, reducing, or exiting. The position is only modestly above cost and retains high-risk characteristics.",
+  "reason": "MSTR remains above its $163.17 confirmed-breakout level at $164.43 and well above the $156.85 invalidation. The target-level trigger is not an exit instruction, and no fresh reversal, failed-participation, or invalidation evidence is supplied. Maintain the existing reduced-size, high-risk position without adding.",
   "confidence": 0.78,
-  "evidenceLimitations": "Only a latest 5-minute quote and a shadow target-level trigger were supplied. No fresh volume/participation data, completed-bar confirmation, intraday trend structure, or updated volatility/correlation data are available.",
+  "evidenceLimitations": "Only a latest 5-minute quote is supplied; there is no fresh volume/participation reading, completed-bar confirmation after entry, broader market update, or new momentum data. The quote is from the prior market close and the trigger is explicitly shadow/review-only.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "12beca1b87b31ddb"
+  "decisionKey": "0383b46f01267605"
 }
