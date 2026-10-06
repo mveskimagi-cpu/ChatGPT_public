@@ -1,31 +1,26 @@
 {
   "schemaVersion": 4,
-  "processedAt": "2026-10-06T16:57:00.985Z",
-  "baseCommitSha": "06796518ced449cc347fcea38f1469f31c005382",
-  "triggerKey": "6cb540b370525a3a",
-  "portfolioFingerprint": "122cb69aced5eb6d",
+  "processedAt": "2026-10-06T17:09:41.535Z",
+  "baseCommitSha": "b8c802a302845ece7d0f4ad104c8cf54bb633a91",
+  "triggerKey": "d471d1e8f6e76006",
+  "portfolioFingerprint": "33ddecd2f965d11b",
   "portfolioFingerprintVersion": 2,
-  "gateReason": "POSITION_TARGET_LEVEL",
-  "decision": "BUY",
+  "gateReason": "PORTFOLIO_CHANGED",
+  "decision": "HOLD",
   "symbol": "SHOP",
-  "eurAmount": 100,
-  "reason": "Initiate a reduced SHOP paper position. The documented entry rule is satisfied: the completed 5-minute close of $165.455 was above the $162.81 trigger with 1.132x participation, and the latest quote ($165.405) remains above the trigger. SHOP is rank 3 with positive 5-day and 20-day momentum (+11.2% and +9.8%), above-baseline daily volume (1.296x), high dollar liquidity, and low selected-set correlation (0.114). The €100 allocation is within cash, buy, and position limits and retains substantial cash. Existing MSTR and HPE target alerts are not profit-taking signals because their recorded targets duplicate entry triggers; neither has documented invalidation. ON has not met its new breakout rule. Reduced sizing is warranted because SHOP volatility is elevated, the portfolio already holds three short-horizon momentum positions, and the regime is neutral/range with tight liquidity.",
-  "evidenceLimitations": "No live catalyst, earnings-calendar, or news feed was supplied, so event risk is unknown. Confirmation rests on one completed 5-minute bar and a 12-bar volume baseline. Macro observations are from 2026-10-01 while price confirmation is from 2026-10-06; VIX was delayed and some macro timestamps were timezone-ambiguous. SHOP's correlation figure is against the selected set rather than actual holdings, so true portfolio factor overlap is unverified. Scores are relative rankings, not calibrated probabilities, and spread, order-book, borrow, and gap risks are unavailable.",
-  "portfolioMutation": true,
-  "execution": {
-    "side": "BUY",
-    "qty": 0.68122656,
-    "priceUsd": 165.2899932861328,
-    "eur": 100
-  },
+  "eurAmount": null,
+  "reason": "Maintain the existing reduced SHOP paper position. The $162.81 target alert is not an actionable profit target because it duplicates the original entry threshold. SHOP remains above $162.81 and no completed 5-minute close below the documented $157.41 invalidation is supplied. Do not add: the latest completed 5-minute close above entry had inadequate participation at 0.845x of its 12-bar baseline, while volatility remains elevated and the portfolio already has clustered short-horizon long-equity momentum exposure.",
+  "evidenceLimitations": "No live catalyst, earnings, or news evidence is supplied, so event risk is unknown. The macro regime snapshot is dated 2026-10-01 and may be stale. Intraday participation is based on one completed 5-minute candle and a 12-bar volume baseline. Target fields for SHOP, HPE, and MSTR repeat entry thresholds and cannot support independent profit-taking. Selection correlation does not capture full portfolio stress correlation.",
+  "portfolioMutation": false,
+  "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "MULTI_AGENT_PAPER_TRADING",
-  "decisionKey": "e33436172c17b3de",
+  "decisionKey": "d77ecef076315d10",
   "agentTeam": {
     "schemaVersion": 1,
     "mode": "MULTI_CALL_ROLE_PIPELINE",
-    "processedAt": "2026-10-06T16:56:05.680Z",
-    "evidenceHash": "f323456cd2dfe2a2167718ee1227c5350a0a456b843251126e0d39b98cef5ef0",
+    "processedAt": "2026-10-06T17:08:59.715Z",
+    "evidenceHash": "13e13cd6b5824adf6a579c4ae45b1656a6c089f65c2388d4d43f2362f166ec39",
     "reports": {
       "scout": {
         "role": "SCOUT",
@@ -387,50 +382,47 @@
         "reason": "Existing daily universe ranking; every open position and valid triggered setup is reviewed. No second scanner or schedule."
       },
       "quantMacro": {
-        "decision": "BUY",
+        "decision": "HOLD",
         "symbol": "SHOP",
-        "eurAmount": 100,
-        "reason": "SHOP has the only newly confirmed actionable setup: one completed 5-minute close at $165.46 exceeded the $162.81 trigger with 1.132x baseline participation, and the latest quote remains above the trigger at $165.40. It ranks 3rd with strong 5-day/20-day momentum (+11.2%/+9.8%), above-baseline daily volume (1.30x), very high dollar liquidity, and low selected-set correlation (0.114), which limits incremental overlap with current positions. Size is deliberately reduced because realized volatility is elevated (48.7% annualized; 4.40% ATR), the regime is RANGE/NEUTRAL with TIGHT liquidity and only a 0.68 sizing multiplier, and existing holdings already concentrate short-horizon momentum exposure.",
-        "timeHorizon": "1-3 trading days; reassess or exit by setup expiry on 2026-10-09 if continuation and participation do not persist.",
+        "eurAmount": 0,
+        "reason": "The SHOP target alert is not an independent take-profit signal because its recorded target ($162.81) duplicates the original entry trigger. Price remains above the $162.81 trigger and well above the $157.41 invalidation, so there is no documented exit condition. However, the latest completed 5-minute close above trigger had insufficient participation (0.845x the 12-bar baseline), preventing an add. Maintain the reduced existing position only.",
+        "timeHorizon": "Until the 2026-10-09 setup expiry, with reassessment on a confirmed invalidation or renewed participation-supported continuation.",
         "riskLevel": "HIGH",
-        "evidenceLimitations": "No live catalyst, earnings, or news feed was supplied, so event risk is unknown rather than absent. The macro-regime observations are dated 2026-10-01 versus the 2026-10-06 price trigger, VIX was delayed, several source clocks lacked explicit timezones, and confirmation uses only one completed 5-minute bar with a 12-bar volume baseline. Scores are relative ranks, not calibrated return probabilities.",
-        "quantView": "BUY at reduced size. The entry rule is explicitly satisfied, with rank 3, quant score 1.902, positive 5-day and 20-day relative strength, 1.296x daily volume, and 1.132x intraday participation. The defined invalidation is one completed 5-minute close below $157.41; no unsupported profit target is inferred.",
-        "macroView": "Cautiously supportive only. The supplied regime permits confirmed range breakouts, but RANGE trend, TIGHT liquidity, firm-dollar/rates signals, fragile participation proxies, and stale macro inputs argue against full sizing or adding multiple correlated momentum positions.",
-        "disagreements": "Quant evidence supports a small SHOP entry because its breakout is confirmed and correlation is low. Macro/risk considerations oppose aggressive sizing due to tight liquidity, elevated volatility, existing momentum exposure, and unavailable catalyst information; these concerns are addressed through the reduced €100 allocation rather than a HOLD."
+        "evidenceLimitations": "No live catalyst, earnings, or news evidence was supplied; event risk cannot be assessed or assumed absent. The regime snapshot is dated 2026-10-01 and may be stale relative to the 2026-10-06 quote. Intraday confirmation uses one completed 5-minute bar and a short volume baseline. The target field is structurally unsuitable for profit-taking because it repeats the entry threshold.",
+        "quantView": "SHOP remains a high-ranked momentum candidate (rank 3; 5-day momentum +11.18%, 20-day +9.76%, daily volume ratio 1.296x, low selected correlation 0.114). Yet elevated realized volatility (48.69% annualized), ATR of 4.395%, and failed current participation confirmation argue against increasing exposure. Neither the $157.41 invalidation nor a ranked-momentum reversal is confirmed.",
+        "macroView": "The supplied regime is neutral/range with tight liquidity and only 65 confidence. Earlier inputs show a firmer USD, higher rates, and weak liquidity proxy behavior, which do not support expanding clustered short-horizon equity momentum exposure. This is a constraint on adds, not evidence for an exit while the defined price invalidation holds.",
+        "disagreements": "No material Quant/Macro disagreement: both support holding the existing reduced SHOP position, declining to add on weak intraday participation, and not reducing without a confirmed invalidation."
       },
       "risk": {
         "verdict": "APPROVE",
-        "reason": "The proposed €100 SHOP paper allocation is within the €250 buy limit and 35% single-position cap, and is deliberately smaller than available cash (€548.57). The documented entry condition is satisfied by one completed 5-minute close at $165.455 above $162.81 with 1.132x baseline participation; the latest quoted price remains above the trigger. The defined invalidation at a completed 5-minute close below $157.41 provides a measurable exit condition. From the indicated entry area, nominal stop distance is approximately 4.8%, or roughly €4.8 on the proposed allocation before gap/slippage effects. This is acceptable for a high-risk, 1-3-day paper trade, provided it is treated as incremental momentum exposure rather than evidence for further additions.",
+        "reason": "The proposal is a non-expansion HOLD of an existing reduced SHOP paper position, not a new allocation. SHOP remains above its documented $162.81 entry threshold and $157.41 invalidation; no supplied completed 5-minute close confirms invalidation. Declining to add is appropriate because the latest qualifying close lacked required participation (0.845x baseline), volatility is elevated (48.69% annualized; 4.395% ATR), and the portfolio already has approximately €553 of four concentrated, short-horizon long-equity momentum exposure against €1,001 total value. The alert at $162.81 is not a valid profit target because it duplicates the entry trigger. HOLD approval is contingent on treating the setup expiry as binding for reassessment and on not relaxing the documented invalidation rule.",
         "checks": {
-          "entryConfirmation": "PASS: completed 5-minute close $165.455 > $162.81 trigger and participation ratio 1.132 >= 1.0.",
-          "sizing": "PASS: €100 is 10.0% of reported €1,002.37 portfolio value, below the 35% position cap and €250 maximum buy limit.",
-          "cash": "PASS: reported cash €548.57 exceeds proposed €100 allocation.",
-          "invalidation": "PASS_WITH_CAVEAT: explicit rule is one completed 5-minute close below $157.41; estimated entry-to-invalidation distance is about 4.8%. A stop is not guaranteed to limit loss during gaps or fast liquidity deterioration.",
-          "horizonExpiry": "PASS: stated 1-3 trading-day horizon and expiry on 2026-10-09 are consistent with a short-duration breakout setup.",
-          "portfolioExposure": "PASS_WITH_CAVEAT: post-trade gross long equity exposure would be roughly €553.8, or about 55% of portfolio value, leaving about 45% cash. Existing ON, HPE, and MSTR are all short-horizon momentum exposures, so common risk-regime sensitivity remains material.",
-          "correlation": "PASS_WITH_CAVEAT: SHOP's 0.114 selected-set correlation is favorable as a selection metric, but it is not a demonstrated correlation to the actual ON, HPE, and MSTR holdings. Do not use this figure to infer portfolio diversification.",
-          "regime": "PASS_WITH_CAVEAT: supplied regime permits confirmed range breakouts, but NEUTRAL/RANGE conditions, TIGHT liquidity, firm-dollar/rates signals, and fragile participation support reduced sizing only.",
-          "concentration": "PASS_WITH_CAVEAT: no single name would be oversized, but this would create four simultaneous short-horizon momentum positions. No additional momentum additions should be justified from this approval alone.",
-          "catalystRisk": "UNRESOLVED: no earnings, news, or corporate-event feed was supplied; unknown event risk must be assumed rather than treated as absent."
+          "proposalScope": "No purchase, sale, or increase proposed; €0 incremental exposure.",
+          "cash": "€448.57 cash is adequate, but not relevant to a HOLD and should not be treated as capacity to add without a separate review.",
+          "positionSizing": "SHOP is approximately €99.57, or about 9.9% of portfolio value, below the 35% maximum-position limit.",
+          "aggregateExposure": "Open equity positions total approximately €552.59, or 55.2% of portfolio value. Despite low selected-set correlation for SHOP, ON, MSTR, HPE, and SHOP share meaningful realized exposure to broad equity momentum, growth/risk appetite, liquidity, and gap risk. Selected-candidate correlation is not a complete held-portfolio correlation assessment.",
+          "invalidation": "Maintain only while no completed 5-minute close is confirmed below $157.41. A price quote alone is insufficient for rule-based invalidation. The target/entry duplication must not be used as a profit-taking or re-entry signal.",
+          "expiryAndHorizon": "SHOP is explicitly short horizon (1-3 trading days) and expires 2026-10-09T12:15:49.745Z. Reassess or close at expiry if continuation with adequate participation is not evidenced; do not silently extend the thesis.",
+          "catalystRisk": "No catalyst or earnings/news feed was supplied. Event risk is unknown, not absent.",
+          "regime": "The supplied neutral/range, tight-liquidity regime is dated 2026-10-01 and is stale versus the 2026-10-06 quote. It supports avoiding additions but does not independently justify an exit under the documented price rule."
         },
         "evidenceLimitations": [
-          "Price confirmation relies on one completed 5-minute candle and a 12-bar volume baseline; this is a narrow and potentially noisy confirmation window.",
-          "The macro regime observations are dated 2026-10-01, while the proposed entry evidence is from 2026-10-06; macro conditions may have changed.",
-          "VIX data were delayed and several macro-source clocks had ambiguous timezones.",
-          "SHOP correlation is measured against the selected candidate set, not calculated against the actual held portfolio; true factor, beta, and drawdown overlap are unverified.",
-          "No live catalyst, earnings-calendar, news, borrow, spread, or order-book information was supplied. Gap risk and execution quality cannot be assessed.",
-          "Quant scores and ranks are relative selection measures, not calibrated probabilities of gain or loss."
+          "No live news, earnings calendar, corporate-action, or sector-event evidence was supplied; catalyst and overnight-gap risk cannot be quantified.",
+          "The market-regime snapshot is approximately five days older than the trade observation and was generated in SHADOW mode with known proxy and timing limitations.",
+          "Intraday participation assessment uses one completed 5-minute candle and a 12-bar baseline; it is useful for the stated entry rule but not a robust liquidity or continuation assessment.",
+          "Portfolio correlation cannot be inferred from selection correlation alone; all current positions are long, short-horizon equity momentum exposures and may become highly correlated during market stress.",
+          "Reported quotes and rule confirmations are external observations and may be delayed or incomplete."
         ]
       },
       "pm": {
-        "decision": "BUY",
+        "decision": "HOLD",
         "symbol": "SHOP",
-        "eurAmount": 100,
-        "reason": "Initiate a reduced SHOP paper position. The documented entry rule is satisfied: the completed 5-minute close of $165.455 was above the $162.81 trigger with 1.132x participation, and the latest quote ($165.405) remains above the trigger. SHOP is rank 3 with positive 5-day and 20-day momentum (+11.2% and +9.8%), above-baseline daily volume (1.296x), high dollar liquidity, and low selected-set correlation (0.114). The €100 allocation is within cash, buy, and position limits and retains substantial cash. Existing MSTR and HPE target alerts are not profit-taking signals because their recorded targets duplicate entry triggers; neither has documented invalidation. ON has not met its new breakout rule. Reduced sizing is warranted because SHOP volatility is elevated, the portfolio already holds three short-horizon momentum positions, and the regime is neutral/range with tight liquidity.",
-        "timeHorizon": "1-3 trading days; reassess or exit by setup expiry on 2026-10-09 if continuation and participation do not persist. Documented invalidation: one completed 5-minute close below $157.41.",
+        "eurAmount": 0,
+        "reason": "Maintain the existing reduced SHOP paper position. The $162.81 target alert is not an actionable profit target because it duplicates the original entry threshold. SHOP remains above $162.81 and no completed 5-minute close below the documented $157.41 invalidation is supplied. Do not add: the latest completed 5-minute close above entry had inadequate participation at 0.845x of its 12-bar baseline, while volatility remains elevated and the portfolio already has clustered short-horizon long-equity momentum exposure.",
+        "timeHorizon": "Until setup expiry on 2026-10-09T12:15:49.745Z; reassess on a confirmed completed 5-minute close below $157.41, renewed participation-supported continuation, or expiry.",
         "riskLevel": "HIGH",
-        "evidenceLimitations": "No live catalyst, earnings-calendar, or news feed was supplied, so event risk is unknown. Confirmation rests on one completed 5-minute bar and a 12-bar volume baseline. Macro observations are from 2026-10-01 while price confirmation is from 2026-10-06; VIX was delayed and some macro timestamps were timezone-ambiguous. SHOP's correlation figure is against the selected set rather than actual holdings, so true portfolio factor overlap is unverified. Scores are relative rankings, not calibrated probabilities, and spread, order-book, borrow, and gap risks are unavailable.",
-        "reportTreatment": "Quant/Macro recommends BUY €100 and Risk APPROVES with caveats; both support only reduced sizing. Their disagreement is directional only in strength: Quant views the confirmed SHOP breakout as actionable, while macro conditions (RANGE/NEUTRAL trend, TIGHT liquidity, firm dollar/rates, fragile participation proxies) argue against aggressive sizing. This decision follows the approved reduced allocation and does not add to existing positions or infer unsupported profit targets."
+        "evidenceLimitations": "No live catalyst, earnings, or news evidence is supplied, so event risk is unknown. The macro regime snapshot is dated 2026-10-01 and may be stale. Intraday participation is based on one completed 5-minute candle and a 12-bar volume baseline. Target fields for SHOP, HPE, and MSTR repeat entry thresholds and cannot support independent profit-taking. Selection correlation does not capture full portfolio stress correlation.",
+        "reportTreatment": "Adopted the Quant/Macro HOLD on SHOP and Risk APPROVE verdict because both support non-expansion while documented invalidation has not occurred. Quant supports the existing thesis but rejects an add due to failed participation; Macro's neutral/range, tight-liquidity backdrop reinforces that constraint. There is no material report disagreement. The target-level sensor alerts were treated as non-actionable structural duplicates of entry triggers, not as exit signals."
       },
       "hardRisk": {
         "verdict": "APPROVE",
@@ -438,75 +430,36 @@
       },
       "critic": {
         "verdict": "PASS",
-        "reason": "The BUY SHOP €100 paper-trade proposal is supported by the supplied, timestamp-consistent intraday confirmation and remains within reported cash, per-buy, and single-position limits. No supplied hard-risk veto contradicts the proposal. Material limitations—especially stale macro-regime inputs and unverified actual-holdings correlation—are explicitly disclosed and the proposal uses reduced sizing rather than treating them as absent.",
+        "reason": "The final proposal is a non-expansion HOLD of the existing SHOP paper position and is supported by the supplied contemporaneous quote/trigger data. SHOP at $164.62 remains above the $162.81 entry threshold and no completed 5-minute close below the $157.41 invalidation is supplied. The latest completed 5-minute confirmation bar closed above entry but failed the required participation test (0.845x the 12-bar baseline), supporting the proposal's explicit decision not to add. The $162.81 target alert is correctly treated as non-actionable because the recorded target duplicates the entry trigger rather than providing an independent profit-taking level. No risk veto is present; Risk and HardRisk both approve the HOLD.",
         "checks": {
-          "decisionScope": "PASS: Proposal is a paper-trading BUY proposal only; no real-order or broker action is implied.",
-          "entryTrigger": "PASS: SHOP's documented rule required one completed 5-minute close above $162.81 with participation of at least 1.0x. The supplied completed 16:50-16:55 UTC bar closed at $165.455 with 1.132x participation, and the 16:56:01 UTC quote was $165.405, still above the trigger.",
-          "participation": "PASS: Required intraday participation is present for SHOP at 1.132x versus the stated 12-bar baseline. This distinguishes SHOP from HPE, whose contemporaneous confirmation failed participation at 0.736x.",
-          "timestampFreshness": "PASS_WITH_CAVEAT: SHOP confirmation, quote, FX, and trigger timestamps cluster around 2026-10-06T16:55-16:56Z; the bar is plausibly complete by retrieval. However, the macro/regime evidence is dated 2026-10-01, roughly five calendar days earlier, and therefore is stale for a current regime assessment.",
-          "arithmetic": "PASS: Existing marked position value is €453.80 (€202.78 + €150.18 + €100.84); plus €548.57 cash equals the reported €1,002.37 portfolio value. A €100 purchase is 9.98% of portfolio value, below the 35% cap and €250 maximum buy. Post-trade cash would be about €448.57 and gross marked equity exposure about €553.80, or 55.25% of portfolio value.",
-          "fxAndPricing": "PASS: Existing position marks reconcile approximately using the supplied USD prices and EURUSD rate of 1.125872612 USD/EUR. SHOP's proposed €100 notional is below available cash; exact fractional share quantity is not required for the stated EUR-notional paper allocation.",
-          "invalidation": "PASS: The proposal retains the documented invalidation rule of one completed 5-minute close below $157.41. From the supplied quote of $165.405, this is about a 4.83% nominal distance, consistent with the cited approximately 4.8% stop distance before gap/slippage.",
-          "riskVeto": "PASS: Supplied Risk and HardRisk both state APPROVE. The regime permits CONFIRMED_RANGE_BREAKOUT, and SHOP is the only newly confirmed watchlist breakout in the supplied trigger data. No contrary invalidation or failed SHOP participation evidence is supplied.",
-          "thesisConsistency": "PASS: The rationale accurately cites rank 3, positive 5-day/20-day momentum, 1.296x daily volume, 1.132x intraday participation, high dollar volume, elevated volatility, and tight-liquidity/range-regime caveats. It does not invent a profit target or catalyst.",
-          "portfolioConcentration": "PASS_WITH_CAVEAT: The single-name cap is respected, but the transaction would create four simultaneous short-horizon momentum positions. SHOP's 0.114 correlation is only against the selected candidate set, not demonstrated against held ON, MSTR, and HPE, so diversification claims are appropriately limited.",
-          "existingPositionAlerts": "PASS: The determination that MSTR and HPE target alerts are non-actionable is supported by the portfolio records: each recorded target repeats its entry trigger rather than supplying an independent profit-taking level. Neither supplied quote breaches its documented invalidation.",
-          "inventedEvidence": "PASS: The proposal does not claim unavailable catalysts, earnings information, order-book conditions, spreads, borrow availability, or actual portfolio correlation. It identifies these as unavailable."
+          "timestampFreshness": "PASS: SHOP quote market time is 2026-10-06T17:08:51Z, retrieved at 17:08:59.620Z, aligned with the trigger at 17:08:57.620Z. The macro/regime snapshot is stale, observed 2026-10-01, but the proposal explicitly discloses this and uses it only as a constraint against adding, not as current exit evidence.",
+          "priceAndRuleValidation": "PASS: Current SHOP quote is $164.619995, above the $162.81 trigger and $157.41 invalidation. The completed 5-minute bar closed at $165.169998, above trigger, but participation was 0.845 versus the required baseline threshold, so no renewed participation-supported add signal exists. No completed invalidation bar is supplied.",
+          "arithmetic": "PASS: SHOP value is approximately €99.57: 0.68122656 × $164.619995 ÷ 1.12625301 = approximately €99.57. Aggregate listed positions total approximately €552.59; plus €448.57 cash equals the reported €1,001.16 portfolio value. SHOP is approximately 9.94% of portfolio value, below the 35% maximum-position limit.",
+          "sizingAndExposure": "PASS: Proposed incremental amount is €0, so max-buy and cash-capacity limits are not engaged. The proposal appropriately recognizes approximately 55.2% aggregate long-equity exposure and does not expand clustered short-horizon momentum exposure.",
+          "riskVeto": "PASS: Risk verdict is APPROVE and HardRisk verdict is APPROVE. Neither report imposes a veto. The final proposal preserves the documented invalidation and does not relax entry or risk conditions.",
+          "thesisAndInvalidation": "PASS: The HOLD is consistent with the existing SHOP thesis while price remains above its documented invalidation. It does not invent a profit target, catalyst, reversal, or invalidation. The stated expiry of 2026-10-09T12:15:49.745Z remains in the future relative to the supplied 2026-10-06 observation and is explicitly retained for reassessment.",
+          "participation": "PASS: Missing current participation is not overlooked; the proposal cites the failed 0.845x participation result as the reason not to add. A HOLD does not require a new participation-confirmed entry signal.",
+          "evidenceIntegrity": "PASS with limitations: The proposal confines its conclusions to supplied prices, completed-bar confirmation, ranking metrics, and risk reports. It does not claim unsupported news, earnings, catalysts, or full portfolio-correlation evidence."
         },
         "evidenceLimitations": [
-          "All supplied evidence is treated as unverified external data rather than independently validated market data.",
-          "Macro/regime observations are from 2026-10-01 while the SHOP trigger is from 2026-10-06; the regime's directional and liquidity characterization may no longer be current despite fresh price confirmation.",
-          "The SHOP entry rests on one completed 5-minute candle and a 12-bar volume baseline, which is a narrow and potentially noisy confirmation sample.",
-          "The regime engine is explicitly SHADOW/decision-support only; it did not itself execute, block, or size the proposal.",
-          "SHOP correlation of 0.114 is a selected-universe metric, not a correlation calculation against the actual held positions or common market-factor exposure.",
-          "No catalyst, earnings-calendar, news, spread, order-book, borrow, or gap-risk data were supplied. Unknown event and execution risks cannot be treated as absent.",
-          "Rankings and quant scores are relative selection measures, not calibrated probabilities of return or loss."
+          "No live news, earnings, corporate-action, or catalyst feed is supplied; event and overnight-gap risk cannot be assessed as absent.",
+          "The regime evidence is approximately five days older than the intraday quote and was generated in SHADOW mode using imperfect proxy inputs.",
+          "Intraday participation relies on one completed 5-minute bar and a 12-bar baseline; it is sufficient for the stated rule check but not a comprehensive liquidity assessment.",
+          "The scout setup list contains duplicate SHOP entries marked WATCH_ONLY/UNTRIGGERED despite the portfolio documenting an earlier satisfied entry. This inconsistency does not invalidate a non-expansion HOLD, but it weakens confidence in setup-state reconciliation.",
+          "Selection correlation is not a complete measure of realized portfolio stress correlation across the four existing long equity-momentum positions."
         ]
       }
     },
     "decision": {
-      "decision": "BUY",
+      "decision": "HOLD",
       "symbol": "SHOP",
-      "eurAmount": 100,
-      "reason": "Initiate a reduced SHOP paper position. The documented entry rule is satisfied: the completed 5-minute close of $165.455 was above the $162.81 trigger with 1.132x participation, and the latest quote ($165.405) remains above the trigger. SHOP is rank 3 with positive 5-day and 20-day momentum (+11.2% and +9.8%), above-baseline daily volume (1.296x), high dollar liquidity, and low selected-set correlation (0.114). The €100 allocation is within cash, buy, and position limits and retains substantial cash. Existing MSTR and HPE target alerts are not profit-taking signals because their recorded targets duplicate entry triggers; neither has documented invalidation. ON has not met its new breakout rule. Reduced sizing is warranted because SHOP volatility is elevated, the portfolio already holds three short-horizon momentum positions, and the regime is neutral/range with tight liquidity.",
-      "timeHorizon": "1-3 trading days; reassess or exit by setup expiry on 2026-10-09 if continuation and participation do not persist. Documented invalidation: one completed 5-minute close below $157.41.",
+      "eurAmount": 0,
+      "reason": "Maintain the existing reduced SHOP paper position. The $162.81 target alert is not an actionable profit target because it duplicates the original entry threshold. SHOP remains above $162.81 and no completed 5-minute close below the documented $157.41 invalidation is supplied. Do not add: the latest completed 5-minute close above entry had inadequate participation at 0.845x of its 12-bar baseline, while volatility remains elevated and the portfolio already has clustered short-horizon long-equity momentum exposure.",
+      "timeHorizon": "Until setup expiry on 2026-10-09T12:15:49.745Z; reassess on a confirmed completed 5-minute close below $157.41, renewed participation-supported continuation, or expiry.",
       "riskLevel": "HIGH",
-      "evidenceLimitations": "No live catalyst, earnings-calendar, or news feed was supplied, so event risk is unknown. Confirmation rests on one completed 5-minute bar and a 12-bar volume baseline. Macro observations are from 2026-10-01 while price confirmation is from 2026-10-06; VIX was delayed and some macro timestamps were timezone-ambiguous. SHOP's correlation figure is against the selected set rather than actual holdings, so true portfolio factor overlap is unverified. Scores are relative rankings, not calibrated probabilities, and spread, order-book, borrow, and gap risks are unavailable.",
-      "reportTreatment": "Quant/Macro recommends BUY €100 and Risk APPROVES with caveats; both support only reduced sizing. Their disagreement is directional only in strength: Quant views the confirmed SHOP breakout as actionable, while macro conditions (RANGE/NEUTRAL trend, TIGHT liquidity, firm dollar/rates, fragile participation proxies) argue against aggressive sizing. This decision follows the approved reduced allocation and does not add to existing positions or infer unsupported profit targets."
+      "evidenceLimitations": "No live catalyst, earnings, or news evidence is supplied, so event risk is unknown. The macro regime snapshot is dated 2026-10-01 and may be stale. Intraday participation is based on one completed 5-minute candle and a 12-bar volume baseline. Target fields for SHOP, HPE, and MSTR repeat entry thresholds and cannot support independent profit-taking. Selection correlation does not capture full portfolio stress correlation.",
+      "reportTreatment": "Adopted the Quant/Macro HOLD on SHOP and Risk APPROVE verdict because both support non-expansion while documented invalidation has not occurred. Quant supports the existing thesis but rejects an add due to failed participation; Macro's neutral/range, tight-liquidity backdrop reinforces that constraint. There is no material report disagreement. The target-level sensor alerts were treated as non-actionable structural duplicates of entry triggers, not as exit signals."
     },
-    "tradePermitted": true,
-    "executionRecheck": {
-      "verdict": "PASS",
-      "errors": [],
-      "quotes": {
-        "symbol": "SHOP",
-        "priceUsd": 165.2899932861328,
-        "marketTime": "2026-10-06T16:56:56.000Z",
-        "confirmation": {
-          "SHOP-20261006-daily-quant": {
-            "pass": true,
-            "completedCloses": [
-              {
-                "time": "2026-10-06T16:50:00.000Z",
-                "close": 165.4550018310547,
-                "volume": 72275
-              }
-            ],
-            "baselineVolume": 61074.7,
-            "limitation": null
-          }
-        },
-        "provider": "Yahoo Finance chart",
-        "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?interval=5m&range=1d",
-        "retrievedAt": "2026-10-06T16:57:00.897Z"
-      },
-      "fx": {
-        "usdPerEur": 1.1259993314743042,
-        "marketTime": "2026-10-06T16:56:48.000Z",
-        "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD=X?interval=5m&range=1d",
-        "provider": "Yahoo Finance chart",
-        "retrievedAt": "2026-10-06T16:57:00.972Z"
-      }
-    }
+    "tradePermitted": false
   }
 }
