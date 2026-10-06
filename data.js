@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-06 17:27 UTC",
+    "asOf": "2026-10-06 17:42 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -38,19 +38,19 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 1000.42,
+    "value": 1000.5,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": 1.85,
-    "total": 0.42,
-    "totalPct": 0.04
+    "unrealized": 1.93,
+    "total": 0.5,
+    "totalPct": 0.05
   },
   "positions": [
     {
       "symbol": "ON",
       "qty": 2.6375123,
       "avgUsd": 85.34500122070312,
-      "lastUsd": 86.26000213623047,
+      "lastUsd": 86.27999877929688,
       "costEur": 200,
       "entryReason": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
       "openedAt": "2026-10-02T13:33:00.322Z",
@@ -62,16 +62,16 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 202.05,
-      "pnl": 2.05,
-      "pnlPct": 1.03,
-      "fxUsdPerEur": 1.1259993314743042
+      "value": 202.01,
+      "pnl": 2.01,
+      "pnlPct": 1,
+      "fxUsdPerEur": 1.1265066862106323
     },
     {
       "symbol": "MSTR",
       "qty": 1.02771459,
       "avgUsd": 163.6999969482422,
-      "lastUsd": 164.15499877929688,
+      "lastUsd": 164.19000244140625,
       "costEur": 150,
       "entryReason": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
       "openedAt": "2026-10-05T18:46:52.781Z",
@@ -97,16 +97,16 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 149.83,
-      "pnl": -0.17,
-      "pnlPct": -0.12,
-      "fxUsdPerEur": 1.1259993314743042
+      "value": 149.79,
+      "pnl": -0.21,
+      "pnlPct": -0.14,
+      "fxUsdPerEur": 1.1265066862106323
     },
     {
       "symbol": "HPE",
       "qty": 1.59808207,
       "avgUsd": 70.51499938964844,
-      "lastUsd": 70.79000091552734,
+      "lastUsd": 70.76499938964844,
       "costEur": 100,
       "entryReason": "Initiate a reduced paper position in HPE. The required entry condition is explicitly met: a completed 5-minute close of $70.73 exceeded the $69.39 trigger with 1.631x participation versus the 12-bar baseline, and the latest quote of $70.60 remains above the trigger. HPE remains a constructive ranked momentum candidate (rank 4, 5-day momentum +9.1%, 20-day momentum +25.6%) with moderate selected-set correlation (0.343). The €100 size is deliberately reduced for tight liquidity, weak daily volume participation (0.745x), rank deterioration from 1 to 4, high realized volatility/ATR, price extension above the trigger, and unverified overlap with existing ON and MSTR exposure. The risk report approves the allocation with no veto. The MSTR target-level event does not justify action because $163.17 is its documented entry trigger, not an evidence-backed profit target.",
       "openedAt": "2026-10-06T15:29:44.132Z",
@@ -116,7 +116,7 @@ window.PORTFOLIO_DATA = {
       "target": "Break above $69.39 with sustained participation.",
       "invalidation": "Loss of $67.33 or failed breakout/reversal of the ranked momentum signal.",
       "lastDecision": "HOLD",
-      "lastDecisionReason": "Maintain the existing HPE paper position. HPE is $70.78, above its $69.39 entry threshold and the defined $67.33 invalidation. The target-level alert is not actionable because the recorded target repeats the entry trigger rather than defining an independent profit-taking level. Do not add: the latest completed 5-minute close above entry lacked required participation (0.675x the 12-bar baseline), daily volume is weak (0.745x), rank fell from 1 to 4, and volatility remains high. Do not reduce or sell: no completed 5-minute close below $67.33 or other documented invalidation is supplied. This aligns with Quant/Macro and is approved by Risk; both favor holding rather than expanding clustered short-horizon momentum exposure in tight liquidity.",
+      "lastDecisionReason": "Maintain the existing HPE paper position without adding. A completed 5-minute close at $70.735 remained above the $69.39 entry trigger with 1.364x baseline participation, while no completed 5-minute close below the documented $67.33 invalidation is supplied. The target-level alert is not actionable because the recorded target duplicates the entry threshold rather than providing an independent profit objective. Do not add despite the valid breakout: HPE fell from rank 1 to 4, daily volume participation is weak at 0.745x, realized volatility and ATR are elevated, and the portfolio already has roughly 55% exposure across four short-horizon long momentum equities in a tight-liquidity regime.",
       "setupId": "HPE-20261006-daily-quant",
       "entryRule": {
         "operator": "ABOVE",
@@ -132,16 +132,16 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 100.47,
-      "pnl": 0.47,
-      "pnlPct": 0.47,
-      "fxUsdPerEur": 1.1259993314743042
+      "value": 100.39,
+      "pnl": 0.39,
+      "pnlPct": 0.39,
+      "fxUsdPerEur": 1.1265066862106323
     },
     {
       "symbol": "SHOP",
       "qty": 0.68122656,
       "avgUsd": 165.2899932861328,
-      "lastUsd": 164.46499633789062,
+      "lastUsd": 164.92999267578125,
       "costEur": 100,
       "entryReason": "Initiate a reduced SHOP paper position. The documented entry rule is satisfied: the completed 5-minute close of $165.455 was above the $162.81 trigger with 1.132x participation, and the latest quote ($165.405) remains above the trigger. SHOP is rank 3 with positive 5-day and 20-day momentum (+11.2% and +9.8%), above-baseline daily volume (1.296x), high dollar liquidity, and low selected-set correlation (0.114). The €100 allocation is within cash, buy, and position limits and retains substantial cash. Existing MSTR and HPE target alerts are not profit-taking signals because their recorded targets duplicate entry triggers; neither has documented invalidation. ON has not met its new breakout rule. Reduced sizing is warranted because SHOP volatility is elevated, the portfolio already holds three short-horizon momentum positions, and the regime is neutral/range with tight liquidity.",
       "openedAt": "2026-10-06T16:57:00.973Z",
@@ -167,10 +167,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 99.5,
-      "pnl": -0.5,
-      "pnlPct": -0.5,
-      "fxUsdPerEur": 1.1259993314743042
+      "value": 99.74,
+      "pnl": -0.26,
+      "pnlPct": -0.26,
+      "fxUsdPerEur": 1.1265066862106323
     }
   ],
   "trades": [
@@ -711,8 +711,8 @@ window.PORTFOLIO_DATA = {
       "value": 998.57
     },
     {
-      "date": "2026-10-06 17:27",
-      "value": 1000.42
+      "date": "2026-10-06 17:42",
+      "value": 1000.5
     }
   ],
   "strategyState": {
@@ -1275,7 +1275,7 @@ window.PORTFOLIO_DATA = {
       "BTC and ETH remained below their breakout levels and vulnerable to further range failure.",
       "Cboe VIX was delayed and several macro page clock times lacked explicit timezones; SHADOW output remains research only."
     ],
-    "lastReviewedAt": "2026-10-06T17:26:18.357Z",
+    "lastReviewedAt": "2026-10-06T17:42:11.554Z",
     "evidence": [
       {
         "id": "current-market-review",
@@ -1353,7 +1353,7 @@ window.PORTFOLIO_DATA = {
       "accountingValuesChanged": false
     },
     "latestReview": {
-      "reviewedAt": "2026-10-06T17:26:18.357Z",
+      "reviewedAt": "2026-10-06T17:42:11.554Z",
       "accountingValidation": "PASS",
       "sourceLedgerBlobSha": "d6bd34fc5bc85289517fd3a0b088299d79c7dd74",
       "decision": "HOLD",
@@ -1532,7 +1532,7 @@ window.PORTFOLIO_DATA = {
       ],
       "alternativeAssessment": "NVDA and XLE showed early-session relative strength, but immediate re-entry after recent exits would be churn without a defined fresh setup. HPE's catalyst was overwhelmed by failed price confirmation; ETH and BTC remained below breakout levels.",
       "transactionReason": null,
-      "reason": "Maintain the existing MSTR paper position. The current $164.15 quote remains above the documented $163.17 breakout-entry threshold and the $156.85 invalidation. The triggered target-level event is not actionable because the recorded target duplicates the entry threshold rather than supplying an independent evidence-backed take-profit level. Do not BUY: MSTR has weakened to rank 7 from 5, with 5-day momentum of +4.64%, sub-baseline volume of 0.934x, ATR of 5.782%, and existing clustered short-horizon long-equity exposure. Do not REDUCE or SELL: no completed 5-minute close below $156.85 or other documented invalidation/reversal is supplied."
+      "reason": "Maintain the existing HPE paper position without adding. A completed 5-minute close at $70.735 remained above the $69.39 entry trigger with 1.364x baseline participation, while no completed 5-minute close below the documented $67.33 invalidation is supplied. The target-level alert is not actionable because the recorded target duplicates the entry threshold rather than providing an independent profit objective. Do not add despite the valid breakout: HPE fell from rank 1 to 4, daily volume participation is weak at 0.745x, realized volatility and ATR are elevated, and the portfolio already has roughly 55% exposure across four short-horizon long momentum equities in a tight-liquidity regime."
     },
     "regimeEngine": {
       "engineVersion": "1.0.0",
@@ -5662,8 +5662,8 @@ window.PORTFOLIO_DATA = {
     "agentTeam": {
       "schemaVersion": 1,
       "mode": "MULTI_CALL_ROLE_PIPELINE",
-      "processedAt": "2026-10-06T17:26:18.357Z",
-      "evidenceHash": "e5426a338876d2d686e4680a5219d4dc17dd2b8e576f45cca0abc4d35a252837",
+      "processedAt": "2026-10-06T17:42:11.554Z",
+      "evidenceHash": "098d7a177dffb0d3f075a7012a3980be03901f0735dece55a5e05276da52684f",
       "reports": {
         "scout": {
           "role": "SCOUT",
@@ -6026,49 +6026,47 @@ window.PORTFOLIO_DATA = {
         },
         "quantMacro": {
           "decision": "HOLD",
-          "symbol": "MSTR",
+          "symbol": "HPE",
           "eurAmount": 0,
-          "reason": "Maintain MSTR without adding or reducing. The $164.15 quote remains above the documented $163.17 entry threshold and $156.85 invalidation, while the trigger's stated target merely repeats the original entry level and is not an independent, evidence-backed profit-taking signal. Ranking has weakened to 7 from 5, with softer 5-day momentum (+4.64%), sub-baseline volume (0.934x), a 5.78% ATR, and moderate selected-set correlation (0.368); this removes justification to buy more. However, no completed 5-minute close below $156.85 or confirmed reversal is supplied to support REDUCE or SELL.",
-          "timeHorizon": "Hold through the remaining 1-3 trading-day setup horizon; reassess promptly on a completed 5-minute close below $156.85, a confirmed momentum reversal, or setup expiry.",
+          "reason": "Maintain the existing HPE paper position without adding. The latest completed 5-minute bar closed at $70.735 above the $69.39 trigger with 1.364x baseline participation, so the original breakout remains technically confirmed. However, this is an already-held position and the portfolio is concentrated in four short-horizon long momentum equities. HPE has deteriorated from rank 1 to rank 4, has weak daily volume participation (0.745x), elevated realized volatility (43.53% annualized) and ATR (5.257%), and a moderately positive selected-set correlation (0.343). The position-target alert is not a take-profit signal because its recorded target merely repeats the entry threshold. There is no supplied completed 5-minute close below the $67.33 invalidation to support reducing or selling.",
+          "timeHorizon": "1-3 trading days; reassess by setup expiry on 2026-10-09T12:15:49.745Z, or earlier upon a completed 5-minute close below $67.33.",
           "riskLevel": "HIGH",
-          "evidenceLimitations": "The reported POSITION_TARGET_LEVEL event is mechanically true only because the target duplicates the entry trigger. No independent profit target, fresh completed invalidation-bar check, updated portfolio-wide correlation matrix, or live catalyst/earnings/news feed is supplied. Catalyst status is NOT_FETCHED, so event risk cannot be assessed or assumed absent. Regime evidence is dated 2026-10-01 versus quotes on 2026-10-06, and the regime engine is SHADOW-only with delayed/timezone-ambiguous components.",
-          "quantView": "MSTR remains above its entry trigger but has deteriorated relative to the current ranked universe: rank 7, 5-day momentum +4.64%, 20-day momentum +13.54%, volume ratio 0.934x, 10-day realized volatility 34.96% annualized, ATR 5.782%, and max selected correlation 0.368. The current quote alone does not establish continuation quality, and no completed 5-minute close below invalidation establishes failure. HOLD is therefore favored over both adding and risk reduction.",
-          "macroView": "The supplied regime is NEUTRAL/RANGE with NORMAL volatility but TIGHT liquidity, a 0.68 position-size multiplier, and fragile participation signals including elevated rates, a firmer dollar, and weak regional-bank relative performance. These conditions argue against expanding clustered short-horizon long-equity momentum exposure. They do not independently validate an exit absent a documented MSTR invalidation.",
-          "disagreements": "No material Quant/Macro disagreement: both support HOLD rather than BUY in the tight-liquidity range regime. Quant notes ranking and participation deterioration; Macro adds caution about stale regime inputs and unmeasured catalyst risk. Neither has sufficient evidence for REDUCE or SELL."
+          "evidenceLimitations": "No live catalyst, earnings, or news feed was provided, so event risk cannot be assessed or assumed absent. Macro-regime inputs are dated 2026-10-01 versus intraday price data dated 2026-10-06; VIX was delayed and some macro timestamps lacked explicit timezones. The regime engine is SHADOW/decision-support only. Intraday confirmation is based on one completed 5-minute bar and does not establish durable continuation. Target fields for HPE, MSTR, and SHOP duplicate entry triggers rather than provide independent exit levels.",
+          "quantView": "HPE's positive 5-day (+9.149%) and 20-day (+25.569%) momentum and confirmed intraday breakout support retaining the existing position. Do not BUY more: rank fell by three places to 4, daily volume is below baseline at 0.745x, realized volatility is 43.53%, ATR is 5.257%, and portfolio momentum exposure is already clustered. Do not REDUCE/SELL absent the documented $67.33 completed-close invalidation or supplied reversal evidence.",
+          "macroView": "The available regime is NEUTRAL risk, RANGE trend, NORMAL volatility, and TIGHT liquidity, with a 0.68 position-size multiplier. Higher 10-year yields, a stronger dollar, weak regional-bank relative performance, and fragile participation argue against expanding high-volatility equity breakouts. These conditions do not by themselves invalidate the already-confirmed HPE setup.",
+          "disagreements": "No material Quant/Macro disagreement: both support HOLD rather than expansion. The narrow tension is that the fresh HPE intraday confirmation is constructive, while rank deterioration, weak daily participation, tight liquidity, and concentrated portfolio exposure argue against adding."
         },
         "risk": {
           "verdict": "APPROVE",
-          "reason": "Approve the proposed HOLD only: no incremental MSTR exposure, no reduction, and no exit is supported by the supplied evidence. MSTR at $164.15 remains above the $163.17 entry threshold and well above the defined $156.85 completed-5-minute-close invalidation. The target-level event is not a valid take-profit catalyst because its recorded target duplicates the entry trigger. Not adding is risk-consistent: MSTR has weakened to rank 7, has sub-baseline volume (0.934x), high ATR (5.782%), and the portfolio already has approximately 55% of portfolio value in four correlated short-horizon long-equity momentum positions, despite selected-universe correlations not measuring actual holdings correlation. Cash of €448.57 is adequate, but cash availability does not justify greater clustered exposure in a tight-liquidity, range regime. This approval is not an instruction to trade.",
+          "reason": "APPROVE the proposed HOLD-only decision for the existing HPE paper position. No incremental exposure is proposed, so the €250 maximum-buy limit and 35% maximum-position limit are not implicated. HPE remains above its documented $69.39 trigger, and the supplied completed 5-minute close at $70.735 with 1.364x baseline participation supports that the breakout condition remains valid. No supplied completed 5-minute close below the explicit $67.33 invalidation supports a reduction or exit under the stated rules. Holding rather than adding is appropriate because the portfolio already has approximately 55% of value in four short-horizon long-equity momentum positions, HPE has fallen from rank 1 to 4, daily participation is weak at 0.745x, and HPE volatility/ATR are elevated. Reassess no later than the stated 2026-10-09 expiry; do not treat the duplicated entry-level target as a profit objective.",
           "checks": {
-            "proposal": "HOLD MSTR; €0 incremental allocation",
-            "cash": "PASS: €448.57 cash; no cash use proposed.",
-            "positionSizing": "PASS: no incremental position sizing. Existing MSTR value is approximately €149.83, about 15.0% of €1,000.42 portfolio value and below the 35% maximum-position limit.",
-            "portfolioExposure": "CAUTION: existing equity positions total approximately €551.85, or 55.2% of portfolio value, across ON, MSTR, HPE, and SHOP. All are short-horizon long momentum/breakout exposures and may co-move materially during broad risk-off conditions.",
-            "correlation": "CAUTION: reported selected-set correlation of 0.368 is not a correlation calculation against actual held ON/HPE/SHOP positions. MSTR's Bitcoin-linked business model can introduce additional unmeasured crypto-beta and gap risk.",
-            "invalidation": "PASS WITH MONITORING: defined invalidation is one completed 5-minute close below $156.85. No such close is supplied. The current quote alone is not a completed-bar invalidation check.",
-            "expiryAndHorizon": "CAUTION: stated horizon is 1-3 trading days and setup expiry is 2026-10-08T12:10:16Z. The position requires reassessment or closure under the strategy process at expiry if continuation evidence is absent.",
-            "triggerValidity": "PASS: disregard the POSITION_TARGET_LEVEL event for trading action; $163.17 is an entry trigger, not an independently specified profit target.",
-            "regime": "CAUTION: supplied regime is NEUTRAL/RANGE, TIGHT liquidity, and size multiplier 0.68. It supports avoiding expansion, but it is dated 2026-10-01 and cannot independently support a current exit.",
-            "catalystRisk": "CAUTION: catalyst/earnings/news status is NOT_FETCHED; event risk is unknown, not absent."
+            "proposedAction": "HOLD; €0 incremental allocation",
+            "cashAndSizing": "Cash is €448.57. No new cash deployment or position-size increase is proposed. Existing HPE value is about €100.39, approximately 10.0% of €1,000.50 portfolio value, below the stated 35% maximum-position limit.",
+            "portfolioExposure": "Open positions total about €551.93, or 55.2% of portfolio value, all in short-horizon long momentum equities. This is meaningful directional and factor concentration despite individual positions being modest.",
+            "correlation": "The cited 0.343 HPE selected-set correlation is a selection-universe metric, not a demonstrated correlation to the actual held portfolio. Actual co-movement with ON, SHOP, and especially MSTR is not supplied. The HOLD decision does not increase this uncertainty; adding would be inappropriate without portfolio-level correlation evidence.",
+            "invalidation": "Documented rule is one completed 5-minute close below $67.33. No such close is supplied. A price-only dip or an uncompleted bar should not be treated as rule satisfaction.",
+            "expiryAndHorizon": "The setup expires 2026-10-09T12:15:49.745Z and has a 1-3 trading-day horizon. Holding is conditional on continued validity through expiry, not indefinite retention.",
+            "triggerQuality": "The HPE breakout confirmation is supported by one completed 5-minute close above $69.39 and participation of 1.364x the 12-bar baseline. This supports retention but is insufficient evidence of durable continuation or an add-on entry.",
+            "targetIntegrity": "The recorded $69.39 target duplicates the breakout entry threshold. It is not an independent, evidence-backed profit-taking level and should not trigger a sale or imply favorable reward-to-risk."
           },
           "evidenceLimitations": [
-            "Quotes are intraday snapshots and do not provide a fresh completed 5-minute candle assessment at the $156.85 invalidation level.",
-            "No actual-held-portfolio correlation matrix, sector/factor decomposition, or crypto-beta estimate is supplied.",
-            "Selection correlation is not equivalent to correlation with existing ON, HPE, and SHOP holdings.",
-            "No live catalyst, earnings-calendar, news, borrow, or event-risk data is available.",
-            "Macro/regime evidence is five calendar days older than the quoted prices, includes delayed and timezone-ambiguous components, and is explicitly SHADOW-only.",
-            "Reported target field is semantically defective because it duplicates the MSTR entry trigger; no evidence-backed profit objective or trailing-risk rule is supplied."
+            "No live catalyst, earnings-calendar, or news evidence was supplied; event risk is unknown and must not be assumed absent.",
+            "Macro regime observations are dated 2026-10-01 while the trade observations are dated 2026-10-06; regime relevance may have decayed.",
+            "The regime engine is explicitly SHADOW/decision-support only, VIX was delayed, and some source times lack clear timezone information.",
+            "Intraday continuation evidence rests on a single completed 5-minute bar and a 12-bar volume baseline.",
+            "Selected-universe correlations do not establish realized correlation to the current holdings; portfolio-level covariance, sector overlap, beta, and MSTR's crypto-linked risk linkage are not provided.",
+            "Prices and trigger information are supplied external evidence and may be delayed, incomplete, or internally inconsistent, including duplicate target/entry fields."
           ]
         },
         "pm": {
           "decision": "HOLD",
-          "symbol": "MSTR",
+          "symbol": "HPE",
           "eurAmount": 0,
-          "reason": "Maintain the existing MSTR paper position. The current $164.15 quote remains above the documented $163.17 breakout-entry threshold and the $156.85 invalidation. The triggered target-level event is not actionable because the recorded target duplicates the entry threshold rather than supplying an independent evidence-backed take-profit level. Do not BUY: MSTR has weakened to rank 7 from 5, with 5-day momentum of +4.64%, sub-baseline volume of 0.934x, ATR of 5.782%, and existing clustered short-horizon long-equity exposure. Do not REDUCE or SELL: no completed 5-minute close below $156.85 or other documented invalidation/reversal is supplied.",
-          "timeHorizon": "Hold for the remaining 1-3 trading-day setup horizon; reassess on a completed 5-minute close below $156.85, confirmed momentum reversal, or setup expiry on 2026-10-08T12:10:16Z.",
+          "reason": "Maintain the existing HPE paper position without adding. A completed 5-minute close at $70.735 remained above the $69.39 entry trigger with 1.364x baseline participation, while no completed 5-minute close below the documented $67.33 invalidation is supplied. The target-level alert is not actionable because the recorded target duplicates the entry threshold rather than providing an independent profit objective. Do not add despite the valid breakout: HPE fell from rank 1 to 4, daily volume participation is weak at 0.745x, realized volatility and ATR are elevated, and the portfolio already has roughly 55% exposure across four short-horizon long momentum equities in a tight-liquidity regime.",
+          "timeHorizon": "1-3 trading days; reassess by setup expiry on 2026-10-09T12:15:49.745Z, or earlier if one completed 5-minute close is below $67.33.",
           "riskLevel": "HIGH",
-          "evidenceLimitations": "The target alert is mechanically triggered but semantically invalid as a profit-taking signal because it repeats the entry level. No fresh completed 5-minute invalidation-bar assessment, actual-held-portfolio correlation matrix, sector/factor or crypto-beta analysis, or live catalyst/earnings/news evidence is supplied. Catalyst risk is unknown, not absent. The macro regime input is dated 2026-10-01, includes delayed/timezone-ambiguous components, and is SHADOW-only.",
-          "reportTreatment": "Quant/Macro recommends HOLD MSTR and Risk approves HOLD only; both are followed. There is no material disagreement: Quant/Macro identifies deteriorating ranking and participation as reasons not to add, while Risk emphasizes portfolio concentration, unmeasured crypto-beta, tight liquidity, and short setup expiry. Neither report provides documented invalidation evidence supporting REDUCE or SELL, and no risk veto applies."
+          "evidenceLimitations": "No live catalyst, earnings-calendar, or news evidence was provided, so event risk is unknown. Macro regime inputs are from 2026-10-01 and may be stale relative to 2026-10-06 intraday prices; VIX was delayed and some timestamps lack explicit timezones. The regime engine is SHADOW/decision-support only. Continuation evidence is only one completed 5-minute bar and a 12-bar volume baseline. Supplied selected-set correlation does not establish correlation to actual holdings. Recorded target fields for HPE, MSTR, and SHOP duplicate entry thresholds and are not valid independent exit signals.",
+          "reportTreatment": "Quant/Macro recommends HOLD and Risk APPROVES that HOLD; no risk veto applies. Both agree that the confirmed HPE breakout supports retention but not expansion. The constructive intraday confirmation conflicts only narrowly with rank deterioration, weak daily participation, high volatility, tight liquidity, and existing clustered long exposure; these negatives justify no incremental allocation but do not meet the documented reduction or full-exit rule."
         },
         "hardRisk": {
           "verdict": "APPROVE",
@@ -6076,41 +6074,64 @@ window.PORTFOLIO_DATA = {
         },
         "critic": {
           "verdict": "PASS",
-          "reason": "The HOLD of MSTR with €0 incremental allocation is supported. The fresh MSTR quote ($164.155 at 2026-10-06T17:26:16Z) is above both the $163.17 entry threshold and $156.85 completed-5-minute-close invalidation. The mechanically triggered “target” at $163.17 is correctly treated as non-actionable because it duplicates the entry trigger rather than establishing an independent profit target. No sizing, cash, or maximum-position breach is created by HOLD, and the supplied deterioration in rank/participation supports not adding. No documented invalidation supports REDUCE or SELL.",
+          "reason": "The HOLD-only proposal for the existing HPE paper position is supported by the supplied current trigger and quote evidence. The 17:35Z completed 5-minute close of $70.735 was above the $69.39 entry threshold with 1.364x participation, the contemporaneous quote was $70.765, and no supplied completed 5-minute close was below the $67.33 invalidation. No incremental allocation, reduction, or sale is proposed, so no sizing or cash constraint is breached. The stated rationale for not adding is consistent with rank deterioration, weak daily participation, high volatility, tight liquidity, and clustered long-equity exposure.",
           "checks": {
-            "timestampFreshness": "PASS: MSTR quote, trigger, FX, and related chart observations are contemporaneous around 2026-10-06T17:26Z. Macro/regime evidence is stale relative to the quote (2026-10-01) but is used only as caution against expansion, not as decisive exit evidence.",
-            "priceAndInvalidation": "PASS: $164.155 is $0.985 above the $163.17 entry threshold and $7.305 above the $156.85 invalidation. The supplied completed 5-minute bar ending 2026-10-06T17:25Z is not below invalidation.",
-            "triggerSemantics": "PASS: The POSITION_TARGET_LEVEL alert is not a valid take-profit event because MSTR's recorded target, “Break above $163.17 with sustained participation,” repeats the original entry condition.",
-            "arithmetic": "PASS: stated position values sum to €551.85 (€202.05 + €149.83 + €100.47 + €99.50); plus €448.57 cash equals the reported €1,000.42 portfolio value. MSTR's €149.83 value is approximately 15.0% of portfolio value, below the 35% position limit.",
-            "sizingAndCash": "PASS: proposal is HOLD with €0, so it uses no cash and does not breach the €250 maximum-buy limit or position limit.",
-            "riskVeto": "PASS: Risk and hardRisk both approve HOLD only. The supplied tight-liquidity/range regime and clustered existing exposure argue against adding but do not veto a non-transactional HOLD.",
-            "thesisAndInvalidationConsistency": "PASS WITH CAUTION: the proposal consistently preserves the $156.85 completed-5-minute-close invalidation and notes weakened rank, momentum, and volume as reasons not to add. It does not claim that those softer factors alone require exit.",
-            "participation": "PASS FOR HOLD: MSTR's current daily volume ratio is sub-baseline at 0.934x, which negates a case for expansion. Participation confirmation is not required to maintain an existing position, and no new MSTR entry is proposed.",
-            "expiry": "PASS WITH MONITORING: the 2026-10-08T12:10:16Z expiry remains in the future relative to the decision timestamp. The proposal calls for reassessment at expiry rather than ignoring it."
+            "timestamps": {
+              "status": "PASS_WITH_LIMITATION",
+              "detail": "Trade/trigger/quote/FX evidence is contemporaneous around 2026-10-06T17:42Z. The macro regime evidence is dated 2026-10-01 and is stale relative to the intraday decision; the proposal explicitly discloses this and does not rely on it to alter the documented invalidation rule."
+            },
+            "triggerAndInvalidation": {
+              "status": "PASS",
+              "detail": "HPE confirmation is explicitly supplied: one completed 5-minute close at $70.735 above $69.39 and participation ratio 1.364. No completed 5-minute close below $67.33 is supplied. The HOLD does not claim an unsupported invalidation or continuation signal."
+            },
+            "arithmetic": {
+              "status": "PASS",
+              "detail": "Position values sum to €551.93 (€202.01 + €149.79 + €100.39 + €99.74); plus €448.57 cash equals the reported €1,000.50 portfolio value. €551.93/€1,000.50 = 55.17%, supporting the stated roughly 55% aggregate invested exposure. HPE is approximately 10.03% of portfolio value, below the 35% position limit."
+            },
+            "sizingAndLimits": {
+              "status": "PASS",
+              "detail": "Proposal is HOLD with €0 incremental allocation. Therefore the €250 maximum-buy limit, available cash, and maximum-position limit are not implicated."
+            },
+            "riskVeto": {
+              "status": "PASS",
+              "detail": "Risk and hard-risk supplied verdicts are APPROVE, and the proposal does not conflict with their HOLD-only condition. The SHADOW regime is appropriately treated as decision support rather than an execution authority."
+            },
+            "thesisConsistency": {
+              "status": "PASS",
+              "detail": "The proposal consistently distinguishes the confirmed breakout from the reasons not to add. It correctly treats the recorded $69.39 target as a duplicate of the entry trigger, not an independent take-profit signal, and retains the documented $67.33 completed-close invalidation."
+            },
+            "participation": {
+              "status": "PASS",
+              "detail": "The proposal cites the relevant qualifying participation evidence for the HPE breakout. It does not incorrectly use SHOP's failed-participation result or ON's unconfirmed breakout as support for HPE."
+            },
+            "portfolioConcentration": {
+              "status": "PASS_WITH_LIMITATION",
+              "detail": "The directionally clustered four-position long-momentum exposure is correctly identified. The cited HPE selected-set correlation of 0.343 is not actual holding-level correlation, but the proposal discloses that limitation and does not use it to justify expansion."
+            }
           },
           "evidenceLimitations": [
-            "The proposal inaccurately frames the record as lacking a fresh completed invalidation-bar assessment: a fresh completed 5-minute MSTR bar/observation is supplied, although it is well above $156.85 and does not constitute an invalidation. This does not alter the HOLD conclusion.",
-            "The current MSTR quote is a snapshot; no comprehensive sequence of completed MSTR bars, fresh reversal test, or renewed participation calculation tied to the original MSTR entry rule is supplied.",
-            "Macro/regime inputs are approximately five calendar days older than the quotes, include delayed/timezone-ambiguous components, and are explicitly SHADOW-only.",
-            "No actual portfolio-held correlation matrix, sector/factor decomposition, crypto-beta estimate, or live catalyst/earnings/news data is supplied. Assertions about clustered exposure are reasonable risk cautions but are not quantitatively verified by an actual-holdings correlation calculation.",
-            "The target field is semantically defective, so there is no evidence-backed profit-taking objective or trailing-risk framework for MSTR."
+            "No live news, catalyst, earnings-calendar, or event-risk evidence is supplied; a HOLD may still pass because it does not add risk.",
+            "Macro-regime observations are approximately five days older than the decision-time quotes and have delayed/timezone-ambiguous components.",
+            "HPE continuation evidence consists of only one completed 5-minute bar and a 12-bar volume baseline; it establishes rule satisfaction, not durable trend persistence.",
+            "The scout setup records include duplicated/conflicting WATCH_ONLY and UNTRIGGERED status entries for HPE despite the separate event bridge explicitly confirming the breakout. The proposal relies on the explicit current confirmation, which is the stronger directly relevant evidence.",
+            "Portfolio correlation, sector exposure, beta, and realized covariance across ON, MSTR, HPE, and SHOP are not supplied."
           ]
         }
       },
       "decision": {
         "decision": "HOLD",
-        "symbol": "MSTR",
+        "symbol": "HPE",
         "eurAmount": 0,
-        "reason": "Maintain the existing MSTR paper position. The current $164.15 quote remains above the documented $163.17 breakout-entry threshold and the $156.85 invalidation. The triggered target-level event is not actionable because the recorded target duplicates the entry threshold rather than supplying an independent evidence-backed take-profit level. Do not BUY: MSTR has weakened to rank 7 from 5, with 5-day momentum of +4.64%, sub-baseline volume of 0.934x, ATR of 5.782%, and existing clustered short-horizon long-equity exposure. Do not REDUCE or SELL: no completed 5-minute close below $156.85 or other documented invalidation/reversal is supplied.",
-        "timeHorizon": "Hold for the remaining 1-3 trading-day setup horizon; reassess on a completed 5-minute close below $156.85, confirmed momentum reversal, or setup expiry on 2026-10-08T12:10:16Z.",
+        "reason": "Maintain the existing HPE paper position without adding. A completed 5-minute close at $70.735 remained above the $69.39 entry trigger with 1.364x baseline participation, while no completed 5-minute close below the documented $67.33 invalidation is supplied. The target-level alert is not actionable because the recorded target duplicates the entry threshold rather than providing an independent profit objective. Do not add despite the valid breakout: HPE fell from rank 1 to 4, daily volume participation is weak at 0.745x, realized volatility and ATR are elevated, and the portfolio already has roughly 55% exposure across four short-horizon long momentum equities in a tight-liquidity regime.",
+        "timeHorizon": "1-3 trading days; reassess by setup expiry on 2026-10-09T12:15:49.745Z, or earlier if one completed 5-minute close is below $67.33.",
         "riskLevel": "HIGH",
-        "evidenceLimitations": "The target alert is mechanically triggered but semantically invalid as a profit-taking signal because it repeats the entry level. No fresh completed 5-minute invalidation-bar assessment, actual-held-portfolio correlation matrix, sector/factor or crypto-beta analysis, or live catalyst/earnings/news evidence is supplied. Catalyst risk is unknown, not absent. The macro regime input is dated 2026-10-01, includes delayed/timezone-ambiguous components, and is SHADOW-only.",
-        "reportTreatment": "Quant/Macro recommends HOLD MSTR and Risk approves HOLD only; both are followed. There is no material disagreement: Quant/Macro identifies deteriorating ranking and participation as reasons not to add, while Risk emphasizes portfolio concentration, unmeasured crypto-beta, tight liquidity, and short setup expiry. Neither report provides documented invalidation evidence supporting REDUCE or SELL, and no risk veto applies."
+        "evidenceLimitations": "No live catalyst, earnings-calendar, or news evidence was provided, so event risk is unknown. Macro regime inputs are from 2026-10-01 and may be stale relative to 2026-10-06 intraday prices; VIX was delayed and some timestamps lack explicit timezones. The regime engine is SHADOW/decision-support only. Continuation evidence is only one completed 5-minute bar and a 12-bar volume baseline. Supplied selected-set correlation does not establish correlation to actual holdings. Recorded target fields for HPE, MSTR, and SHOP duplicate entry thresholds and are not valid independent exit signals.",
+        "reportTreatment": "Quant/Macro recommends HOLD and Risk APPROVES that HOLD; no risk veto applies. Both agree that the confirmed HPE breakout supports retention but not expansion. The constructive intraday confirmation conflicts only narrowly with rank deterioration, weak daily participation, high volatility, tight liquidity, and existing clustered long exposure; these negatives justify no incremental allocation but do not meet the documented reduction or full-exit rule."
       },
       "tradePermitted": false,
-      "decisionKey": "89a3606307bc660c",
-      "triggerKey": "d471d1e8f6e76006",
-      "baseCommitSha": "a0c83820308aa71e426c513d92e400dd584b728b",
+      "decisionKey": "831f550587fec1f6",
+      "triggerKey": "853e92bcf2b79fa8",
+      "baseCommitSha": "22638951cb4f202edc386ce6d7b3f1e41ad20ea9",
       "portfolioMutation": false
     },
     "agentTeamHistory": [
@@ -19721,12 +19742,487 @@ window.PORTFOLIO_DATA = {
         "triggerKey": "d471d1e8f6e76006",
         "baseCommitSha": "a0c83820308aa71e426c513d92e400dd584b728b",
         "portfolioMutation": false
+      },
+      {
+        "schemaVersion": 1,
+        "mode": "MULTI_CALL_ROLE_PIPELINE",
+        "processedAt": "2026-10-06T17:42:11.554Z",
+        "evidenceHash": "098d7a177dffb0d3f075a7012a3980be03901f0735dece55a5e05276da52684f",
+        "reports": {
+          "scout": {
+            "role": "SCOUT",
+            "mode": "DETERMINISTIC_EXISTING_UNIVERSE_SELECTOR",
+            "selectedAt": "2026-10-06T12:15:49.745Z",
+            "universeSize": 116,
+            "symbols": [
+              "ON",
+              "MSTR",
+              "HPE",
+              "SHOP"
+            ],
+            "candidates": [
+              {
+                "symbol": "ON",
+                "rank": 1,
+                "previousRank": 2,
+                "rankChange": 1,
+                "rankChangeLabel": "+1",
+                "status": "SELECTED",
+                "quantScore": 1.939,
+                "metrics": {
+                  "momentum5d": 13.589,
+                  "momentum20d": 16.673,
+                  "realizedVol10dAnnualized": 40.73,
+                  "volumeRatio": 0.936,
+                  "atrPct": 4.235,
+                  "gapPct": 0.247,
+                  "relativeStrength5dPct": 12.385,
+                  "relativeStrength20dPct": 16.459,
+                  "avgDollarVolume10d": 984874668,
+                  "maxSelectedCorrelation": 0
+                },
+                "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+                "factors": {
+                  "momentum": 2.703,
+                  "participation": 0.322,
+                  "volatility": 1.36,
+                  "gap": 0.255,
+                  "correlation": 0,
+                  "regimeFit": null
+                },
+                "setup": "Daily quant momentum / volatility breakout",
+                "entryRule": {
+                  "operator": "ABOVE",
+                  "level": 87.14,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1,
+                  "requireParticipation": true
+                },
+                "invalidationRule": {
+                  "operator": "BELOW",
+                  "level": 84.72,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1
+                },
+                "expiresAt": "2026-10-09T12:15:49.745Z",
+                "trigger": "Break above $87.14 with sustained participation.",
+                "invalidation": "Loss of $84.72 or failed breakout/reversal of the ranked momentum signal.",
+                "expectedHorizon": "1-3 trading days",
+                "reason": "Quant score 1.94: 5d momentum 13.6%, 20d 16.7%, annualized 10d realized vol 41%, volume 0.94x, max selected correlation 0.00.",
+                "createdAt": "2026-10-06T12:15:49.745Z",
+                "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+                "setupId": "ON-20261006-daily-quant"
+              },
+              {
+                "symbol": "SHOP",
+                "rank": 3,
+                "previousRank": 12,
+                "rankChange": 9,
+                "rankChangeLabel": "+9",
+                "status": "SELECTED",
+                "quantScore": 1.902,
+                "metrics": {
+                  "momentum5d": 11.18,
+                  "momentum20d": 9.755,
+                  "realizedVol10dAnnualized": 48.69,
+                  "volumeRatio": 1.296,
+                  "atrPct": 4.395,
+                  "gapPct": 1.103,
+                  "relativeStrength5dPct": 9.976,
+                  "relativeStrength20dPct": 9.54,
+                  "avgDollarVolume10d": 1685843027,
+                  "maxSelectedCorrelation": 0.114
+                },
+                "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+                "factors": {
+                  "momentum": 2.068,
+                  "participation": 1.894,
+                  "volatility": 1.673,
+                  "gap": 1.454,
+                  "correlation": 0.114,
+                  "regimeFit": null
+                },
+                "setup": "Daily quant momentum / volatility breakout",
+                "entryRule": {
+                  "operator": "ABOVE",
+                  "level": 162.81,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1,
+                  "requireParticipation": true
+                },
+                "invalidationRule": {
+                  "operator": "BELOW",
+                  "level": 157.41,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1
+                },
+                "expiresAt": "2026-10-09T12:15:49.745Z",
+                "trigger": "Break above $162.81 with sustained participation.",
+                "invalidation": "Loss of $157.41 or failed breakout/reversal of the ranked momentum signal.",
+                "expectedHorizon": "1-3 trading days",
+                "reason": "Quant score 1.90: 5d momentum 11.2%, 20d 9.8%, annualized 10d realized vol 49%, volume 1.30x, max selected correlation 0.11.",
+                "createdAt": "2026-10-06T12:15:49.745Z",
+                "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+                "setupId": "SHOP-20261006-daily-quant"
+              },
+              {
+                "symbol": "HPE",
+                "rank": 4,
+                "previousRank": 1,
+                "rankChange": -3,
+                "rankChangeLabel": "-3",
+                "status": "SELECTED",
+                "quantScore": 1.821,
+                "metrics": {
+                  "momentum5d": 9.149,
+                  "momentum20d": 25.569,
+                  "realizedVol10dAnnualized": 43.53,
+                  "volumeRatio": 0.745,
+                  "atrPct": 5.257,
+                  "gapPct": -0.591,
+                  "relativeStrength5dPct": 7.945,
+                  "relativeStrength20dPct": 25.355,
+                  "avgDollarVolume10d": 1300024690,
+                  "maxSelectedCorrelation": 0.343
+                },
+                "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+                "factors": {
+                  "momentum": 2.239,
+                  "participation": -0.516,
+                  "volatility": 1.984,
+                  "gap": 0.921,
+                  "correlation": 0.343,
+                  "regimeFit": null
+                },
+                "setup": "Daily quant momentum / volatility breakout",
+                "entryRule": {
+                  "operator": "ABOVE",
+                  "level": 69.39,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1,
+                  "requireParticipation": true
+                },
+                "invalidationRule": {
+                  "operator": "BELOW",
+                  "level": 67.33,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1
+                },
+                "expiresAt": "2026-10-09T12:15:49.745Z",
+                "trigger": "Break above $69.39 with sustained participation.",
+                "invalidation": "Loss of $67.33 or failed breakout/reversal of the ranked momentum signal.",
+                "expectedHorizon": "1-3 trading days",
+                "reason": "Quant score 1.82: 5d momentum 9.1%, 20d 25.6%, annualized 10d realized vol 44%, volume 0.74x, max selected correlation 0.34.",
+                "createdAt": "2026-10-06T12:15:49.745Z",
+                "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+                "setupId": "HPE-20261006-daily-quant"
+              },
+              {
+                "symbol": "MSTR",
+                "rank": 7,
+                "previousRank": 5,
+                "rankChange": -2,
+                "rankChangeLabel": "-2",
+                "status": "WATCH",
+                "quantScore": 1.432,
+                "metrics": {
+                  "momentum5d": 4.639,
+                  "momentum20d": 13.541,
+                  "realizedVol10dAnnualized": 34.96,
+                  "volumeRatio": 0.934,
+                  "atrPct": 5.782,
+                  "gapPct": 2.919,
+                  "relativeStrength5dPct": 3.435,
+                  "relativeStrength20dPct": 13.326,
+                  "avgDollarVolume10d": 3219784257,
+                  "maxSelectedCorrelation": 0.368
+                },
+                "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+                "factors": {
+                  "momentum": 1.082,
+                  "participation": 0.313,
+                  "volatility": 2.019,
+                  "gap": 3.999,
+                  "correlation": 0.368,
+                  "regimeFit": null
+                }
+              }
+            ],
+            "setups": [
+              {
+                "symbol": "SHOP",
+                "setup": "Daily quant momentum / volatility breakout",
+                "entryRule": {
+                  "operator": "ABOVE",
+                  "level": 162.81,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1,
+                  "requireParticipation": true
+                },
+                "invalidationRule": {
+                  "operator": "BELOW",
+                  "level": 157.41,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1
+                },
+                "expiresAt": "2026-10-09T12:15:49.745Z",
+                "trigger": "Break above $162.81 with sustained participation.",
+                "invalidation": "Loss of $157.41 or failed breakout/reversal of the ranked momentum signal.",
+                "expectedHorizon": "1-3 trading days",
+                "reason": "Quant score 1.90: 5d momentum 11.2%, 20d 9.8%, annualized 10d realized vol 49%, volume 1.30x, max selected correlation 0.11.",
+                "quantScore": 1.902,
+                "metrics": {
+                  "momentum5d": 11.18,
+                  "momentum20d": 9.755,
+                  "realizedVol10dAnnualized": 48.69,
+                  "volumeRatio": 1.296,
+                  "atrPct": 4.395,
+                  "gapPct": 1.103,
+                  "relativeStrength5dPct": 9.976,
+                  "relativeStrength20dPct": 9.54,
+                  "avgDollarVolume10d": 1685843027,
+                  "maxSelectedCorrelation": 0.114
+                },
+                "createdAt": "2026-10-06T12:15:49.745Z",
+                "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+                "status": "WATCH_ONLY",
+                "setupId": "SHOP-20261006-daily-quant"
+              },
+              {
+                "symbol": "HPE",
+                "setup": "Daily quant momentum / volatility breakout",
+                "entryRule": {
+                  "operator": "ABOVE",
+                  "level": 69.39,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1,
+                  "requireParticipation": true
+                },
+                "invalidationRule": {
+                  "operator": "BELOW",
+                  "level": 67.33,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1
+                },
+                "expiresAt": "2026-10-09T12:15:49.745Z",
+                "trigger": "Break above $69.39 with sustained participation.",
+                "invalidation": "Loss of $67.33 or failed breakout/reversal of the ranked momentum signal.",
+                "expectedHorizon": "1-3 trading days",
+                "reason": "Quant score 1.82: 5d momentum 9.1%, 20d 25.6%, annualized 10d realized vol 44%, volume 0.74x, max selected correlation 0.34.",
+                "quantScore": 1.821,
+                "metrics": {
+                  "momentum5d": 9.149,
+                  "momentum20d": 25.569,
+                  "realizedVol10dAnnualized": 43.53,
+                  "volumeRatio": 0.745,
+                  "atrPct": 5.257,
+                  "gapPct": -0.591,
+                  "relativeStrength5dPct": 7.945,
+                  "relativeStrength20dPct": 25.355,
+                  "avgDollarVolume10d": 1300024690,
+                  "maxSelectedCorrelation": 0.343
+                },
+                "createdAt": "2026-10-06T12:15:49.745Z",
+                "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+                "status": "WATCH_ONLY",
+                "setupId": "HPE-20261006-daily-quant"
+              },
+              {
+                "symbol": "SHOP",
+                "setup": "Daily quant momentum / volatility breakout",
+                "entryRule": {
+                  "operator": "ABOVE",
+                  "level": 162.81,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1,
+                  "requireParticipation": true
+                },
+                "invalidationRule": {
+                  "operator": "BELOW",
+                  "level": 157.41,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1
+                },
+                "expiresAt": "2026-10-09T12:15:49.745Z",
+                "trigger": "Break above $162.81 with sustained participation.",
+                "invalidation": "Loss of $157.41 or failed breakout/reversal of the ranked momentum signal.",
+                "expectedHorizon": "1-3 trading days",
+                "reason": "Quant score 1.90: 5d momentum 11.2%, 20d 9.8%, annualized 10d realized vol 49%, volume 1.30x, max selected correlation 0.11.",
+                "quantScore": 1.902,
+                "metrics": {
+                  "momentum5d": 11.18,
+                  "momentum20d": 9.755,
+                  "realizedVol10dAnnualized": 48.69,
+                  "volumeRatio": 1.296,
+                  "atrPct": 4.395,
+                  "gapPct": 1.103,
+                  "relativeStrength5dPct": 9.976,
+                  "relativeStrength20dPct": 9.54,
+                  "avgDollarVolume10d": 1685843027,
+                  "maxSelectedCorrelation": 0.114
+                },
+                "createdAt": "2026-10-06T12:15:49.745Z",
+                "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+                "status": "UNTRIGGERED",
+                "setupId": "SHOP-20261006-daily-quant"
+              },
+              {
+                "symbol": "HPE",
+                "setup": "Daily quant momentum / volatility breakout",
+                "entryRule": {
+                  "operator": "ABOVE",
+                  "level": 69.39,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1,
+                  "requireParticipation": true
+                },
+                "invalidationRule": {
+                  "operator": "BELOW",
+                  "level": 67.33,
+                  "timeframeMinutes": 5,
+                  "requiredCloses": 1
+                },
+                "expiresAt": "2026-10-09T12:15:49.745Z",
+                "trigger": "Break above $69.39 with sustained participation.",
+                "invalidation": "Loss of $67.33 or failed breakout/reversal of the ranked momentum signal.",
+                "expectedHorizon": "1-3 trading days",
+                "reason": "Quant score 1.82: 5d momentum 9.1%, 20d 25.6%, annualized 10d realized vol 44%, volume 0.74x, max selected correlation 0.34.",
+                "quantScore": 1.821,
+                "metrics": {
+                  "momentum5d": 9.149,
+                  "momentum20d": 25.569,
+                  "realizedVol10dAnnualized": 43.53,
+                  "volumeRatio": 0.745,
+                  "atrPct": 5.257,
+                  "gapPct": -0.591,
+                  "relativeStrength5dPct": 7.945,
+                  "relativeStrength20dPct": 25.355,
+                  "avgDollarVolume10d": 1300024690,
+                  "maxSelectedCorrelation": 0.343
+                },
+                "createdAt": "2026-10-06T12:15:49.745Z",
+                "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+                "status": "UNTRIGGERED",
+                "setupId": "HPE-20261006-daily-quant"
+              }
+            ],
+            "reason": "Existing daily universe ranking; every open position and valid triggered setup is reviewed. No second scanner or schedule."
+          },
+          "quantMacro": {
+            "decision": "HOLD",
+            "symbol": "HPE",
+            "eurAmount": 0,
+            "reason": "Maintain the existing HPE paper position without adding. The latest completed 5-minute bar closed at $70.735 above the $69.39 trigger with 1.364x baseline participation, so the original breakout remains technically confirmed. However, this is an already-held position and the portfolio is concentrated in four short-horizon long momentum equities. HPE has deteriorated from rank 1 to rank 4, has weak daily volume participation (0.745x), elevated realized volatility (43.53% annualized) and ATR (5.257%), and a moderately positive selected-set correlation (0.343). The position-target alert is not a take-profit signal because its recorded target merely repeats the entry threshold. There is no supplied completed 5-minute close below the $67.33 invalidation to support reducing or selling.",
+            "timeHorizon": "1-3 trading days; reassess by setup expiry on 2026-10-09T12:15:49.745Z, or earlier upon a completed 5-minute close below $67.33.",
+            "riskLevel": "HIGH",
+            "evidenceLimitations": "No live catalyst, earnings, or news feed was provided, so event risk cannot be assessed or assumed absent. Macro-regime inputs are dated 2026-10-01 versus intraday price data dated 2026-10-06; VIX was delayed and some macro timestamps lacked explicit timezones. The regime engine is SHADOW/decision-support only. Intraday confirmation is based on one completed 5-minute bar and does not establish durable continuation. Target fields for HPE, MSTR, and SHOP duplicate entry triggers rather than provide independent exit levels.",
+            "quantView": "HPE's positive 5-day (+9.149%) and 20-day (+25.569%) momentum and confirmed intraday breakout support retaining the existing position. Do not BUY more: rank fell by three places to 4, daily volume is below baseline at 0.745x, realized volatility is 43.53%, ATR is 5.257%, and portfolio momentum exposure is already clustered. Do not REDUCE/SELL absent the documented $67.33 completed-close invalidation or supplied reversal evidence.",
+            "macroView": "The available regime is NEUTRAL risk, RANGE trend, NORMAL volatility, and TIGHT liquidity, with a 0.68 position-size multiplier. Higher 10-year yields, a stronger dollar, weak regional-bank relative performance, and fragile participation argue against expanding high-volatility equity breakouts. These conditions do not by themselves invalidate the already-confirmed HPE setup.",
+            "disagreements": "No material Quant/Macro disagreement: both support HOLD rather than expansion. The narrow tension is that the fresh HPE intraday confirmation is constructive, while rank deterioration, weak daily participation, tight liquidity, and concentrated portfolio exposure argue against adding."
+          },
+          "risk": {
+            "verdict": "APPROVE",
+            "reason": "APPROVE the proposed HOLD-only decision for the existing HPE paper position. No incremental exposure is proposed, so the €250 maximum-buy limit and 35% maximum-position limit are not implicated. HPE remains above its documented $69.39 trigger, and the supplied completed 5-minute close at $70.735 with 1.364x baseline participation supports that the breakout condition remains valid. No supplied completed 5-minute close below the explicit $67.33 invalidation supports a reduction or exit under the stated rules. Holding rather than adding is appropriate because the portfolio already has approximately 55% of value in four short-horizon long-equity momentum positions, HPE has fallen from rank 1 to 4, daily participation is weak at 0.745x, and HPE volatility/ATR are elevated. Reassess no later than the stated 2026-10-09 expiry; do not treat the duplicated entry-level target as a profit objective.",
+            "checks": {
+              "proposedAction": "HOLD; €0 incremental allocation",
+              "cashAndSizing": "Cash is €448.57. No new cash deployment or position-size increase is proposed. Existing HPE value is about €100.39, approximately 10.0% of €1,000.50 portfolio value, below the stated 35% maximum-position limit.",
+              "portfolioExposure": "Open positions total about €551.93, or 55.2% of portfolio value, all in short-horizon long momentum equities. This is meaningful directional and factor concentration despite individual positions being modest.",
+              "correlation": "The cited 0.343 HPE selected-set correlation is a selection-universe metric, not a demonstrated correlation to the actual held portfolio. Actual co-movement with ON, SHOP, and especially MSTR is not supplied. The HOLD decision does not increase this uncertainty; adding would be inappropriate without portfolio-level correlation evidence.",
+              "invalidation": "Documented rule is one completed 5-minute close below $67.33. No such close is supplied. A price-only dip or an uncompleted bar should not be treated as rule satisfaction.",
+              "expiryAndHorizon": "The setup expires 2026-10-09T12:15:49.745Z and has a 1-3 trading-day horizon. Holding is conditional on continued validity through expiry, not indefinite retention.",
+              "triggerQuality": "The HPE breakout confirmation is supported by one completed 5-minute close above $69.39 and participation of 1.364x the 12-bar baseline. This supports retention but is insufficient evidence of durable continuation or an add-on entry.",
+              "targetIntegrity": "The recorded $69.39 target duplicates the breakout entry threshold. It is not an independent, evidence-backed profit-taking level and should not trigger a sale or imply favorable reward-to-risk."
+            },
+            "evidenceLimitations": [
+              "No live catalyst, earnings-calendar, or news evidence was supplied; event risk is unknown and must not be assumed absent.",
+              "Macro regime observations are dated 2026-10-01 while the trade observations are dated 2026-10-06; regime relevance may have decayed.",
+              "The regime engine is explicitly SHADOW/decision-support only, VIX was delayed, and some source times lack clear timezone information.",
+              "Intraday continuation evidence rests on a single completed 5-minute bar and a 12-bar volume baseline.",
+              "Selected-universe correlations do not establish realized correlation to the current holdings; portfolio-level covariance, sector overlap, beta, and MSTR's crypto-linked risk linkage are not provided.",
+              "Prices and trigger information are supplied external evidence and may be delayed, incomplete, or internally inconsistent, including duplicate target/entry fields."
+            ]
+          },
+          "pm": {
+            "decision": "HOLD",
+            "symbol": "HPE",
+            "eurAmount": 0,
+            "reason": "Maintain the existing HPE paper position without adding. A completed 5-minute close at $70.735 remained above the $69.39 entry trigger with 1.364x baseline participation, while no completed 5-minute close below the documented $67.33 invalidation is supplied. The target-level alert is not actionable because the recorded target duplicates the entry threshold rather than providing an independent profit objective. Do not add despite the valid breakout: HPE fell from rank 1 to 4, daily volume participation is weak at 0.745x, realized volatility and ATR are elevated, and the portfolio already has roughly 55% exposure across four short-horizon long momentum equities in a tight-liquidity regime.",
+            "timeHorizon": "1-3 trading days; reassess by setup expiry on 2026-10-09T12:15:49.745Z, or earlier if one completed 5-minute close is below $67.33.",
+            "riskLevel": "HIGH",
+            "evidenceLimitations": "No live catalyst, earnings-calendar, or news evidence was provided, so event risk is unknown. Macro regime inputs are from 2026-10-01 and may be stale relative to 2026-10-06 intraday prices; VIX was delayed and some timestamps lack explicit timezones. The regime engine is SHADOW/decision-support only. Continuation evidence is only one completed 5-minute bar and a 12-bar volume baseline. Supplied selected-set correlation does not establish correlation to actual holdings. Recorded target fields for HPE, MSTR, and SHOP duplicate entry thresholds and are not valid independent exit signals.",
+            "reportTreatment": "Quant/Macro recommends HOLD and Risk APPROVES that HOLD; no risk veto applies. Both agree that the confirmed HPE breakout supports retention but not expansion. The constructive intraday confirmation conflicts only narrowly with rank deterioration, weak daily participation, high volatility, tight liquidity, and existing clustered long exposure; these negatives justify no incremental allocation but do not meet the documented reduction or full-exit rule."
+          },
+          "hardRisk": {
+            "verdict": "APPROVE",
+            "errors": []
+          },
+          "critic": {
+            "verdict": "PASS",
+            "reason": "The HOLD-only proposal for the existing HPE paper position is supported by the supplied current trigger and quote evidence. The 17:35Z completed 5-minute close of $70.735 was above the $69.39 entry threshold with 1.364x participation, the contemporaneous quote was $70.765, and no supplied completed 5-minute close was below the $67.33 invalidation. No incremental allocation, reduction, or sale is proposed, so no sizing or cash constraint is breached. The stated rationale for not adding is consistent with rank deterioration, weak daily participation, high volatility, tight liquidity, and clustered long-equity exposure.",
+            "checks": {
+              "timestamps": {
+                "status": "PASS_WITH_LIMITATION",
+                "detail": "Trade/trigger/quote/FX evidence is contemporaneous around 2026-10-06T17:42Z. The macro regime evidence is dated 2026-10-01 and is stale relative to the intraday decision; the proposal explicitly discloses this and does not rely on it to alter the documented invalidation rule."
+              },
+              "triggerAndInvalidation": {
+                "status": "PASS",
+                "detail": "HPE confirmation is explicitly supplied: one completed 5-minute close at $70.735 above $69.39 and participation ratio 1.364. No completed 5-minute close below $67.33 is supplied. The HOLD does not claim an unsupported invalidation or continuation signal."
+              },
+              "arithmetic": {
+                "status": "PASS",
+                "detail": "Position values sum to €551.93 (€202.01 + €149.79 + €100.39 + €99.74); plus €448.57 cash equals the reported €1,000.50 portfolio value. €551.93/€1,000.50 = 55.17%, supporting the stated roughly 55% aggregate invested exposure. HPE is approximately 10.03% of portfolio value, below the 35% position limit."
+              },
+              "sizingAndLimits": {
+                "status": "PASS",
+                "detail": "Proposal is HOLD with €0 incremental allocation. Therefore the €250 maximum-buy limit, available cash, and maximum-position limit are not implicated."
+              },
+              "riskVeto": {
+                "status": "PASS",
+                "detail": "Risk and hard-risk supplied verdicts are APPROVE, and the proposal does not conflict with their HOLD-only condition. The SHADOW regime is appropriately treated as decision support rather than an execution authority."
+              },
+              "thesisConsistency": {
+                "status": "PASS",
+                "detail": "The proposal consistently distinguishes the confirmed breakout from the reasons not to add. It correctly treats the recorded $69.39 target as a duplicate of the entry trigger, not an independent take-profit signal, and retains the documented $67.33 completed-close invalidation."
+              },
+              "participation": {
+                "status": "PASS",
+                "detail": "The proposal cites the relevant qualifying participation evidence for the HPE breakout. It does not incorrectly use SHOP's failed-participation result or ON's unconfirmed breakout as support for HPE."
+              },
+              "portfolioConcentration": {
+                "status": "PASS_WITH_LIMITATION",
+                "detail": "The directionally clustered four-position long-momentum exposure is correctly identified. The cited HPE selected-set correlation of 0.343 is not actual holding-level correlation, but the proposal discloses that limitation and does not use it to justify expansion."
+              }
+            },
+            "evidenceLimitations": [
+              "No live news, catalyst, earnings-calendar, or event-risk evidence is supplied; a HOLD may still pass because it does not add risk.",
+              "Macro-regime observations are approximately five days older than the decision-time quotes and have delayed/timezone-ambiguous components.",
+              "HPE continuation evidence consists of only one completed 5-minute bar and a 12-bar volume baseline; it establishes rule satisfaction, not durable trend persistence.",
+              "The scout setup records include duplicated/conflicting WATCH_ONLY and UNTRIGGERED status entries for HPE despite the separate event bridge explicitly confirming the breakout. The proposal relies on the explicit current confirmation, which is the stronger directly relevant evidence.",
+              "Portfolio correlation, sector exposure, beta, and realized covariance across ON, MSTR, HPE, and SHOP are not supplied."
+            ]
+          }
+        },
+        "decision": {
+          "decision": "HOLD",
+          "symbol": "HPE",
+          "eurAmount": 0,
+          "reason": "Maintain the existing HPE paper position without adding. A completed 5-minute close at $70.735 remained above the $69.39 entry trigger with 1.364x baseline participation, while no completed 5-minute close below the documented $67.33 invalidation is supplied. The target-level alert is not actionable because the recorded target duplicates the entry threshold rather than providing an independent profit objective. Do not add despite the valid breakout: HPE fell from rank 1 to 4, daily volume participation is weak at 0.745x, realized volatility and ATR are elevated, and the portfolio already has roughly 55% exposure across four short-horizon long momentum equities in a tight-liquidity regime.",
+          "timeHorizon": "1-3 trading days; reassess by setup expiry on 2026-10-09T12:15:49.745Z, or earlier if one completed 5-minute close is below $67.33.",
+          "riskLevel": "HIGH",
+          "evidenceLimitations": "No live catalyst, earnings-calendar, or news evidence was provided, so event risk is unknown. Macro regime inputs are from 2026-10-01 and may be stale relative to 2026-10-06 intraday prices; VIX was delayed and some timestamps lack explicit timezones. The regime engine is SHADOW/decision-support only. Continuation evidence is only one completed 5-minute bar and a 12-bar volume baseline. Supplied selected-set correlation does not establish correlation to actual holdings. Recorded target fields for HPE, MSTR, and SHOP duplicate entry thresholds and are not valid independent exit signals.",
+          "reportTreatment": "Quant/Macro recommends HOLD and Risk APPROVES that HOLD; no risk veto applies. Both agree that the confirmed HPE breakout supports retention but not expansion. The constructive intraday confirmation conflicts only narrowly with rank deterioration, weak daily participation, high volatility, tight liquidity, and existing clustered long exposure; these negatives justify no incremental allocation but do not meet the documented reduction or full-exit rule."
+        },
+        "tradePermitted": false,
+        "decisionKey": "831f550587fec1f6",
+        "triggerKey": "853e92bcf2b79fa8",
+        "baseCommitSha": "22638951cb4f202edc386ce6d7b3f1e41ad20ea9",
+        "portfolioMutation": false
       }
     ],
     "triggerProcessing": {
-      "lastTriggerKey": "d471d1e8f6e76006",
-      "processedAt": "2026-10-06T17:26:18.357Z",
-      "decisionKey": "89a3606307bc660c"
+      "lastTriggerKey": "853e92bcf2b79fa8",
+      "processedAt": "2026-10-06T17:42:11.554Z",
+      "decisionKey": "831f550587fec1f6"
     }
   },
   "strategyMemory": {
