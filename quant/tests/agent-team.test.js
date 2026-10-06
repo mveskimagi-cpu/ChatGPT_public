@@ -1,0 +1,23 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict');
+const fs=require('fs'),vm=require('vm');
+const {validateLedger,scout,hardRisk,runTeam,chartEvidence}=require('../agent-team');
+const {validate,mutate,markToMarket}=require('../decision-consumer');
+const now=Date.parse('2026-10-06T14:00:00Z');
+function fixture(){
+ const setup={symbol:'TEST',setupId:'test-1',entryRule:{level:99,timeframeMinutes:5,requiredCloses:1,requireParticipation:true},invalidationRule:{level:95},expiresAt:'2026-10-07T14:00:00Z'};
+ const D={summary:{initial:1000,cash:1000,value:1000,realized:0,unrealized:0,total:0,totalPct:0},positions:[],trades:[],meta:{},strategyState:{watchlist:[setup]}};
+ const T={triggers:[{symbol:'TEST'}]}, Q={TEST:{symbol:'TEST',priceUsd:100,marketTime:new Date(now).toISOString(),confirmation:{'test-1':{pass:true}}}},F={usdPerEur:1.1,marketTime:new Date(now).toISOString()};
+ const C={maxBuyEur:250};const proposal={decision:'BUY',symbol:'TEST',eurAmount:100,reason:'Verified breakout',timeHorizon:'1d'};
+ return {D,T,Q,F,C,proposal,now};
+}
+function calls(f,overrides={}){const called=[];return{called,call:async(role)=>{called.push(role);return overrides[role]||({QUANT_MACRO:f.proposal,RISK:{verdict:'APPROVE',reason:'Sized appropriately'},PM:f.proposal,CRITIC:{verdict:'PASS',reason:'Verified'}}[role])}};}
+test('current production ledger reconciles without migration',()=>{const s={window:{}};vm.runInNewContext(fs.readFileSync('data.js','utf8'),s);assert.equal(validateLedger(s.window.PORTFOLIO_DATA).status,'PASS');});
+test('risk veto cannot be overridden and PM call is skipped',async()=>{const f=fixture(),c=calls(f,{RISK:{verdict:'VETO',reason:'Event uncertainty'}});const r=await runTeam({...f,call:c.call});assert.equal(r.decision.decision,'HOLD');assert.equal(r.tradePermitted,false);assert.deepEqual(c.called,['QUANT_MACRO','RISK','CRITIC']);});
+test('critic rejection converts approved BUY to HOLD',async()=>{const f=fixture(),c=calls(f,{CRITIC:{verdict:'FAIL',reason:'Unsupported thesis'}});const r=await runTeam({...f,call:c.call});assert.equal(r.decision.decision,'HOLD');assert.equal(r.tradePermitted,false);assert.deepEqual(c.called,['QUANT_MACRO','RISK','PM','CRITIC']);});
+test('approved chain permits one reconciled paper mutation only',async()=>{const f=fixture(),c=calls(f),r=await runTeam({...f,call:c.call});assert.equal(r.tradePermitted,true);const e=validate(r.decision,f.D,f.Q,f.F,f.C);mutate(f.D,r.decision,e,f.Q.TEST,f.F);markToMarket(f.D,f.Q,f.F);validateLedger(f.D);assert.equal(f.D.trades.length,1);assert.equal(f.D.summary.cash,900);assert.equal(f.D.trades[0].execution.paperTrade,true);});
+test('stale quote, stale FX, cash and concentration gates block',()=>{for(const change of [f=>f.Q.TEST.marketTime='2026-10-05T14:00:00Z',f=>f.F.marketTime=null,f=>f.proposal.eurAmount=1500,f=>f.C.maxPositionPct=5]){const f=fixture();change(f);assert.ok(hardRisk(f.proposal,f.D,f.Q,f.F,f.C,scout(f.D,f.T,now),now).length);}});
+test('expired setup and unconfirmed candles cannot trade',()=>{const f=fixture();f.D.strategyState.watchlist[0].expiresAt='2026-10-05T14:00:00Z';assert.ok(hardRisk(f.proposal,f.D,f.Q,f.F,f.C,scout(f.D,f.T,now),now).includes('MISSING_VALID_SETUP'));f.D.strategyState.watchlist[0].expiresAt='2026-10-07T14:00:00Z';f.Q.TEST.confirmation={};assert.ok(hardRisk(f.proposal,f.D,f.Q,f.F,f.C,scout(f.D,f.T,now),now).includes('COMPLETED_CANDLES_OR_PARTICIPATION_NOT_CONFIRMED'));});
+test('incomplete final candle cannot confirm a breakout',()=>{const f=fixture(),times=Array.from({length:8},(_,i)=>now/1000-(7-i)*300),result={timestamp:times,indicators:{quote:[{close:[98,98,98,98,98,98,98,101],volume:Array(8).fill(100)}]}};assert.equal(chartEvidence(result,f.D.strategyState.watchlist,now).confirmation['test-1'].pass,false);result.indicators.quote[0].close[6]=101;assert.equal(chartEvidence(result,f.D.strategyState.watchlist,now).confirmation['test-1'].pass,true);});
+test('duplicate ledger records and inconsistent cash are rejected',()=>{const f=fixture();f.D.summary.cash=999;assert.throws(()=>validateLedger(f.D),/cash/);const g=fixture(),e=validate(g.proposal,g.D,g.Q,g.F,g.C);mutate(g.D,g.proposal,e,g.Q.TEST,g.F);markToMarket(g.D,g.Q,g.F);g.D.trades.push({...g.D.trades[0]});assert.throws(()=>validateLedger(g.D),/duplicate/);});
+test('malformed model report and API failure fail closed',async()=>{const f=fixture();await assert.rejects(runTeam({...f,call:async()=>({reason:'Missing verdict'})}),/invalid decision/);await assert.rejects(runTeam({...f,call:async()=>{throw Error('API unavailable')}}),/API unavailable/);assert.equal(f.D.trades.length,0);});

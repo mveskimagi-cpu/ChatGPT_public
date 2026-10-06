@@ -91,3 +91,11 @@ function render(f="ALL"){
 }
 render();
 document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.f)});
+// Durable role reports come from the same authoritative portfolio file.
+const team=S.agentTeam, history=S.agentTeamHistory||[];
+document.querySelector('#agentTeamReviewed').textContent=team?shortDate(team.processedAt):'Awaiting first team review';
+document.querySelector('#agentTeam').innerHTML=team?[
+ ['Scout',team.reports?.scout,'CANDIDATES'],['Quant / Macro',team.reports?.quantMacro],
+ ['Risk manager',team.reports?.risk],['PM',team.reports?.pm],['Hard risk gate',team.reports?.hardRisk],['Independent critic',team.reports?.critic]
+].map(([label,r,fallback])=>`<article class="strategy-card"><div class="strategy-card-head"><b>${esc(label)}</b><span class="pill">${esc(r?.verdict||r?.decision||fallback||'—')}</span></div><p>${esc(r?.reason||r?.errors?.join(', ')||'Checks passed')}</p>${r?.symbol?`<p>${esc(r.symbol)} · ${r.eurAmount?eur(r.eurAmount):'No allocation'}</p>`:''}</article>`).join('')+`<div class="strategy-field full"><b>Final: ${esc(team.decision?.decision)} ${esc(team.decision?.symbol||'')}</b><p>${esc(team.decision?.reason)}</p></div>`:'<div class="empty">Team pipeline installed. Reports appear after the next material trigger is reviewed.</div>';
+document.querySelector('#agentTeamStats').textContent=`${history.length} recorded reviews · ${history.filter(x=>x.reports?.risk?.verdict==='VETO').length} risk vetoes · ${history.filter(x=>x.reports?.critic?.verdict==='FAIL').length} critic rejections. Separate model calls share the same evidence and model; they are not statistically independent. Live catalyst feed is not connected. Outcome attribution is not yet measured.`;

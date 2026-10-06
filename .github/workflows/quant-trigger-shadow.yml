@@ -29,7 +29,9 @@ jobs:
         run: |
           node --check quant/daily-universe-selector.js
           node --check universe-matrix.js
-          node --test quant/tests/universe-matrix.test.js
+          node --test quant/tests/*.test.js
+          node --check quant/decision-consumer.js
+          node --check quant/agent-team.js
 
       - name: Check daily universe refresh
         id: universe
@@ -169,4 +171,5 @@ jobs:
             ACTUAL=$(git show origin/main:data.js)
             test "$EXPECTED" = "$ACTUAL"
           fi
-          echo "Quant decision commit and exact read-back verified."
+          node -e "const fs=require('fs'),vm=require('vm'),s={window:{}};vm.runInNewContext(fs.readFileSync('data.js','utf8'),s,{timeout:1000});require('./quant/agent-team').validateLedger(s.window.PORTFOLIO_DATA)"
+          echo "Quant team decision commit, exact read-back and ledger verified."
