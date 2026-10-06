@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-06T02:07:23.026Z",
-  "baseCommitSha": "c8a8d6020138dcbe68e3ddad87607b97011ff6ca",
+  "processedAt": "2026-10-06T02:27:27.725Z",
+  "baseCommitSha": "69346c0c32c65ecd60e75aad1fe39c3086f29ea1",
   "triggerKey": "c3d75e106e0d7373",
   "portfolioFingerprint": "bc6df6598f8e407a",
   "portfolioFingerprintVersion": 2,
@@ -9,12 +9,12 @@
   "decision": "HOLD",
   "symbol": "MSTR",
   "eurAmount": null,
-  "reason": "MSTR remains above its $163.17 breakout trigger at $164.43, but the supplied target is the same breakout condition rather than a defined profit-taking level. No fresh reversal, invalidation, or participation deterioration is supplied; the trigger is a review event, not an exit order.",
+  "reason": "MSTR remains above its $163.17 breakout trigger at $164.43, but the supplied target is the entry/breakout condition rather than a profit-taking target. No fresh reversal, invalidation breach, or sustained-participation update supports reducing or exiting; no additional purchase is justified from a target-level review alone.",
   "confidence": 0.78,
-  "evidenceLimitations": "Only a latest 5-minute quote is supplied; there is no fresh completed-candle participation/volume confirmation, intraday momentum path, or new broader-market data. The quote is from the prior market close and the target field does not specify a separate take-profit level.",
+  "evidenceLimitations": "Latest quote is a single 5-minute-chart price near market close. No fresh volume/participation reading, completed-candle confirmation beyond the original entry evidence, broader-market update, or new momentum/volatility data was supplied.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "1e12dc8263177dca"
+  "decisionKey": "8fa81d6268ea6936"
 }
