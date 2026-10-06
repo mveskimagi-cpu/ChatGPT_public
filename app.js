@@ -42,7 +42,15 @@ document.querySelector("#positionStrategy").innerHTML=D.positions.map(p=>`
   </article>`).join("");
 
 document.querySelector("#bigReturn").innerHTML=`<span class="${cls(D.summary.total)}">${sign(D.summary.total)} (${D.summary.totalPct.toFixed(2)}%)</span>`;
-const pts=D.snapshots||[];
+const pts=(D.snapshots||[]).map(x=>({...x}));
+if(Number.isFinite(+D.summary?.value)){
+  const currentDate=String(D.meta?.asOf||new Date().toISOString()).replace(' UTC','').replace('T',' ').slice(0,16);
+  const last=pts[pts.length-1];
+  if(!last||Math.abs(+last.value-(+D.summary.value))>0.004){
+    if(last&&String(last.date||'').slice(0,10)===currentDate.slice(0,10))pts[pts.length-1]={date:currentDate,value:+D.summary.value};
+    else pts.push({date:currentDate,value:+D.summary.value});
+  }
+}
 if(pts.length){
   const vals=pts.map(x=>x.value),min=Math.min(...vals,990),max=Math.max(...vals,1005),w=600,h=130,p=10,
   x=i=>p+i*(w-2*p)/Math.max(1,pts.length-1),
