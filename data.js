@@ -595,6 +595,10 @@ window.PORTFOLIO_DATA = {
     {
       "date": "2026-09-30 17:51",
       "value": 998.57
+    },
+    {
+      "date": "2026-10-06 02:07",
+      "value": 1001.15
     }
   ],
   "strategyState": {
