@@ -4,6 +4,13 @@ on:
   schedule:
     - cron: "*/15 * * * *"
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "quant/decision-consumer.js"
+      - "quant/agent-team.js"
+      - "quant/tests/**"
+      - ".github/workflows/quant-trigger-shadow.yml"
 
 permissions:
   contents: write
