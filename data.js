@@ -15380,7 +15380,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": 0.94
             },
             "selectionPrice": 160.00999450683594,
             "triggeredAt": "2026-10-05T13:30:00.000Z"
@@ -15757,7 +15758,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0,
-              "h4": -1.457
+              "h4": -1.457,
+              "d1": 0.94
             },
             "selectionPrice": 160.00999450683594,
             "triggeredAt": "2026-10-05T13:30:00.000Z"
@@ -15861,8 +15863,11 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1685843027,
               "maxSelectedCorrelation": 0.114
             },
-            "outcomes": {},
-            "selectionPrice": 160.11000061035156
+            "outcomes": {
+              "h1": 0
+            },
+            "selectionPrice": 160.11000061035156,
+            "triggeredAt": "2026-10-06T13:30:00.000Z"
           },
           {
             "symbol": "HPE",
@@ -15931,6 +15936,6 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-06T13:09:23.537Z"
+    "lastUpdatedAt": "2026-10-06T13:30:02.063Z"
   }
 };
