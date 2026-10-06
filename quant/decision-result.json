@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
-  "processedAt": "2026-10-06T03:47:11.085Z",
-  "baseCommitSha": "94550d101f6f873e01891e0030b22326b5938eee",
+  "processedAt": "2026-10-06T04:08:40.458Z",
+  "baseCommitSha": "3700ec27b927fda6af2ed2b092165c6a5dce2b79",
   "triggerKey": "c3d75e106e0d7373",
   "portfolioFingerprint": "bc6df6598f8e407a",
   "portfolioFingerprintVersion": 2,
@@ -9,12 +9,12 @@
   "decision": "HOLD",
   "symbol": "MSTR",
   "eurAmount": null,
-  "reason": "MSTR remains above its $163.17 breakout trigger at $164.43, with no supplied evidence of a failed breakout or breach of the $156.85 invalidation. The target-level trigger is a review event rather than an exit instruction, and no fresh participation data support adding.",
+  "reason": "MSTR remains above its confirmed $163.17 breakout level at $164.43, while the supplied quote does not show failure toward the $156.85 invalidation. The target trigger is a review signal rather than an exit instruction, and no fresh reversal or participation deterioration is supplied.",
   "confidence": 0.78,
-  "evidenceLimitations": "Latest quote is a single delayed/end-of-session 5-minute chart observation. No fresh volume/participation confirmation, completed-candle sequence, broader market update, or intraday reversal data were supplied.",
+  "evidenceLimitations": "Only a latest 5-minute quote is supplied; there is no fresh completed-candle participation/volume evidence, intraday trend context, or updated volatility/regime data. Quote market time is 2026-10-05 20:00 UTC and may be outside regular trading hours.",
   "portfolioMutation": false,
   "execution": null,
   "model": "gpt-5.6-terra",
   "consumerMode": "PRODUCTION_PAPER_TRADING",
-  "decisionKey": "d5c9f7eea8434eb5"
+  "decisionKey": "e6162e9d3753a325"
 }
