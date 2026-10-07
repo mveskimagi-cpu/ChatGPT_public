@@ -1,3 +1,5 @@
+> **Current production policy (7 October 2026):** the four-call pipeline below is historical. Production now uses one budgeted GPT-6 Luna analyst and a GPT-5.6 Terra risk audit only for eligible transactions. See [BUDGET.md](BUDGET.md) for the enforced $5 monthly limit and current process. Existing reports are retained as historical evidence.
+
 # Quant investment team v1
 
 The existing GitHub Actions bridge now invokes a role pipeline in `decision-consumer.js`. No second scheduler, scanner, broker or portfolio is created. `main/data.js` remains the authoritative paper ledger. Scout consumes the existing daily universe selector; it includes all open positions and unexpired triggered setups. Quant and Macro are combined in v1.

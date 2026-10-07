@@ -15,14 +15,24 @@ window.PORTFOLIO_DATA = {
   "automationConfig": {
     "schemaVersion": 1,
     "decision": {
-      "model": "gpt-5.6-terra",
-      "reasoningEffort": "medium",
+      "model": "gpt-6-luna",
+      "reasoningEffort": "low",
       "promptCacheTtl": "30m",
       "maxBuyEur": 250,
       "positionReviewMovePct": 2,
       "watchlistMaterialMovePct": 2,
-      "positionReevaluationMinutes": 60,
-      "watchlistReevaluationMinutes": 240
+      "positionReevaluationMinutes": 120,
+      "watchlistReevaluationMinutes": 240,
+      "criticModel": "gpt-5.6-terra",
+      "maxOutputTokens": 1600,
+      "criticMaxOutputTokens": 1200,
+      "maxInputTokens": 6000,
+      "maxPromptBytes": 24000,
+      "monthlyLimitUsd": 5,
+      "dailyLimitUsd": 0.16,
+      "maxDailyRequests": 16,
+      "pricingVerifiedAt": "2026-10-07",
+      "mode": "BUDGETED_ANALYST_AND_TRADE_AUDIT"
     },
     "trigger": {
       "positionPriceMovePct": 2,
@@ -8034,6 +8044,29 @@ window.PORTFOLIO_DATA = {
       "initializedFromObservedError": true,
       "sourceRun": "https://github.com/mveskimagi-cpu/ChatGPT_public/actions/runs/37565300085",
       "actionRequired": "Add API credits to the OpenAI project/organization used by OPENAI_API_KEY. No trading decision was made."
+    },
+    "apiBudget": {
+      "schemaVersion": 1,
+      "currency": "USD",
+      "monthlyLimitUsd": 5,
+      "dailyLimitUsd": 0.16,
+      "pricingVerifiedAt": "2026-10-07",
+      "months": {
+        "2026-10": {
+          "openingMicroUsd": 5040000,
+          "openingSource": "User OpenAI October-to-date screenshot, 2026-10-07. Conservative account-level opening balance; not exact Quant-only attribution.",
+          "spentMicroUsd": 0,
+          "uncertainMicroUsd": 0,
+          "requestCount": 0,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedTokens": 0,
+          "cacheWriteTokens": 0,
+          "days": {},
+          "pending": {},
+          "recent": []
+        }
+      }
     }
   }
 };

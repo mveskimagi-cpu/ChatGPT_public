@@ -27,6 +27,7 @@ test('consumer persists quota pause, skips repeated API calls and recovers witho
  const fs=require('fs'),os=require('os'),path=require('path'),vm=require('vm'),{main}=require('../decision-consumer');
  const cwd=process.cwd(),tmp=fs.mkdtempSync(path.join(os.tmpdir(),'quant-quota-test-'));
  const D={meta:{lastTrade:'unchanged'},summary:{initial:1000,cash:1000,value:1000,realized:0,unrealized:0,total:0,totalPct:0},positions:[],trades:[],strategyState:{watchlist:[{symbol:'TEST',setupId:'t',expiresAt:'2099-01-01T00:00:00Z'}],triggerProcessing:{lastTriggerKey:'old'},agentTeamHistory:[]}};
+ require('../api-budget').initialize(D);D.automationHealth.apiBudget.months['2026-10'].openingMicroUsd=0;
  const write=d=>fs.writeFileSync('data.js','window.PORTFOLIO_DATA = '+JSON.stringify(d)+';\n');
  const read=()=>{const s={window:{}};vm.runInNewContext(fs.readFileSync('data.js','utf8'),s);return JSON.parse(JSON.stringify(s.window.PORTFOLIO_DATA))};
  try{

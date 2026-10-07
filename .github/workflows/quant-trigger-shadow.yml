@@ -14,6 +14,9 @@ on:
     paths:
       - "quant/decision-consumer.js"
       - "quant/agent-team.js"
+      - "quant/budget-team.js"
+      - "quant/api-budget.js"
+      - "quant/model-client.js"
       - "quant/decision-policy.js"
       - "quant/trigger-engine.js"
       - "quant/tests/**"
@@ -24,7 +27,7 @@ permissions:
 
 concurrency:
   group: quant-trigger-event-bridge
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 env:
   TRIGGER_COOLDOWN_MINUTES: "60"
@@ -46,6 +49,9 @@ jobs:
           node --test quant/tests/*.test.js
           node --check quant/decision-consumer.js
           node --check quant/agent-team.js
+          node --check quant/api-budget.js
+          node --check quant/model-client.js
+          node --check quant/budget-team.js
           node --check quant/decision-policy.js
           node --check quant/trigger-engine.js
 
@@ -122,70 +128,21 @@ jobs:
         run: |
           node quant/decision-consumer.js
 
-      - name: Check whether consumer produced a decision
-        id: consumer
-        if: steps.trigger.outputs.needs == 'true'
+      - name: Commit monitoring, budget and verified decision artifacts
+        if: always()
         shell: bash
         run: |
-          if git diff --quiet -- quant/decision-event.json quant/decision-result.json data.js; then
-            echo "produced=false" >> "$GITHUB_OUTPUT"
-            echo "Duplicate/immaterial trigger suppressed; no model decision artifact to commit."
-          else
-            echo "produced=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Commit monitoring marks and provider status
-        if: steps.trigger.outputs.needs == 'true' && steps.consumer.outputs.produced == 'true'
-        shell: bash
-        run: |
-          if git diff --quiet -- quant/decision-event.json quant/decision-result.json && ! git diff --quiet -- data.js; then
-            git fetch origin main
-            test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo "main changed; fail closed"; exit 1; }
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data.js
-            git commit -m "Update Quant monitoring marks and API status"
-            git push origin HEAD:main
-            git fetch origin main
-            test "$(cat data.js)" = "$(git show origin/main:data.js)"
-            node -e "const fs=require('fs'),vm=require('vm'),s={window:{}};vm.runInNewContext(fs.readFileSync('data.js','utf8'),s,{timeout:1000});require('./quant/agent-team').validateLedger(s.window.PORTFOLIO_DATA)"
-            echo "Monitoring marks / provider status committed and exact read-back verified. No new model decision or trade claimed."
-            echo "mtm_only=true" >> "$GITHUB_ENV"
-          fi
-
-      - name: Commit verified decision artifacts
-        if: steps.trigger.outputs.needs == 'true' && steps.consumer.outputs.produced == 'true' && env.mtm_only != 'true'
-        shell: bash
-        run: |
+          node -e "const fs=require('fs'),vm=require('vm'),s={window:{}};vm.runInNewContext(fs.readFileSync('data.js','utf8'),s,{timeout:1000});require('./quant/agent-team').validateLedger(s.window.PORTFOLIO_DATA)"
           git fetch origin main
-          BASE_SHA=$(node -e "const x=require('./quant/decision-result.json'); process.stdout.write(x.baseCommitSha)")
-          REMOTE_SHA=$(git rev-parse origin/main)
-          if [ "$BASE_SHA" != "$REMOTE_SHA" ]; then
-            echo "Authoritative main changed during decision; fail closed."
-            exit 1
-          fi
-
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || { echo "main changed; fail closed"; exit 1; }
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add quant/decision-event.json quant/decision-result.json quant/agent-reviews
-          if ! git diff --quiet -- data.js; then
-            git add data.js
-          fi
-
-          git commit -m "Quant decision $(node -e "const x=require('./quant/decision-result.json'); process.stdout.write(x.decision)") $(node -e "const x=require('./quant/decision-result.json'); process.stdout.write(x.triggerKey)")"
+          git add data.js quant/decision-event.json quant/decision-result.json quant/agent-reviews
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update Quant monitoring, API budget and decision state"
           git push origin HEAD:main
-
           git fetch origin main
-          for f in quant/decision-event.json quant/decision-result.json $(git diff-tree --no-commit-id --name-only -r HEAD -- quant/agent-reviews); do
-            EXPECTED=$(cat "$f")
-            ACTUAL=$(git show "origin/main:$f")
-            test "$EXPECTED" = "$ACTUAL"
+          for f in $(git diff-tree --no-commit-id --name-only -r HEAD); do
+            test "$(cat "$f")" = "$(git show "origin/main:$f")"
           done
-          if git show --name-only --pretty='' HEAD | grep -qx 'data.js'; then
-            EXPECTED=$(cat data.js)
-            ACTUAL=$(git show origin/main:data.js)
-            test "$EXPECTED" = "$ACTUAL"
-          fi
-          node -e "const fs=require('fs'),vm=require('vm'),s={window:{}};vm.runInNewContext(fs.readFileSync('data.js','utf8'),s,{timeout:1000});require('./quant/agent-team').validateLedger(s.window.PORTFOLIO_DATA)"
-          echo "Quant team decision commit, exact read-back and ledger verified."
+          echo "Authoritative state committed and exact read-back verified."

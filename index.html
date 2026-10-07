@@ -1,1 +1,73 @@
-<!doctype html><html lang="et"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>€1000 Quant Challenge</title><link rel="stylesheet" href="style.css?v=matrix1"></head><body><main class="wrap"><header><div><div class="eyebrow">PAPER TRADING</div><h1>€1000 Quant Challenge</h1><p id="asof"></p><p id="lasttrade" class="submeta"></p></div><div class="badge">LIVE LEDGER</div></header><section id="cards" class="cards"></section><section class="panel"><div class="panelhead"><h2>Open positions</h2><span>Mark-to-market</span></div><div class="tablewrap"><table><thead><tr><th>Asset</th><th>Qty</th><th>Cost</th><th>Last</th><th>Value</th><th>P/L</th></tr></thead><tbody id="positions"></tbody></table></div></section><section class="panel"><div class="panelhead"><h2>Strategy</h2><span id="strategyReviewed"></span></div><div id="strategySummary" class="strategy-summary"></div><div id="positionStrategy" class="strategy-cards"></div></section><section class="panel"><div class="panelhead"><h2>AI investment team</h2><span id="agentTeamReviewed"></span></div><p id="agentHealth" class="matrix-note" role="status"></p><div id="agentTeam" class="strategy-cards"></div><p id="agentTeamStats" class="matrix-note"></p></section><section class="grid"><div class="panel"><div class="panelhead"><h2>Performance</h2><span>Since inception</span></div><div class="perf"><div id="bigReturn"></div><div id="chart" class="chart"></div><div id="chartDates" class="chartdates"></div><p>Initial capital €1,000</p></div></div><div class="panel"><div class="panelhead"><h2>Risk snapshot</h2></div><div id="risk" class="risk"></div></div></section><section class="panel"><div class="panelhead"><h2>Daily Top 5 & setups</h2><span>Strategic memory</span></div><div id="watchlist" class="watchlist"></div></section><details id="universeMatrix" class="panel universe-panel"><summary><strong>Universe Matrix</strong><span id="universeCount"></span></summary><p id="universeMeta" class="matrix-note"></p><p id="universeMethod" class="matrix-note"></p><p id="universeComparison" class="matrix-note"></p><div class="matrix-controls"><label>Instrument<input id="universeSearch" type="search" placeholder="Search symbol" autocomplete="off"></label><label>Status<select id="universeFilter"><option value="ALL">All instruments</option><option value="SELECTED">Selected</option><option value="WATCH">Watch</option><option value="REJECT">Rejected / missing data</option></select></label><label>Sort<select id="universeSort"><option value="score">Score: high to low</option><option value="symbol">Symbol: A–Z</option><option value="change">Rank change: biggest rise</option></select></label><span id="universeVisible" class="label"></span></div><div class="tablewrap matrix-scroll" tabindex="0" role="region" aria-label="Universe factors; scroll horizontally for all columns"><table class="matrix-table"><thead><tr><th>Instrument</th><th>Rank</th><th>Change</th><th>Momentum<br>5d / 20d</th><th>Participation</th><th>Volatility</th><th>Correlation</th><th>Regime fit</th><th>Trigger</th><th>Invalidation</th><th>Expiry</th><th>Score</th><th>Status</th></tr></thead><tbody id="universeRows"></tbody></table></div><p class="matrix-note">Scroll sideways for all columns. Tap an instrument for selection reasons and setup rules. SELECTED is a watchlist candidate; entry still requires trigger confirmation.</p></details><section class="panel"><div class="panelhead"><h2>Trade log</h2><span id="tradeCount"></span></div><div class="filters"><button class="active" data-f="ALL">All</button><button data-f="BUY">BUY</button><button data-f="SELL">SELL</button></div><div class="tablewrap"><table><thead><tr><th>Time (Tallinn)</th><th>Asset</th><th>Action</th><th>Qty</th><th>USD price</th><th>EUR</th><th>Realized P/L</th><th>Note</th></tr></thead><tbody id="trades"></tbody></table></div></section><footer>Paper trading only. Prices are fixed at the time of each simulated execution; no real orders are placed.</footer></main><script src="data.js?v=quant4"></script><script src="app.js?v=quota2"></script><script src="universe-matrix.js?v=matrix1"></script></body></html>
+<!doctype html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Ülevaade · Quant Challenge</title>
+  <link rel="stylesheet" href="style.css?v=budget1">
+</head>
+<body>
+<a class="skip" href="#content">Liigu sisuni</a>
+<div class="wrap">
+  <header class="site-header">
+    <a class="brand" href="#/overview"><span class="brand-mark">Q</span><span>Quant Challenge<small>1 000 € paberportfell</small></span></a>
+    <span class="badge">Paberkaubandus</span>
+  </header>
+  <nav aria-label="Peamenüü" class="nav">
+    <a href="#/overview" data-route="overview">Ülevaade</a>
+    <a href="#/trades" data-route="trades">Tehingud</a>
+    <a href="#/performance" data-route="performance">Tulemus</a>
+    <a href="#/strategy" data-route="strategy">Strateegia</a>
+    <a href="#/universe" data-route="universe">Turuvalik</a>
+    <a href="#/model" data-route="model">Mudel ja kulud</a>
+  </nav>
+  <main id="content" tabindex="-1">
+    <section data-view="overview" aria-label="Portfelli ülevaade">
+      <div class="page-heading"><div><p class="eyebrow">PORTFELL</p><h1>Ülevaade</h1></div><p id="asof" class="muted"></p></div>
+      <div id="cards" class="cards"></div>
+      <section class="model-strip" id="modelStatus" aria-label="Mudeli staatus"></section>
+      <section class="panel"><div class="panelhead"><h2>Avatud positsioonid</h2><span id="positionCount" class="muted"></span></div>
+        <div class="tablewrap"><table class="positions-table"><thead><tr><th>Instrument</th><th>Viimane hind</th><th>Väärtus</th><th>Kasum / kahjum</th></tr></thead><tbody id="positions"></tbody></table></div>
+        <p class="note">Tootlus on eurodes ja sisaldab valuutakursi mõju. Hinnad on viimased salvestatud turuvaatlused.</p>
+      </section>
+      <section class="panel"><div class="panelhead"><h2>Viimased tehingud</h2><a href="#/trades">Kõik tehingud →</a></div><div id="recentTrades"></div></section>
+    </section>
+    <section data-view="trades" hidden aria-label="Tehingute ajalugu">
+      <div class="page-heading"><div><p class="eyebrow">AJALUGU</p><h1>Tehingud</h1></div><span id="tradeCount" class="muted"></span></div>
+      <section class="panel"><div class="filters" role="group" aria-label="Tehingu liik"><button data-filter="ALL" aria-pressed="true">Kõik</button><button data-filter="BUY" aria-pressed="false">Ostud</button><button data-filter="SELL" aria-pressed="false">Müügid</button></div><div id="allTrades"></div></section>
+    </section>
+    <section data-view="performance" hidden aria-label="Portfelli tulemus">
+      <div class="page-heading"><div><p class="eyebrow">TOOTLUS</p><h1>Tulemus ja risk</h1></div></div>
+      <section class="panel"><div class="panelhead"><h2>Portfelli väärtus</h2><span>Enne API-kulu</span></div><div id="performanceSummary"></div><div id="chart" class="chart"></div><div id="chartDates" class="chartdates"></div></section>
+      <div class="two-columns"><section class="panel"><h2>Tulemuse jaotus</h2><div id="performanceBreakdown"></div></section><section class="panel"><h2>Portfelli jaotus</h2><div id="risk"></div></section></div>
+      <p class="note">API on tegelik rahaline kulu; portfelli kasum ja kahjum on simuleeritud. Teadaoleva API-kulu teisendus eurodesse kasutab viimast salvestatud EUR/USD kurssi. Varasem registreerimata API-kulu ei sisaldu hinnangus.</p>
+    </section>
+    <section data-view="strategy" hidden aria-label="Strateegia ja analüüs">
+      <div class="page-heading"><div><p class="eyebrow">OTSUSTE TAUST</p><h1>Strateegia</h1></div></div>
+      <section class="panel"><h2>Positsioonide algne tees ja väljumisreeglid</h2><p class="note">Need on positsiooni avamisel salvestatud reeglid. Tänase turuvaliku uued ostutasemed asuvad eraldi turuvaliku vaates.</p><div id="positionStrategy" class="strategy-cards"></div></section>
+      <section class="panel"><h2>Viimane lõpetatud AI-analüüs</h2><div id="latestAnalysis"></div></section>
+      <section class="panel"><h2>Makrohinnangu ajalugu</h2><div id="regimeHistory"></div></section>
+    </section>
+    <section data-view="universe" hidden aria-label="Turuvalik">
+      <div class="page-heading"><div><p class="eyebrow">IGAPÄEVANE VALIK</p><h1>Turuvalik</h1></div></div>
+      <div id="selectionStatus"></div>
+      <section class="panel"><h2>Jälgitavad võimalused</h2><p class="note">Jälgimisnimekiri ei ole ostukorraldus. Aegunud võimalused on märgistatud; tehing vajab värsket kinnitust.</p><div id="watchlist" class="strategy-cards"></div></section>
+<details open id="universeMatrix" class="panel universe-panel"><summary><strong>Universe Matrix</strong><span id="universeCount"></span></summary><p id="universeMeta" class="matrix-note"></p><p id="universeMethod" class="matrix-note"></p><p id="universeComparison" class="matrix-note"></p><div class="matrix-controls"><label>Instrument<input id="universeSearch" type="search" placeholder="Search symbol" autocomplete="off"></label><label>Status<select id="universeFilter"><option value="ALL">All instruments</option><option value="SELECTED">Selected</option><option value="WATCH">Watch</option><option value="REJECT">Rejected / missing data</option></select></label><label>Sort<select id="universeSort"><option value="score">Score: high to low</option><option value="symbol">Symbol: A–Z</option><option value="change">Rank change: biggest rise</option></select></label><span id="universeVisible" class="label"></span></div><div class="tablewrap matrix-scroll" tabindex="0" role="region" aria-label="Universe factors; scroll horizontally for all columns"><table class="matrix-table"><thead><tr><th>Instrument</th><th>Rank</th><th>Change</th><th>Momentum<br>5d / 20d</th><th>Participation</th><th>Volatility</th><th>Correlation</th><th>Regime fit</th><th>Trigger</th><th>Invalidation</th><th>Expiry</th><th>Score</th><th>Status</th></tr></thead><tbody id="universeRows"></tbody></table></div><p class="matrix-note">Scroll sideways for all columns. Tap an instrument for selection reasons and setup rules. SELECTED is a watchlist candidate; entry still requires trigger confirmation.</p></details>
+    </section>
+    <section data-view="model" hidden aria-label="Mudel ja kulud">
+      <div class="page-heading"><div><p class="eyebrow">AUTOMAATIKA</p><h1>Mudel ja kulud</h1></div></div>
+      <section class="panel"><h2>Praegune staatus</h2><div id="modelDetails"></div></section>
+      <section class="panel"><h2>API kuueelarve</h2><div id="budgetDetails"></div></section>
+      <section class="panel"><h2>Otsuse tegemine</h2><ol class="process"><li>Hinnad, päevane turuvalik ja riskireeglid kontrollitakse koodiga.</li><li>Värske olulise signaali esmase hinnangu teeb GPT-6 Luna.</li><li>Tehinguettepanekut kontrollib GPT-5.6 Terra. HOLD-otsust eraldi ei auditeerita.</li><li>Tehing jõustub alles kontrollitud GitHubi salvestuse järel.</li></ol></section>
+      <details class="panel"><summary>Varasemate analüüside arhiiv</summary><p class="note">Ajaloolised raportid võivad kirjeldada vanemat töökorraldust ja turuolukorda.</p><div id="reviewHistory"></div></details>
+    </section>
+  </main>
+  <footer>Paberkaubandus · Tegelikke väärtpaberitehinguid ei tehta. Kõik kellaajad on Eesti ajas, kui pole märgitud teisiti.</footer>
+</div>
+<script src="data.js?v=budget1"></script>
+<script src="dashboard-data.js?v=budget1"></script>
+<script src="app.js?v=budget1"></script>
+<script src="universe-matrix.js?v=budget1"></script>
+</body>
+</html>

@@ -1,110 +1,81 @@
-const D=window.PORTFOLIO_DATA,
-eur=n=>"€"+Number(n).toLocaleString("en-IE",{minimumFractionDigits:2,maximumFractionDigits:2}),
-cls=n=>n>=0?"pos":"neg",
-sign=n=>(n>=0?"+":"")+eur(n),
-esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[c])),
-shortDate=s=>s?String(s).replace("T"," ").replace(/\+\d\d:\d\d$/,""):"—";
-
-document.querySelector("#asof").textContent="Last market update: "+D.meta.asOf;
-document.querySelector("#lasttrade").textContent="Last trade: "+D.meta.lastTrade+" · "+D.meta.marketSource;
-
+'use strict';
+const D=window.PORTFOLIO_DATA,S=D.strategyState||{},H=D.automationHealth||{},now=Date.now();
+const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num=(n,d=2)=>Number(n).toLocaleString('et-EE',{minimumFractionDigits:d,maximumFractionDigits:d});
+const eur=n=>num(n)+' €',usd=n=>'$'+Number(n).toFixed(2),signed=n=>(n>0?'+':'')+eur(n),tone=n=>n>=0?'pos':'neg';
+function date(s){
+ if(!s)return 'Puudub';
+ let text=String(s).replace(' UTC','Z').replace(' ','T');
+ if(/^\d{4}-\d\d-\d\dT\d\d:\d\d$/.test(text))text+='Z';
+ const d=new Date(text);return Number.isNaN(d.getTime())?'Aeg teadmata':d.toLocaleString('et-EE',{timeZone:'Europe/Tallinn',day:'2-digit',month:'2-digit',year:'numeric',hour:'2-digit',minute:'2-digit'});
+}
+function tradeDate(s){const m=String(s||'').match(/^(\d{4})-(\d\d)-(\d\d) (\d\d:\d\d)$/);return m?`${m[3]}.${m[2]}.${m[1]} ${m[4]}`:date(s);}
+const row=(label,value)=>`<div class="detail-row"><span>${label}</span><strong>${value}</strong></div>`;
+const B=QuantDashboard.budget(D,now),status=QuantDashboard.status(D,now);
 const cards=[
-["Portfolio",eur(D.summary.value)],
-["Cash",eur(D.summary.cash)],
-["Realized P/L",sign(D.summary.realized),cls(D.summary.realized)],
-["Unrealized P/L",sign(D.summary.unrealized),cls(D.summary.unrealized)],
-["Total return",(D.summary.totalPct>=0?"+":"")+D.summary.totalPct.toFixed(2)+"%",cls(D.summary.totalPct)]
+ ['Portfelli väärtus',eur(D.summary.value),'Algkapital '+eur(D.summary.initial),''],
+ ['Portfelli tootlus',signed(D.summary.total),(D.summary.totalPct>0?'+':'')+num(D.summary.totalPct)+'% · enne API-kulu',tone(D.summary.total)],
+ ['Vaba raha',eur(D.summary.cash),num(D.summary.cash/D.summary.value*100,1)+'% portfellist',''],
+ ['Tulemus teadaoleva API-kuluga',B.netEstimateEur===null?'—':signed(B.netEstimateEur),'Hinnang · kulude alus '+usd(B.allKnownUsd),B.netEstimateEur===null?'':tone(B.netEstimateEur)]
 ];
-document.querySelector("#cards").innerHTML=cards.map(x=>`<div class="card"><div class="label">${x[0]}</div><div class="value ${x[2]||""}">${x[1]}</div></div>`).join("");
-
-document.querySelector("#positions").innerHTML=D.positions.map(p=>{const cost=+(p.costEur??p.cost)||0,pct=(+p.avgUsd&&+p.lastUsd)?((+p.lastUsd/+p.avgUsd)-1)*100:(+p.pnlPct||0),pnl=Number.isFinite(+p.pnl)?+p.pnl:cost*pct/100,value=Number.isFinite(+p.value)?+p.value:cost+pnl;return `<tr><td><span class="symbol">${esc(p.symbol)}</span><br><span class="label">${esc(p.name)}</span></td><td>${p.qty}</td><td>${eur(cost)}</td><td>${Number(p.lastUsd).toLocaleString()}</td><td>${eur(value)}</td><td class="${cls(pnl)}">${sign(pnl)}<br><span class="label">${pct.toFixed(2)}%</span></td></tr>`}).join("");
-
-const S=D.strategyState||{};
-document.querySelector("#strategyReviewed").textContent=S.lastReviewedAt?"Reviewed "+shortDate(S.lastReviewedAt):"";
-document.querySelector("#strategySummary").innerHTML=`
-  <div class="strategy-hero">
-    <div><span class="label">Market regime</span><div class="strategy-title">${esc(S.regime||"—")}</div></div>
-    <div><span class="label">Risk posture</span><div class="strategy-copy">${esc(S.riskPosture||"—")}</div></div>
-  </div>
-  <div class="strategy-copy full"><span class="label">Market view</span><p>${esc(S.marketView||"—")}</p></div>
-  <div class="strategy-copy full"><span class="label">Why this regime</span><p>${esc(S.regimeReason||"—")}</p></div>`;
-
-document.querySelector("#positionStrategy").innerHTML=D.positions.map(p=>`
-  <article class="strategy-card">
-    <div class="strategy-card-head"><div><span class="symbol">${esc(p.symbol)}</span><span class="pill">${esc(p.lastDecision||"—")}</span></div><span class="riskpill">${esc(p.riskLevel||"—")}</span></div>
-    <div class="strategy-meta"><span>Opened ${esc(shortDate(p.openedAt))}</span><span>Horizon ${esc(p.timeHorizon||"—")}</span></div>
-    <div class="strategy-field"><span class="label">Current thesis</span><p>${esc(p.thesis||"—")}</p></div>
-    <div class="strategy-two">
-      <div class="strategy-field"><span class="label">Target / trim</span><p>${esc(p.target||"—")}</p></div>
-      <div class="strategy-field"><span class="label">Invalidation</span><p>${esc(p.invalidation||"—")}</p></div>
-    </div>
-    <div class="strategy-field decision"><span class="label">Last decision reason</span><p>${esc(p.lastDecisionReason||"—")}</p></div>
-  </article>`).join("");
-
-document.querySelector("#bigReturn").innerHTML=`<span class="${cls(D.summary.total)}">${sign(D.summary.total)} (${D.summary.totalPct.toFixed(2)}%)</span>`;
-const pts=(D.snapshots||[]).map(x=>({...x}));
-if(Number.isFinite(+D.summary?.value)){
-  const currentDate=String(D.meta?.asOf||new Date().toISOString()).replace(' UTC','').replace('T',' ').slice(0,16);
-  const last=pts[pts.length-1];
-  if(!last||Math.abs(+last.value-(+D.summary.value))>0.004){
-    if(last&&String(last.date||'').slice(0,10)===currentDate.slice(0,10))pts[pts.length-1]={date:currentDate,value:+D.summary.value};
-    else pts.push({date:currentDate,value:+D.summary.value});
-  }
+$('#cards').innerHTML=cards.map(([label,value,note,color])=>`<article class="card"><span class="label">${label}</span><strong class="value ${color}">${value}</strong><span class="card-note">${note}</span></article>`).join('');
+$('#asof').textContent='Portfelli hinnang: '+date(D.meta?.asOf);
+$('#modelStatus').classList.add(status.tone);
+$('#modelStatus').innerHTML=`<div><div class="status-title"><span class="status-dot" aria-hidden="true"></span>${esc(status.title)}</div><p>${B.available?'Kuu kulu ja broneeringud '+usd(B.used+B.reserved)+' / $5.00. ':''}Hinnavaatlus: ${date(H.monitor?.lastRunAt)}.</p></div><a href="#/model">Vaata staatust →</a>`;
+$('#positionCount').textContent=D.positions.length+' positsiooni';
+$('#positions').innerHTML=D.positions.length?D.positions.map(p=>{
+ const pct=QuantDashboard.positionReturn(p),age=now-Date.parse(p.lastPriceAt);
+ const stamp=p.lastPriceAt?date(p.lastPriceAt):(D.meta?.asOf?'Hinna aeg eraldi salvestamata':'Aeg teadmata');
+ return `<tr><td><a class="symbol" href="#/strategy">${esc(p.symbol)}</a><small>${num(p.qty,5)} tk</small></td><td>$${num(p.lastUsd)}<small class="${age>900000?'muted':''}">${stamp}${age>900000?' · varasem hind':''}</small></td><td>${eur(p.value)}</td><td class="${tone(p.pnl)}"><strong>${signed(p.pnl)}</strong><small>${pct===null?'—':num(pct)+'%'}</small></td></tr>`;
+}).join(''):'<tr><td colspan="4" class="empty">Avatud positsioone ei ole.</td></tr>';
+function tradeItem(t,details=false){
+ const action=t.side==='BUY'?'Ost':'Müük';
+ const top=`<span class="trade-symbol"><span class="trade-action ${t.side==='BUY'?'buy':'sell'}">${action}</span><strong>${esc(t.symbol)}</strong><small>${tradeDate(t.date)}</small></span><span class="trade-value">${eur(t.eur)}${t.pnl==null?'':`<small class="${tone(t.pnl)}">${signed(t.pnl)} realiseeritud</small>`}</span>`;
+ if(!details)return `<div class="trade-row">${top}</div>`;
+ return `<details class="trade-detail"><summary class="trade-row">${top}</summary><div class="trade-body">${row('Kogus',num(t.qty,8))}${row('Tehingu hind','$'+num(t.priceUsd))}${row('Hinnavaatlus',date(t.execution?.quotedAt))}${row('EUR/USD',t.execution?.fxUsdPerEur?num(t.execution.fxUsdPerEur,5):'Puudub')}<p>${esc(t.note||'Põhjendus puudub.')}</p></div></details>`;
 }
-if(pts.length){
-  const vals=pts.map(x=>x.value),min=Math.min(...vals,990),max=Math.max(...vals,1005),w=600,h=130,p=10,
-  x=i=>p+i*(w-2*p)/Math.max(1,pts.length-1),
-  y=v=>p+(max-v)*(h-2*p)/Math.max(1,max-min),
-  poly=pts.map((d,i)=>x(i)+","+y(d.value)).join(" "),base=y(1000);
-  document.querySelector("#chart").innerHTML='<svg viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none"><line class="base" x1="'+p+'" y1="'+base+'" x2="'+(w-p)+'" y2="'+base+'"></line><polyline class="line" points="'+poly+'"></polyline>'+pts.map((d,i)=>'<circle class="dot" cx="'+x(i)+'" cy="'+y(d.value)+'" r="3"><title>'+d.date+': €'+d.value.toFixed(2)+'</title></circle>').join("")+'</svg>';
-  const mobile=window.matchMedia("(max-width:600px)").matches,maxLabels=mobile?4:6,step=Math.max(1,Math.ceil((pts.length-1)/(maxLabels-1))),
-  candidates=pts.filter((d,i)=>i===0||i===pts.length-1||(i%step===0&&i<pts.length-1)),seen=new Set(),
-  shown=candidates.filter(d=>{const day=d.date.slice(0,10);if(seen.has(day))return false;seen.add(day);return true});
-  document.querySelector("#chartDates").innerHTML=shown.map(d=>{const idx=pts.indexOf(d),left=(idx/Math.max(1,pts.length-1))*100,raw=d.date.slice(0,10).split("-"),label=raw[2]+"."+raw[1];return '<span class="chartdate" style="left:'+left+'%">'+label+'</span>'}).join("");
+const reversed=(D.trades||[]).slice().reverse();
+$('#recentTrades').innerHTML=reversed.slice(0,5).map(t=>tradeItem(t)).join('')||'<p class="empty">Tehinguid veel pole.</p>';
+function renderTrades(filter='ALL'){
+ const selected=reversed.filter(t=>filter==='ALL'||t.side===filter);
+ $('#tradeCount').textContent=selected.length+' tehingut';
+ $('#allTrades').innerHTML=selected.map(t=>tradeItem(t,true)).join('')||'<p class="empty">Selle filtriga tehinguid ei ole.</p>';
+ document.querySelectorAll('[data-filter]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===filter)));
 }
-
-const invested=D.positions.reduce((a,p)=>a+p.value,0),largest=D.positions.length?Math.max(...D.positions.map(p=>p.value))/D.summary.value*100:0;
-document.querySelector("#risk").innerHTML=`<div class="riskrow"><span class="label">Invested</span><b>${eur(invested)}</b></div><div class="riskrow"><span class="label">Cash allocation</span><b>${(D.summary.cash/D.summary.value*100).toFixed(1)}%</b></div><div class="riskrow"><span class="label">Largest position</span><b>${largest.toFixed(1)}%</b></div><div class="riskrow"><span class="label">Open positions</span><b>${D.positions.length}</b></div>`;
-
-const watch=S.watchlist||[],pending=S.pendingSetups||[];
-const setupMap=new Map();
-[...watch,...pending].forEach(x=>{
-  const key=x.setupId||x.symbol+"|"+x.setup;
-  if(!setupMap.has(key))setupMap.set(key,x);
-  else setupMap.set(key,{...setupMap.get(key),...x});
-});
-const setups=[...setupMap.values()];
-document.querySelector("#watchlist").innerHTML=setups.length?setups.map(x=>`
-  <article class="watch-card">
-    <div class="strategy-card-head"><div><span class="symbol">${esc(x.symbol)}</span><span class="pill">${esc(x.status||"WATCH")}</span></div><span class="label">${esc(x.expectedHorizon||"")}</span></div>
-    <div class="watch-setup">${esc(x.setup||"")}</div>
-    <div class="strategy-field"><span class="label">Trigger</span><p>${esc(x.trigger||"—")}</p></div>
-    <div class="strategy-field"><span class="label">Invalidation</span><p>${esc(x.invalidation||"—")}</p></div>
-    <div class="strategy-field"><span class="label">Why watching</span><p>${esc(x.reason||"—")}</p></div>
-  </article>`).join(""):'<div class="empty">No active setups.</div>';
-
-const tbody=document.querySelector("#trades");
-function render(f="ALL"){
-  const a=D.trades.filter(t=>f==="ALL"||t.side===f).slice().reverse();
-  tbody.innerHTML=a.map(t=>`<tr><td>${esc(t.date)}</td><td class="symbol">${esc(t.symbol)}</td><td><span class="side ${t.side==="SELL"?"neg":"pos"}">${esc(t.side)}</span></td><td>${t.qty}</td><td>$${Number(t.priceUsd).toLocaleString()}</td><td>${eur(t.eur)}</td><td class="${t.pnl==null?"":cls(t.pnl)}">${t.pnl==null?"—":sign(t.pnl)}</td><td class="label">${esc(t.note)}</td></tr>`).join("");
-  document.querySelector("#tradeCount").textContent=a.length+" trades";
+renderTrades();document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>renderTrades(b.dataset.filter)));
+$('#performanceSummary').innerHTML=`<p class="large-return ${tone(D.summary.total)}">${signed(D.summary.total)} <span>${num(D.summary.totalPct)}%</span></p>`;
+$('#performanceBreakdown').innerHTML=row('Realiseeritud tulemus',`<span class="${tone(D.summary.realized)}">${signed(D.summary.realized)}</span>`)+row('Avatud positsioonide tulemus',`<span class="${tone(D.summary.unrealized)}">${signed(D.summary.unrealized)}</span>`)+row('Teadaolev API-kulu',usd(B.allKnownUsd))+row('Tulemus teadaoleva kuluga',B.netEstimateEur===null?'FX-andmed puuduvad':`<span class="${tone(B.netEstimateEur)}">${signed(B.netEstimateEur)} (hinnang)</span>`);
+$('#risk').innerHTML=row('Investeeritud',eur(D.summary.value-D.summary.cash))+row('Vaba raha osakaal',num(D.summary.cash/D.summary.value*100,1)+'%')+row('Suurim positsioon',num(D.positions.length?Math.max(...D.positions.map(p=>p.value))/D.summary.value*100:0,1)+'%')+row('Avatud positsioone',D.positions.length);
+const points=(D.snapshots||[]).filter(p=>Number.isFinite(p.value)).map(p=>({...p}));
+const currentDay=String(D.meta?.asOf||'').slice(0,10);
+if(points.at(-1)?.date?.slice(0,10)===currentDay)points[points.length-1].value=D.summary.value;
+else if(currentDay)points.push({date:currentDay,value:D.summary.value});
+if(points.length){
+ const values=points.map(p=>p.value),min=Math.min(...values,D.summary.initial)-1,max=Math.max(...values,D.summary.initial)+1;
+ const x=i=>12+i*576/Math.max(1,points.length-1),y=v=>12+(max-v)*136/(max-min);
+ $('#chart').innerHTML=`<svg viewBox="0 0 600 160" role="img" aria-label="Portfelli väärtuse ajalugu eurodes"><line class="base" x1="12" x2="588" y1="${y(D.summary.initial)}" y2="${y(D.summary.initial)}"/><polyline class="line" points="${points.map((p,i)=>x(i)+','+y(p.value)).join(' ')}"/>${points.map((p,i)=>`<circle cx="${x(i)}" cy="${y(p.value)}" r="3"><title>${esc(p.date)}: ${eur(p.value)}</title></circle>`).join('')}</svg>`;
+ const candidates=[0,Math.floor((points.length-1)/3),Math.floor(2*(points.length-1)/3),points.length-1],seen=new Set();
+ $('#chartDates').innerHTML=candidates.filter(i=>{const d=points[i].date.slice(0,10);if(seen.has(d))return false;seen.add(d);return true;}).map(i=>{const d=points[i].date.slice(0,10).split('-');return `<span>${d[2]}.${d[1]}.${d[0]}</span>`;}).join('');
 }
-render();
-document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.f)});
-// Durable role reports come from the same authoritative portfolio file.
-const team=S.agentTeam, history=S.agentTeamHistory||[], teamStats=S.agentTeamStats||{reviews:history.length,riskVetoes:history.filter(x=>x.reports?.risk?.verdict==='VETO').length,criticRejections:history.filter(x=>x.reports?.critic?.verdict==='FAIL').length};
-document.querySelector('#agentTeamReviewed').textContent=team?shortDate(team.processedAt):'Awaiting first team review';
-document.querySelector('#agentTeam').innerHTML=team?[
- ['Scout',team.reports?.scout,'CANDIDATES'],['Quant / Macro',team.reports?.quantMacro],
- ['Risk manager',team.reports?.risk],['PM',team.reports?.pm],['Hard risk gate',team.reports?.hardRisk],['Independent critic',team.reports?.critic]
-].map(([label,r,fallback])=>`<article class="strategy-card"><div class="strategy-card-head"><b>${esc(label)}</b><span class="pill">${esc(r?.verdict||r?.decision||fallback||'—')}</span></div><p>${esc(r?.reason||r?.errors?.join(', ')||'Checks passed')}</p>${r?.symbol?`<p>${esc(r.symbol)} · ${r.eurAmount?eur(r.eurAmount):'No allocation'}</p>`:''}</article>`).join('')+`<div class="strategy-field full"><b>Final: ${esc(team.decision?.decision)} ${esc(team.decision?.symbol||'')}</b><p>${esc(team.decision?.reason)}</p></div>`:'<div class="empty">Team pipeline installed. Reports appear after the next material trigger is reviewed.</div>';
-document.querySelector('#agentTeamStats').textContent=`${teamStats.reviews} recorded reviews · ${teamStats.riskVetoes} risk vetoes · ${teamStats.criticRejections} critic rejections. Separate model calls share the same evidence and model; they are not statistically independent. Live catalyst feed is not connected. Outcome attribution is not yet measured.`;
-
-const apiHealth=D.automationHealth?.openai;
-const apiStatus=document.querySelector('#agentHealth');
-if(apiHealth?.status==='BLOCKED_QUOTA'){
- apiStatus.classList.add('neg');
- apiStatus.textContent='AI decisions paused: OpenAI API credits exhausted. Last failed attempt: '+shortDate(apiHealth.lastFailedAt)+'. Add API credits; next eligible automatic retry no earlier than '+shortDate(apiHealth.nextProbeAt)+'. Reports below are from the last completed analysis. Market monitoring continues; no new AI decision is being made.';
-}else if(apiHealth?.status==='AVAILABLE'){
- apiStatus.textContent='Last completed AI review: '+shortDate(apiHealth.lastSuccessAt)+'. Metered API requests since cost tracking began: '+(apiHealth.usage?.requests||0)+'.';
-}else{apiStatus.textContent='API availability has not yet been confirmed by the updated monitor.';}
+function rule(r,text){return r?`${r.operator==='ABOVE'?'Üle':'Alla'} $${num(r.level)}${r.timeframeMinutes?' · '+r.timeframeMinutes+' min küünal':''}`:esc(text||'Arvuline reegel pole salvestatud.');}
+$('#positionStrategy').innerHTML=D.positions.map(p=>`<article class="strategy-card"><div class="panelhead"><h3>${esc(p.symbol)}</h3><span>Avatud ${date(p.openedAt)}</span></div><p>${esc(p.thesis||p.entryReason||'Tees puudub.')}</p>${row('Investeeritud',eur(p.costEur))}${row('Ajahorisont',esc(p.timeHorizon||'Määramata'))}<h4>Teesi kehtetuks muutumine</h4><p>${rule(p.invalidationRule,p.invalidation)}</p><h4>Väljumine või vähendamine</h4><p>${rule(p.targetRule,QuantDashboard.targetText(p))}</p><details><summary>Varasem otsuse põhjendus</summary><p class="note">Ajalooline märge; see ei ole uus turuhinnang.</p><p>${esc(p.lastDecisionReason||'Puudub.')}</p></details></article>`).join('');
+const team=S.agentTeam;
+$('#latestAnalysis').innerHTML=team?`<p class="note">Ajalooline otsus · ${date(team.processedAt)}. Mudeli praegune staatus: ${esc(status.title)}.</p><p><strong>${esc(team.decision?.decision)} ${esc(team.decision?.symbol||'')}</strong></p><p>${esc(team.decision?.reason)}</p><details><summary>Rollide raportid ja tõendite piirangud</summary>${Object.entries(team.reports||{}).filter(([k])=>k!=='scout').map(([k,r])=>`<h4>${esc(k)} · ${esc(r.verdict||r.decision||'')}</h4><p>${esc(r.reason||r.errors?.join(', ')||'')}</p><p class="note">${esc(Array.isArray(r.evidenceLimitations)?r.evidenceLimitations.join(' '):r.evidenceLimitations||'')}</p>`).join('')}</details>`:'<p class="empty">Lõpetatud analüüsi veel ei ole.</p>';
+const regime=S.regimeEngine,regimeOld=!regime?.observedAt||now-Date.parse(regime.observedAt)>86400000;
+$('#regimeHistory').innerHTML=`<p class="notice ${regimeOld?'warn':''}">${regimeOld?'Aegunud makroandmed – neid ei kasutata uue otsuse värske alusena.':'Varasem makrohinnang; hinnang on ainult taustinfo.'} Vaatlus: ${date(regime?.observedAt)}.</p><details><summary>Ava ajalooline hinnang</summary><p>${esc(S.marketView||'Kirjeldus puudub.')}</p><p>${esc(S.regimeReason||'')}</p><pre>${esc(JSON.stringify(regime?.output||{},null,2))}</pre></details>`;
+const selection=S.dailyUniverseSelection||{},selectionAge=now-Date.parse(selection.selectedAt);
+$('#selectionStatus').innerHTML=`<p class="notice ${selectionAge>36*3600000?'warn':''}">Valik koostatud ${date(selection.selectedAt)}.${selectionAge>36*3600000?' Valik on üle 36 tunni vana; värskendus vajab kontrolli.':''}</p>`;
+const setups=[...new Map([...(S.watchlist||[]),...(S.pendingSetups||[])].map(x=>[x.setupId||x.symbol,x])).values()];
+$('#watchlist').innerHTML=setups.map(x=>`<article class="strategy-card"><div class="panelhead"><h3>${esc(x.symbol)}</h3><span class="pill ${Date.parse(x.expiresAt)<=now?'warn':''}">${Date.parse(x.expiresAt)<=now?'Aegunud':'Jälgimisel'}</span></div><h4>Sisenemise kinnitus</h4><p>${rule(x.entryRule,x.trigger)}</p><h4>Kehtetuks muutumine</h4><p>${rule(x.invalidationRule,x.invalidation)}</p><p class="note">Kehtib kuni ${date(x.expiresAt)}</p><details><summary>Valiku põhjendus</summary><p>${esc(x.reason||'Puudub.')}</p></details></article>`).join('')||'<p class="empty">Jälgitavaid võimalusi pole.</p>';
+$('#modelDetails').innerHTML=`<p class="notice ${status.tone}"><strong>${esc(status.title)}</strong><br>${esc(status.text)}</p>${row('Viimane hinnavaatlus',date(H.monitor?.lastRunAt))}${row('Viimane lõpetatud AI-analüüs',date(H.openai?.lastSuccessAt||team?.processedAt))}${row('Esmane mudel',esc(D.automationConfig?.decision?.model||'Määramata'))}${row('Tehingu riskikontroll',esc(D.automationConfig?.decision?.criticModel||'Määramata'))}<p class="note">Hinnavaatlus, turuvalik ja portfelli arvestus toimivad ka tasuliste AI-otsuste pausi ajal. Vanad raportid jäävad ajalooks. Mudeli vahetuse järel kinnitab uue mudeli API-ligipääsu alles esimene edukas päring.</p>${H.openai?.status==='BLOCKED_QUOTA'?'<p class="note">OpenAI konto krediit on samuti otsas. Krediidi lisamine ei tühista kuueelarve piirangut.</p>':''}`;
+$('#budgetDetails').innerHTML=`<div class="budget-total"><strong>${usd(B.used+B.reserved)}</strong><span> / $5.00 · ${B.month} UTC</span></div><progress value="${Math.min(5,B.used+B.reserved)}" max="5" aria-label="Kuueelarve kasutus"></progress>${row('Kasutatav kuueelarve',usd(B.remaining))}${row('Päevane ülempiir','$0.16')}${row('Broneeritud päringute maksimum',usd(B.reserved))}${row('Kinnitamata kulu ülempiir',usd(B.uncertainUsd))}${row('Mõõdetud päringuid sel kuul',B.requests)}${row('Sisend- / väljundtokenid',num(B.inputTokens,0)+' / '+num(B.outputTokens,0))}<p class="note">Enne tasulist päringut salvestatakse selle maksimaalne kulu GitHubi. Kuu või päeva piiri täitumisel uut päringut ei tehta. Piir katab selle Quant-töövoo; muude rakenduste kasutust sama API-kontoga siit piirata ei saa.</p><details><summary>Kuluarvestuse alus ja ajalugu</summary><p class="note">Oktoobri algsaldo $5.04 pärineb 7.10 konto kuukulude kuvatõmmiselt ning on konservatiivselt täielikult projektile arvestatud. See ei ole täpne ainult Quanti kulujaotus. Septembrikulu pole mõõdetud. Hilisem kulu põhineb API tokeniarvestusel; katkestuste puhul jääb maksimaalne broneering arvesse. Hinnakiri kontrollitud 7.10.2026.</p>${Object.entries(H.apiBudget?.months||{}).map(([m,v])=>row(esc(m),usd(((v.openingMicroUsd||0)+(v.spentMicroUsd||0)+(v.uncertainMicroUsd||0))/1e6))).join('')}</details>`;
+$('#reviewHistory').innerHTML=(S.agentTeamHistory||[]).slice().reverse().map(r=>`<div class="detail-row"><span>${date(r.processedAt)} · ${esc(r.decision?.decision)} ${esc(r.decision?.symbol||'')}</span>${/^[a-f0-9]{16}$/.test(r.decisionKey||'')?`<a href="quant/agent-reviews/${r.decisionKey}.json" target="_blank" rel="noopener">Raport ↗</a>`:'<span>Raport puudub</span>'}</div>`).join('')||'<p class="empty">Arhiiv on tühi.</p>';
+const titles={overview:'Ülevaade',trades:'Tehingud',performance:'Tulemus',strategy:'Strateegia',universe:'Turuvalik',model:'Mudel ja kulud'};
+function route(focus=false){
+ const key=location.hash.replace(/^#\//,'');const active=Object.hasOwn(titles,key)?key:'overview';
+ document.querySelectorAll('[data-view]').forEach(el=>{el.hidden=el.dataset.view!==active;});
+ document.querySelectorAll('[data-route]').forEach(a=>{if(a.dataset.route===active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
+ document.title=titles[active]+' · Quant Challenge';
+ if(focus){window.scrollTo(0,0);$('#content').focus({preventScroll:true});}
+}
+window.addEventListener('hashchange',()=>route(true));route();
