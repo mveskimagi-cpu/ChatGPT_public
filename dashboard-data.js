@@ -15,7 +15,7 @@
    const b=budget(D,now),h=D.automationHealth?.openai||{},monitor=D.automationHealth?.monitor||{};
    if(!b.available)return {tone:'warn',title:'AI-otsused peatatud',text:'Kuluarvestus vajab kontrolli.',code:'BUDGET_UNKNOWN'};
    if(b.remaining<=0)return {tone:'warn',title:'AI-otsused pausil · kuueelarve täis',text:'Selle kuu 5 USD piir on täis. Uus kuueelarve avaneb järgmise kuu 1. kuupäeval UTC järgi.',code:'BUDGET'};
-   if(h.status==='BLOCKED_QUOTA')return {tone:'warn',title:'AI-otsused pausil · API-krediit puudub',text:'Kuueelarves on ruumi, kuid OpenAI konto krediit tuleb taastada.',code:'QUOTA'};
+   if(h.status==='BLOCKED_QUOTA')return {tone:'warn',title:'Viimane API-vastus: krediidipiirang',text:'Viimane tasuline päring peatus krediidipiirangu tõttu. Konto praegust jääki siit ei näe.',code:'QUOTA'};
    if(h.status==='ERROR_MODEL')return {tone:'warn',title:'AI-otsused pausil · tehniline tõrge',text:'Viimane mudelipäring ei lõpetanud otsust. Tehingut ei kinnitatud.',code:'ERROR'};
    if(monitor.decisionStatus==='BLOCKED_BUDGET'&&String(monitor.lastRunAt||'').slice(0,10)===new Date(now).toISOString().slice(0,10))
      return {tone:'warn',title:'AI-otsused pausil · kulukontroll',text:'Päeva kulupiir, päringupiir või päringu mahu kontroll peatas uue analüüsi.',code:'DAILY'};
@@ -23,11 +23,22 @@
    return {tone:'ok',title:'Mudel jälgib signaale',text:'AI käivitub värske olulise signaali korral ja ainult vaba eelarve piires.',code:'READY'};
  }
  function positionReturn(p){return p.costEur>0?100*p.pnl/p.costEur:null;}
+ function tradeTimestamp(t){
+   const raw=String(t.date||'');
+   // Early automated trades stored UTC without an offset. Only interpret that
+   // legacy form as UTC when its execution evidence agrees within two minutes.
+   // Other unzoned ledger dates retain the existing Europe/Tallinn convention.
+   if(/^\d{4}-\d\d-\d\d \d\d:\d\d$/.test(raw)&&t.execution?.retrievedAt){
+     const utc=raw.replace(' ','T')+':00Z',evidence=Date.parse(t.execution.retrievedAt);
+     if(Number.isFinite(evidence)&&Math.abs(Date.parse(utc)-evidence)<=120000)return utc;
+   }
+   return raw;
+ }
  function targetText(p){
    const match=String(p.target||'').match(/\$(\d+(?:\.\d+)?)/);
    if(!p.targetRule&&match&&p.entryRule?.level===Number(match[1]))
      return 'Kasumivõtu taset pole määratud. Varasem märge kordas ostutaset ja ei ole väljumissignaal.';
    return p.target||'Kasumivõtu taset pole määratud.';
  }
- return {budget,status,positionReturn,targetText};
+ return {budget,status,positionReturn,targetText,tradeTimestamp};
 });
