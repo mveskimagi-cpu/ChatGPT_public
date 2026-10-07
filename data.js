@@ -7467,7 +7467,8 @@ window.PORTFOLIO_DATA = {
               "d3": 0.94
             },
             "selectionPrice": 160.00999450683594,
-            "triggeredAt": "2026-10-05T13:30:00.000Z"
+            "triggeredAt": "2026-10-05T13:30:00.000Z",
+            "invalidatedAt": "2026-10-07T13:30:00.000Z"
           }
         ]
       },
@@ -7660,7 +7661,8 @@ window.PORTFOLIO_DATA = {
               "d1": -1.937
             },
             "selectionPrice": 160.00999450683594,
-            "triggeredAt": "2026-10-05T13:30:00.000Z"
+            "triggeredAt": "2026-10-05T13:30:00.000Z",
+            "invalidatedAt": "2026-10-07T13:30:00.000Z"
           }
         ]
       },
@@ -7853,7 +7855,8 @@ window.PORTFOLIO_DATA = {
               "d1": 0.94
             },
             "selectionPrice": 160.00999450683594,
-            "triggeredAt": "2026-10-05T13:30:00.000Z"
+            "triggeredAt": "2026-10-05T13:30:00.000Z",
+            "invalidatedAt": "2026-10-07T13:30:00.000Z"
           }
         ]
       },
@@ -8084,7 +8087,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0
             },
-            "selectionPrice": 70.4800033569336
+            "selectionPrice": 70.4800033569336,
+            "triggeredAt": "2026-10-07T13:30:00.000Z"
           },
           {
             "symbol": "MRVL",
@@ -8229,7 +8233,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-07T13:33:33.006Z"
+    "lastUpdatedAt": "2026-10-07T13:56:21.790Z"
   },
   "automationHealth": {
     "openai": {
