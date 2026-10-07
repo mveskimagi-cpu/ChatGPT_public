@@ -92,10 +92,19 @@ function render(f="ALL"){
 render();
 document.querySelectorAll(".filters button").forEach(b=>b.onclick=()=>{document.querySelectorAll(".filters button").forEach(x=>x.classList.remove("active"));b.classList.add("active");render(b.dataset.f)});
 // Durable role reports come from the same authoritative portfolio file.
-const team=S.agentTeam, history=S.agentTeamHistory||[];
+const team=S.agentTeam, history=S.agentTeamHistory||[], teamStats=S.agentTeamStats||{reviews:history.length,riskVetoes:history.filter(x=>x.reports?.risk?.verdict==='VETO').length,criticRejections:history.filter(x=>x.reports?.critic?.verdict==='FAIL').length};
 document.querySelector('#agentTeamReviewed').textContent=team?shortDate(team.processedAt):'Awaiting first team review';
 document.querySelector('#agentTeam').innerHTML=team?[
  ['Scout',team.reports?.scout,'CANDIDATES'],['Quant / Macro',team.reports?.quantMacro],
  ['Risk manager',team.reports?.risk],['PM',team.reports?.pm],['Hard risk gate',team.reports?.hardRisk],['Independent critic',team.reports?.critic]
 ].map(([label,r,fallback])=>`<article class="strategy-card"><div class="strategy-card-head"><b>${esc(label)}</b><span class="pill">${esc(r?.verdict||r?.decision||fallback||'—')}</span></div><p>${esc(r?.reason||r?.errors?.join(', ')||'Checks passed')}</p>${r?.symbol?`<p>${esc(r.symbol)} · ${r.eurAmount?eur(r.eurAmount):'No allocation'}</p>`:''}</article>`).join('')+`<div class="strategy-field full"><b>Final: ${esc(team.decision?.decision)} ${esc(team.decision?.symbol||'')}</b><p>${esc(team.decision?.reason)}</p></div>`:'<div class="empty">Team pipeline installed. Reports appear after the next material trigger is reviewed.</div>';
-document.querySelector('#agentTeamStats').textContent=`${history.length} recorded reviews · ${history.filter(x=>x.reports?.risk?.verdict==='VETO').length} risk vetoes · ${history.filter(x=>x.reports?.critic?.verdict==='FAIL').length} critic rejections. Separate model calls share the same evidence and model; they are not statistically independent. Live catalyst feed is not connected. Outcome attribution is not yet measured.`;
+document.querySelector('#agentTeamStats').textContent=`${teamStats.reviews} recorded reviews · ${teamStats.riskVetoes} risk vetoes · ${teamStats.criticRejections} critic rejections. Separate model calls share the same evidence and model; they are not statistically independent. Live catalyst feed is not connected. Outcome attribution is not yet measured.`;
+
+const apiHealth=D.automationHealth?.openai;
+const apiStatus=document.querySelector('#agentHealth');
+if(apiHealth?.status==='BLOCKED_QUOTA'){
+ apiStatus.classList.add('neg');
+ apiStatus.textContent='AI decisions paused: OpenAI API credits exhausted. Last failed attempt: '+shortDate(apiHealth.lastFailedAt)+'. Add API credits; next eligible automatic retry no earlier than '+shortDate(apiHealth.nextProbeAt)+'. Reports below are from the last completed analysis. Market monitoring continues; no new AI decision is being made.';
+}else if(apiHealth?.status==='AVAILABLE'){
+ apiStatus.textContent='Last completed AI review: '+shortDate(apiHealth.lastSuccessAt)+'. Metered API requests since cost tracking began: '+(apiHealth.usage?.requests||0)+'.';
+}else{apiStatus.textContent='API availability has not yet been confirmed by the updated monitor.';}

@@ -1,0 +1,375 @@
+{
+  "schemaVersion": 1,
+  "mode": "MULTI_CALL_ROLE_PIPELINE",
+  "processedAt": "2026-10-06T05:08:19.179Z",
+  "evidenceHash": "0e776c32a568965f8facf58eb3ecced487e728b574396a980d75f4087bf339e6",
+  "reports": {
+    "scout": {
+      "role": "SCOUT",
+      "mode": "DETERMINISTIC_EXISTING_UNIVERSE_SELECTOR",
+      "selectedAt": "2026-10-05T12:10:16.000Z",
+      "universeSize": 116,
+      "symbols": [
+        "ON",
+        "MSTR"
+      ],
+      "candidates": [
+        {
+          "symbol": "ON",
+          "rank": 2,
+          "previousRank": 2,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
+          "status": "SELECTED",
+          "quantScore": 2.095,
+          "metrics": {
+            "momentum5d": 9.961,
+            "momentum20d": 17.349,
+            "realizedVol10dAnnualized": 40.68,
+            "volumeRatio": 2.344,
+            "atrPct": 4.369,
+            "gapPct": 5.832,
+            "relativeStrength5dPct": 10.183,
+            "relativeStrength20dPct": 16.763,
+            "avgDollarVolume10d": 981230769,
+            "maxSelectedCorrelation": 0.322
+          },
+          "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+          "factors": {
+            "momentum": 2.305,
+            "participation": 3.069,
+            "volatility": 1.209,
+            "gap": 3.147,
+            "correlation": 0.322,
+            "regimeFit": null
+          },
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 86.09,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 83.69,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-08T12:10:16.000Z",
+          "trigger": "Break above $86.09 with sustained participation.",
+          "invalidation": "Loss of $83.69 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 2.09: 5d momentum 10.0%, 20d 17.3%, annualized 10d realized vol 41%, volume 2.34x, max selected correlation 0.32.",
+          "createdAt": "2026-10-05T12:10:16.000Z",
+          "lastReviewedAt": "2026-10-05T12:10:16.000Z",
+          "setupId": "ON-20261005-daily-quant"
+        },
+        {
+          "symbol": "MSTR",
+          "rank": 5,
+          "previousRank": 5,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
+          "status": "SELECTED",
+          "quantScore": 1.576,
+          "metrics": {
+            "momentum5d": 0.883,
+            "momentum20d": 29.889,
+            "realizedVol10dAnnualized": 57.03,
+            "volumeRatio": 1.551,
+            "atrPct": 6.179,
+            "gapPct": 3.358,
+            "relativeStrength5dPct": 1.104,
+            "relativeStrength20dPct": 29.303,
+            "avgDollarVolume10d": 3511652944,
+            "maxSelectedCorrelation": 0.658
+          },
+          "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+          "factors": {
+            "momentum": 1.15,
+            "participation": 1.152,
+            "volatility": 2.495,
+            "gap": 1.588,
+            "correlation": 0.658,
+            "regimeFit": null
+          },
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 163.17,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 156.85,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-08T12:10:16.000Z",
+          "trigger": "Break above $163.17 with sustained participation.",
+          "invalidation": "Loss of $156.85 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.58: 5d momentum 0.9%, 20d 29.9%, annualized 10d realized vol 57%, volume 1.55x, max selected correlation 0.66.",
+          "createdAt": "2026-10-05T12:10:16.000Z",
+          "lastReviewedAt": "2026-10-05T12:10:16.000Z",
+          "setupId": "MSTR-20261005-daily-quant"
+        }
+      ],
+      "setups": [
+        {
+          "symbol": "MSTR",
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 163.17,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 156.85,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-08T12:10:16.000Z",
+          "trigger": "Break above $163.17 with sustained participation.",
+          "invalidation": "Loss of $156.85 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.58: 5d momentum 0.9%, 20d 29.9%, annualized 10d realized vol 57%, volume 1.55x, max selected correlation 0.66.",
+          "quantScore": 1.576,
+          "metrics": {
+            "momentum5d": 0.883,
+            "momentum20d": 29.889,
+            "realizedVol10dAnnualized": 57.03,
+            "volumeRatio": 1.551,
+            "atrPct": 6.179,
+            "gapPct": 3.358,
+            "relativeStrength5dPct": 1.104,
+            "relativeStrength20dPct": 29.303,
+            "avgDollarVolume10d": 3511652944,
+            "maxSelectedCorrelation": 0.658
+          },
+          "createdAt": "2026-10-05T12:10:16.000Z",
+          "lastReviewedAt": "2026-10-05T12:10:16.000Z",
+          "status": "WATCH_ONLY",
+          "setupId": "MSTR-20261005-daily-quant"
+        },
+        {
+          "symbol": "MSTR",
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 163.17,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 156.85,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-08T12:10:16.000Z",
+          "trigger": "Break above $163.17 with sustained participation.",
+          "invalidation": "Loss of $156.85 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.58: 5d momentum 0.9%, 20d 29.9%, annualized 10d realized vol 57%, volume 1.55x, max selected correlation 0.66.",
+          "quantScore": 1.576,
+          "metrics": {
+            "momentum5d": 0.883,
+            "momentum20d": 29.889,
+            "realizedVol10dAnnualized": 57.03,
+            "volumeRatio": 1.551,
+            "atrPct": 6.179,
+            "gapPct": 3.358,
+            "relativeStrength5dPct": 1.104,
+            "relativeStrength20dPct": 29.303,
+            "avgDollarVolume10d": 3511652944,
+            "maxSelectedCorrelation": 0.658
+          },
+          "createdAt": "2026-10-05T12:10:16.000Z",
+          "lastReviewedAt": "2026-10-05T12:10:16.000Z",
+          "status": "UNTRIGGERED",
+          "setupId": "MSTR-20261005-daily-quant"
+        }
+      ],
+      "reason": "Existing daily universe ranking; every open position and valid triggered setup is reviewed. No second scanner or schedule."
+    },
+    "quantMacro": {
+      "decision": "HOLD",
+      "symbol": "MSTR",
+      "eurAmount": 0,
+      "reason": "Maintain the existing MSTR position. The observed $164.43 quote remains above the $163.17 breakout level and well above the $156.85 invalidation, but the required participation confirmation is absent: the only completed 5-minute bar has zero reported volume against a 206,566.8 baseline. The target trigger merely repeats the entry threshold and is not evidence of a separate profit-taking level. No verified reversal or invalidation close supports reducing or selling, while no valid fresh confirmation supports adding.",
+      "timeHorizon": "1-3 trading days, subject to reassessment before setup expiry on 2026-10-08T12:10:16Z",
+      "riskLevel": "HIGH",
+      "evidenceLimitations": [
+        "Latest price/confirmation candle is from 2026-10-05 20:00Z and was retrieved outside the stated market timestamp; it may be stale for a new decision.",
+        "The completed 5-minute MSTR candle reports zero volume, preventing required participation validation.",
+        "No live catalyst, news, earnings, or event-risk feed was supplied; absence of supplied news is not evidence of no event risk.",
+        "Macro-regime inputs were observed on 2026-10-01 and are not current confirmation.",
+        "The regime engine is SHADOW/decision-support only, and its VIX input was delayed with some timezone-ambiguous macro observations."
+      ],
+      "quantView": "MSTR remains selected at rank 5 with strong 20-day momentum (+29.9%), above-baseline daily volume (1.55x), and a quote 0.77% above its $163.17 trigger. Offsetting this are weak 5-day momentum (+0.9%), high 10-day annualized realized volatility (57.0%), high ATR (6.18%), selected-correlation of 0.66, and failed intraday participation confirmation. Ranking metrics favor retaining the already-open small position, not increasing it.",
+      "macroView": "The supplied regime is NEUTRAL/RANGE with NORMAL volatility but TIGHT liquidity and a 0.68 position-size multiplier. Earlier evidence of higher 10-year yields, a firmer dollar, and weak regional-bank relative performance argues against relaxing confirmation requirements for a high-volatility momentum position.",
+      "disagreements": "Price-only logic flags the target because MSTR is above $163.17. Quant process rejects treating that as a new actionable signal because $163.17 is also the entry threshold and the explicit volume-confirmation condition failed. The constructive 20-day momentum ranking conflicts with weak short-horizon momentum, high volatility/correlation, and constrained macro liquidity; HOLD resolves this by preserving exposure without adding or trimming."
+    },
+    "risk": {
+      "verdict": "APPROVE",
+      "reason": "Approve the proposed HOLD only: it does not add risk, preserves a modest existing MSTR exposure (~15.0% of portfolio value, below the 35% position limit), and the supplied quote remains above the documented $156.85 invalidation. The price being above $163.17 is not a separate take-profit event because that level is the original entry trigger. Required participation confirmation is unavailable/failed, so adding would be unsupported. No verified completed 5-minute close below invalidation supports a risk-driven exit on the supplied evidence. Reassess promptly with current-session data and no later than the 2026-10-08T12:10:16Z setup expiry.",
+      "checks": {
+        "proposedExposureChangeEur": 0,
+        "cashEur": 648.57,
+        "mstrCurrentValueEur": 150.62,
+        "mstrPortfolioWeightPct": 15.04,
+        "maxPositionPct": 35,
+        "maxBuyEur": 250,
+        "sizingWithinLimits": true,
+        "heldPortfolioCorrelationAssessment": "No full held-position correlation matrix is supplied. MSTR and ON are both long, short-horizon momentum/breakout equities and can share broad risk-off, liquidity, rates, and growth-beta exposure despite ON/MSTR selection metrics not constituting held-portfolio correlation evidence.",
+        "concentrationAssessment": "Combined ON and MSTR exposure is approximately EUR352.63, or 35.22% of portfolio value; this is material but not increased by HOLD. MSTR's 57.03% realized volatility and 6.18% ATR make a fresh increase inappropriate without valid confirmation.",
+        "invalidationAssessment": "MSTR quote of $164.43 is above the $156.85 invalidation level, but the only cited 5-minute candle has zero volume. A current, completed 5-minute close below $156.85 remains the documented invalidation condition.",
+        "horizonAndExpiryAssessment": "The stated 1-3 trading-day horizon remains active, but the setup expires on 2026-10-08T12:10:16Z. Holding must not become open-ended after expiry without an independently refreshed thesis and risk review.",
+        "catalystAssessment": "No catalyst, earnings, or live-news evidence was supplied; event risk is unassessed rather than absent.",
+        "regimeAssessment": "The available NEUTRAL/RANGE, TIGHT-liquidity regime is stale (2026-10-01) and supports retaining rather than relaxing the confirmation or sizing standard."
+      },
+      "evidenceLimitations": [
+        "The latest MSTR market timestamp is 2026-10-05T20:00:00Z, while retrieval occurred on 2026-10-06; it is not reliable as current-session confirmation.",
+        "The completed 5-minute candle shows zero reported volume versus a stated 206,566.8 baseline, so participation cannot validate either a breakout continuation or a fresh add.",
+        "No current full portfolio correlation/beta data are supplied; selected-candidate correlation is not correlation to current holdings.",
+        "Macro observations are several days old; VIX was delayed and some macro source times were timezone-ambiguous.",
+        "No live earnings, corporate-action, crypto-linked catalyst, or news feed was provided. Absence of such evidence does not establish absence of risk.",
+        "Price alone cannot distinguish a sustainable breakout from an after-hours, stale, or illiquid print."
+      ]
+    },
+    "pm": {
+      "decision": "HOLD",
+      "symbol": "MSTR",
+      "eurAmount": 0,
+      "reason": "Maintain the existing MSTR paper position. The supplied $164.43 quote is above both the $163.17 breakout threshold and the $156.85 documented invalidation, so there is no verified basis for a REDUCE or full SELL. Conversely, the required 5-minute participation condition failed because the sole completed candle reported zero volume against a 206,566.8 baseline; therefore there is no valid confirmation for a BUY/add. The target alert is not a profit-taking signal because it merely repeats the original entry threshold. This preserves the small existing exposure without expanding risk in a high-volatility setup.",
+      "timeHorizon": "Reassess on current-session data within 1-3 trading days and no later than setup expiry at 2026-10-08T12:10:16Z.",
+      "riskLevel": "HIGH",
+      "evidenceLimitations": [
+        "The latest MSTR price and candle are timestamped 2026-10-05T20:00:00Z, retrieved on 2026-10-06, and may be stale or after-hours rather than current-session evidence.",
+        "The completed 5-minute candle has zero reported volume, preventing validation of the explicitly required participation condition.",
+        "No live news, earnings, corporate-action, or crypto-linked catalyst feed was provided; event risk is unassessed, not absent.",
+        "Macro/regime observations are from 2026-10-01, with delayed VIX and timezone ambiguity, so they are not current confirmation.",
+        "No complete held-portfolio correlation or beta matrix is supplied; candidate-selection correlation is not a portfolio correlation measure."
+      ],
+      "reportTreatment": {
+        "quantMacro": "Followed. Quant/Macro recommends HOLD: price remains above invalidation, but failed participation confirmation blocks an add and no reversal evidence supports a reduction or exit.",
+        "risk": "Followed. Risk APPROVE applies only to HOLD, noting MSTR is about 15.0% of portfolio value, below the 35% position limit, while its 57.0% realized volatility, 6.18% ATR, and material combined long-equity exposure argue against increasing exposure.",
+        "disagreements": "The sensor's price-only target event treats a move above $163.17 as positive. Quant and Risk correctly identify $163.17 as the original entry threshold rather than an independently evidenced take-profit level. Constructive 20-day momentum and the quote above trigger conflict with weak 5-day momentum, high volatility/correlation, tight-liquidity regime conditions, and absent intraday volume confirmation; HOLD resolves this by retaining but not adding or trimming.",
+        "riskVeto": "No risk veto was issued. No risk limits are relaxed and no missing participation or current-session evidence is inferred."
+      }
+    },
+    "hardRisk": {
+      "verdict": "APPROVE",
+      "errors": []
+    },
+    "critic": {
+      "verdict": "PASS",
+      "reason": "The HOLD proposal is consistent with the supplied MSTR position, documented entry/invalidation rules, and risk limits. It makes no trade or exposure increase, correctly treats $163.17 as the original entry threshold rather than an independently evidenced profit target, and does not infer participation confirmation from the zero-volume candle. The supplied $164.43 observation is above the $156.85 invalidation, so no evidenced invalidation exit is required. Its stale/after-hours character is explicitly disclosed and does not prevent a HOLD decision.",
+      "checks": {
+        "decisionAndSizing": {
+          "decision": "HOLD",
+          "eurAmount": 0,
+          "proposedExposureChangeEur": 0,
+          "maxBuyEur": 250,
+          "maxPositionPct": 35,
+          "result": "No sizing, cash, concentration, or risk-limit breach is created by HOLD."
+        },
+        "arithmetic": {
+          "portfolioValueEur": 1001.19,
+          "cashEur": 648.57,
+          "onValueEur": 202.01,
+          "mstrValueEur": 150.62,
+          "positionsPlusCashEur": 1001.2,
+          "roundingDifferenceEur": 0.01,
+          "mstrWeightPct": 15.04,
+          "mstrWeightCalculation": "150.62 / 1001.19 = 15.04%",
+          "combinedOnMstrWeightPct": 35.22,
+          "combinedWeightCalculation": "352.63 / 1001.19 = 35.22%",
+          "result": "Reported values and weights reconcile within normal cent rounding; MSTR is below the 35% single-position limit."
+        },
+        "priceAndInvalidation": {
+          "observedMstrPriceUsd": 164.42999267578125,
+          "entryThresholdUsd": 163.17,
+          "invalidationUsd": 156.85,
+          "priceAboveEntryThreshold": true,
+          "priceAboveInvalidation": true,
+          "documentedInvalidationRequires": "One completed 5-minute close below $156.85",
+          "result": "No supplied completed close below invalidation supports a forced reduction or exit."
+        },
+        "participation": {
+          "required": true,
+          "completedBarTimestamp": "2026-10-05T20:00:00.000Z",
+          "reportedBarVolume": 0,
+          "baselineVolume": 206566.8,
+          "confirmationPass": false,
+          "result": "The proposal correctly blocks an add because required participation confirmation failed/is unavailable."
+        },
+        "timestamps": {
+          "triggeredAt": "2026-10-06T05:08:18.400Z",
+          "quoteMarketTime": "2026-10-05T20:00:00.000Z",
+          "quoteRetrievedAt": "2026-10-06T05:08:19.143Z",
+          "fxMarketTime": "2026-10-06T05:07:48.000Z",
+          "macroObservedAt": "2026-10-01T17:12:45.435+03:00",
+          "result": "The quote is an approximately nine-hour-old, likely after-hours observation at decision time, and macro evidence is materially older. The proposal explicitly identifies both limitations and does not use them to justify new exposure."
+        },
+        "thesisAndHorizon": {
+          "positionHorizon": "1-3 trading days",
+          "openedAt": "2026-10-05T18:46:52.781Z",
+          "setupExpiresAt": "2026-10-08T12:10:16.000Z",
+          "result": "The proposed reassessment within 1-3 trading days and no later than expiry is consistent with the recorded setup. HOLD does not contradict the high-volatility risk characterization."
+        },
+        "riskVeto": {
+          "riskVerdict": "APPROVE for HOLD only",
+          "hardRiskVerdict": "APPROVE",
+          "result": "No supplied risk veto conflicts with the final proposal."
+        },
+        "evidenceIntegrity": {
+          "result": "No catalyst, current-session participation, completed invalidation close, or portfolio-correlation evidence is invented. The proposal appropriately treats absent news/catalyst evidence as unassessed rather than benign."
+        }
+      },
+      "evidenceLimitations": [
+        "Yahoo chart observations and all quoted provider data are supplied evidence and cannot independently establish live market conditions.",
+        "The MSTR quote/candle is timestamped 2026-10-05T20:00:00Z, likely after the regular session, and is not current-session confirmation for 2026-10-06.",
+        "The sole completed 5-minute bar has zero reported volume, so it cannot validate the explicitly required participation condition.",
+        "The regime evidence is from 2026-10-01; delayed VIX and timezone-ambiguous source clocks further weaken its timeliness.",
+        "No live news, earnings, corporate-action, crypto-linked catalyst, or complete current-holdings correlation/beta data are supplied.",
+        "The supplied target-event sensor is price-only and should not be interpreted as proof of breakout quality or a take-profit signal."
+      ]
+    }
+  },
+  "decision": {
+    "decision": "HOLD",
+    "symbol": "MSTR",
+    "eurAmount": 0,
+    "reason": "Maintain the existing MSTR paper position. The supplied $164.43 quote is above both the $163.17 breakout threshold and the $156.85 documented invalidation, so there is no verified basis for a REDUCE or full SELL. Conversely, the required 5-minute participation condition failed because the sole completed candle reported zero volume against a 206,566.8 baseline; therefore there is no valid confirmation for a BUY/add. The target alert is not a profit-taking signal because it merely repeats the original entry threshold. This preserves the small existing exposure without expanding risk in a high-volatility setup.",
+    "timeHorizon": "Reassess on current-session data within 1-3 trading days and no later than setup expiry at 2026-10-08T12:10:16Z.",
+    "riskLevel": "HIGH",
+    "evidenceLimitations": [
+      "The latest MSTR price and candle are timestamped 2026-10-05T20:00:00Z, retrieved on 2026-10-06, and may be stale or after-hours rather than current-session evidence.",
+      "The completed 5-minute candle has zero reported volume, preventing validation of the explicitly required participation condition.",
+      "No live news, earnings, corporate-action, or crypto-linked catalyst feed was provided; event risk is unassessed, not absent.",
+      "Macro/regime observations are from 2026-10-01, with delayed VIX and timezone ambiguity, so they are not current confirmation.",
+      "No complete held-portfolio correlation or beta matrix is supplied; candidate-selection correlation is not a portfolio correlation measure."
+    ],
+    "reportTreatment": {
+      "quantMacro": "Followed. Quant/Macro recommends HOLD: price remains above invalidation, but failed participation confirmation blocks an add and no reversal evidence supports a reduction or exit.",
+      "risk": "Followed. Risk APPROVE applies only to HOLD, noting MSTR is about 15.0% of portfolio value, below the 35% position limit, while its 57.0% realized volatility, 6.18% ATR, and material combined long-equity exposure argue against increasing exposure.",
+      "disagreements": "The sensor's price-only target event treats a move above $163.17 as positive. Quant and Risk correctly identify $163.17 as the original entry threshold rather than an independently evidenced take-profit level. Constructive 20-day momentum and the quote above trigger conflict with weak 5-day momentum, high volatility/correlation, tight-liquidity regime conditions, and absent intraday volume confirmation; HOLD resolves this by retaining but not adding or trimming.",
+      "riskVeto": "No risk veto was issued. No risk limits are relaxed and no missing participation or current-session evidence is inferred."
+    }
+  },
+  "tradePermitted": false,
+  "decisionKey": "6e001ddd049ac3c8",
+  "triggerKey": "c3d75e106e0d7373",
+  "baseCommitSha": "4b203c56374ac60040443101f9739a57dfaf25e8",
+  "portfolioMutation": false
+}

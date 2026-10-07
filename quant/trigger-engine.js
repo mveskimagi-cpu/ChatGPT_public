@@ -33,6 +33,13 @@ function classifyRule(text){
 }
 function crossed(price,rule){return rule.op==="BELOW"?price<rule.level:price>rule.level}
 
+function positionRules(pos,field){
+ const structured=field==='invalidation'?pos.invalidationRule:pos.targetRule;
+ if(structured)return [{op:structured.operator,level:+structured.level}];
+ return classifyRule(pos[field]).filter(rule=>!(field==='target'&&pos.entryRule&&
+   rule.level===+pos.entryRule.level&&rule.op===pos.entryRule.operator&&/break above|participation/i.test(String(pos.target))));
+}
+
 async function completedCloses(symbol,count,timeframeMinutes,C){
   const granularity=timeframeMinutes*60,end=Math.floor(Date.now()/1000), currentBucket=Math.floor(end/granularity)*granularity;
   if(symbol==="BTC"||symbol==="ETH"){
@@ -74,7 +81,7 @@ async function price(symbol,C){
   return {price:p,source:"Yahoo Finance chart",url:"https://query1.finance.yahoo.com/v8/finance/chart/"+symbol+"?interval="+C.quote.equityInterval+"&range="+C.quote.equityRange};
 }
 
-(async()=>{
+async function main(){
   const D=loadLedger("data.js"), C={positionPriceMovePct:2,defaultConfirmation:{timeframeMinutes:60,completedCloses:2},quote:{equityInterval:"5m",equityRange:"1d"},...((D.automationConfig||{}).trigger||{})}, now=new Date().toISOString(), triggers=[], observations=[], errors=[];
   const symbols=new Set([...(D.positions||[]).map(p=>p.symbol),...((D.strategyState||{}).watchlist||[]).map(x=>x.symbol),...((D.strategyState||{}).pendingSetups||[]).map(x=>x.symbol)]);
   for(const symbol of symbols){
@@ -87,8 +94,7 @@ async function price(symbol,C){
           triggers.push({type:"PRICE_MOVE",symbol,condition:"abs(move from stored lastUsd) >= "+C.positionPriceMovePct+"%",observedPrice:q.price,referencePrice:pos.lastUsd,movePct:Number(movePct.toFixed(3)),source:q.source});
         }
         for(const field of ["invalidation","target"]){
-          const structured=field==="invalidation"&&pos.invalidationRule?[{op:pos.invalidationRule.operator,level:+pos.invalidationRule.level}]:null;
-          for(const rule of structured||classifyRule(pos[field])){
+          for(const rule of positionRules(pos,field)){
             if(crossed(q.price,rule)) triggers.push({type:field==="invalidation"?"POSITION_INVALIDATION_LEVEL":"POSITION_TARGET_LEVEL",symbol,field,condition:rule.op+" $"+rule.level,observedPrice:q.price,source:q.source,shadow:true});
           }
         }
@@ -123,4 +129,6 @@ async function price(symbol,C){
   fs.mkdirSync("quant",{recursive:true});
   fs.writeFileSync("quant/trigger.json",JSON.stringify(out,null,2)+"\n");
   console.log(JSON.stringify(out,null,2));
-})().catch(e=>{console.error(e);process.exit(1)});
+}
+module.exports={main,positionRules};
+if(require.main===module)main().catch(e=>{console.error(e);process.exit(1)});

@@ -1,0 +1,492 @@
+{
+  "schemaVersion": 1,
+  "mode": "MULTI_CALL_ROLE_PIPELINE",
+  "processedAt": "2026-10-06T16:56:05.680Z",
+  "evidenceHash": "f323456cd2dfe2a2167718ee1227c5350a0a456b843251126e0d39b98cef5ef0",
+  "reports": {
+    "scout": {
+      "role": "SCOUT",
+      "mode": "DETERMINISTIC_EXISTING_UNIVERSE_SELECTOR",
+      "selectedAt": "2026-10-06T12:15:49.745Z",
+      "universeSize": 116,
+      "symbols": [
+        "ON",
+        "MSTR",
+        "HPE",
+        "SHOP"
+      ],
+      "candidates": [
+        {
+          "symbol": "ON",
+          "rank": 1,
+          "previousRank": 2,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
+          "status": "SELECTED",
+          "quantScore": 1.939,
+          "metrics": {
+            "momentum5d": 13.589,
+            "momentum20d": 16.673,
+            "realizedVol10dAnnualized": 40.73,
+            "volumeRatio": 0.936,
+            "atrPct": 4.235,
+            "gapPct": 0.247,
+            "relativeStrength5dPct": 12.385,
+            "relativeStrength20dPct": 16.459,
+            "avgDollarVolume10d": 984874668,
+            "maxSelectedCorrelation": 0
+          },
+          "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+          "factors": {
+            "momentum": 2.703,
+            "participation": 0.322,
+            "volatility": 1.36,
+            "gap": 0.255,
+            "correlation": 0,
+            "regimeFit": null
+          },
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 87.14,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 84.72,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-09T12:15:49.745Z",
+          "trigger": "Break above $87.14 with sustained participation.",
+          "invalidation": "Loss of $84.72 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.94: 5d momentum 13.6%, 20d 16.7%, annualized 10d realized vol 41%, volume 0.94x, max selected correlation 0.00.",
+          "createdAt": "2026-10-06T12:15:49.745Z",
+          "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+          "setupId": "ON-20261006-daily-quant"
+        },
+        {
+          "symbol": "SHOP",
+          "rank": 3,
+          "previousRank": 12,
+          "rankChange": 9,
+          "rankChangeLabel": "+9",
+          "status": "SELECTED",
+          "quantScore": 1.902,
+          "metrics": {
+            "momentum5d": 11.18,
+            "momentum20d": 9.755,
+            "realizedVol10dAnnualized": 48.69,
+            "volumeRatio": 1.296,
+            "atrPct": 4.395,
+            "gapPct": 1.103,
+            "relativeStrength5dPct": 9.976,
+            "relativeStrength20dPct": 9.54,
+            "avgDollarVolume10d": 1685843027,
+            "maxSelectedCorrelation": 0.114
+          },
+          "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+          "factors": {
+            "momentum": 2.068,
+            "participation": 1.894,
+            "volatility": 1.673,
+            "gap": 1.454,
+            "correlation": 0.114,
+            "regimeFit": null
+          },
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 162.81,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 157.41,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-09T12:15:49.745Z",
+          "trigger": "Break above $162.81 with sustained participation.",
+          "invalidation": "Loss of $157.41 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.90: 5d momentum 11.2%, 20d 9.8%, annualized 10d realized vol 49%, volume 1.30x, max selected correlation 0.11.",
+          "createdAt": "2026-10-06T12:15:49.745Z",
+          "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+          "setupId": "SHOP-20261006-daily-quant"
+        },
+        {
+          "symbol": "HPE",
+          "rank": 4,
+          "previousRank": 1,
+          "rankChange": -3,
+          "rankChangeLabel": "-3",
+          "status": "SELECTED",
+          "quantScore": 1.821,
+          "metrics": {
+            "momentum5d": 9.149,
+            "momentum20d": 25.569,
+            "realizedVol10dAnnualized": 43.53,
+            "volumeRatio": 0.745,
+            "atrPct": 5.257,
+            "gapPct": -0.591,
+            "relativeStrength5dPct": 7.945,
+            "relativeStrength20dPct": 25.355,
+            "avgDollarVolume10d": 1300024690,
+            "maxSelectedCorrelation": 0.343
+          },
+          "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
+          "factors": {
+            "momentum": 2.239,
+            "participation": -0.516,
+            "volatility": 1.984,
+            "gap": 0.921,
+            "correlation": 0.343,
+            "regimeFit": null
+          },
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 69.39,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 67.33,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-09T12:15:49.745Z",
+          "trigger": "Break above $69.39 with sustained participation.",
+          "invalidation": "Loss of $67.33 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.82: 5d momentum 9.1%, 20d 25.6%, annualized 10d realized vol 44%, volume 0.74x, max selected correlation 0.34.",
+          "createdAt": "2026-10-06T12:15:49.745Z",
+          "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+          "setupId": "HPE-20261006-daily-quant"
+        },
+        {
+          "symbol": "MSTR",
+          "rank": 7,
+          "previousRank": 5,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
+          "status": "WATCH",
+          "quantScore": 1.432,
+          "metrics": {
+            "momentum5d": 4.639,
+            "momentum20d": 13.541,
+            "realizedVol10dAnnualized": 34.96,
+            "volumeRatio": 0.934,
+            "atrPct": 5.782,
+            "gapPct": 2.919,
+            "relativeStrength5dPct": 3.435,
+            "relativeStrength20dPct": 13.326,
+            "avgDollarVolume10d": 3219784257,
+            "maxSelectedCorrelation": 0.368
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 1.082,
+            "participation": 0.313,
+            "volatility": 2.019,
+            "gap": 3.999,
+            "correlation": 0.368,
+            "regimeFit": null
+          }
+        }
+      ],
+      "setups": [
+        {
+          "symbol": "SHOP",
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 162.81,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 157.41,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-09T12:15:49.745Z",
+          "trigger": "Break above $162.81 with sustained participation.",
+          "invalidation": "Loss of $157.41 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.90: 5d momentum 11.2%, 20d 9.8%, annualized 10d realized vol 49%, volume 1.30x, max selected correlation 0.11.",
+          "quantScore": 1.902,
+          "metrics": {
+            "momentum5d": 11.18,
+            "momentum20d": 9.755,
+            "realizedVol10dAnnualized": 48.69,
+            "volumeRatio": 1.296,
+            "atrPct": 4.395,
+            "gapPct": 1.103,
+            "relativeStrength5dPct": 9.976,
+            "relativeStrength20dPct": 9.54,
+            "avgDollarVolume10d": 1685843027,
+            "maxSelectedCorrelation": 0.114
+          },
+          "createdAt": "2026-10-06T12:15:49.745Z",
+          "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+          "status": "WATCH_ONLY",
+          "setupId": "SHOP-20261006-daily-quant"
+        },
+        {
+          "symbol": "HPE",
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 69.39,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 67.33,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-09T12:15:49.745Z",
+          "trigger": "Break above $69.39 with sustained participation.",
+          "invalidation": "Loss of $67.33 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.82: 5d momentum 9.1%, 20d 25.6%, annualized 10d realized vol 44%, volume 0.74x, max selected correlation 0.34.",
+          "quantScore": 1.821,
+          "metrics": {
+            "momentum5d": 9.149,
+            "momentum20d": 25.569,
+            "realizedVol10dAnnualized": 43.53,
+            "volumeRatio": 0.745,
+            "atrPct": 5.257,
+            "gapPct": -0.591,
+            "relativeStrength5dPct": 7.945,
+            "relativeStrength20dPct": 25.355,
+            "avgDollarVolume10d": 1300024690,
+            "maxSelectedCorrelation": 0.343
+          },
+          "createdAt": "2026-10-06T12:15:49.745Z",
+          "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+          "status": "WATCH_ONLY",
+          "setupId": "HPE-20261006-daily-quant"
+        },
+        {
+          "symbol": "SHOP",
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 162.81,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 157.41,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-09T12:15:49.745Z",
+          "trigger": "Break above $162.81 with sustained participation.",
+          "invalidation": "Loss of $157.41 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.90: 5d momentum 11.2%, 20d 9.8%, annualized 10d realized vol 49%, volume 1.30x, max selected correlation 0.11.",
+          "quantScore": 1.902,
+          "metrics": {
+            "momentum5d": 11.18,
+            "momentum20d": 9.755,
+            "realizedVol10dAnnualized": 48.69,
+            "volumeRatio": 1.296,
+            "atrPct": 4.395,
+            "gapPct": 1.103,
+            "relativeStrength5dPct": 9.976,
+            "relativeStrength20dPct": 9.54,
+            "avgDollarVolume10d": 1685843027,
+            "maxSelectedCorrelation": 0.114
+          },
+          "createdAt": "2026-10-06T12:15:49.745Z",
+          "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+          "status": "UNTRIGGERED",
+          "setupId": "SHOP-20261006-daily-quant"
+        },
+        {
+          "symbol": "HPE",
+          "setup": "Daily quant momentum / volatility breakout",
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 69.39,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 67.33,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "expiresAt": "2026-10-09T12:15:49.745Z",
+          "trigger": "Break above $69.39 with sustained participation.",
+          "invalidation": "Loss of $67.33 or failed breakout/reversal of the ranked momentum signal.",
+          "expectedHorizon": "1-3 trading days",
+          "reason": "Quant score 1.82: 5d momentum 9.1%, 20d 25.6%, annualized 10d realized vol 44%, volume 0.74x, max selected correlation 0.34.",
+          "quantScore": 1.821,
+          "metrics": {
+            "momentum5d": 9.149,
+            "momentum20d": 25.569,
+            "realizedVol10dAnnualized": 43.53,
+            "volumeRatio": 0.745,
+            "atrPct": 5.257,
+            "gapPct": -0.591,
+            "relativeStrength5dPct": 7.945,
+            "relativeStrength20dPct": 25.355,
+            "avgDollarVolume10d": 1300024690,
+            "maxSelectedCorrelation": 0.343
+          },
+          "createdAt": "2026-10-06T12:15:49.745Z",
+          "lastReviewedAt": "2026-10-06T12:15:49.745Z",
+          "status": "UNTRIGGERED",
+          "setupId": "HPE-20261006-daily-quant"
+        }
+      ],
+      "reason": "Existing daily universe ranking; every open position and valid triggered setup is reviewed. No second scanner or schedule."
+    },
+    "quantMacro": {
+      "decision": "BUY",
+      "symbol": "SHOP",
+      "eurAmount": 100,
+      "reason": "SHOP has the only newly confirmed actionable setup: one completed 5-minute close at $165.46 exceeded the $162.81 trigger with 1.132x baseline participation, and the latest quote remains above the trigger at $165.40. It ranks 3rd with strong 5-day/20-day momentum (+11.2%/+9.8%), above-baseline daily volume (1.30x), very high dollar liquidity, and low selected-set correlation (0.114), which limits incremental overlap with current positions. Size is deliberately reduced because realized volatility is elevated (48.7% annualized; 4.40% ATR), the regime is RANGE/NEUTRAL with TIGHT liquidity and only a 0.68 sizing multiplier, and existing holdings already concentrate short-horizon momentum exposure.",
+      "timeHorizon": "1-3 trading days; reassess or exit by setup expiry on 2026-10-09 if continuation and participation do not persist.",
+      "riskLevel": "HIGH",
+      "evidenceLimitations": "No live catalyst, earnings, or news feed was supplied, so event risk is unknown rather than absent. The macro-regime observations are dated 2026-10-01 versus the 2026-10-06 price trigger, VIX was delayed, several source clocks lacked explicit timezones, and confirmation uses only one completed 5-minute bar with a 12-bar volume baseline. Scores are relative ranks, not calibrated return probabilities.",
+      "quantView": "BUY at reduced size. The entry rule is explicitly satisfied, with rank 3, quant score 1.902, positive 5-day and 20-day relative strength, 1.296x daily volume, and 1.132x intraday participation. The defined invalidation is one completed 5-minute close below $157.41; no unsupported profit target is inferred.",
+      "macroView": "Cautiously supportive only. The supplied regime permits confirmed range breakouts, but RANGE trend, TIGHT liquidity, firm-dollar/rates signals, fragile participation proxies, and stale macro inputs argue against full sizing or adding multiple correlated momentum positions.",
+      "disagreements": "Quant evidence supports a small SHOP entry because its breakout is confirmed and correlation is low. Macro/risk considerations oppose aggressive sizing due to tight liquidity, elevated volatility, existing momentum exposure, and unavailable catalyst information; these concerns are addressed through the reduced €100 allocation rather than a HOLD."
+    },
+    "risk": {
+      "verdict": "APPROVE",
+      "reason": "The proposed €100 SHOP paper allocation is within the €250 buy limit and 35% single-position cap, and is deliberately smaller than available cash (€548.57). The documented entry condition is satisfied by one completed 5-minute close at $165.455 above $162.81 with 1.132x baseline participation; the latest quoted price remains above the trigger. The defined invalidation at a completed 5-minute close below $157.41 provides a measurable exit condition. From the indicated entry area, nominal stop distance is approximately 4.8%, or roughly €4.8 on the proposed allocation before gap/slippage effects. This is acceptable for a high-risk, 1-3-day paper trade, provided it is treated as incremental momentum exposure rather than evidence for further additions.",
+      "checks": {
+        "entryConfirmation": "PASS: completed 5-minute close $165.455 > $162.81 trigger and participation ratio 1.132 >= 1.0.",
+        "sizing": "PASS: €100 is 10.0% of reported €1,002.37 portfolio value, below the 35% position cap and €250 maximum buy limit.",
+        "cash": "PASS: reported cash €548.57 exceeds proposed €100 allocation.",
+        "invalidation": "PASS_WITH_CAVEAT: explicit rule is one completed 5-minute close below $157.41; estimated entry-to-invalidation distance is about 4.8%. A stop is not guaranteed to limit loss during gaps or fast liquidity deterioration.",
+        "horizonExpiry": "PASS: stated 1-3 trading-day horizon and expiry on 2026-10-09 are consistent with a short-duration breakout setup.",
+        "portfolioExposure": "PASS_WITH_CAVEAT: post-trade gross long equity exposure would be roughly €553.8, or about 55% of portfolio value, leaving about 45% cash. Existing ON, HPE, and MSTR are all short-horizon momentum exposures, so common risk-regime sensitivity remains material.",
+        "correlation": "PASS_WITH_CAVEAT: SHOP's 0.114 selected-set correlation is favorable as a selection metric, but it is not a demonstrated correlation to the actual ON, HPE, and MSTR holdings. Do not use this figure to infer portfolio diversification.",
+        "regime": "PASS_WITH_CAVEAT: supplied regime permits confirmed range breakouts, but NEUTRAL/RANGE conditions, TIGHT liquidity, firm-dollar/rates signals, and fragile participation support reduced sizing only.",
+        "concentration": "PASS_WITH_CAVEAT: no single name would be oversized, but this would create four simultaneous short-horizon momentum positions. No additional momentum additions should be justified from this approval alone.",
+        "catalystRisk": "UNRESOLVED: no earnings, news, or corporate-event feed was supplied; unknown event risk must be assumed rather than treated as absent."
+      },
+      "evidenceLimitations": [
+        "Price confirmation relies on one completed 5-minute candle and a 12-bar volume baseline; this is a narrow and potentially noisy confirmation window.",
+        "The macro regime observations are dated 2026-10-01, while the proposed entry evidence is from 2026-10-06; macro conditions may have changed.",
+        "VIX data were delayed and several macro-source clocks had ambiguous timezones.",
+        "SHOP correlation is measured against the selected candidate set, not calculated against the actual held portfolio; true factor, beta, and drawdown overlap are unverified.",
+        "No live catalyst, earnings-calendar, news, borrow, spread, or order-book information was supplied. Gap risk and execution quality cannot be assessed.",
+        "Quant scores and ranks are relative selection measures, not calibrated probabilities of gain or loss."
+      ]
+    },
+    "pm": {
+      "decision": "BUY",
+      "symbol": "SHOP",
+      "eurAmount": 100,
+      "reason": "Initiate a reduced SHOP paper position. The documented entry rule is satisfied: the completed 5-minute close of $165.455 was above the $162.81 trigger with 1.132x participation, and the latest quote ($165.405) remains above the trigger. SHOP is rank 3 with positive 5-day and 20-day momentum (+11.2% and +9.8%), above-baseline daily volume (1.296x), high dollar liquidity, and low selected-set correlation (0.114). The €100 allocation is within cash, buy, and position limits and retains substantial cash. Existing MSTR and HPE target alerts are not profit-taking signals because their recorded targets duplicate entry triggers; neither has documented invalidation. ON has not met its new breakout rule. Reduced sizing is warranted because SHOP volatility is elevated, the portfolio already holds three short-horizon momentum positions, and the regime is neutral/range with tight liquidity.",
+      "timeHorizon": "1-3 trading days; reassess or exit by setup expiry on 2026-10-09 if continuation and participation do not persist. Documented invalidation: one completed 5-minute close below $157.41.",
+      "riskLevel": "HIGH",
+      "evidenceLimitations": "No live catalyst, earnings-calendar, or news feed was supplied, so event risk is unknown. Confirmation rests on one completed 5-minute bar and a 12-bar volume baseline. Macro observations are from 2026-10-01 while price confirmation is from 2026-10-06; VIX was delayed and some macro timestamps were timezone-ambiguous. SHOP's correlation figure is against the selected set rather than actual holdings, so true portfolio factor overlap is unverified. Scores are relative rankings, not calibrated probabilities, and spread, order-book, borrow, and gap risks are unavailable.",
+      "reportTreatment": "Quant/Macro recommends BUY €100 and Risk APPROVES with caveats; both support only reduced sizing. Their disagreement is directional only in strength: Quant views the confirmed SHOP breakout as actionable, while macro conditions (RANGE/NEUTRAL trend, TIGHT liquidity, firm dollar/rates, fragile participation proxies) argue against aggressive sizing. This decision follows the approved reduced allocation and does not add to existing positions or infer unsupported profit targets."
+    },
+    "hardRisk": {
+      "verdict": "APPROVE",
+      "errors": []
+    },
+    "critic": {
+      "verdict": "PASS",
+      "reason": "The BUY SHOP €100 paper-trade proposal is supported by the supplied, timestamp-consistent intraday confirmation and remains within reported cash, per-buy, and single-position limits. No supplied hard-risk veto contradicts the proposal. Material limitations—especially stale macro-regime inputs and unverified actual-holdings correlation—are explicitly disclosed and the proposal uses reduced sizing rather than treating them as absent.",
+      "checks": {
+        "decisionScope": "PASS: Proposal is a paper-trading BUY proposal only; no real-order or broker action is implied.",
+        "entryTrigger": "PASS: SHOP's documented rule required one completed 5-minute close above $162.81 with participation of at least 1.0x. The supplied completed 16:50-16:55 UTC bar closed at $165.455 with 1.132x participation, and the 16:56:01 UTC quote was $165.405, still above the trigger.",
+        "participation": "PASS: Required intraday participation is present for SHOP at 1.132x versus the stated 12-bar baseline. This distinguishes SHOP from HPE, whose contemporaneous confirmation failed participation at 0.736x.",
+        "timestampFreshness": "PASS_WITH_CAVEAT: SHOP confirmation, quote, FX, and trigger timestamps cluster around 2026-10-06T16:55-16:56Z; the bar is plausibly complete by retrieval. However, the macro/regime evidence is dated 2026-10-01, roughly five calendar days earlier, and therefore is stale for a current regime assessment.",
+        "arithmetic": "PASS: Existing marked position value is €453.80 (€202.78 + €150.18 + €100.84); plus €548.57 cash equals the reported €1,002.37 portfolio value. A €100 purchase is 9.98% of portfolio value, below the 35% cap and €250 maximum buy. Post-trade cash would be about €448.57 and gross marked equity exposure about €553.80, or 55.25% of portfolio value.",
+        "fxAndPricing": "PASS: Existing position marks reconcile approximately using the supplied USD prices and EURUSD rate of 1.125872612 USD/EUR. SHOP's proposed €100 notional is below available cash; exact fractional share quantity is not required for the stated EUR-notional paper allocation.",
+        "invalidation": "PASS: The proposal retains the documented invalidation rule of one completed 5-minute close below $157.41. From the supplied quote of $165.405, this is about a 4.83% nominal distance, consistent with the cited approximately 4.8% stop distance before gap/slippage.",
+        "riskVeto": "PASS: Supplied Risk and HardRisk both state APPROVE. The regime permits CONFIRMED_RANGE_BREAKOUT, and SHOP is the only newly confirmed watchlist breakout in the supplied trigger data. No contrary invalidation or failed SHOP participation evidence is supplied.",
+        "thesisConsistency": "PASS: The rationale accurately cites rank 3, positive 5-day/20-day momentum, 1.296x daily volume, 1.132x intraday participation, high dollar volume, elevated volatility, and tight-liquidity/range-regime caveats. It does not invent a profit target or catalyst.",
+        "portfolioConcentration": "PASS_WITH_CAVEAT: The single-name cap is respected, but the transaction would create four simultaneous short-horizon momentum positions. SHOP's 0.114 correlation is only against the selected candidate set, not demonstrated against held ON, MSTR, and HPE, so diversification claims are appropriately limited.",
+        "existingPositionAlerts": "PASS: The determination that MSTR and HPE target alerts are non-actionable is supported by the portfolio records: each recorded target repeats its entry trigger rather than supplying an independent profit-taking level. Neither supplied quote breaches its documented invalidation.",
+        "inventedEvidence": "PASS: The proposal does not claim unavailable catalysts, earnings information, order-book conditions, spreads, borrow availability, or actual portfolio correlation. It identifies these as unavailable."
+      },
+      "evidenceLimitations": [
+        "All supplied evidence is treated as unverified external data rather than independently validated market data.",
+        "Macro/regime observations are from 2026-10-01 while the SHOP trigger is from 2026-10-06; the regime's directional and liquidity characterization may no longer be current despite fresh price confirmation.",
+        "The SHOP entry rests on one completed 5-minute candle and a 12-bar volume baseline, which is a narrow and potentially noisy confirmation sample.",
+        "The regime engine is explicitly SHADOW/decision-support only; it did not itself execute, block, or size the proposal.",
+        "SHOP correlation of 0.114 is a selected-universe metric, not a correlation calculation against the actual held positions or common market-factor exposure.",
+        "No catalyst, earnings-calendar, news, spread, order-book, borrow, or gap-risk data were supplied. Unknown event and execution risks cannot be treated as absent.",
+        "Rankings and quant scores are relative selection measures, not calibrated probabilities of return or loss."
+      ]
+    }
+  },
+  "decision": {
+    "decision": "BUY",
+    "symbol": "SHOP",
+    "eurAmount": 100,
+    "reason": "Initiate a reduced SHOP paper position. The documented entry rule is satisfied: the completed 5-minute close of $165.455 was above the $162.81 trigger with 1.132x participation, and the latest quote ($165.405) remains above the trigger. SHOP is rank 3 with positive 5-day and 20-day momentum (+11.2% and +9.8%), above-baseline daily volume (1.296x), high dollar liquidity, and low selected-set correlation (0.114). The €100 allocation is within cash, buy, and position limits and retains substantial cash. Existing MSTR and HPE target alerts are not profit-taking signals because their recorded targets duplicate entry triggers; neither has documented invalidation. ON has not met its new breakout rule. Reduced sizing is warranted because SHOP volatility is elevated, the portfolio already holds three short-horizon momentum positions, and the regime is neutral/range with tight liquidity.",
+    "timeHorizon": "1-3 trading days; reassess or exit by setup expiry on 2026-10-09 if continuation and participation do not persist. Documented invalidation: one completed 5-minute close below $157.41.",
+    "riskLevel": "HIGH",
+    "evidenceLimitations": "No live catalyst, earnings-calendar, or news feed was supplied, so event risk is unknown. Confirmation rests on one completed 5-minute bar and a 12-bar volume baseline. Macro observations are from 2026-10-01 while price confirmation is from 2026-10-06; VIX was delayed and some macro timestamps were timezone-ambiguous. SHOP's correlation figure is against the selected set rather than actual holdings, so true portfolio factor overlap is unverified. Scores are relative rankings, not calibrated probabilities, and spread, order-book, borrow, and gap risks are unavailable.",
+    "reportTreatment": "Quant/Macro recommends BUY €100 and Risk APPROVES with caveats; both support only reduced sizing. Their disagreement is directional only in strength: Quant views the confirmed SHOP breakout as actionable, while macro conditions (RANGE/NEUTRAL trend, TIGHT liquidity, firm dollar/rates, fragile participation proxies) argue against aggressive sizing. This decision follows the approved reduced allocation and does not add to existing positions or infer unsupported profit targets."
+  },
+  "tradePermitted": true,
+  "executionRecheck": {
+    "verdict": "PASS",
+    "errors": [],
+    "quotes": {
+      "symbol": "SHOP",
+      "priceUsd": 165.2899932861328,
+      "marketTime": "2026-10-06T16:56:56.000Z",
+      "confirmation": {
+        "SHOP-20261006-daily-quant": {
+          "pass": true,
+          "completedCloses": [
+            {
+              "time": "2026-10-06T16:50:00.000Z",
+              "close": 165.4550018310547,
+              "volume": 72275
+            }
+          ],
+          "baselineVolume": 61074.7,
+          "limitation": null
+        }
+      },
+      "provider": "Yahoo Finance chart",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/SHOP?interval=5m&range=1d",
+      "retrievedAt": "2026-10-06T16:57:00.897Z"
+    },
+    "fx": {
+      "usdPerEur": 1.1259993314743042,
+      "marketTime": "2026-10-06T16:56:48.000Z",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD=X?interval=5m&range=1d",
+      "provider": "Yahoo Finance chart",
+      "retrievedAt": "2026-10-06T16:57:00.972Z"
+    }
+  },
+  "decisionKey": "e33436172c17b3de",
+  "triggerKey": "6cb540b370525a3a",
+  "baseCommitSha": "06796518ced449cc347fcea38f1469f31c005382",
+  "portfolioMutation": true
+}
