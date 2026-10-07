@@ -7509,7 +7509,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0.27
+              "d1": 0.27,
+              "d3": 6.226
             },
             "selectionPrice": 69.33000183105469,
             "invalidatedAt": "2026-10-05T13:30:00.000Z",
@@ -7547,7 +7548,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 1.191
+              "d1": 1.191,
+              "d3": -2.618
             },
             "selectionPrice": 84.88999938964844,
             "triggeredAt": "2026-10-05T17:30:00.000Z",
@@ -7585,7 +7587,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": -1.529
+              "d1": -1.529,
+              "d3": -2.209
             },
             "selectionPrice": 307.489990234375,
             "invalidatedAt": "2026-10-07T13:30:00.000Z"
@@ -7622,7 +7625,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": -0.346
+              "d1": -0.346,
+              "d3": -3.17
             },
             "selectionPrice": 540.0399780273438,
             "triggeredAt": "2026-10-05T13:30:00.000Z",
@@ -7660,7 +7664,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": -1.937
+              "d1": -1.937,
+              "d3": -6.503
             },
             "selectionPrice": 160.00999450683594,
             "triggeredAt": "2026-10-05T13:30:00.000Z",
@@ -8241,7 +8246,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-07T17:29:28.124Z"
+    "lastUpdatedAt": "2026-10-07T17:47:16.506Z"
   },
   "automationHealth": {
     "openai": {
