@@ -8169,7 +8169,8 @@ window.PORTFOLIO_DATA = {
               "h4": 0.733
             },
             "selectionPrice": 164.44000244140625,
-            "invalidatedAt": "2026-10-07T13:30:00.000Z"
+            "invalidatedAt": "2026-10-07T13:30:00.000Z",
+            "triggeredAt": "2026-10-07T17:30:00.000Z"
           },
           {
             "symbol": "AMD",
@@ -8246,7 +8247,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-07T18:09:38.416Z"
+    "lastUpdatedAt": "2026-10-07T18:32:30.587Z"
   },
   "automationHealth": {
     "openai": {
