@@ -8088,7 +8088,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": 1.192
             },
             "selectionPrice": 70.4800033569336,
             "triggeredAt": "2026-10-07T13:30:00.000Z"
@@ -8123,7 +8124,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.132
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": -0.475
             },
             "selectionPrice": 287.010009765625,
             "invalidatedAt": "2026-10-07T13:30:00.000Z"
@@ -8158,7 +8160,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.204
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": 0.733
             },
             "selectionPrice": 164.44000244140625,
             "invalidatedAt": "2026-10-07T13:30:00.000Z"
@@ -8193,7 +8196,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.628
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": 0.35
             },
             "selectionPrice": 649.4199829101562,
             "invalidatedAt": "2026-10-07T13:30:00.000Z"
@@ -8228,7 +8232,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.395
             },
             "outcomes": {
-              "h1": 0
+              "h1": 0,
+              "h4": -1.447
             },
             "selectionPrice": 86.30999755859375,
             "invalidatedAt": "2026-10-07T13:30:00.000Z"
@@ -8236,7 +8241,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-07T16:11:00.926Z"
+    "lastUpdatedAt": "2026-10-07T16:32:18.392Z"
   },
   "automationHealth": {
     "openai": {
