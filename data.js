@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-08 20:12 UTC",
+    "asOf": "2026-10-08 20:32 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -50,12 +50,12 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 975.03,
+    "value": 975.34,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": -23.54,
-    "total": -24.97,
-    "totalPct": -2.5
+    "unrealized": -23.23,
+    "total": -24.66,
+    "totalPct": -2.47
   },
   "positions": [
     {
@@ -74,10 +74,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 186.68,
-      "pnl": -13.32,
-      "pnlPct": -6.66,
-      "fxUsdPerEur": 1.121956706047058,
+      "value": 186.78,
+      "pnl": -13.22,
+      "pnlPct": -6.61,
+      "fxUsdPerEur": 1.1213276386260986,
       "lastPriceAt": "2026-10-08T20:00:00.000Z"
     },
     {
@@ -110,17 +110,17 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 138.75,
-      "pnl": -11.25,
-      "pnlPct": -7.5,
-      "fxUsdPerEur": 1.121956706047058,
+      "value": 138.82,
+      "pnl": -11.18,
+      "pnlPct": -7.45,
+      "fxUsdPerEur": 1.1213276386260986,
       "lastPriceAt": "2026-10-08T20:00:00.000Z"
     },
     {
       "symbol": "HPE",
       "qty": 1.59808207,
       "avgUsd": 70.51499938964844,
-      "lastUsd": 70.98999786376953,
+      "lastUsd": 71,
       "costEur": 100,
       "entryReason": "Initiate a reduced paper position in HPE. The required entry condition is explicitly met: a completed 5-minute close of $70.73 exceeded the $69.39 trigger with 1.631x participation versus the 12-bar baseline, and the latest quote of $70.60 remains above the trigger. HPE remains a constructive ranked momentum candidate (rank 4, 5-day momentum +9.1%, 20-day momentum +25.6%) with moderate selected-set correlation (0.343). The €100 size is deliberately reduced for tight liquidity, weak daily volume participation (0.745x), rank deterioration from 1 to 4, high realized volatility/ATR, price extension above the trigger, and unverified overlap with existing ON and MSTR exposure. The risk report approves the allocation with no veto. The MSTR target-level event does not justify action because $163.17 is its documented entry trigger, not an evidence-backed profit target.",
       "openedAt": "2026-10-06T15:29:44.132Z",
@@ -146,10 +146,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 101.12,
-      "pnl": 1.12,
-      "pnlPct": 1.12,
-      "fxUsdPerEur": 1.121956706047058,
+      "value": 101.19,
+      "pnl": 1.19,
+      "pnlPct": 1.19,
+      "fxUsdPerEur": 1.1213276386260986,
       "lastPriceAt": "2026-10-08T20:00:00.000Z"
     },
     {
@@ -182,10 +182,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 99.92,
-      "pnl": -0.08,
-      "pnlPct": -0.08,
-      "fxUsdPerEur": 1.121956706047058,
+      "value": 99.97,
+      "pnl": -0.03,
+      "pnlPct": -0.03,
+      "fxUsdPerEur": 1.1213276386260986,
       "lastPriceAt": "2026-10-08T20:00:00.000Z"
     }
   ],
@@ -735,8 +735,8 @@ window.PORTFOLIO_DATA = {
       "value": 987.18
     },
     {
-      "date": "2026-10-08 20:12",
-      "value": 975.03
+      "date": "2026-10-08 20:32",
+      "value": 975.34
     }
   ],
   "strategyState": {
@@ -8499,7 +8499,7 @@ window.PORTFOLIO_DATA = {
       }
     },
     "monitor": {
-      "lastRunAt": "2026-10-08T20:12:18.051Z",
+      "lastRunAt": "2026-10-08T20:32:36.497Z",
       "status": "OK",
       "priceTimes": {
         "ON": "2026-10-08T20:00:00.000Z",
@@ -8507,8 +8507,8 @@ window.PORTFOLIO_DATA = {
         "HPE": "2026-10-08T20:00:00.000Z",
         "SHOP": "2026-10-08T20:00:00.000Z"
       },
-      "fxUsdPerEur": 1.121956706047058,
-      "fxAt": "2026-10-08T20:11:47.000Z",
+      "fxUsdPerEur": 1.1213276386260986,
+      "fxAt": "2026-10-08T20:31:47.000Z",
       "decisionStatus": "BLOCKED_BUDGET",
       "reason": "MONTHLY_BUDGET_EXHAUSTED"
     }
