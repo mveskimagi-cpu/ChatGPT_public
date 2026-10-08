@@ -8332,7 +8332,8 @@ window.PORTFOLIO_DATA = {
               "h1": 0
             },
             "selectionPrice": 166.02999877929688,
-            "invalidatedAt": "2026-10-08T13:30:00.000Z"
+            "invalidatedAt": "2026-10-08T13:30:00.000Z",
+            "triggeredAt": "2026-10-08T13:30:00.000Z"
           },
           {
             "symbol": "MRVL",
@@ -8442,7 +8443,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-08T13:57:17.449Z"
+    "lastUpdatedAt": "2026-10-08T14:14:46.147Z"
   },
   "automationHealth": {
     "openai": {
