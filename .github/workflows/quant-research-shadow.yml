@@ -1,4 +1,4 @@
-name: Quant research shadow backtest
+name: Quant research robustness
 on:
   workflow_dispatch:
   push:
@@ -9,7 +9,7 @@ on:
 permissions:
   contents: read
 jobs:
-  shadow:
+  robustness:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -17,16 +17,16 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate bundled market data and provenance
+      - name: Validate bundled frozen data
         run: |
           test "$(cat quant/research/data/DATA_SOURCE.txt)" = "real"
           test "$(wc -l < quant/research/data/ewa_ewc_2015_2024.csv)" -gt 2500
-      - name: Reproduce holdout results
-        run: |
-          node quant/research/shadow-eval.mjs quant/research/data/ewa_ewc_2015_2024.csv > /tmp/research-result.json
-          node -e "const fs=require('fs'); const a=JSON.parse(fs.readFileSync('/tmp/research-result.json')); const b=JSON.parse(fs.readFileSync('quant/research/results/ewa_ewc_shadow_2015_2024.json')); if(JSON.stringify(a.results)!==JSON.stringify(b.results))process.exit(1); console.log('Results match committed benchmark')"
+      - name: Unit and no-lookahead tests
+        run: node --test quant/research/robustness-v2.test.mjs
+      - name: Walk-forward robustness and cost stress
+        run: node quant/research/robustness-v2.mjs quant/research/data/ewa_ewc_2015_2024.csv | tee /tmp/quant-robustness-v2.json
       - uses: actions/upload-artifact@v4
         with:
-          name: quant-research-results
-          path: /tmp/research-result.json
-          retention-days: 14
+          name: quant-robustness-v2
+          path: /tmp/quant-robustness-v2.json
+          retention-days: 30
