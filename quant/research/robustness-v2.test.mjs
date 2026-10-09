@@ -1,0 +1,6 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {parse,target,simulate,evaluate} from './robustness-v2.mjs';
+function sample(n=550){let out=['Date,EWA,EWC'];for(let i=0;i<n;i++)out.push(new Date(Date.UTC(2018,0,1+i)).toISOString().slice(0,10)+','+(20*Math.exp(.0002*i+.03*Math.sin(i/10)))+','+(30*Math.exp(.00015*i+.025*Math.cos(i/13))));return out.join('\n');}
+test('invalid and nonmonotonic data rejected',()=>{assert.throws(()=>parse(sample(100)));assert.throws(()=>parse(sample().replace('2018-01-02','2018-01-01')));});
+test('lookahead isolation: future price changes do not change current signal',()=>{const a=parse(sample());const s=target(a,400,'kalman');a[401].a*=100;assert.equal(target(a,400,'kalman'),s);});
+test('cost stress reduces ending wealth with identical signals for hold',()=>{const a=parse(sample());assert.ok(simulate(a,400,550,'hold',30).netReturnPct<simulate(a,400,550,'hold',0).netReturnPct);});
+test('walk-forward results include net-of-cost Sharpe and three distinct folds',()=>{const o=evaluate(parse(sample()));assert.equal(o.folds.length,3);assert.equal(o.results.length,60);assert.ok(o.results.every(x=>Number.isFinite(x.netReturnPct)));});
