@@ -1470,10 +1470,11 @@
             "h1": 0
           },
           "selectionPrice": 574.5499877929688,
-          "triggeredAt": "2026-10-09T13:30:00.000Z"
+          "triggeredAt": "2026-10-09T13:30:00.000Z",
+          "invalidatedAt": "2026-10-09T14:30:00.000Z"
         }
       ]
     }
   ],
-  "lastUpdatedAt": "2026-10-09T14:37:40.059Z"
+  "lastUpdatedAt": "2026-10-09T14:58:27.912Z"
 }
