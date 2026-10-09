@@ -17,7 +17,7 @@ const backtest = function backtest(csv){
  if(target!==pos){wealth*=1-cost/10000;trades++;pos=target}
  const r=pos*(p[t][1]/p[t-1][1]-1);wealth*=1+r;ret.push(r);peak=Math.max(peak,wealth);dd=Math.max(dd,1-wealth/peak);
  }
- results.push({strategy:name,cost_bps_per_side:cost,return_pct:+((wealth/1000-1)*100).toFixed(2),ending_value:+wealth.toFixed(2),sharpe:sd(ret)>0?+(mean(ret)/sd(ret)*Math.sqrt(252)).toFixed(2):null,max_drawdown_pct:+(100*dd).toFixed(2),transactions:trades});
+ results.push({strategy:name,cost_bps_per_side:cost,return_pct:+((wealth/1000-1)*100).toFixed(2),ending_value:+wealth.toFixed(2),gross_signal_sharpe_before_costs:sd(ret)>0?+(mean(ret)/sd(ret)*Math.sqrt(252)).toFixed(2):null,max_drawdown_pct:+(100*dd).toFixed(2),transactions:trades});
  }
  return {data_source:"maddoxk/quant-statarb-research data/prices.csv; provenance flag real (unverified independently)",rows:p.length,train_end:p[start-1][0],test_start:p[start][0],test_end:p.at(-1)[0],execution:"previous close signal, next close-to-close EWA return; optimistic close proxy; not executable fill",caveats:"No SPY data; EWC trend proxy for regime; EWA long-only, not pair-neutral; no FX or borrow, no multiple-testing control; Kalman beta is simplified and no independent calibration; performance is exploratory",results};
 };
