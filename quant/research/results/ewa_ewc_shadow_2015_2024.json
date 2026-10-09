@@ -1,0 +1,155 @@
+{
+  "data_source": "maddoxk/quant-statarb-research data/prices.csv; provenance flag real (unverified independently)",
+  "rows": 2515,
+  "train_end": "2020-12-29",
+  "test_start": "2020-12-30",
+  "test_end": "2024-12-30",
+  "execution": "previous close signal, next close-to-close EWA return; optimistic close proxy; not executable fill",
+  "caveats": "No SPY data; EWC trend proxy for regime; EWA long-only, not pair-neutral; no FX or borrow, no multiple-testing control; Kalman beta is simplified and no independent calibration; performance is exploratory",
+  "results": [
+    {
+      "strategy": "hold",
+      "cost_bps_per_side": 0,
+      "return_pct": 19,
+      "ending_value": 1189.96,
+      "sharpe": 0.32,
+      "max_drawdown_pct": 24.87,
+      "transactions": 1
+    },
+    {
+      "strategy": "hold",
+      "cost_bps_per_side": 10,
+      "return_pct": 18.88,
+      "ending_value": 1188.77,
+      "sharpe": 0.32,
+      "max_drawdown_pct": 24.87,
+      "transactions": 1
+    },
+    {
+      "strategy": "hold",
+      "cost_bps_per_side": 30,
+      "return_pct": 18.64,
+      "ending_value": 1186.39,
+      "sharpe": 0.32,
+      "max_drawdown_pct": 24.87,
+      "transactions": 1
+    },
+    {
+      "strategy": "hold",
+      "cost_bps_per_side": 60,
+      "return_pct": 18.28,
+      "ending_value": 1182.82,
+      "sharpe": 0.32,
+      "max_drawdown_pct": 24.87,
+      "transactions": 1
+    },
+    {
+      "strategy": "kalman",
+      "cost_bps_per_side": 0,
+      "return_pct": 34.26,
+      "ending_value": 1342.63,
+      "sharpe": 0.9,
+      "max_drawdown_pct": 20.21,
+      "transactions": 119
+    },
+    {
+      "strategy": "kalman",
+      "cost_bps_per_side": 10,
+      "return_pct": 19.19,
+      "ending_value": 1191.93,
+      "sharpe": 0.9,
+      "max_drawdown_pct": 21.4,
+      "transactions": 119
+    },
+    {
+      "strategy": "kalman",
+      "cost_bps_per_side": 30,
+      "return_pct": -6.1,
+      "ending_value": 939.03,
+      "sharpe": 0.9,
+      "max_drawdown_pct": 23.86,
+      "transactions": 119
+    },
+    {
+      "strategy": "kalman",
+      "cost_bps_per_side": 60,
+      "return_pct": -34.39,
+      "ending_value": 656.05,
+      "sharpe": 0.9,
+      "max_drawdown_pct": 35.5,
+      "transactions": 119
+    },
+    {
+      "strategy": "regime",
+      "cost_bps_per_side": 0,
+      "return_pct": -15.76,
+      "ending_value": 842.45,
+      "sharpe": -0.3,
+      "max_drawdown_pct": 23.81,
+      "transactions": 120
+    },
+    {
+      "strategy": "regime",
+      "cost_bps_per_side": 10,
+      "return_pct": -25.29,
+      "ending_value": 747.14,
+      "sharpe": -0.3,
+      "max_drawdown_pct": 29.67,
+      "transactions": 120
+    },
+    {
+      "strategy": "regime",
+      "cost_bps_per_side": 30,
+      "return_pct": -41.26,
+      "ending_value": 587.44,
+      "sharpe": -0.3,
+      "max_drawdown_pct": 43.67,
+      "transactions": 120
+    },
+    {
+      "strategy": "regime",
+      "cost_bps_per_side": 60,
+      "return_pct": -59.08,
+      "ending_value": 409.18,
+      "sharpe": -0.3,
+      "max_drawdown_pct": 60.64,
+      "transactions": 120
+    },
+    {
+      "strategy": "cost_gate",
+      "cost_bps_per_side": 0,
+      "return_pct": -3.04,
+      "ending_value": 969.57,
+      "sharpe": -0.02,
+      "max_drawdown_pct": 20.38,
+      "transactions": 100
+    },
+    {
+      "strategy": "cost_gate",
+      "cost_bps_per_side": 10,
+      "return_pct": -12.27,
+      "ending_value": 877.26,
+      "sharpe": -0.02,
+      "max_drawdown_pct": 23.04,
+      "transactions": 100
+    },
+    {
+      "strategy": "cost_gate",
+      "cost_bps_per_side": 30,
+      "return_pct": -28.21,
+      "ending_value": 717.95,
+      "sharpe": -0.02,
+      "max_drawdown_pct": 31.05,
+      "transactions": 100
+    },
+    {
+      "strategy": "cost_gate",
+      "cost_bps_per_side": 60,
+      "return_pct": -46.89,
+      "ending_value": 531.15,
+      "sharpe": -0.02,
+      "max_drawdown_pct": 48.44,
+      "transactions": 100
+    }
+  ]
+}
