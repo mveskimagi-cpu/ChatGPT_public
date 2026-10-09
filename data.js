@@ -8308,7 +8308,8 @@ window.PORTFOLIO_DATA = {
               "d1": 0.681
             },
             "selectionPrice": 72.08999633789062,
-            "invalidatedAt": "2026-10-08T13:30:00.000Z"
+            "invalidatedAt": "2026-10-08T13:30:00.000Z",
+            "triggeredAt": "2026-10-09T17:30:00.000Z"
           },
           {
             "symbol": "SHOP",
@@ -8650,7 +8651,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-09T17:44:19.372Z"
+    "lastUpdatedAt": "2026-10-09T17:58:07.453Z"
   },
   "automationHealth": {
     "openai": {
