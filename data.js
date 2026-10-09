@@ -8568,7 +8568,8 @@ window.PORTFOLIO_DATA = {
               "h1": 0
             },
             "selectionPrice": 274.6600036621094,
-            "triggeredAt": "2026-10-09T13:30:00.000Z"
+            "triggeredAt": "2026-10-09T13:30:00.000Z",
+            "invalidatedAt": "2026-10-09T13:30:00.000Z"
           },
           {
             "symbol": "PLTR",
@@ -8643,7 +8644,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-09T13:33:37.491Z"
+    "lastUpdatedAt": "2026-10-09T13:57:19.687Z"
   },
   "automationHealth": {
     "openai": {
