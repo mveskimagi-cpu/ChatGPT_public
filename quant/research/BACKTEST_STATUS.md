@@ -1,0 +1,4 @@
+# Research backtest execution
+The research-only prototype is available as a separate downloadable artifact in the associated ChatGPT conversation. It has 3 candidate signals (Kalman log-price beta / residual z-score, regime momentum, cost-gated momentum), plus buy-and-hold, with 0/10/30/60 bps per-side sensitivity. Two deterministic unit tests passed locally using synthetic prices, which are NOT investment evidence.
+
+No market-data backtest was run because no verified historical adjusted-price CSV was available. Stooq 2026 downloads can require API key/CAPTCHA. Require licensed point-in-time adjusted closes and check currency, dividends, execution and no-lookahead assumptions before drawing conclusions. No production changes.
