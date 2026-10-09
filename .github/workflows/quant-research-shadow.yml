@@ -11,22 +11,30 @@ permissions:
 jobs:
   robustness:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate bundled frozen data
+      - name: Validate frozen dataset
         run: |
           test "$(cat quant/research/data/DATA_SOURCE.txt)" = "real"
           test "$(wc -l < quant/research/data/ewa_ewc_2015_2024.csv)" -gt 2500
-      - name: Unit and no-lookahead tests
-        run: node --test quant/research/robustness-v2.test.mjs
-      - name: Walk-forward robustness and cost stress
-        run: node quant/research/robustness-v2.mjs quant/research/data/ewa_ewc_2015_2024.csv | tee /tmp/quant-robustness-v2.json
+      - name: Unit tests for both generations
+        run: node --test quant/research/robustness-v2.test.mjs quant/research/pairs-v3.test.mjs
+      - name: Recompute three-fold two-leg results
+        run: |
+          node quant/research/pairs-v3.mjs quant/research/data/ewa_ewc_2015_2024.csv > /tmp/pairs-v3.json
+          node --input-type=module -e "import fs from 'node:fs'; const a=JSON.parse(fs.readFileSync('/tmp/pairs-v3.json'));const b=JSON.parse(fs.readFileSync('quant/research/results/pairs_v3_2015_2024.json'));if(JSON.stringify(a.results)!==JSON.stringify(b.results))throw Error('Pair results differ');console.log('Pair benchmark reproduced');"
+      - name: Recompute long-only results
+        run: node quant/research/robustness-v2.mjs quant/research/data/ewa_ewc_2015_2024.csv > /tmp/robustness-v2.json
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: quant-robustness-v2
-          path: /tmp/quant-robustness-v2.json
+          name: quant-research-robustness
+          path: |
+            /tmp/pairs-v3.json
+            /tmp/robustness-v2.json
+          if-no-files-found: ignore
           retention-days: 30
