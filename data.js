@@ -8653,9 +8653,175 @@ window.PORTFOLIO_DATA = {
             "invalidatedAt": "2026-10-09T14:30:00.000Z"
           }
         ]
+      },
+      {
+        "selectedAt": "2026-10-10T12:08:07.738Z",
+        "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
+        "setups": [
+          {
+            "symbol": "SHOP",
+            "quantScore": 2.085,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 172.61,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 169.09,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 12.854,
+              "momentum20d": 34.953,
+              "realizedVol10dAnnualized": 29.66,
+              "volumeRatio": 0.886,
+              "atrPct": 4.149,
+              "gapPct": 0.902,
+              "relativeStrength5dPct": 11.694,
+              "relativeStrength20dPct": 32.216,
+              "avgDollarVolume10d": 1259378107,
+              "maxSelectedCorrelation": 0
+            },
+            "outcomes": {},
+            "selectionPrice": 170.85000610351562
+          },
+          {
+            "symbol": "PLTR",
+            "quantScore": 1.777,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 211.05,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 207.05,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 10.755,
+              "momentum20d": 26.04,
+              "realizedVol10dAnnualized": 27.62,
+              "volumeRatio": 1.69,
+              "atrPct": 2.947,
+              "gapPct": 1.356,
+              "relativeStrength5dPct": 9.595,
+              "relativeStrength20dPct": 23.303,
+              "avgDollarVolume10d": 4544933121,
+              "maxSelectedCorrelation": 0.108
+            },
+            "outcomes": {},
+            "selectionPrice": 209.0500030517578
+          },
+          {
+            "symbol": "HPE",
+            "quantScore": 1.634,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 74.6,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 72.32,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 5.957,
+              "momentum20d": 33.032,
+              "realizedVol10dAnnualized": 44.8,
+              "volumeRatio": 0.652,
+              "atrPct": 4.673,
+              "gapPct": 1.197,
+              "relativeStrength5dPct": 4.797,
+              "relativeStrength20dPct": 30.295,
+              "avgDollarVolume10d": 1421623613,
+              "maxSelectedCorrelation": 0.126
+            },
+            "outcomes": {},
+            "selectionPrice": 73.45999908447266
+          },
+          {
+            "symbol": "PANW",
+            "quantScore": 1.168,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 424.84,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 412.72,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 3.854,
+              "momentum20d": 23.72,
+              "realizedVol10dAnnualized": 41.79,
+              "volumeRatio": 0.83,
+              "atrPct": 3.882,
+              "gapPct": 1.478,
+              "relativeStrength5dPct": 2.694,
+              "relativeStrength20dPct": 20.983,
+              "avgDollarVolume10d": 2071306813,
+              "maxSelectedCorrelation": 0.322
+            },
+            "outcomes": {},
+            "selectionPrice": 418.7799987792969
+          },
+          {
+            "symbol": "DELL",
+            "quantScore": 1.124,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 593.27,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 578.85,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 4.185,
+              "momentum20d": 15.68,
+              "realizedVol10dAnnualized": 35.5,
+              "volumeRatio": 1.133,
+              "atrPct": 4.312,
+              "gapPct": 1.236,
+              "relativeStrength5dPct": 3.024,
+              "relativeStrength20dPct": 12.944,
+              "avgDollarVolume10d": 3162133602,
+              "maxSelectedCorrelation": 0.772
+            },
+            "outcomes": {},
+            "selectionPrice": 586.0599975585938
+          }
+        ]
       }
     ],
-    "lastUpdatedAt": "2026-10-10T11:54:37.107Z"
+    "lastUpdatedAt": "2026-10-10T12:08:11.625Z"
   },
   "automationHealth": {
     "openai": {
