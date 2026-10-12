@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-11 20:44 UTC",
+    "asOf": "2026-10-12 00:00 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -50,11 +50,11 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 981.23,
+    "value": 981.17,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": -17.34,
-    "total": -18.77,
+    "unrealized": -17.4,
+    "total": -18.83,
     "totalPct": -1.88
   },
   "positions": [
@@ -74,10 +74,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 182.48,
-      "pnl": -17.52,
-      "pnlPct": -8.76,
-      "fxUsdPerEur": 1.1205737590789795,
+      "value": 182.46,
+      "pnl": -17.54,
+      "pnlPct": -8.77,
+      "fxUsdPerEur": 1.1206992864608765,
       "lastPriceAt": "2026-10-09T20:00:00.000Z"
     },
     {
@@ -110,10 +110,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 141.55,
-      "pnl": -8.45,
-      "pnlPct": -5.63,
-      "fxUsdPerEur": 1.1205737590789795,
+      "value": 141.53,
+      "pnl": -8.47,
+      "pnlPct": -5.64,
+      "fxUsdPerEur": 1.1206992864608765,
       "lastPriceAt": "2026-10-09T20:00:00.000Z"
     },
     {
@@ -146,10 +146,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 104.76,
-      "pnl": 4.76,
-      "pnlPct": 4.76,
-      "fxUsdPerEur": 1.1205737590789795,
+      "value": 104.75,
+      "pnl": 4.75,
+      "pnlPct": 4.75,
+      "fxUsdPerEur": 1.1206992864608765,
       "lastPriceAt": "2026-10-09T20:00:00.000Z"
     },
     {
@@ -182,10 +182,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 103.86,
-      "pnl": 3.86,
-      "pnlPct": 3.86,
-      "fxUsdPerEur": 1.1205737590789795,
+      "value": 103.85,
+      "pnl": 3.85,
+      "pnlPct": 3.85,
+      "fxUsdPerEur": 1.1206992864608765,
       "lastPriceAt": "2026-10-09T20:00:00.000Z"
     }
   ],
@@ -749,6 +749,10 @@ window.PORTFOLIO_DATA = {
     {
       "date": "2026-10-11 20:44",
       "value": 981.23
+    },
+    {
+      "date": "2026-10-12 00:00",
+      "value": 981.17
     }
   ],
   "strategyState": {
@@ -9049,6 +9053,11 @@ window.PORTFOLIO_DATA = {
               "spentMicroUsd": 0,
               "uncertainMicroUsd": 0,
               "requestCount": 0
+            },
+            "2026-10-12": {
+              "spentMicroUsd": 0,
+              "uncertainMicroUsd": 0,
+              "requestCount": 0
             }
           },
           "pending": {},
@@ -9057,7 +9066,7 @@ window.PORTFOLIO_DATA = {
       }
     },
     "monitor": {
-      "lastRunAt": "2026-10-11T20:44:05.686Z",
+      "lastRunAt": "2026-10-12T00:00:18.323Z",
       "status": "OK",
       "priceTimes": {
         "ON": "2026-10-09T20:00:00.000Z",
@@ -9065,8 +9074,8 @@ window.PORTFOLIO_DATA = {
         "HPE": "2026-10-09T20:00:00.000Z",
         "SHOP": "2026-10-09T20:00:00.000Z"
       },
-      "fxUsdPerEur": 1.1205737590789795,
-      "fxAt": "2026-10-09T21:25:00.000Z",
+      "fxUsdPerEur": 1.1206992864608765,
+      "fxAt": "2026-10-11T23:59:28.000Z",
       "decisionStatus": "BLOCKED_BUDGET",
       "reason": "MONTHLY_BUDGET_EXHAUSTED"
     }
