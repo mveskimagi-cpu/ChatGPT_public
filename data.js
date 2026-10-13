@@ -8051,7 +8051,8 @@ window.PORTFOLIO_DATA = {
               "d3": 3.298
             },
             "selectionPrice": 68.36000061035156,
-            "triggeredAt": "2026-10-06T13:30:00.000Z"
+            "triggeredAt": "2026-10-06T13:30:00.000Z",
+            "invalidatedAt": "2026-10-13T13:30:00.000Z"
           },
           {
             "symbol": "AMAT",
@@ -8133,7 +8134,8 @@ window.PORTFOLIO_DATA = {
               "d3": -0.928
             },
             "selectionPrice": 70.4800033569336,
-            "triggeredAt": "2026-10-07T13:30:00.000Z"
+            "triggeredAt": "2026-10-07T13:30:00.000Z",
+            "invalidatedAt": "2026-10-13T13:30:00.000Z"
           },
           {
             "symbol": "MRVL",
@@ -8723,7 +8725,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": 0.488
             },
             "selectionPrice": 170.85000610351562,
             "triggeredAt": "2026-10-12T13:30:00.000Z"
@@ -8760,7 +8763,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": 0.637
             },
             "selectionPrice": 209.0500030517578,
             "triggeredAt": "2026-10-12T13:30:00.000Z",
@@ -8798,7 +8802,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": -2.155
             },
             "selectionPrice": 73.45999908447266,
             "invalidatedAt": "2026-10-12T13:30:00.000Z"
@@ -8835,7 +8840,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": -1.195
             },
             "selectionPrice": 418.7799987792969,
             "invalidatedAt": "2026-10-12T13:30:00.000Z"
@@ -8872,7 +8878,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": -0.314
             },
             "selectionPrice": 586.0599975585938,
             "invalidatedAt": "2026-10-12T13:30:00.000Z"
@@ -9106,10 +9113,12 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": -0.471,
-              "h4": 0.46
+              "h4": 0.46,
+              "d1": 0.871
             },
             "selectionPrice": 176.71499633789062,
-            "triggeredAt": "2026-10-12T19:30:00.000Z"
+            "triggeredAt": "2026-10-12T19:30:00.000Z",
+            "invalidatedAt": "2026-10-13T13:30:00.000Z"
           },
           {
             "symbol": "PLTR",
@@ -9142,9 +9151,11 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": -0.586,
-              "h4": -0.456
+              "h4": -0.456,
+              "d1": -0.192
             },
-            "selectionPrice": 207.5500030517578
+            "selectionPrice": 207.5500030517578,
+            "triggeredAt": "2026-10-13T13:30:00.000Z"
           },
           {
             "symbol": "HPE",
@@ -9177,7 +9188,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0.61,
-              "h4": 0.079
+              "h4": 0.079,
+              "d1": -1.589
             },
             "selectionPrice": 71.41500091552734,
             "invalidatedAt": "2026-10-12T14:30:00.000Z"
@@ -9213,7 +9225,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": -1.002,
-              "h4": -1.518
+              "h4": -1.518,
+              "d1": 0.302
             },
             "selectionPrice": 143.85000610351562,
             "invalidatedAt": "2026-10-12T14:30:00.000Z"
@@ -9249,15 +9262,182 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": -0.091,
-              "h4": -0.703
+              "h4": -0.703,
+              "d1": -0.421
             },
             "selectionPrice": 410.4849853515625,
             "invalidatedAt": "2026-10-12T14:30:00.000Z"
           }
         ]
+      },
+      {
+        "selectedAt": "2026-10-13T17:47:59.128Z",
+        "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
+        "setups": [
+          {
+            "symbol": "SHOP",
+            "quantScore": 1.744,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 180.22,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 175.88,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 8.277,
+              "momentum20d": 32.982,
+              "realizedVol10dAnnualized": 35.1,
+              "volumeRatio": 0.484,
+              "atrPct": 3.482,
+              "gapPct": -1.908,
+              "relativeStrength5dPct": 8.499,
+              "relativeStrength20dPct": 30.817,
+              "avgDollarVolume10d": 1307446562,
+              "maxSelectedCorrelation": 0
+            },
+            "outcomes": {},
+            "selectionPrice": 178.05999755859375
+          },
+          {
+            "symbol": "HPE",
+            "quantScore": 1.364,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 70.26,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 67.75,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": -2.093,
+              "momentum20d": 24.535,
+              "realizedVol10dAnnualized": 52.31,
+              "volumeRatio": 0.712,
+              "atrPct": 5.306,
+              "gapPct": -3.939,
+              "relativeStrength5dPct": -1.87,
+              "relativeStrength20dPct": 22.37,
+              "avgDollarVolume10d": 1372630823,
+              "maxSelectedCorrelation": 0.181
+            },
+            "outcomes": {},
+            "selectionPrice": 69.0199966430664
+          },
+          {
+            "symbol": "PLTR",
+            "quantScore": 1.156,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 209.79,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 206.01,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 8.242,
+              "momentum20d": 19.958,
+              "realizedVol10dAnnualized": 26.24,
+              "volumeRatio": 0.405,
+              "atrPct": 2.876,
+              "gapPct": -0.526,
+              "relativeStrength5dPct": 8.464,
+              "relativeStrength20dPct": 17.793,
+              "avgDollarVolume10d": 4567672076,
+              "maxSelectedCorrelation": 0.117
+            },
+            "outcomes": {},
+            "selectionPrice": 207.9499969482422
+          },
+          {
+            "symbol": "UNG",
+            "quantScore": 0.987,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 11.45,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 11.21,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 5.493,
+              "momentum20d": 9.68,
+              "realizedVol10dAnnualized": 30.99,
+              "volumeRatio": 0.622,
+              "atrPct": 3.748,
+              "gapPct": 0.916,
+              "relativeStrength5dPct": 5.715,
+              "relativeStrength20dPct": 7.514,
+              "avgDollarVolume10d": 322899717,
+              "maxSelectedCorrelation": 0.408
+            },
+            "outcomes": {},
+            "selectionPrice": 11.324999809265137
+          },
+          {
+            "symbol": "META",
+            "quantScore": 0.941,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 770.3,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 755.63,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 3.26,
+              "momentum20d": 14.628,
+              "realizedVol10dAnnualized": 27.74,
+              "volumeRatio": 1.024,
+              "atrPct": 3.029,
+              "gapPct": -0.925,
+              "relativeStrength5dPct": 3.482,
+              "relativeStrength20dPct": 12.463,
+              "avgDollarVolume10d": 11856784755,
+              "maxSelectedCorrelation": 0.674
+            },
+            "outcomes": {},
+            "selectionPrice": 763.0700073242188
+          }
+        ]
       }
     ],
-    "lastUpdatedAt": "2026-10-13T10:31:08.107Z"
+    "lastUpdatedAt": "2026-10-13T17:48:06.312Z"
   },
   "automationHealth": {
     "openai": {
