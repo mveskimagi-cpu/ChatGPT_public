@@ -9152,7 +9152,8 @@ window.PORTFOLIO_DATA = {
               "d1": -0.192
             },
             "selectionPrice": 207.5500030517578,
-            "triggeredAt": "2026-10-13T13:30:00.000Z"
+            "triggeredAt": "2026-10-13T13:30:00.000Z",
+            "invalidatedAt": "2026-10-14T13:30:00.000Z"
           },
           {
             "symbol": "HPE",
@@ -9301,9 +9302,11 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0
             },
             "outcomes": {
-              "h1": 0.062
+              "h1": 0.062,
+              "h4": -0.048
             },
-            "selectionPrice": 178.05999755859375
+            "selectionPrice": 178.05999755859375,
+            "invalidatedAt": "2026-10-14T13:30:00.000Z"
           },
           {
             "symbol": "HPE",
@@ -9335,9 +9338,11 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.181
             },
             "outcomes": {
-              "h1": 0.189
+              "h1": 0.189,
+              "h4": -4.558
             },
-            "selectionPrice": 69.0199966430664
+            "selectionPrice": 69.0199966430664,
+            "invalidatedAt": "2026-10-14T13:30:00.000Z"
           },
           {
             "symbol": "PLTR",
@@ -9369,9 +9374,11 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.117
             },
             "outcomes": {
-              "h1": 0.192
+              "h1": 0.192,
+              "h4": -0.451
             },
-            "selectionPrice": 207.9499969482422
+            "selectionPrice": 207.9499969482422,
+            "invalidatedAt": "2026-10-14T13:30:00.000Z"
           },
           {
             "symbol": "UNG",
@@ -9403,9 +9410,11 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.408
             },
             "outcomes": {
-              "h1": 0.131
+              "h1": 0.131,
+              "h4": -4.347
             },
-            "selectionPrice": 11.324999809265137
+            "selectionPrice": 11.324999809265137,
+            "invalidatedAt": "2026-10-14T13:30:00.000Z"
           },
           {
             "symbol": "META",
@@ -9437,14 +9446,182 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.674
             },
             "outcomes": {
-              "h1": -0.306
+              "h1": -0.306,
+              "h4": -2.623
             },
-            "selectionPrice": 763.0700073242188
+            "selectionPrice": 763.0700073242188,
+            "invalidatedAt": "2026-10-14T13:30:00.000Z"
+          }
+        ]
+      },
+      {
+        "selectedAt": "2026-10-14T16:19:55.543Z",
+        "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
+        "setups": [
+          {
+            "symbol": "SHOP",
+            "quantScore": 1.504,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 174.89,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 169.99,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 3.861,
+              "momentum20d": 32.789,
+              "realizedVol10dAnnualized": 41.09,
+              "volumeRatio": 0.501,
+              "atrPct": 3.661,
+              "gapPct": -1.116,
+              "relativeStrength5dPct": 4.853,
+              "relativeStrength20dPct": 31.19,
+              "avgDollarVolume10d": 1263956714,
+              "maxSelectedCorrelation": 0
+            },
+            "outcomes": {},
+            "selectionPrice": 172.46499633789062
+          },
+          {
+            "symbol": "PLTR",
+            "quantScore": 0.915,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 205.88,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 201.58,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 4.951,
+              "momentum20d": 18.063,
+              "realizedVol10dAnnualized": 30.4,
+              "volumeRatio": 0.377,
+              "atrPct": 2.917,
+              "gapPct": -0.628,
+              "relativeStrength5dPct": 5.943,
+              "relativeStrength20dPct": 16.464,
+              "avgDollarVolume10d": 4474108997,
+              "maxSelectedCorrelation": 0.328
+            },
+            "outcomes": {},
+            "selectionPrice": 203.92990112304688
+          },
+          {
+            "symbol": "MSTR",
+            "quantScore": 0.725,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 146.57,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 141.32,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": -6.145,
+              "momentum20d": 11.069,
+              "realizedVol10dAnnualized": 52.62,
+              "volumeRatio": 0.561,
+              "atrPct": 5.741,
+              "gapPct": -1.627,
+              "relativeStrength5dPct": -5.153,
+              "relativeStrength20dPct": 9.469,
+              "avgDollarVolume10d": 2578649934,
+              "maxSelectedCorrelation": 0.424
+            },
+            "outcomes": {},
+            "selectionPrice": 144.0399932861328
+          },
+          {
+            "symbol": "HPE",
+            "quantScore": 0.707,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 65.56,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 62.78,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": -10.986,
+              "momentum20d": 14.835,
+              "realizedVol10dAnnualized": 62.4,
+              "volumeRatio": 0.499,
+              "atrPct": 5.699,
+              "gapPct": -5.77,
+              "relativeStrength5dPct": -9.994,
+              "relativeStrength20dPct": 13.236,
+              "avgDollarVolume10d": 1200343246,
+              "maxSelectedCorrelation": 0.434
+            },
+            "outcomes": {},
+            "selectionPrice": 64.22250366210938
+          },
+          {
+            "symbol": "META",
+            "quantScore": 0.57,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 743,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 726.66,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 1.874,
+              "momentum20d": 9.637,
+              "realizedVol10dAnnualized": 32.1,
+              "volumeRatio": 0.449,
+              "atrPct": 3.061,
+              "gapPct": -0.23,
+              "relativeStrength5dPct": 2.867,
+              "relativeStrength20dPct": 8.037,
+              "avgDollarVolume10d": 11069290894,
+              "maxSelectedCorrelation": 0.556
+            },
+            "outcomes": {},
+            "selectionPrice": 735.52001953125
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-14T11:47:56.364Z"
+    "lastUpdatedAt": "2026-10-14T16:20:00.511Z"
   },
   "automationHealth": {
     "openai": {
