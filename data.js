@@ -9742,7 +9742,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0.178
             },
-            "selectionPrice": 148.72999572753906
+            "selectionPrice": 148.72999572753906,
+            "triggeredAt": "2026-10-15T19:30:00.000Z"
           },
           {
             "symbol": "LLY",
@@ -9811,7 +9812,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0.004
             },
-            "selectionPrice": 412.1199951171875
+            "selectionPrice": 412.1199951171875,
+            "invalidatedAt": "2026-10-15T19:30:00.000Z"
           },
           {
             "symbol": "WMT",
@@ -9851,7 +9853,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-15T19:52:41.891Z"
+    "lastUpdatedAt": "2026-10-15T22:50:22.713Z"
   },
   "automationHealth": {
     "openai": {
