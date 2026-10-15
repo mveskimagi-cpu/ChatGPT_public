@@ -9512,10 +9512,12 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": -0.277,
-              "h4": -0.186
+              "h4": -0.186,
+              "d1": 0.699
             },
             "selectionPrice": 172.46499633789062,
-            "invalidatedAt": "2026-10-15T13:30:00.000Z"
+            "invalidatedAt": "2026-10-15T13:30:00.000Z",
+            "triggeredAt": "2026-10-15T17:30:00.000Z"
           },
           {
             "symbol": "PLTR",
@@ -9548,7 +9550,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": -0.465,
-              "h4": -3.501
+              "h4": -3.501,
+              "d1": -1.44
             },
             "selectionPrice": 203.92990112304688,
             "invalidatedAt": "2026-10-14T17:30:00.000Z"
@@ -9584,7 +9587,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": -0.761,
-              "h4": -2.704
+              "h4": -2.704,
+              "d1": 3.083
             },
             "selectionPrice": 144.0399932861328,
             "triggeredAt": "2026-10-15T14:30:00.000Z",
@@ -9621,7 +9625,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0.032,
-              "h4": -9.064
+              "h4": -9.064,
+              "d1": -6.437
             },
             "selectionPrice": 64.22250366210938,
             "invalidatedAt": "2026-10-14T18:30:00.000Z"
@@ -9657,10 +9662,12 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0.282,
-              "h4": -0.537
+              "h4": -0.537,
+              "d1": 0.772
             },
             "selectionPrice": 735.52001953125,
-            "invalidatedAt": "2026-10-15T13:30:00.000Z"
+            "invalidatedAt": "2026-10-15T13:30:00.000Z",
+            "triggeredAt": "2026-10-15T16:30:00.000Z"
           }
         ]
       },
@@ -9697,8 +9704,11 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1330026737,
               "maxSelectedCorrelation": 0
             },
-            "outcomes": {},
-            "selectionPrice": 172.44000244140625
+            "outcomes": {
+              "h1": 1.816
+            },
+            "selectionPrice": 172.44000244140625,
+            "triggeredAt": "2026-10-15T17:30:00.000Z"
           },
           {
             "symbol": "MSTR",
@@ -9729,7 +9739,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2718499627,
               "maxSelectedCorrelation": 0.432
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.178
+            },
             "selectionPrice": 148.72999572753906
           },
           {
@@ -9761,8 +9773,11 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2659006494,
               "maxSelectedCorrelation": 0.197
             },
-            "outcomes": {},
-            "selectionPrice": 1271.35498046875
+            "outcomes": {
+              "h1": 0.289
+            },
+            "selectionPrice": 1271.35498046875,
+            "invalidatedAt": "2026-10-15T19:30:00.000Z"
           },
           {
             "symbol": "UNH",
@@ -9793,7 +9808,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2709135559,
               "maxSelectedCorrelation": 0.684
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.004
+            },
             "selectionPrice": 412.1199951171875
           },
           {
@@ -9825,13 +9842,16 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2260499614,
               "maxSelectedCorrelation": 0.574
             },
-            "outcomes": {},
-            "selectionPrice": 118.70999908447266
+            "outcomes": {
+              "h1": -0.101
+            },
+            "selectionPrice": 118.70999908447266,
+            "invalidatedAt": "2026-10-15T19:30:00.000Z"
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-15T16:07:32.732Z"
+    "lastUpdatedAt": "2026-10-15T19:52:41.891Z"
   },
   "automationHealth": {
     "openai": {
