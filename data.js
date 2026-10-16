@@ -9908,7 +9908,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0
             },
             "outcomes": {
-              "h1": -3.469
+              "h1": -3.469,
+              "h4": -3.377
             },
             "selectionPrice": 178.57000732421875,
             "invalidatedAt": "2026-10-16T15:30:00.000Z"
@@ -9943,7 +9944,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.609
             },
             "outcomes": {
-              "h1": -0.816
+              "h1": -0.816,
+              "h4": -1.142
             },
             "selectionPrice": 145.0399932861328,
             "invalidatedAt": "2026-10-16T15:30:00.000Z"
@@ -9978,7 +9980,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.641
             },
             "outcomes": {
-              "h1": 0.135
+              "h1": 0.135,
+              "h4": 0.795
             },
             "selectionPrice": 144.89500427246094,
             "invalidatedAt": "2026-10-16T15:30:00.000Z"
@@ -10013,7 +10016,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.409
             },
             "outcomes": {
-              "h1": -0.251
+              "h1": -0.251,
+              "h4": -0.372
             },
             "selectionPrice": 1268.4150390625,
             "invalidatedAt": "2026-10-16T16:30:00.000Z"
@@ -10048,7 +10052,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.743
             },
             "outcomes": {
-              "h1": -0.629
+              "h1": -0.629,
+              "h4": -0.695
             },
             "selectionPrice": 37.435001373291016,
             "invalidatedAt": "2026-10-16T17:30:00.000Z"
@@ -10056,7 +10061,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-16T18:34:09.043Z"
+    "lastUpdatedAt": "2026-10-16T21:43:06.790Z"
   },
   "automationHealth": {
     "openai": {
