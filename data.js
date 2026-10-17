@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-17 21:44 UTC",
+    "asOf": "2026-10-17 23:28 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -50,11 +50,11 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 923.65,
+    "value": 923.7,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": -74.92,
-    "total": -76.35,
+    "unrealized": -74.87,
+    "total": -76.3,
     "totalPct": -7.63
   },
   "positions": [
@@ -74,10 +74,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 168.94,
-      "pnl": -31.06,
-      "pnlPct": -15.53,
-      "fxUsdPerEur": 1.1243535280227661,
+      "value": 168.96,
+      "pnl": -31.04,
+      "pnlPct": -15.52,
+      "fxUsdPerEur": 1.1242270469665527,
       "lastPriceAt": "2026-10-16T20:00:00.000Z"
     },
     {
@@ -110,10 +110,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 125.07,
-      "pnl": -24.93,
-      "pnlPct": -16.62,
-      "fxUsdPerEur": 1.1243535280227661,
+      "value": 125.08,
+      "pnl": -24.92,
+      "pnlPct": -16.61,
+      "fxUsdPerEur": 1.1242270469665527,
       "lastPriceAt": "2026-10-16T20:00:00.000Z"
     },
     {
@@ -146,10 +146,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 78.36,
-      "pnl": -21.64,
-      "pnlPct": -21.64,
-      "fxUsdPerEur": 1.1243535280227661,
+      "value": 78.37,
+      "pnl": -21.63,
+      "pnlPct": -21.63,
+      "fxUsdPerEur": 1.1242270469665527,
       "lastPriceAt": "2026-10-16T20:00:00.000Z"
     },
     {
@@ -182,10 +182,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 102.71,
-      "pnl": 2.71,
-      "pnlPct": 2.71,
-      "fxUsdPerEur": 1.1243535280227661,
+      "value": 102.72,
+      "pnl": 2.72,
+      "pnlPct": 2.72,
+      "fxUsdPerEur": 1.1242270469665527,
       "lastPriceAt": "2026-10-16T20:00:00.000Z"
     }
   ],
@@ -771,8 +771,8 @@ window.PORTFOLIO_DATA = {
       "value": 923.65
     },
     {
-      "date": "2026-10-17 21:44",
-      "value": 923.65
+      "date": "2026-10-17 23:28",
+      "value": 923.7
     }
   ],
   "strategyState": {
@@ -10327,7 +10327,7 @@ window.PORTFOLIO_DATA = {
       }
     },
     "monitor": {
-      "lastRunAt": "2026-10-17T21:44:20.682Z",
+      "lastRunAt": "2026-10-17T23:28:10.731Z",
       "status": "OK",
       "priceTimes": {
         "ON": "2026-10-16T20:00:00.000Z",
@@ -10335,8 +10335,8 @@ window.PORTFOLIO_DATA = {
         "HPE": "2026-10-16T20:00:00.000Z",
         "SHOP": "2026-10-16T20:00:00.000Z"
       },
-      "fxUsdPerEur": 1.1243535280227661,
-      "fxAt": "2026-10-16T21:25:00.000Z",
+      "fxUsdPerEur": 1.1242270469665527,
+      "fxAt": "2026-10-16T22:59:00.000Z",
       "decisionStatus": "BLOCKED_BUDGET",
       "reason": "MONTHLY_BUDGET_EXHAUSTED"
     }
