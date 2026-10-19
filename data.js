@@ -10507,7 +10507,10 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1502120905,
               "maxSelectedCorrelation": 0
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.088,
+              "h4": -0.064
+            },
             "selectionPrice": 172.32479858398438
           },
           {
@@ -10539,8 +10542,12 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 604646448,
               "maxSelectedCorrelation": 0.235
             },
-            "outcomes": {},
-            "selectionPrice": 160.24000549316406
+            "outcomes": {
+              "h1": -0.827,
+              "h4": -0.79
+            },
+            "selectionPrice": 160.24000549316406,
+            "triggeredAt": "2026-10-19T16:30:00.000Z"
           },
           {
             "symbol": "AMZN",
@@ -10571,7 +10578,10 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 8676345054,
               "maxSelectedCorrelation": 0.738
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.306,
+              "h4": -0.086
+            },
             "selectionPrice": 263.2349853515625
           },
           {
@@ -10603,7 +10613,10 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1572780940,
               "maxSelectedCorrelation": 0.579
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.163,
+              "h4": 0.345
+            },
             "selectionPrice": 144.14500427246094
           },
           {
@@ -10635,13 +10648,16 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2739526466,
               "maxSelectedCorrelation": 0.402
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.188,
+              "h4": -0.738
+            },
             "selectionPrice": 1247.1650390625
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-19T15:46:53.258Z"
+    "lastUpdatedAt": "2026-10-19T20:49:47.979Z"
   },
   "automationHealth": {
     "openai": {
