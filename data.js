@@ -10918,7 +10918,10 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1237136602,
               "maxSelectedCorrelation": 0
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 1.045,
+              "h4": 0.155
+            },
             "selectionPrice": 35.935001373291016
           },
           {
@@ -10950,7 +10953,10 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1719505662,
               "maxSelectedCorrelation": 0.528
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.176,
+              "h4": -0.371
+            },
             "selectionPrice": 153.41000366210938
           },
           {
@@ -10982,8 +10988,12 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1473858681,
               "maxSelectedCorrelation": 0.588
             },
-            "outcomes": {},
-            "selectionPrice": 177.61000061035156
+            "outcomes": {
+              "h1": -0.423,
+              "h4": -1.491
+            },
+            "selectionPrice": 177.61000061035156,
+            "invalidatedAt": "2026-10-21T18:30:00.000Z"
           },
           {
             "symbol": "NOC",
@@ -11014,7 +11024,10 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 558444777,
               "maxSelectedCorrelation": 0.448
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.486,
+              "h4": -0.533
+            },
             "selectionPrice": 537.094970703125
           },
           {
@@ -11046,13 +11059,17 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 947071086,
               "maxSelectedCorrelation": 0.372
             },
-            "outcomes": {},
-            "selectionPrice": 426.0299987792969
+            "outcomes": {
+              "h1": 0.147,
+              "h4": 0.012
+            },
+            "selectionPrice": 426.0299987792969,
+            "triggeredAt": "2026-10-21T15:30:00.000Z"
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-21T15:12:59.423Z"
+    "lastUpdatedAt": "2026-10-21T19:18:00.330Z"
   },
   "automationHealth": {
     "openai": {
