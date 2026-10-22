@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-21 22:33 UTC",
+    "asOf": "2026-10-22 00:54 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -50,12 +50,12 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 958.08,
+    "value": 957.91,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": -40.49,
-    "total": -41.92,
-    "totalPct": -4.19
+    "unrealized": -40.66,
+    "total": -42.09,
+    "totalPct": -4.21
   },
   "positions": [
     {
@@ -74,10 +74,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 180.65,
-      "pnl": -19.35,
-      "pnlPct": -9.68,
-      "fxUsdPerEur": 1.1233429908752441,
+      "value": 180.59,
+      "pnl": -19.41,
+      "pnlPct": -9.71,
+      "fxUsdPerEur": 1.123721718788147,
       "lastPriceAt": "2026-10-21T20:00:00.000Z"
     },
     {
@@ -110,10 +110,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 140.41,
-      "pnl": -9.59,
-      "pnlPct": -6.39,
-      "fxUsdPerEur": 1.1233429908752441,
+      "value": 140.37,
+      "pnl": -9.63,
+      "pnlPct": -6.42,
+      "fxUsdPerEur": 1.123721718788147,
       "lastPriceAt": "2026-10-21T20:00:00.000Z"
     },
     {
@@ -146,10 +146,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 82.75,
-      "pnl": -17.25,
-      "pnlPct": -17.25,
-      "fxUsdPerEur": 1.1233429908752441,
+      "value": 82.73,
+      "pnl": -17.27,
+      "pnlPct": -17.27,
+      "fxUsdPerEur": 1.123721718788147,
       "lastPriceAt": "2026-10-21T20:00:00.000Z"
     },
     {
@@ -182,10 +182,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 105.69,
-      "pnl": 5.69,
-      "pnlPct": 5.69,
-      "fxUsdPerEur": 1.1233429908752441,
+      "value": 105.66,
+      "pnl": 5.66,
+      "pnlPct": 5.66,
+      "fxUsdPerEur": 1.123721718788147,
       "lastPriceAt": "2026-10-21T20:00:00.000Z"
     }
   ],
@@ -789,6 +789,10 @@ window.PORTFOLIO_DATA = {
     {
       "date": "2026-10-21 22:33",
       "value": 958.08
+    },
+    {
+      "date": "2026-10-22 00:54",
+      "value": 957.91
     }
   ],
   "strategyState": {
@@ -11177,6 +11181,11 @@ window.PORTFOLIO_DATA = {
               "spentMicroUsd": 0,
               "uncertainMicroUsd": 0,
               "requestCount": 0
+            },
+            "2026-10-22": {
+              "spentMicroUsd": 0,
+              "uncertainMicroUsd": 0,
+              "requestCount": 0
             }
           },
           "pending": {},
@@ -11185,7 +11194,7 @@ window.PORTFOLIO_DATA = {
       }
     },
     "monitor": {
-      "lastRunAt": "2026-10-21T22:33:59.636Z",
+      "lastRunAt": "2026-10-22T00:54:10.803Z",
       "status": "OK",
       "priceTimes": {
         "ON": "2026-10-21T20:00:00.000Z",
@@ -11193,8 +11202,8 @@ window.PORTFOLIO_DATA = {
         "HPE": "2026-10-21T20:00:00.000Z",
         "SHOP": "2026-10-21T20:00:00.000Z"
       },
-      "fxUsdPerEur": 1.1233429908752441,
-      "fxAt": "2026-10-21T22:33:28.000Z",
+      "fxUsdPerEur": 1.123721718788147,
+      "fxAt": "2026-10-22T00:53:25.000Z",
       "decisionStatus": "BLOCKED_BUDGET",
       "reason": "MONTHLY_BUDGET_EXHAUSTED"
     }
