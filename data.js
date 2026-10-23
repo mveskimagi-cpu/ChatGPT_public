@@ -11254,7 +11254,8 @@ window.PORTFOLIO_DATA = {
               "d1": 1.019
             },
             "selectionPrice": 156.72000122070312,
-            "invalidatedAt": "2026-10-23T13:30:00.000Z"
+            "invalidatedAt": "2026-10-23T13:30:00.000Z",
+            "triggeredAt": "2026-10-23T19:30:00.000Z"
           },
           {
             "symbol": "NOC",
@@ -11332,7 +11333,8 @@ window.PORTFOLIO_DATA = {
               "h1": 0.223,
               "h4": 1.702
             },
-            "selectionPrice": 251.23500061035156
+            "selectionPrice": 251.23500061035156,
+            "triggeredAt": "2026-10-23T19:30:00.000Z"
           },
           {
             "symbol": "NOW",
@@ -11399,7 +11401,8 @@ window.PORTFOLIO_DATA = {
               "maxSelectedCorrelation": 0.694
             },
             "outcomes": {
-              "h1": 1.175
+              "h1": 1.175,
+              "h4": -1.667
             },
             "selectionPrice": 148.41000366210938
           },
@@ -11476,7 +11479,7 @@ window.PORTFOLIO_DATA = {
         ]
       }
     ],
-    "lastUpdatedAt": "2026-10-23T19:28:28.589Z"
+    "lastUpdatedAt": "2026-10-23T22:31:34.617Z"
   },
   "automationHealth": {
     "openai": {
