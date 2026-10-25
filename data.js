@@ -11651,9 +11651,175 @@ window.PORTFOLIO_DATA = {
             "selectionPrice": 53.060001373291016
           }
         ]
+      },
+      {
+        "selectedAt": "2026-10-25T13:10:27.002Z",
+        "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
+        "setups": [
+          {
+            "symbol": "CRWD",
+            "quantScore": 1.828,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 263.69,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 251.45,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 13.272,
+              "momentum20d": -0.809,
+              "realizedVol10dAnnualized": 68.56,
+              "volumeRatio": 1.344,
+              "atrPct": 5.277,
+              "gapPct": 0.567,
+              "relativeStrength5dPct": 13.702,
+              "relativeStrength20dPct": 0.131,
+              "avgDollarVolume10d": 2488803680,
+              "maxSelectedCorrelation": 0
+            },
+            "outcomes": {},
+            "selectionPrice": 257.57000732421875
+          },
+          {
+            "symbol": "NOW",
+            "quantScore": 1.414,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 161.31,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 156.61,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 11.967,
+              "momentum20d": 15.372,
+              "realizedVol10dAnnualized": 42.6,
+              "volumeRatio": 0.835,
+              "atrPct": 3.906,
+              "gapPct": -0.395,
+              "relativeStrength5dPct": 12.397,
+              "relativeStrength20dPct": 16.312,
+              "avgDollarVolume10d": 2087054281,
+              "maxSelectedCorrelation": 0.396
+            },
+            "outcomes": {},
+            "selectionPrice": 158.9600067138672
+          },
+          {
+            "symbol": "MSTR",
+            "quantScore": 1.16,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 150.13,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 141.89,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 6.709,
+              "momentum20d": -9.653,
+              "realizedVol10dAnnualized": 81.48,
+              "volumeRatio": 0.873,
+              "atrPct": 6.742,
+              "gapPct": -0.94,
+              "relativeStrength5dPct": 7.139,
+              "relativeStrength20dPct": -8.713,
+              "avgDollarVolume10d": 2814336804,
+              "maxSelectedCorrelation": 0.693
+            },
+            "outcomes": {},
+            "selectionPrice": 146.00999450683594
+          },
+          {
+            "symbol": "LMT",
+            "quantScore": 1.158,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 612.15,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 596.21,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 9.435,
+              "momentum20d": 15.368,
+              "realizedVol10dAnnualized": 38.08,
+              "volumeRatio": 1.023,
+              "atrPct": 2.729,
+              "gapPct": -0.968,
+              "relativeStrength5dPct": 9.865,
+              "relativeStrength20dPct": 16.307,
+              "avgDollarVolume10d": 925458746,
+              "maxSelectedCorrelation": 0.547
+            },
+            "outcomes": {},
+            "selectionPrice": 604.1799926757812
+          },
+          {
+            "symbol": "SLB",
+            "quantScore": 1.118,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 53.82,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 52.3,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 7.192,
+              "momentum20d": 3.169,
+              "realizedVol10dAnnualized": 41.16,
+              "volumeRatio": 1.593,
+              "atrPct": 2.945,
+              "gapPct": 0.827,
+              "relativeStrength5dPct": 7.622,
+              "relativeStrength20dPct": 4.109,
+              "avgDollarVolume10d": 619471802,
+              "maxSelectedCorrelation": 0.572
+            },
+            "outcomes": {},
+            "selectionPrice": 53.060001373291016
+          }
+        ]
       }
     ],
-    "lastUpdatedAt": "2026-10-25T08:01:10.402Z"
+    "lastUpdatedAt": "2026-10-25T13:10:30.704Z"
   },
   "automationHealth": {
     "openai": {
