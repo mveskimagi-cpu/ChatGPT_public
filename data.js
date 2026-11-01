@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-10-31 23:45 UTC",
+    "asOf": "2026-11-01 02:38 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -828,6 +828,10 @@ window.PORTFOLIO_DATA = {
     },
     {
       "date": "2026-10-31 23:45",
+      "value": 912.92
+    },
+    {
+      "date": "2026-11-01 02:38",
       "value": 912.92
     }
   ],
@@ -13227,11 +13231,30 @@ window.PORTFOLIO_DATA = {
           },
           "pending": {},
           "recent": []
+        },
+        "2026-11": {
+          "openingMicroUsd": 0,
+          "spentMicroUsd": 0,
+          "uncertainMicroUsd": 0,
+          "requestCount": 0,
+          "inputTokens": 0,
+          "outputTokens": 0,
+          "cachedTokens": 0,
+          "cacheWriteTokens": 0,
+          "days": {
+            "2026-11-01": {
+              "spentMicroUsd": 0,
+              "uncertainMicroUsd": 0,
+              "requestCount": 0
+            }
+          },
+          "pending": {},
+          "recent": []
         }
       }
     },
     "monitor": {
-      "lastRunAt": "2026-10-31T23:45:02.433Z",
+      "lastRunAt": "2026-11-01T02:38:48.848Z",
       "status": "OK",
       "priceTimes": {
         "ON": "2026-10-30T20:00:00.000Z",
@@ -13241,8 +13264,8 @@ window.PORTFOLIO_DATA = {
       },
       "fxUsdPerEur": 1.1165698766708374,
       "fxAt": "2026-10-30T21:25:00.000Z",
-      "decisionStatus": "BLOCKED_BUDGET",
-      "reason": "MONTHLY_BUDGET_EXHAUSTED"
+      "decisionStatus": "IDLE",
+      "reason": "NO_FRESH_TRIGGER_QUOTES"
     }
   }
 };
