@@ -13691,9 +13691,9 @@ window.PORTFOLIO_DATA = {
       "code": "credit_balance_exhausted",
       "role": "QUANT_MACRO",
       "firstBlockedAt": "2026-10-06T18:09:06Z",
-      "lastFailedAt": "2026-10-07T03:07:56Z",
-      "nextProbeAt": "2026-10-07T09:07:56Z",
-      "failedProbes": 0,
+      "lastFailedAt": "2026-11-03T18:02:52.582Z",
+      "nextProbeAt": "2026-11-04T00:02:52.582Z",
+      "failedProbes": 1,
       "observedFailedRuns": 33,
       "initializedFromObservedError": true,
       "sourceRun": "https://github.com/mveskimagi-cpu/ChatGPT_public/actions/runs/37565300085",
@@ -13850,7 +13850,7 @@ window.PORTFOLIO_DATA = {
           "openingMicroUsd": 0,
           "spentMicroUsd": 0,
           "uncertainMicroUsd": 0,
-          "requestCount": 0,
+          "requestCount": 1,
           "inputTokens": 0,
           "outputTokens": 0,
           "cachedTokens": 0,
@@ -13869,11 +13869,12 @@ window.PORTFOLIO_DATA = {
             "2026-11-03": {
               "spentMicroUsd": 0,
               "uncertainMicroUsd": 0,
-              "requestCount": 0
+              "requestCount": 1
             }
           },
-          "pending": {
-            "699dbe3a-5c05-45c2-ae76-c1ad89825d37": {
+          "pending": {},
+          "recent": [
+            {
               "id": "699dbe3a-5c05-45c2-ae76-c1ad89825d37",
               "role": "QUANT_MACRO",
               "model": "gpt-6-luna",
@@ -13882,10 +13883,13 @@ window.PORTFOLIO_DATA = {
               "maxMicroUsd": 1242,
               "day": "2026-11-03",
               "month": "2026-11",
-              "at": "2026-11-03T18:02:49.916Z"
+              "at": "2026-11-03T18:02:49.916Z",
+              "chargeMicroUsd": 0,
+              "status": "METERED",
+              "responseId": null,
+              "usage": null
             }
-          },
-          "recent": []
+          ]
         }
       }
     },
@@ -13900,7 +13904,8 @@ window.PORTFOLIO_DATA = {
       },
       "fxUsdPerEur": 1.1198208332061768,
       "fxAt": "2026-11-03T18:02:28.000Z",
-      "decisionStatus": "IDLE"
+      "decisionStatus": "BLOCKED_QUOTA",
+      "reason": "OPENAI_QUOTA_BLOCKED"
     }
   }
 };
