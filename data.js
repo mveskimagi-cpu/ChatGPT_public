@@ -13549,7 +13549,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 3870977606,
               "maxSelectedCorrelation": 0
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.599
+            },
             "selectionPrice": 1419.5301513671875
           },
           {
@@ -13581,8 +13583,11 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1251656089,
               "maxSelectedCorrelation": 0.354
             },
-            "outcomes": {},
-            "selectionPrice": 148.55499267578125
+            "outcomes": {
+              "h1": -1.019
+            },
+            "selectionPrice": 148.55499267578125,
+            "invalidatedAt": "2026-11-03T18:30:00.000Z"
           },
           {
             "symbol": "RIVN",
@@ -13613,7 +13618,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 455282809,
               "maxSelectedCorrelation": 0.318
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.113
+            },
             "selectionPrice": 13.239999771118164
           },
           {
@@ -13645,7 +13652,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 643854785,
               "maxSelectedCorrelation": 0.657
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.363
+            },
             "selectionPrice": 213.3094940185547
           },
           {
@@ -13677,13 +13686,15 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 5091110815,
               "maxSelectedCorrelation": 0.589
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.756
+            },
             "selectionPrice": 127.5250015258789
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-11-03T18:02:45.250Z"
+    "lastUpdatedAt": "2026-11-03T23:18:44.089Z"
   },
   "automationHealth": {
     "openai": {
