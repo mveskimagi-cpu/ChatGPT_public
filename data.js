@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-11-03 23:18 UTC",
+    "asOf": "2026-11-04 03:05 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -50,12 +50,12 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 906.75,
+    "value": 904.39,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": -91.82,
-    "total": -93.25,
-    "totalPct": -9.32
+    "unrealized": -94.18,
+    "total": -95.61,
+    "totalPct": -9.56
   },
   "positions": [
     {
@@ -74,10 +74,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 171.07,
-      "pnl": -28.93,
-      "pnlPct": -14.46,
-      "fxUsdPerEur": 1.1193194389343262,
+      "value": 170.19,
+      "pnl": -29.81,
+      "pnlPct": -14.9,
+      "fxUsdPerEur": 1.125112533569336,
       "lastPriceAt": "2026-11-03T21:00:00.000Z"
     },
     {
@@ -110,10 +110,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 124.53,
-      "pnl": -25.47,
-      "pnlPct": -16.98,
-      "fxUsdPerEur": 1.1193194389343262,
+      "value": 123.89,
+      "pnl": -26.11,
+      "pnlPct": -17.41,
+      "fxUsdPerEur": 1.125112533569336,
       "lastPriceAt": "2026-11-03T21:00:00.000Z"
     },
     {
@@ -146,10 +146,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 75.81,
-      "pnl": -24.19,
-      "pnlPct": -24.19,
-      "fxUsdPerEur": 1.1193194389343262,
+      "value": 75.42,
+      "pnl": -24.58,
+      "pnlPct": -24.58,
+      "fxUsdPerEur": 1.125112533569336,
       "lastPriceAt": "2026-11-03T21:00:00.000Z"
     },
     {
@@ -182,10 +182,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 86.77,
-      "pnl": -13.23,
-      "pnlPct": -13.23,
-      "fxUsdPerEur": 1.1193194389343262,
+      "value": 86.32,
+      "pnl": -13.68,
+      "pnlPct": -13.68,
+      "fxUsdPerEur": 1.125112533569336,
       "lastPriceAt": "2026-11-03T21:00:00.000Z"
     }
   ],
@@ -841,6 +841,10 @@ window.PORTFOLIO_DATA = {
     {
       "date": "2026-11-03 23:18",
       "value": 906.75
+    },
+    {
+      "date": "2026-11-04 03:05",
+      "value": 904.39
     }
   ],
   "strategyState": {
@@ -13881,6 +13885,11 @@ window.PORTFOLIO_DATA = {
               "spentMicroUsd": 0,
               "uncertainMicroUsd": 0,
               "requestCount": 1
+            },
+            "2026-11-04": {
+              "spentMicroUsd": 0,
+              "uncertainMicroUsd": 0,
+              "requestCount": 0
             }
           },
           "pending": {},
@@ -13905,7 +13914,7 @@ window.PORTFOLIO_DATA = {
       }
     },
     "monitor": {
-      "lastRunAt": "2026-11-03T23:18:48.671Z",
+      "lastRunAt": "2026-11-04T03:05:30.492Z",
       "status": "OK",
       "priceTimes": {
         "ON": "2026-11-03T21:00:00.000Z",
@@ -13913,10 +13922,10 @@ window.PORTFOLIO_DATA = {
         "HPE": "2026-11-03T21:00:00.000Z",
         "SHOP": "2026-11-03T21:00:00.000Z"
       },
-      "fxUsdPerEur": 1.1193194389343262,
-      "fxAt": "2026-11-03T23:18:29.000Z",
-      "decisionStatus": "BLOCKED_QUOTA",
-      "reason": "OPENAI_QUOTA_BLOCKED"
+      "fxUsdPerEur": 1.125112533569336,
+      "fxAt": "2026-11-04T03:04:30.000Z",
+      "decisionStatus": "IDLE",
+      "reason": "NO_FRESH_TRIGGER_QUOTES"
     }
   }
 };
