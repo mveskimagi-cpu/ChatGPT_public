@@ -13922,9 +13922,175 @@ window.PORTFOLIO_DATA = {
             "selectionPrice": 88.57499694824219
           }
         ]
+      },
+      {
+        "selectedAt": "2026-11-05T12:45:13.617Z",
+        "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
+        "setups": [
+          {
+            "symbol": "LOW",
+            "quantScore": 1.029,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 233.34,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 225.42,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 15.615,
+              "momentum20d": 24.887,
+              "realizedVol10dAnnualized": 49.83,
+              "volumeRatio": 1.461,
+              "atrPct": 2.679,
+              "gapPct": 4.462,
+              "relativeStrength5dPct": 16.327,
+              "relativeStrength20dPct": 26.463,
+              "avgDollarVolume10d": 792659308,
+              "maxSelectedCorrelation": 0
+            },
+            "outcomes": {},
+            "selectionPrice": 229.3800048828125
+          },
+          {
+            "symbol": "RIVN",
+            "quantScore": 0.916,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 14.38,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 13.74,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 20.48,
+              "momentum20d": -3.101,
+              "realizedVol10dAnnualized": 65.39,
+              "volumeRatio": 0.918,
+              "atrPct": 4.417,
+              "gapPct": 3.085,
+              "relativeStrength5dPct": 21.192,
+              "relativeStrength20dPct": -1.525,
+              "avgDollarVolume10d": 534915106,
+              "maxSelectedCorrelation": 0.37
+            },
+            "outcomes": {},
+            "selectionPrice": 14.0600004196167
+          },
+          {
+            "symbol": "ISRG",
+            "quantScore": 0.87,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 490.83,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 473.37,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 8.537,
+              "momentum20d": 19.108,
+              "realizedVol10dAnnualized": 52.27,
+              "volumeRatio": 1.889,
+              "atrPct": 3.366,
+              "gapPct": 4.138,
+              "relativeStrength5dPct": 9.249,
+              "relativeStrength20dPct": 20.684,
+              "avgDollarVolume10d": 1356508892,
+              "maxSelectedCorrelation": 0.619
+            },
+            "outcomes": {},
+            "selectionPrice": 482.1000061035156
+          },
+          {
+            "symbol": "LLY",
+            "quantScore": 0.653,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 1436.6,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 1399.38,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 10.067,
+              "momentum20d": 22.506,
+              "realizedVol10dAnnualized": 37.87,
+              "volumeRatio": 0.997,
+              "atrPct": 3.279,
+              "gapPct": 2.173,
+              "relativeStrength5dPct": 10.779,
+              "relativeStrength20dPct": 24.082,
+              "avgDollarVolume10d": 4362729803,
+              "maxSelectedCorrelation": 0.473
+            },
+            "outcomes": {},
+            "selectionPrice": 1417.989990234375
+          },
+          {
+            "symbol": "NEE",
+            "quantScore": 0.631,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 89.44,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 87.46,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 9.171,
+              "momentum20d": 13.572,
+              "realizedVol10dAnnualized": 32.35,
+              "volumeRatio": 2.001,
+              "atrPct": 2.147,
+              "gapPct": 3.723,
+              "relativeStrength5dPct": 9.883,
+              "relativeStrength20dPct": 15.148,
+              "avgDollarVolume10d": 1250210634,
+              "maxSelectedCorrelation": 0.791
+            },
+            "outcomes": {},
+            "selectionPrice": 88.44999694824219
+          }
+        ]
       }
     ],
-    "lastUpdatedAt": "2026-11-05T04:41:10.111Z"
+    "lastUpdatedAt": "2026-11-05T12:45:23.514Z"
   },
   "automationHealth": {
     "openai": {
