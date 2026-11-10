@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-11-10 10:42 UTC",
+    "asOf": "2026-11-10 18:17 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -50,19 +50,19 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 885.77,
+    "value": 875.56,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": -112.8,
-    "total": -114.23,
-    "totalPct": -11.42
+    "unrealized": -123.01,
+    "total": -124.44,
+    "totalPct": -12.44
   },
   "positions": [
     {
       "symbol": "ON",
       "qty": 2.6375123,
       "avgUsd": 85.34500122070312,
-      "lastUsd": 69.11000061035156,
+      "lastUsd": 68.53500366210938,
       "costEur": 200,
       "entryReason": "ON is the strongest supplied confirmed breakout candidate: fresh price $85.35 is above the $81.05 trigger, with positive 5-day (+9.5%) and 20-day (+10.2%) momentum, reported volume at 1.12x, comparatively moderate 10-day realized volatility (35%), and low selected correlation (0.27). Use reduced sizing because the broader regime remains mixed with fragile participation and tight-liquidity risks.",
       "openedAt": "2026-10-02T13:33:00.322Z",
@@ -74,17 +74,17 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 162.34,
-      "pnl": -37.66,
-      "pnlPct": -18.83,
-      "fxUsdPerEur": 1.1228384971618652,
-      "lastPriceAt": "2026-11-09T21:00:00.000Z"
+      "value": 162.02,
+      "pnl": -37.98,
+      "pnlPct": -18.99,
+      "fxUsdPerEur": 1.1156978607177734,
+      "lastPriceAt": "2026-11-10T18:17:06.000Z"
     },
     {
       "symbol": "MSTR",
       "qty": 1.02771459,
       "avgUsd": 163.6999969482422,
-      "lastUsd": 125.58999633789062,
+      "lastUsd": 120.02999877929688,
       "costEur": 150,
       "entryReason": "MSTR has a fresh confirmed 5-minute breakout above the $163.17 entry level: completed close was $163.53 with participation at 1.084x baseline, and the latest quote remains above trigger at $163.70. The daily selection data retain strong 20-day momentum (+29.9%) and above-baseline volume (1.55x). Size is reduced due to high realized volatility (57%), relatively high selected correlation (0.66), marginal participation confirmation, and the fragile broader-risk backdrop.",
       "openedAt": "2026-10-05T18:46:52.781Z",
@@ -110,17 +110,17 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 114.95,
-      "pnl": -35.05,
-      "pnlPct": -23.37,
-      "fxUsdPerEur": 1.1228384971618652,
-      "lastPriceAt": "2026-11-09T21:00:00.000Z"
+      "value": 110.56,
+      "pnl": -39.44,
+      "pnlPct": -26.29,
+      "fxUsdPerEur": 1.1156978607177734,
+      "lastPriceAt": "2026-11-10T18:17:01.000Z"
     },
     {
       "symbol": "HPE",
       "qty": 1.59808207,
       "avgUsd": 70.51499938964844,
-      "lastUsd": 47.540000915527344,
+      "lastUsd": 46.69499969482422,
       "costEur": 100,
       "entryReason": "Initiate a reduced paper position in HPE. The required entry condition is explicitly met: a completed 5-minute close of $70.73 exceeded the $69.39 trigger with 1.631x participation versus the 12-bar baseline, and the latest quote of $70.60 remains above the trigger. HPE remains a constructive ranked momentum candidate (rank 4, 5-day momentum +9.1%, 20-day momentum +25.6%) with moderate selected-set correlation (0.343). The €100 size is deliberately reduced for tight liquidity, weak daily volume participation (0.745x), rank deterioration from 1 to 4, high realized volatility/ATR, price extension above the trigger, and unverified overlap with existing ON and MSTR exposure. The risk report approves the allocation with no veto. The MSTR target-level event does not justify action because $163.17 is its documented entry trigger, not an evidence-backed profit target.",
       "openedAt": "2026-10-06T15:29:44.132Z",
@@ -146,17 +146,17 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 67.66,
-      "pnl": -32.34,
-      "pnlPct": -32.34,
-      "fxUsdPerEur": 1.1228384971618652,
-      "lastPriceAt": "2026-11-09T21:00:00.000Z"
+      "value": 66.88,
+      "pnl": -33.12,
+      "pnlPct": -33.12,
+      "fxUsdPerEur": 1.1156978607177734,
+      "lastPriceAt": "2026-11-10T18:17:05.000Z"
     },
     {
       "symbol": "SHOP",
       "qty": 0.68122656,
       "avgUsd": 165.2899932861328,
-      "lastUsd": 152.05999755859375,
+      "lastUsd": 143.34500122070312,
       "costEur": 100,
       "entryReason": "Initiate a reduced SHOP paper position. The documented entry rule is satisfied: the completed 5-minute close of $165.455 was above the $162.81 trigger with 1.132x participation, and the latest quote ($165.405) remains above the trigger. SHOP is rank 3 with positive 5-day and 20-day momentum (+11.2% and +9.8%), above-baseline daily volume (1.296x), high dollar liquidity, and low selected-set correlation (0.114). The €100 allocation is within cash, buy, and position limits and retains substantial cash. Existing MSTR and HPE target alerts are not profit-taking signals because their recorded targets duplicate entry triggers; neither has documented invalidation. ON has not met its new breakout rule. Reduced sizing is warranted because SHOP volatility is elevated, the portfolio already holds three short-horizon momentum positions, and the regime is neutral/range with tight liquidity.",
       "openedAt": "2026-10-06T16:57:00.973Z",
@@ -182,11 +182,11 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 92.25,
-      "pnl": -7.75,
-      "pnlPct": -7.75,
-      "fxUsdPerEur": 1.1228384971618652,
-      "lastPriceAt": "2026-11-09T21:00:00.000Z"
+      "value": 87.52,
+      "pnl": -12.48,
+      "pnlPct": -12.48,
+      "fxUsdPerEur": 1.1156978607177734,
+      "lastPriceAt": "2026-11-10T18:17:09.000Z"
     }
   ],
   "trades": [
@@ -867,8 +867,8 @@ window.PORTFOLIO_DATA = {
       "value": 888.08
     },
     {
-      "date": "2026-11-10 10:42",
-      "value": 885.77
+      "date": "2026-11-10 18:17",
+      "value": 875.56
     }
   ],
   "strategyState": {
@@ -15349,7 +15349,19 @@ window.PORTFOLIO_DATA = {
               "requestCount": 0
             }
           },
-          "pending": {},
+          "pending": {
+            "93eb721d-9891-4c17-9c66-43911c60fe4b": {
+              "id": "93eb721d-9891-4c17-9c66-43911c60fe4b",
+              "role": "QUANT_MACRO",
+              "model": "gpt-6-luna",
+              "inputTokens": 2269,
+              "maxOutputTokens": 1600,
+              "maxMicroUsd": 1192,
+              "day": "2026-11-10",
+              "month": "2026-11",
+              "at": "2026-11-10T18:17:11.134Z"
+            }
+          },
           "recent": [
             {
               "id": "699dbe3a-5c05-45c2-ae76-c1ad89825d37",
@@ -15431,18 +15443,17 @@ window.PORTFOLIO_DATA = {
       }
     },
     "monitor": {
-      "lastRunAt": "2026-11-10T10:42:01.557Z",
+      "lastRunAt": "2026-11-10T18:17:10.116Z",
       "status": "OK",
       "priceTimes": {
-        "ON": "2026-11-09T21:00:00.000Z",
-        "MSTR": "2026-11-09T21:00:00.000Z",
-        "HPE": "2026-11-09T21:00:00.000Z",
-        "SHOP": "2026-11-09T21:00:00.000Z"
+        "ON": "2026-11-10T18:17:06.000Z",
+        "MSTR": "2026-11-10T18:17:01.000Z",
+        "HPE": "2026-11-10T18:17:05.000Z",
+        "SHOP": "2026-11-10T18:17:09.000Z"
       },
-      "fxUsdPerEur": 1.1228384971618652,
-      "fxAt": "2026-11-10T10:41:31.000Z",
-      "decisionStatus": "IDLE",
-      "reason": "NO_FRESH_TRIGGER_QUOTES"
+      "fxUsdPerEur": 1.1156978607177734,
+      "fxAt": "2026-11-10T18:16:31.000Z",
+      "decisionStatus": "IDLE"
     }
   }
 };
