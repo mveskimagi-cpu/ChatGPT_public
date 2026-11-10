@@ -14340,7 +14340,8 @@ window.PORTFOLIO_DATA = {
               "d1": -0.04,
               "d3": 0.996
             },
-            "selectionPrice": 458.6449890136719
+            "selectionPrice": 458.6449890136719,
+            "invalidatedAt": "2026-11-10T14:30:00.000Z"
           },
           {
             "symbol": "AMZN",
@@ -14418,10 +14419,12 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": -2.105
             },
             "selectionPrice": 189.99000549316406,
-            "triggeredAt": "2026-11-09T14:30:00.000Z"
+            "triggeredAt": "2026-11-09T14:30:00.000Z",
+            "invalidatedAt": "2026-11-10T17:30:00.000Z"
           },
           {
             "symbol": "LOW",
@@ -14455,7 +14458,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": 0.417
             },
             "selectionPrice": 224.5500030517578,
             "triggeredAt": "2026-11-09T14:30:00.000Z"
@@ -14492,7 +14496,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": 1.007
             },
             "selectionPrice": 13.609999656677246,
             "triggeredAt": "2026-11-09T14:30:00.000Z"
@@ -14529,7 +14534,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": 0.42
             },
             "selectionPrice": 323.239990234375,
             "triggeredAt": "2026-11-09T14:30:00.000Z"
@@ -14566,7 +14572,8 @@ window.PORTFOLIO_DATA = {
             "outcomes": {
               "h1": 0,
               "h4": 0,
-              "d1": 0
+              "d1": 0,
+              "d3": -1.697
             },
             "selectionPrice": 452.79998779296875,
             "triggeredAt": "2026-11-09T16:30:00.000Z"
@@ -14612,7 +14619,8 @@ window.PORTFOLIO_DATA = {
               "d1": 0.823
             },
             "selectionPrice": 189.99000549316406,
-            "triggeredAt": "2026-11-09T14:30:00.000Z"
+            "triggeredAt": "2026-11-09T14:30:00.000Z",
+            "invalidatedAt": "2026-11-10T17:30:00.000Z"
           },
           {
             "symbol": "LOW",
@@ -14797,8 +14805,12 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 19064077310,
               "maxSelectedCorrelation": 0
             },
-            "outcomes": {},
-            "selectionPrice": 513.0601196289062
+            "outcomes": {
+              "h1": 0,
+              "h4": 0
+            },
+            "selectionPrice": 513.0601196289062,
+            "triggeredAt": "2026-11-10T14:30:00.000Z"
           },
           {
             "symbol": "UNG",
@@ -14829,8 +14841,12 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 218632775,
               "maxSelectedCorrelation": 0.586
             },
-            "outcomes": {},
-            "selectionPrice": 10.09000015258789
+            "outcomes": {
+              "h1": 0,
+              "h4": 0
+            },
+            "selectionPrice": 10.09000015258789,
+            "triggeredAt": "2026-11-10T14:30:00.000Z"
           },
           {
             "symbol": "ABNB",
@@ -14861,8 +14877,12 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1034308752,
               "maxSelectedCorrelation": 0.424
             },
-            "outcomes": {},
-            "selectionPrice": 192.1999969482422
+            "outcomes": {
+              "h1": 0,
+              "h4": 0
+            },
+            "selectionPrice": 192.1999969482422,
+            "invalidatedAt": "2026-11-10T14:30:00.000Z"
           },
           {
             "symbol": "LOW",
@@ -14893,8 +14913,12 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 814638764,
               "maxSelectedCorrelation": 0.289
             },
-            "outcomes": {},
-            "selectionPrice": 232.94500732421875
+            "outcomes": {
+              "h1": 0,
+              "h4": 0
+            },
+            "selectionPrice": 232.94500732421875,
+            "invalidatedAt": "2026-11-10T14:30:00.000Z"
           },
           {
             "symbol": "AMZN",
@@ -14925,13 +14949,183 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 16451823909,
               "maxSelectedCorrelation": 0.618
             },
+            "outcomes": {
+              "h1": 0,
+              "h4": 0
+            },
+            "selectionPrice": 268.4016418457031,
+            "triggeredAt": "2026-11-10T14:30:00.000Z"
+          }
+        ]
+      },
+      {
+        "selectedAt": "2026-11-10T18:17:01.936Z",
+        "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
+        "setups": [
+          {
+            "symbol": "LCID",
+            "quantScore": 3.173,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 4.12,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 3.78,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 30.795,
+              "momentum20d": 14.993,
+              "realizedVol10dAnnualized": 122.56,
+              "volumeRatio": 1.335,
+              "atrPct": 8.463,
+              "gapPct": -0.139,
+              "relativeStrength5dPct": 31.837,
+              "relativeStrength20dPct": 19.055,
+              "avgDollarVolume10d": 54543837,
+              "maxSelectedCorrelation": 0
+            },
             "outcomes": {},
-            "selectionPrice": 268.4016418457031
+            "selectionPrice": 3.950000047683716
+          },
+          {
+            "symbol": "UNG",
+            "quantScore": 1.162,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 10.5,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 10.18,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 13.252,
+              "momentum20d": -5.312,
+              "realizedVol10dAnnualized": 45.64,
+              "volumeRatio": 1.058,
+              "atrPct": 3.302,
+              "gapPct": 1.29,
+              "relativeStrength5dPct": 14.294,
+              "relativeStrength20dPct": -1.25,
+              "avgDollarVolume10d": 218307206,
+              "maxSelectedCorrelation": 0.603
+            },
+            "outcomes": {},
+            "selectionPrice": 10.339900016784668
+          },
+          {
+            "symbol": "ABNB",
+            "quantScore": 0.947,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 190.98,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 181.81,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 11.641,
+              "momentum20d": 14.003,
+              "realizedVol10dAnnualized": 70.95,
+              "volumeRatio": 0.224,
+              "atrPct": 3.763,
+              "gapPct": -1.203,
+              "relativeStrength5dPct": 12.682,
+              "relativeStrength20dPct": 18.066,
+              "avgDollarVolume10d": 1010974331,
+              "maxSelectedCorrelation": 0.53
+            },
+            "outcomes": {},
+            "selectionPrice": 186.47000122070312
+          },
+          {
+            "symbol": "LOW",
+            "quantScore": 0.83,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 235.63,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 228.07,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 8.656,
+              "momentum20d": 24.939,
+              "realizedVol10dAnnualized": 47.05,
+              "volumeRatio": 0.256,
+              "atrPct": 3.084,
+              "gapPct": -1.551,
+              "relativeStrength5dPct": 9.698,
+              "relativeStrength20dPct": 29.002,
+              "avgDollarVolume10d": 799160378,
+              "maxSelectedCorrelation": 0.284
+            },
+            "outcomes": {},
+            "selectionPrice": 231.8800048828125
+          },
+          {
+            "symbol": "AMZN",
+            "quantScore": 0.556,
+            "entryPrice": null,
+            "entryRule": {
+              "operator": "ABOVE",
+              "level": 272.8,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1,
+              "requireParticipation": true
+            },
+            "invalidationRule": {
+              "operator": "BELOW",
+              "level": 264.6,
+              "timeframeMinutes": 5,
+              "requiredCloses": 1
+            },
+            "metrics": {
+              "momentum5d": 7.184,
+              "momentum20d": 3.533,
+              "realizedVol10dAnnualized": 44,
+              "volumeRatio": 0.317,
+              "atrPct": 3.973,
+              "gapPct": -0.225,
+              "relativeStrength5dPct": 8.226,
+              "relativeStrength20dPct": 7.596,
+              "avgDollarVolume10d": 16495075142,
+              "maxSelectedCorrelation": 0.698
+            },
+            "outcomes": {},
+            "selectionPrice": 268.6199951171875
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-11-10T10:41:57.380Z"
+    "lastUpdatedAt": "2026-11-10T18:17:07.280Z"
   },
   "automationHealth": {
     "openai": {
