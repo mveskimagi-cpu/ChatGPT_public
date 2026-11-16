@@ -7,7 +7,7 @@ window.PORTFOLIO_DATA = {
     },
     "title": "€1000 Quant Challenge",
     "currency": "EUR",
-    "asOf": "2026-11-15 23:41 UTC",
+    "asOf": "2026-11-16 03:08 UTC",
     "lastTrade": "2026-10-06 16:57 UTC",
     "marketSource": "NVDA paper SELL: Google Finance last trade $230.55 at 2026-09-30 10:51:23 GMT-4 (17:51:23 Europe/Tallinn), after a $232.37 intraday high. EUR/USD 1.1358 USD per EUR from Investing.com real-time 1.1357/1.1359 bid/ask midpoint, raw time 11:04:37. See trade.execution and strategyState.latestReview.",
     "note": "Paper trading only — no real money is traded."
@@ -50,12 +50,12 @@ window.PORTFOLIO_DATA = {
   },
   "summary": {
     "initial": 1000,
-    "value": 883.39,
+    "value": 883.58,
     "cash": 448.57,
     "realized": -1.43,
-    "unrealized": -115.18,
-    "total": -116.61,
-    "totalPct": -11.66
+    "unrealized": -114.99,
+    "total": -116.42,
+    "totalPct": -11.64
   },
   "positions": [
     {
@@ -74,10 +74,10 @@ window.PORTFOLIO_DATA = {
       "lastDecision": "HOLD",
       "lastDecisionReason": "ON is at $84.39, modestly below the $85.35 entry but still above the $81.05 breakout trigger and $79.11 invalidation. No supplied fresh participation or reversal evidence justifies adding, reducing, or exiting.",
       "setupId": "ON-20261002-daily-quant",
-      "value": 169.95,
-      "pnl": -30.05,
-      "pnlPct": -15.02,
-      "fxUsdPerEur": 1.1027790307998657,
+      "value": 170.03,
+      "pnl": -29.97,
+      "pnlPct": -14.99,
+      "fxUsdPerEur": 1.102292776107788,
       "lastPriceAt": "2026-11-13T21:00:00.000Z"
     },
     {
@@ -110,10 +110,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-08T12:10:16.000Z",
-      "value": 104.02,
-      "pnl": -45.98,
-      "pnlPct": -30.65,
-      "fxUsdPerEur": 1.1027790307998657,
+      "value": 104.07,
+      "pnl": -45.93,
+      "pnlPct": -30.62,
+      "fxUsdPerEur": 1.102292776107788,
       "lastPriceAt": "2026-11-13T21:00:00.000Z"
     },
     {
@@ -146,10 +146,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 69.98,
-      "pnl": -30.02,
-      "pnlPct": -30.02,
-      "fxUsdPerEur": 1.1027790307998657,
+      "value": 70.01,
+      "pnl": -29.99,
+      "pnlPct": -29.99,
+      "fxUsdPerEur": 1.102292776107788,
       "lastPriceAt": "2026-11-13T21:00:00.000Z"
     },
     {
@@ -182,10 +182,10 @@ window.PORTFOLIO_DATA = {
         "requiredCloses": 1
       },
       "setupExpiresAt": "2026-10-09T12:15:49.745Z",
-      "value": 90.86,
-      "pnl": -9.14,
-      "pnlPct": -9.14,
-      "fxUsdPerEur": 1.1027790307998657,
+      "value": 90.9,
+      "pnl": -9.1,
+      "pnlPct": -9.1,
+      "fxUsdPerEur": 1.102292776107788,
       "lastPriceAt": "2026-11-13T21:00:00.000Z"
     }
   ],
@@ -889,6 +889,10 @@ window.PORTFOLIO_DATA = {
     {
       "date": "2026-11-15 23:41",
       "value": 883.39
+    },
+    {
+      "date": "2026-11-16 03:08",
+      "value": 883.58
     }
   ],
   "strategyState": {
@@ -16338,6 +16342,11 @@ window.PORTFOLIO_DATA = {
               "spentMicroUsd": 0,
               "uncertainMicroUsd": 0,
               "requestCount": 0
+            },
+            "2026-11-16": {
+              "spentMicroUsd": 0,
+              "uncertainMicroUsd": 0,
+              "requestCount": 0
             }
           },
           "pending": {},
@@ -16482,7 +16491,7 @@ window.PORTFOLIO_DATA = {
       }
     },
     "monitor": {
-      "lastRunAt": "2026-11-15T23:41:13.247Z",
+      "lastRunAt": "2026-11-16T03:08:30.035Z",
       "status": "OK",
       "priceTimes": {
         "ON": "2026-11-13T21:00:00.000Z",
@@ -16490,8 +16499,8 @@ window.PORTFOLIO_DATA = {
         "HPE": "2026-11-13T21:00:00.000Z",
         "SHOP": "2026-11-13T21:00:00.000Z"
       },
-      "fxUsdPerEur": 1.1027790307998657,
-      "fxAt": "2026-11-13T22:25:00.000Z",
+      "fxUsdPerEur": 1.102292776107788,
+      "fxAt": "2026-11-16T03:07:44.000Z",
       "decisionStatus": "IDLE",
       "reason": "NO_FRESH_TRIGGER_QUOTES"
     }
