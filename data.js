@@ -11232,7 +11232,8 @@ window.PORTFOLIO_DATA = {
               "d3": 6.15
             },
             "selectionPrice": 426.0299987792969,
-            "triggeredAt": "2026-10-21T15:30:00.000Z"
+            "triggeredAt": "2026-10-21T15:30:00.000Z",
+            "invalidatedAt": "2026-11-18T20:30:00.000Z"
           }
         ]
       },
@@ -16627,8 +16628,11 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 734382948,
               "maxSelectedCorrelation": 0
             },
-            "outcomes": {},
-            "selectionPrice": 169.6649932861328
+            "outcomes": {
+              "h1": -0.783
+            },
+            "selectionPrice": 169.6649932861328,
+            "invalidatedAt": "2026-11-18T20:30:00.000Z"
           },
           {
             "symbol": "AVGO",
@@ -16659,7 +16663,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 11645487025,
               "maxSelectedCorrelation": 0.526
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.116
+            },
             "selectionPrice": 354.5299987792969
           },
           {
@@ -16691,7 +16697,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 212936540,
               "maxSelectedCorrelation": 0.683
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.047
+            },
             "selectionPrice": 10.548700332641602
           },
           {
@@ -16723,7 +16731,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 1098202118,
               "maxSelectedCorrelation": 0.202
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.804
+            },
             "selectionPrice": 182.4199981689453
           },
           {
@@ -16755,13 +16765,15 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2757316695,
               "maxSelectedCorrelation": 0.26
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.284
+            },
             "selectionPrice": 127.29000091552734
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-11-18T19:15:31.911Z"
+    "lastUpdatedAt": "2026-11-19T01:19:39.876Z"
   },
   "automationHealth": {
     "openai": {
