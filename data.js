@@ -17177,9 +17177,9 @@ window.PORTFOLIO_DATA = {
       "code": "credit_balance_exhausted",
       "role": "QUANT_MACRO",
       "firstBlockedAt": "2026-10-06T18:09:06Z",
-      "lastFailedAt": "2026-11-19T18:14:41.338Z",
-      "nextProbeAt": "2026-11-20T00:14:41.338Z",
-      "failedProbes": 13,
+      "lastFailedAt": "2026-11-20T16:24:42.466Z",
+      "nextProbeAt": "2026-11-20T22:24:42.466Z",
+      "failedProbes": 14,
       "observedFailedRuns": 33,
       "initializedFromObservedError": true,
       "sourceRun": "https://github.com/mveskimagi-cpu/ChatGPT_public/actions/runs/37565300085",
@@ -17336,7 +17336,7 @@ window.PORTFOLIO_DATA = {
           "openingMicroUsd": 0,
           "spentMicroUsd": 0,
           "uncertainMicroUsd": 0,
-          "requestCount": 13,
+          "requestCount": 14,
           "inputTokens": 0,
           "outputTokens": 0,
           "cachedTokens": 0,
@@ -17440,22 +17440,10 @@ window.PORTFOLIO_DATA = {
             "2026-11-20": {
               "spentMicroUsd": 0,
               "uncertainMicroUsd": 0,
-              "requestCount": 0
+              "requestCount": 1
             }
           },
-          "pending": {
-            "7fe88eb7-4ad5-4221-bbbc-7c4bc7f225f0": {
-              "id": "7fe88eb7-4ad5-4221-bbbc-7c4bc7f225f0",
-              "role": "QUANT_MACRO",
-              "model": "gpt-6-luna",
-              "inputTokens": 2309,
-              "maxOutputTokens": 1600,
-              "maxMicroUsd": 1198,
-              "day": "2026-11-20",
-              "month": "2026-11",
-              "at": "2026-11-20T16:24:39.750Z"
-            }
-          },
+          "pending": {},
           "recent": [
             {
               "id": "699dbe3a-5c05-45c2-ae76-c1ad89825d37",
@@ -17651,6 +17639,21 @@ window.PORTFOLIO_DATA = {
               "status": "METERED",
               "responseId": null,
               "usage": null
+            },
+            {
+              "id": "7fe88eb7-4ad5-4221-bbbc-7c4bc7f225f0",
+              "role": "QUANT_MACRO",
+              "model": "gpt-6-luna",
+              "inputTokens": 2309,
+              "maxOutputTokens": 1600,
+              "maxMicroUsd": 1198,
+              "day": "2026-11-20",
+              "month": "2026-11",
+              "at": "2026-11-20T16:24:39.750Z",
+              "chargeMicroUsd": 0,
+              "status": "METERED",
+              "responseId": null,
+              "usage": null
             }
           ]
         }
@@ -17667,7 +17670,8 @@ window.PORTFOLIO_DATA = {
       },
       "fxUsdPerEur": 1.098659634590149,
       "fxAt": "2026-11-20T16:23:44.000Z",
-      "decisionStatus": "IDLE"
+      "decisionStatus": "BLOCKED_QUOTA",
+      "reason": "OPENAI_QUOTA_BLOCKED"
     }
   }
 };
