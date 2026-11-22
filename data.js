@@ -1063,12 +1063,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $352.04 with sustained participation.",
         "invalidation": "Loss of $334.60 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 1.11: 5d momentum 6.5%, 20d -3.3%, annualized 10d realized vol 73%, volume 1.15x, max selected correlation 0.00.",
-        "quantScore": 1.112,
+        "reason": "Quant score 1.12: 5d momentum 6.5%, 20d -3.3%, annualized 10d realized vol 73%, volume 1.15x, max selected correlation 0.00.",
+        "quantScore": 1.119,
         "metrics": {
           "momentum5d": 6.542,
           "momentum20d": -3.268,
@@ -1081,10 +1081,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 3036730696,
           "maxSelectedCorrelation": 0
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "WATCH_ONLY",
-        "setupId": "PANW-20261121-daily-quant"
+        "setupId": "PANW-20261122-daily-quant"
       },
       {
         "symbol": "UNG",
@@ -1102,12 +1102,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $10.78 with sustained participation.",
         "invalidation": "Loss of $10.34 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 0.99: 5d momentum 4.0%, 20d 6.8%, annualized 10d realized vol 60%, volume 1.36x, max selected correlation 0.19.",
-        "quantScore": 0.995,
+        "reason": "Quant score 1.00: 5d momentum 4.0%, 20d 6.8%, annualized 10d realized vol 60%, volume 1.36x, max selected correlation 0.19.",
+        "quantScore": 0.999,
         "metrics": {
           "momentum5d": 4.039,
           "momentum20d": 6.775,
@@ -1120,10 +1120,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 228609542,
           "maxSelectedCorrelation": 0.194
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "WATCH_ONLY",
-        "setupId": "UNG-20261121-daily-quant"
+        "setupId": "UNG-20261122-daily-quant"
       },
       {
         "symbol": "WMT",
@@ -1141,12 +1141,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $128.97 with sustained participation.",
         "invalidation": "Loss of $126.93 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 0.63: 5d momentum -0.1%, 20d 5.6%, annualized 10d realized vol 12%, volume 1.86x, max selected correlation 0.48.",
-        "quantScore": 0.627,
+        "reason": "Quant score 0.62: 5d momentum -0.1%, 20d 5.6%, annualized 10d realized vol 12%, volume 1.86x, max selected correlation 0.48.",
+        "quantScore": 0.625,
         "metrics": {
           "momentum5d": -0.109,
           "momentum20d": 5.639,
@@ -1159,10 +1159,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 3028170826,
           "maxSelectedCorrelation": 0.481
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "WATCH_ONLY",
-        "setupId": "WMT-20261121-daily-quant"
+        "setupId": "WMT-20261122-daily-quant"
       },
       {
         "symbol": "MCD",
@@ -1180,12 +1180,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $275.43 with sustained participation.",
         "invalidation": "Loss of $271.05 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 0.56: 5d momentum 0.5%, 20d 8.2%, annualized 10d realized vol 18%, volume 1.14x, max selected correlation 0.45.",
-        "quantScore": 0.563,
+        "reason": "Quant score 0.57: 5d momentum 0.5%, 20d 8.2%, annualized 10d realized vol 18%, volume 1.14x, max selected correlation 0.45.",
+        "quantScore": 0.57,
         "metrics": {
           "momentum5d": 0.467,
           "momentum20d": 8.158,
@@ -1198,10 +1198,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 1407287049,
           "maxSelectedCorrelation": 0.453
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "WATCH_ONLY",
-        "setupId": "MCD-20261121-daily-quant"
+        "setupId": "MCD-20261122-daily-quant"
       },
       {
         "symbol": "COST",
@@ -1219,7 +1219,7 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $1110.97 with sustained participation.",
         "invalidation": "Loss of $1093.33 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
@@ -1237,10 +1237,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 2735337974,
           "maxSelectedCorrelation": 0.508
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "WATCH_ONLY",
-        "setupId": "COST-20261121-daily-quant"
+        "setupId": "COST-20261122-daily-quant"
       }
     ],
     "pendingSetups": [
@@ -1260,12 +1260,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $352.04 with sustained participation.",
         "invalidation": "Loss of $334.60 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 1.11: 5d momentum 6.5%, 20d -3.3%, annualized 10d realized vol 73%, volume 1.15x, max selected correlation 0.00.",
-        "quantScore": 1.112,
+        "reason": "Quant score 1.12: 5d momentum 6.5%, 20d -3.3%, annualized 10d realized vol 73%, volume 1.15x, max selected correlation 0.00.",
+        "quantScore": 1.119,
         "metrics": {
           "momentum5d": 6.542,
           "momentum20d": -3.268,
@@ -1278,10 +1278,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 3036730696,
           "maxSelectedCorrelation": 0
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "UNTRIGGERED",
-        "setupId": "PANW-20261121-daily-quant"
+        "setupId": "PANW-20261122-daily-quant"
       },
       {
         "symbol": "UNG",
@@ -1299,12 +1299,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $10.78 with sustained participation.",
         "invalidation": "Loss of $10.34 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 0.99: 5d momentum 4.0%, 20d 6.8%, annualized 10d realized vol 60%, volume 1.36x, max selected correlation 0.19.",
-        "quantScore": 0.995,
+        "reason": "Quant score 1.00: 5d momentum 4.0%, 20d 6.8%, annualized 10d realized vol 60%, volume 1.36x, max selected correlation 0.19.",
+        "quantScore": 0.999,
         "metrics": {
           "momentum5d": 4.039,
           "momentum20d": 6.775,
@@ -1317,10 +1317,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 228609542,
           "maxSelectedCorrelation": 0.194
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "UNTRIGGERED",
-        "setupId": "UNG-20261121-daily-quant"
+        "setupId": "UNG-20261122-daily-quant"
       },
       {
         "symbol": "WMT",
@@ -1338,12 +1338,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $128.97 with sustained participation.",
         "invalidation": "Loss of $126.93 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 0.63: 5d momentum -0.1%, 20d 5.6%, annualized 10d realized vol 12%, volume 1.86x, max selected correlation 0.48.",
-        "quantScore": 0.627,
+        "reason": "Quant score 0.62: 5d momentum -0.1%, 20d 5.6%, annualized 10d realized vol 12%, volume 1.86x, max selected correlation 0.48.",
+        "quantScore": 0.625,
         "metrics": {
           "momentum5d": -0.109,
           "momentum20d": 5.639,
@@ -1356,10 +1356,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 3028170826,
           "maxSelectedCorrelation": 0.481
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "UNTRIGGERED",
-        "setupId": "WMT-20261121-daily-quant"
+        "setupId": "WMT-20261122-daily-quant"
       },
       {
         "symbol": "MCD",
@@ -1377,12 +1377,12 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $275.43 with sustained participation.",
         "invalidation": "Loss of $271.05 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
-        "reason": "Quant score 0.56: 5d momentum 0.5%, 20d 8.2%, annualized 10d realized vol 18%, volume 1.14x, max selected correlation 0.45.",
-        "quantScore": 0.563,
+        "reason": "Quant score 0.57: 5d momentum 0.5%, 20d 8.2%, annualized 10d realized vol 18%, volume 1.14x, max selected correlation 0.45.",
+        "quantScore": 0.57,
         "metrics": {
           "momentum5d": 0.467,
           "momentum20d": 8.158,
@@ -1395,10 +1395,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 1407287049,
           "maxSelectedCorrelation": 0.453
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "UNTRIGGERED",
-        "setupId": "MCD-20261121-daily-quant"
+        "setupId": "MCD-20261122-daily-quant"
       },
       {
         "symbol": "COST",
@@ -1416,7 +1416,7 @@ window.PORTFOLIO_DATA = {
           "timeframeMinutes": 5,
           "requiredCloses": 1
         },
-        "expiresAt": "2026-11-24T18:34:23.097Z",
+        "expiresAt": "2026-11-25T18:55:38.486Z",
         "trigger": "Break above $1110.97 with sustained participation.",
         "invalidation": "Loss of $1093.33 or failed breakout/reversal of the ranked momentum signal.",
         "expectedHorizon": "1-3 trading days",
@@ -1434,10 +1434,10 @@ window.PORTFOLIO_DATA = {
           "avgDollarVolume10d": 2735337974,
           "maxSelectedCorrelation": 0.508
         },
-        "createdAt": "2026-11-21T18:34:23.097Z",
-        "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+        "createdAt": "2026-11-22T18:55:38.486Z",
+        "lastReviewedAt": "2026-11-22T18:55:38.486Z",
         "status": "UNTRIGGERED",
-        "setupId": "COST-20261121-daily-quant"
+        "setupId": "COST-20261122-daily-quant"
       }
     ],
     "candidateDecisions": [
@@ -1479,7 +1479,7 @@ window.PORTFOLIO_DATA = {
       "BTC and ETH remained below their breakout levels and vulnerable to further range failure.",
       "Cboe VIX was delayed and several macro page clock times lacked explicit timezones; SHADOW output remains research only."
     ],
-    "lastReviewedAt": "2026-11-21T18:34:23.097Z",
+    "lastReviewedAt": "2026-11-22T18:55:38.486Z",
     "evidence": [
       {
         "id": "current-market-review",
@@ -2098,7 +2098,7 @@ window.PORTFOLIO_DATA = {
       }
     ],
     "dailyUniverseSelection": {
-      "selectedAt": "2026-11-21T18:34:23.097Z",
+      "selectedAt": "2026-11-22T18:55:38.486Z",
       "version": 2,
       "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
       "universeSize": 117,
@@ -2117,12 +2117,12 @@ window.PORTFOLIO_DATA = {
         "gap": 0.05
       },
       "correlationCap": 0.8,
-      "previousSelectedAt": "2026-11-20T16:24:22.024Z",
+      "previousSelectedAt": "2026-11-21T18:34:23.097Z",
       "factorNote": "Heatmap shows cross-sectional z-scores. Higher volatility is rewarded by this opportunity score, not a safety rating. Correlation is measured against earlier selected candidates at the selection gate. Regime fit is not scored by selector v2.",
       "selected": [
         {
           "symbol": "PANW",
-          "quantScore": 1.112,
+          "quantScore": 1.119,
           "metrics": {
             "momentum5d": 6.542,
             "momentum20d": -3.268,
@@ -2138,7 +2138,7 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "UNG",
-          "quantScore": 0.995,
+          "quantScore": 0.999,
           "metrics": {
             "momentum5d": 4.039,
             "momentum20d": 6.775,
@@ -2154,7 +2154,7 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "WMT",
-          "quantScore": 0.627,
+          "quantScore": 0.625,
           "metrics": {
             "momentum5d": -0.109,
             "momentum20d": 5.639,
@@ -2170,7 +2170,7 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "MCD",
-          "quantScore": 0.563,
+          "quantScore": 0.57,
           "metrics": {
             "momentum5d": 0.467,
             "momentum20d": 8.158,
@@ -2209,7 +2209,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "SELECTED",
-          "quantScore": 1.112,
+          "quantScore": 1.119,
           "metrics": {
             "momentum5d": 6.542,
             "momentum20d": -3.268,
@@ -2224,8 +2224,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
           "factors": {
-            "momentum": 1.758,
-            "participation": -1.12,
+            "momentum": 1.754,
+            "participation": -1.038,
             "volatility": 0.841,
             "gap": 0.11,
             "correlation": 0,
@@ -2245,23 +2245,23 @@ window.PORTFOLIO_DATA = {
             "timeframeMinutes": 5,
             "requiredCloses": 1
           },
-          "expiresAt": "2026-11-24T18:34:23.097Z",
+          "expiresAt": "2026-11-25T18:55:38.486Z",
           "trigger": "Break above $352.04 with sustained participation.",
           "invalidation": "Loss of $334.60 or failed breakout/reversal of the ranked momentum signal.",
           "expectedHorizon": "1-3 trading days",
-          "reason": "Quant score 1.11: 5d momentum 6.5%, 20d -3.3%, annualized 10d realized vol 73%, volume 1.15x, max selected correlation 0.00.",
-          "createdAt": "2026-11-21T18:34:23.097Z",
-          "lastReviewedAt": "2026-11-21T18:34:23.097Z",
-          "setupId": "PANW-20261121-daily-quant"
+          "reason": "Quant score 1.12: 5d momentum 6.5%, 20d -3.3%, annualized 10d realized vol 73%, volume 1.15x, max selected correlation 0.00.",
+          "createdAt": "2026-11-22T18:55:38.486Z",
+          "lastReviewedAt": "2026-11-22T18:55:38.486Z",
+          "setupId": "PANW-20261122-daily-quant"
         },
         {
           "symbol": "UNG",
           "rank": 2,
-          "previousRank": 4,
-          "rankChange": 2,
-          "rankChangeLabel": "+2",
+          "previousRank": 2,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "SELECTED",
-          "quantScore": 0.995,
+          "quantScore": 0.999,
           "metrics": {
             "momentum5d": 4.039,
             "momentum20d": 6.775,
@@ -2276,9 +2276,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
           "factors": {
-            "momentum": 1.809,
-            "participation": -0.587,
-            "volatility": 0.184,
+            "momentum": 1.806,
+            "participation": -0.533,
+            "volatility": 0.185,
             "gap": 0.067,
             "correlation": 0.194,
             "regimeFit": null
@@ -2297,23 +2297,23 @@ window.PORTFOLIO_DATA = {
             "timeframeMinutes": 5,
             "requiredCloses": 1
           },
-          "expiresAt": "2026-11-24T18:34:23.097Z",
+          "expiresAt": "2026-11-25T18:55:38.486Z",
           "trigger": "Break above $10.78 with sustained participation.",
           "invalidation": "Loss of $10.34 or failed breakout/reversal of the ranked momentum signal.",
           "expectedHorizon": "1-3 trading days",
-          "reason": "Quant score 0.99: 5d momentum 4.0%, 20d 6.8%, annualized 10d realized vol 60%, volume 1.36x, max selected correlation 0.19.",
-          "createdAt": "2026-11-21T18:34:23.097Z",
-          "lastReviewedAt": "2026-11-21T18:34:23.097Z",
-          "setupId": "UNG-20261121-daily-quant"
+          "reason": "Quant score 1.00: 5d momentum 4.0%, 20d 6.8%, annualized 10d realized vol 60%, volume 1.36x, max selected correlation 0.19.",
+          "createdAt": "2026-11-22T18:55:38.486Z",
+          "lastReviewedAt": "2026-11-22T18:55:38.486Z",
+          "setupId": "UNG-20261122-daily-quant"
         },
         {
           "symbol": "CRWD",
           "rank": 3,
-          "previousRank": 2,
-          "rankChange": -1,
-          "rankChangeLabel": "-1",
+          "previousRank": 3,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "REJECT",
-          "quantScore": 0.95,
+          "quantScore": 0.952,
           "metrics": {
             "momentum5d": 1.249,
             "momentum20d": -3.572,
@@ -2328,8 +2328,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Absolute correlation with earlier selected instruments exceeds 0.80.",
           "factors": {
-            "momentum": 1.233,
-            "participation": -0.379,
+            "momentum": 1.23,
+            "participation": -0.336,
             "volatility": 0.812,
             "gap": 1.322,
             "correlation": 0.922,
@@ -2339,11 +2339,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "TGT",
           "rank": 4,
-          "previousRank": 3,
-          "rankChange": -1,
-          "rankChangeLabel": "-1",
+          "previousRank": 4,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "REJECT",
-          "quantScore": 0.78,
+          "quantScore": 0.787,
           "metrics": {
             "momentum5d": 2.713,
             "momentum20d": 4.883,
@@ -2358,9 +2358,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Absolute correlation with earlier selected instruments exceeds 0.80.",
           "factors": {
-            "momentum": 1.624,
-            "participation": -1.211,
-            "volatility": -0.216,
+            "momentum": 1.621,
+            "participation": -1.124,
+            "volatility": -0.215,
             "gap": 1.45,
             "correlation": 0.828,
             "regimeFit": null
@@ -2373,7 +2373,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "SELECTED",
-          "quantScore": 0.627,
+          "quantScore": 0.625,
           "metrics": {
             "momentum5d": -0.109,
             "momentum20d": 5.639,
@@ -2388,9 +2388,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
           "factors": {
-            "momentum": 1.372,
-            "participation": 0.703,
-            "volatility": -0.837,
+            "momentum": 1.369,
+            "participation": 0.689,
+            "volatility": -0.835,
             "gap": 1.072,
             "correlation": 0.481,
             "regimeFit": null
@@ -2409,23 +2409,23 @@ window.PORTFOLIO_DATA = {
             "timeframeMinutes": 5,
             "requiredCloses": 1
           },
-          "expiresAt": "2026-11-24T18:34:23.097Z",
+          "expiresAt": "2026-11-25T18:55:38.486Z",
           "trigger": "Break above $128.97 with sustained participation.",
           "invalidation": "Loss of $126.93 or failed breakout/reversal of the ranked momentum signal.",
           "expectedHorizon": "1-3 trading days",
-          "reason": "Quant score 0.63: 5d momentum -0.1%, 20d 5.6%, annualized 10d realized vol 12%, volume 1.86x, max selected correlation 0.48.",
-          "createdAt": "2026-11-21T18:34:23.097Z",
-          "lastReviewedAt": "2026-11-21T18:34:23.097Z",
-          "setupId": "WMT-20261121-daily-quant"
+          "reason": "Quant score 0.62: 5d momentum -0.1%, 20d 5.6%, annualized 10d realized vol 12%, volume 1.86x, max selected correlation 0.48.",
+          "createdAt": "2026-11-22T18:55:38.486Z",
+          "lastReviewedAt": "2026-11-22T18:55:38.486Z",
+          "setupId": "WMT-20261122-daily-quant"
         },
         {
           "symbol": "MCD",
           "rank": 6,
-          "previousRank": 9,
-          "rankChange": 3,
-          "rankChangeLabel": "+3",
+          "previousRank": 6,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "SELECTED",
-          "quantScore": 0.563,
+          "quantScore": 0.57,
           "metrics": {
             "momentum5d": 0.467,
             "momentum20d": 8.158,
@@ -2440,9 +2440,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
           "factors": {
-            "momentum": 1.502,
-            "participation": -1.146,
-            "volatility": -0.714,
+            "momentum": 1.499,
+            "participation": -1.062,
+            "volatility": -0.713,
             "gap": 1.308,
             "correlation": 0.453,
             "regimeFit": null
@@ -2461,21 +2461,21 @@ window.PORTFOLIO_DATA = {
             "timeframeMinutes": 5,
             "requiredCloses": 1
           },
-          "expiresAt": "2026-11-24T18:34:23.097Z",
+          "expiresAt": "2026-11-25T18:55:38.486Z",
           "trigger": "Break above $275.43 with sustained participation.",
           "invalidation": "Loss of $271.05 or failed breakout/reversal of the ranked momentum signal.",
           "expectedHorizon": "1-3 trading days",
-          "reason": "Quant score 0.56: 5d momentum 0.5%, 20d 8.2%, annualized 10d realized vol 18%, volume 1.14x, max selected correlation 0.45.",
-          "createdAt": "2026-11-21T18:34:23.097Z",
-          "lastReviewedAt": "2026-11-21T18:34:23.097Z",
-          "setupId": "MCD-20261121-daily-quant"
+          "reason": "Quant score 0.57: 5d momentum 0.5%, 20d 8.2%, annualized 10d realized vol 18%, volume 1.14x, max selected correlation 0.45.",
+          "createdAt": "2026-11-22T18:55:38.486Z",
+          "lastReviewedAt": "2026-11-22T18:55:38.486Z",
+          "setupId": "MCD-20261122-daily-quant"
         },
         {
           "symbol": "COST",
           "rank": 7,
-          "previousRank": 6,
-          "rankChange": -1,
-          "rankChangeLabel": "-1",
+          "previousRank": 7,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "SELECTED",
           "quantScore": 0.562,
           "metrics": {
@@ -2492,9 +2492,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Top-ranked eligible candidate passing the correlation gate.",
           "factors": {
-            "momentum": 1.423,
-            "participation": 0.175,
-            "volatility": -0.949,
+            "momentum": 1.42,
+            "participation": 0.189,
+            "volatility": -0.948,
             "gap": 0.922,
             "correlation": 0.508,
             "regimeFit": null
@@ -2513,23 +2513,23 @@ window.PORTFOLIO_DATA = {
             "timeframeMinutes": 5,
             "requiredCloses": 1
           },
-          "expiresAt": "2026-11-24T18:34:23.097Z",
+          "expiresAt": "2026-11-25T18:55:38.486Z",
           "trigger": "Break above $1110.97 with sustained participation.",
           "invalidation": "Loss of $1093.33 or failed breakout/reversal of the ranked momentum signal.",
           "expectedHorizon": "1-3 trading days",
           "reason": "Quant score 0.56: 5d momentum -0.4%, 20d 8.2%, annualized 10d realized vol 14%, volume 1.66x, max selected correlation 0.51.",
-          "createdAt": "2026-11-21T18:34:23.097Z",
-          "lastReviewedAt": "2026-11-21T18:34:23.097Z",
-          "setupId": "COST-20261121-daily-quant"
+          "createdAt": "2026-11-22T18:55:38.486Z",
+          "lastReviewedAt": "2026-11-22T18:55:38.486Z",
+          "setupId": "COST-20261122-daily-quant"
         },
         {
           "symbol": "TLT",
           "rank": 8,
-          "previousRank": 10,
-          "rankChange": 2,
-          "rankChangeLabel": "+2",
+          "previousRank": 8,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.546,
+          "quantScore": 0.543,
           "metrics": {
             "momentum5d": 2.608,
             "momentum20d": -0.355,
@@ -2544,9 +2544,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.46,
-            "participation": 0.622,
-            "volatility": -1.189,
+            "momentum": 1.457,
+            "participation": 0.613,
+            "volatility": -1.187,
             "gap": 0.738,
             "correlation": 0.263,
             "regimeFit": null
@@ -2555,11 +2555,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "AVGO",
           "rank": 9,
-          "previousRank": 7,
-          "rankChange": -2,
-          "rankChangeLabel": "-2",
+          "previousRank": 9,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.534,
+          "quantScore": 0.527,
           "metrics": {
             "momentum5d": -12.276,
             "momentum20d": -5.825,
@@ -2574,8 +2574,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.15,
-            "participation": 1.501,
+            "momentum": -0.152,
+            "participation": 1.445,
             "volatility": 1.501,
             "gap": 0.322,
             "correlation": 0.533,
@@ -2585,11 +2585,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "LOW",
           "rank": 10,
-          "previousRank": 8,
-          "rankChange": -2,
-          "rankChangeLabel": "-2",
+          "previousRank": 10,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.479,
+          "quantScore": 0.486,
           "metrics": {
             "momentum5d": -3.026,
             "momentum20d": 8.059,
@@ -2604,9 +2604,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.159,
-            "participation": -1.015,
-            "volatility": -0.442,
+            "momentum": 1.156,
+            "participation": -0.939,
+            "volatility": -0.441,
             "gap": 1.519,
             "correlation": 0.631,
             "regimeFit": null
@@ -2615,11 +2615,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "SBUX",
           "rank": 11,
-          "previousRank": 16,
-          "rankChange": 5,
-          "rankChangeLabel": "+5",
+          "previousRank": 11,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.427,
+          "quantScore": 0.431,
           "metrics": {
             "momentum5d": -3.11,
             "momentum20d": 1.197,
@@ -2634,8 +2634,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.949,
-            "participation": -0.402,
+            "momentum": 0.946,
+            "participation": -0.358,
             "volatility": -0.307,
             "gap": 0.76,
             "correlation": 0.483,
@@ -2645,11 +2645,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "HD",
           "rank": 12,
-          "previousRank": 14,
-          "rankChange": 2,
-          "rankChangeLabel": "+2",
+          "previousRank": 12,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.427,
+          "quantScore": 0.431,
           "metrics": {
             "momentum5d": -2.767,
             "momentum20d": 3.451,
@@ -2664,9 +2664,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.048,
-            "participation": -0.469,
-            "volatility": -0.582,
+            "momentum": 1.046,
+            "participation": -0.421,
+            "volatility": -0.581,
             "gap": 1.433,
             "correlation": 0.498,
             "regimeFit": null
@@ -2675,11 +2675,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "ABBV",
           "rank": 13,
-          "previousRank": 25,
-          "rankChange": 12,
-          "rankChangeLabel": "+12",
+          "previousRank": 13,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "REJECT",
-          "quantScore": 0.424,
+          "quantScore": 0.42,
           "metrics": {
             "momentum5d": -2.993,
             "momentum20d": 0.354,
@@ -2694,9 +2694,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Absolute correlation with earlier selected instruments exceeds 0.80.",
           "factors": {
-            "momentum": 0.935,
-            "participation": 0.9,
-            "volatility": -0.803,
+            "momentum": 0.933,
+            "participation": 0.875,
+            "volatility": -0.802,
             "gap": 1.204,
             "correlation": 0.809,
             "regimeFit": null
@@ -2705,11 +2705,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "DIS",
           "rank": 14,
-          "previousRank": 12,
-          "rankChange": -2,
-          "rankChangeLabel": "-2",
+          "previousRank": 14,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.4,
+          "quantScore": 0.411,
           "metrics": {
             "momentum5d": -0.832,
             "momentum20d": 4.287,
@@ -2724,8 +2724,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.262,
-            "participation": -1.907,
+            "momentum": 1.259,
+            "participation": -1.784,
             "volatility": -0.484,
             "gap": 0.851,
             "correlation": 0.715,
@@ -2735,11 +2735,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "AAPL",
           "rank": 15,
-          "previousRank": 19,
-          "rankChange": 4,
-          "rankChangeLabel": "+4",
+          "previousRank": 15,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.395,
+          "quantScore": 0.391,
           "metrics": {
             "momentum5d": -3.848,
             "momentum20d": -1.625,
@@ -2754,9 +2754,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.794,
-            "participation": 1.015,
-            "volatility": -0.665,
+            "momentum": 0.791,
+            "participation": 0.985,
+            "volatility": -0.664,
             "gap": 1.127,
             "correlation": 0.476,
             "regimeFit": null
@@ -2765,11 +2765,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "AMZN",
           "rank": 16,
-          "previousRank": 15,
-          "rankChange": -1,
-          "rankChangeLabel": "-1",
+          "previousRank": 16,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.341,
+          "quantScore": 0.34,
           "metrics": {
             "momentum5d": -7.44,
             "momentum20d": -1.422,
@@ -2784,9 +2784,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.45,
-            "participation": 0.405,
-            "volatility": 0.069,
+            "momentum": 0.448,
+            "participation": 0.407,
+            "volatility": 0.07,
             "gap": 0.64,
             "correlation": 0.734,
             "regimeFit": null
@@ -2795,11 +2795,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "XLP",
           "rank": 17,
-          "previousRank": 11,
-          "rankChange": -6,
-          "rankChangeLabel": "-6",
+          "previousRank": 17,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "REJECT",
-          "quantScore": 0.335,
+          "quantScore": 0.337,
           "metrics": {
             "momentum5d": -2.047,
             "momentum20d": 0.522,
@@ -2814,9 +2814,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Absolute correlation with earlier selected instruments exceeds 0.80.",
           "factors": {
-            "momentum": 1.033,
-            "participation": -0.058,
-            "volatility": -0.96,
+            "momentum": 1.03,
+            "participation": -0.032,
+            "volatility": -0.958,
             "gap": 1.225,
             "correlation": 0.818,
             "regimeFit": null
@@ -2825,11 +2825,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "AMD",
           "rank": 18,
-          "previousRank": 13,
-          "rankChange": -5,
-          "rankChangeLabel": "-5",
+          "previousRank": 18,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.319,
+          "quantScore": 0.321,
           "metrics": {
             "momentum5d": -20.535,
             "momentum20d": -16.447,
@@ -2844,9 +2844,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.267,
-            "participation": -0.142,
-            "volatility": 3.089,
+            "momentum": -1.268,
+            "participation": -0.112,
+            "volatility": 3.087,
             "gap": 2.061,
             "correlation": 0.573,
             "regimeFit": null
@@ -2855,11 +2855,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "DUK",
           "rank": 19,
-          "previousRank": 17,
-          "rankChange": -2,
-          "rankChangeLabel": "-2",
+          "previousRank": 19,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.306,
+          "quantScore": 0.317,
           "metrics": {
             "momentum5d": 0.48,
             "momentum20d": 3.493,
@@ -2874,9 +2874,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.366,
-            "participation": -1.907,
-            "volatility": -1.032,
+            "momentum": 1.363,
+            "participation": -1.784,
+            "volatility": -1.03,
             "gap": 1.089,
             "correlation": 0.651,
             "regimeFit": null
@@ -2889,7 +2889,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.299,
+          "quantScore": 0.301,
           "metrics": {
             "momentum5d": 0.856,
             "momentum20d": -0.566,
@@ -2904,9 +2904,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.283,
-            "participation": -0.199,
-            "volatility": -1.38,
+            "momentum": 1.28,
+            "participation": -0.165,
+            "volatility": -1.378,
             "gap": 0.544,
             "correlation": 0.327,
             "regimeFit": null
@@ -2915,11 +2915,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "GE",
           "rank": 21,
-          "previousRank": 18,
-          "rankChange": -3,
-          "rankChangeLabel": "-3",
+          "previousRank": 21,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.297,
+          "quantScore": 0.3,
           "metrics": {
             "momentum5d": -6.688,
             "momentum20d": 5.478,
@@ -2934,9 +2934,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.726,
-            "participation": -0.425,
-            "volatility": -0.269,
+            "momentum": 0.724,
+            "participation": -0.38,
+            "volatility": -0.268,
             "gap": 0.408,
             "correlation": 0.445,
             "regimeFit": null
@@ -2949,7 +2949,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.28,
+          "quantScore": 0.285,
           "metrics": {
             "momentum5d": -1.962,
             "momentum20d": 1.893,
@@ -2964,9 +2964,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.081,
-            "participation": -0.763,
-            "volatility": -0.982,
+            "momentum": 1.078,
+            "participation": -0.7,
+            "volatility": -0.981,
             "gap": 1.12,
             "correlation": 0.391,
             "regimeFit": null
@@ -2975,11 +2975,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "RTX",
           "rank": 23,
-          "previousRank": 33,
-          "rankChange": 10,
-          "rankChangeLabel": "+10",
+          "previousRank": 23,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.26,
+          "quantScore": 0.264,
           "metrics": {
             "momentum5d": -4.235,
             "momentum20d": -2.332,
@@ -2994,52 +2994,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.735,
-            "participation": -0.419,
-            "volatility": -0.47,
+            "momentum": 0.733,
+            "participation": -0.374,
+            "volatility": -0.469,
             "gap": 0.775,
             "correlation": 0.581,
             "regimeFit": null
           }
         },
         {
-          "symbol": "JNJ",
-          "rank": 24,
-          "previousRank": 46,
-          "rankChange": 22,
-          "rankChangeLabel": "+22",
-          "status": "WATCH",
-          "quantScore": 0.224,
-          "metrics": {
-            "momentum5d": -5.347,
-            "momentum20d": 1.069,
-            "realizedVol10dAnnualized": 22.28,
-            "volumeRatio": 1.449,
-            "atrPct": 2.583,
-            "gapPct": 1.205,
-            "relativeStrength5dPct": 3.211,
-            "relativeStrength20dPct": 10.775,
-            "avgDollarVolume10d": 2206226505,
-            "maxSelectedCorrelation": 0.676
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0.727,
-            "participation": -0.354,
-            "volatility": -0.674,
-            "gap": 1.235,
-            "correlation": 0.676,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "TMO",
-          "rank": 25,
-          "previousRank": 28,
-          "rankChange": 3,
-          "rankChangeLabel": "+3",
+          "rank": 24,
+          "previousRank": 25,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": 0.223,
+          "quantScore": 0.228,
           "metrics": {
             "momentum5d": -4.381,
             "momentum20d": -1.035,
@@ -3054,52 +3024,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.759,
-            "participation": -0.737,
-            "volatility": -0.486,
+            "momentum": 0.757,
+            "participation": -0.676,
+            "volatility": -0.485,
             "gap": 0.501,
             "correlation": 0.696,
             "regimeFit": null
           }
         },
         {
-          "symbol": "HYG",
-          "rank": 26,
-          "previousRank": 31,
-          "rankChange": 5,
-          "rankChangeLabel": "+5",
+          "symbol": "JNJ",
+          "rank": 25,
+          "previousRank": 24,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
           "status": "WATCH",
-          "quantScore": 0.223,
+          "quantScore": 0.227,
           "metrics": {
-            "momentum5d": -0.793,
-            "momentum20d": -0.999,
-            "realizedVol10dAnnualized": 4.02,
-            "volumeRatio": 1.707,
-            "atrPct": 0.384,
-            "gapPct": -0.118,
-            "relativeStrength5dPct": 7.765,
-            "relativeStrength20dPct": 8.707,
-            "avgDollarVolume10d": 2939221061,
-            "maxSelectedCorrelation": 0.629
+            "momentum5d": -5.347,
+            "momentum20d": 1.069,
+            "realizedVol10dAnnualized": 22.28,
+            "volumeRatio": 1.449,
+            "atrPct": 2.583,
+            "gapPct": 1.205,
+            "relativeStrength5dPct": 3.211,
+            "relativeStrength20dPct": 10.775,
+            "avgDollarVolume10d": 2206226505,
+            "maxSelectedCorrelation": 0.676
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.11,
-            "participation": 0.308,
-            "volatility": -1.449,
-            "gap": 0.322,
-            "correlation": 0.629,
+            "momentum": 0.725,
+            "participation": -0.312,
+            "volatility": -0.673,
+            "gap": 1.235,
+            "correlation": 0.676,
             "regimeFit": null
           }
         },
         {
           "symbol": "LMT",
-          "rank": 27,
-          "previousRank": 39,
-          "rankChange": 12,
-          "rankChangeLabel": "+12",
+          "rank": 26,
+          "previousRank": 27,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": 0.22,
+          "quantScore": 0.223,
           "metrics": {
             "momentum5d": -5.124,
             "momentum20d": -4.138,
@@ -3114,22 +3084,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.596,
-            "participation": -0.306,
-            "volatility": -0.377,
+            "momentum": 0.593,
+            "participation": -0.267,
+            "volatility": -0.376,
             "gap": 0.715,
             "correlation": 0.48,
             "regimeFit": null
           }
         },
         {
+          "symbol": "HYG",
+          "rank": 27,
+          "previousRank": 26,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
+          "status": "WATCH",
+          "quantScore": 0.222,
+          "metrics": {
+            "momentum5d": -0.793,
+            "momentum20d": -0.999,
+            "realizedVol10dAnnualized": 4.02,
+            "volumeRatio": 1.707,
+            "atrPct": 0.384,
+            "gapPct": -0.118,
+            "relativeStrength5dPct": 7.765,
+            "relativeStrength20dPct": 8.707,
+            "avgDollarVolume10d": 2939221061,
+            "maxSelectedCorrelation": 0.629
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 1.107,
+            "participation": 0.314,
+            "volatility": -1.447,
+            "gap": 0.322,
+            "correlation": 0.629,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "CSCO",
           "rank": 28,
-          "previousRank": 32,
-          "rankChange": 4,
-          "rankChangeLabel": "+4",
+          "previousRank": 28,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.217,
+          "quantScore": 0.22,
           "metrics": {
             "momentum5d": -5.228,
             "momentum20d": -13.586,
@@ -3144,9 +3144,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.308,
-            "participation": -0.365,
-            "volatility": 0.233,
+            "momentum": 0.305,
+            "participation": -0.322,
+            "volatility": 0.234,
             "gap": 0.289,
             "correlation": 0.592,
             "regimeFit": null
@@ -3155,11 +3155,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "LLY",
           "rank": 29,
-          "previousRank": 35,
-          "rankChange": 6,
-          "rankChangeLabel": "+6",
+          "previousRank": 29,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.201,
+          "quantScore": 0.206,
           "metrics": {
             "momentum5d": -6.678,
             "momentum20d": 3.093,
@@ -3174,52 +3174,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.657,
-            "participation": -0.829,
-            "volatility": -0.422,
+            "momentum": 0.655,
+            "participation": -0.762,
+            "volatility": -0.421,
             "gap": 0.979,
             "correlation": 0.609,
             "regimeFit": null
           }
         },
         {
-          "symbol": "ARM",
-          "rank": 30,
-          "previousRank": 23,
-          "rankChange": -7,
-          "rankChangeLabel": "-7",
-          "status": "WATCH",
-          "quantScore": 0.189,
-          "metrics": {
-            "momentum5d": -20.118,
-            "momentum20d": -27.558,
-            "realizedVol10dAnnualized": 112.88,
-            "volumeRatio": 2.106,
-            "atrPct": 11.016,
-            "gapPct": -4.572,
-            "relativeStrength5dPct": -11.559,
-            "relativeStrength20dPct": -17.852,
-            "avgDollarVolume10d": 867876345,
-            "maxSelectedCorrelation": 0.488
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -1.553,
-            "participation": 1.329,
-            "volatility": 2.574,
-            "gap": 2.753,
-            "correlation": 0.488,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "XLRE",
-          "rank": 31,
-          "previousRank": 26,
-          "rankChange": -5,
-          "rankChangeLabel": "-5",
+          "rank": 30,
+          "previousRank": 31,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": 0.186,
+          "quantScore": 0.187,
           "metrics": {
             "momentum5d": -4.305,
             "momentum20d": -0.141,
@@ -3234,52 +3204,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.793,
-            "participation": 0.076,
-            "volatility": -1.006,
+            "momentum": 0.791,
+            "participation": 0.095,
+            "volatility": -1.005,
             "gap": 0.878,
             "correlation": 0.461,
             "regimeFit": null
           }
         },
         {
-          "symbol": "XLU",
-          "rank": 32,
-          "previousRank": 42,
-          "rankChange": 10,
-          "rankChangeLabel": "+10",
-          "status": "WATCH",
-          "quantScore": 0.172,
-          "metrics": {
-            "momentum5d": -3.065,
-            "momentum20d": -0.42,
-            "realizedVol10dAnnualized": 13.57,
-            "volumeRatio": 1.387,
-            "atrPct": 1.499,
-            "gapPct": 0.605,
-            "relativeStrength5dPct": 5.493,
-            "relativeStrength20dPct": 9.286,
-            "avgDollarVolume10d": 926620572,
-            "maxSelectedCorrelation": 0.446
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0.906,
-            "participation": -0.513,
-            "volatility": -1.052,
-            "gap": 0.821,
-            "correlation": 0.446,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "SO",
-          "rank": 33,
-          "previousRank": 24,
-          "rankChange": -9,
-          "rankChangeLabel": "-9",
+          "rank": 31,
+          "previousRank": 33,
+          "rankChange": 2,
+          "rankChangeLabel": "+2",
           "status": "WATCH",
-          "quantScore": 0.171,
+          "quantScore": 0.185,
           "metrics": {
             "momentum5d": -0.492,
             "momentum20d": -0.735,
@@ -3294,22 +3234,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 1.147,
-            "participation": -2.529,
-            "volatility": -0.867,
+            "momentum": 1.144,
+            "participation": -2.373,
+            "volatility": -0.866,
             "gap": 1.062,
             "correlation": 0.401,
             "regimeFit": null
           }
         },
         {
-          "symbol": "NOC",
-          "rank": 34,
-          "previousRank": 29,
-          "rankChange": -5,
-          "rankChangeLabel": "-5",
+          "symbol": "ARM",
+          "rank": 32,
+          "previousRank": 30,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
           "status": "WATCH",
-          "quantScore": 0.167,
+          "quantScore": 0.183,
+          "metrics": {
+            "momentum5d": -20.118,
+            "momentum20d": -27.558,
+            "realizedVol10dAnnualized": 112.88,
+            "volumeRatio": 2.106,
+            "atrPct": 11.016,
+            "gapPct": -4.572,
+            "relativeStrength5dPct": -11.559,
+            "relativeStrength20dPct": -17.852,
+            "avgDollarVolume10d": 867876345,
+            "maxSelectedCorrelation": 0.488
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -1.554,
+            "participation": 1.282,
+            "volatility": 2.573,
+            "gap": 2.753,
+            "correlation": 0.488,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "NOC",
+          "rank": 33,
+          "previousRank": 34,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
+          "status": "WATCH",
+          "quantScore": 0.177,
           "metrics": {
             "momentum5d": -2.929,
             "momentum20d": -3.266,
@@ -3324,22 +3294,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.835,
-            "participation": -1.686,
-            "volatility": -0.578,
+            "momentum": 0.833,
+            "participation": -1.574,
+            "volatility": -0.577,
             "gap": 1.002,
             "correlation": 0.316,
             "regimeFit": null
           }
         },
         {
+          "symbol": "XLU",
+          "rank": 34,
+          "previousRank": 32,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
+          "status": "WATCH",
+          "quantScore": 0.176,
+          "metrics": {
+            "momentum5d": -3.065,
+            "momentum20d": -0.42,
+            "realizedVol10dAnnualized": 13.57,
+            "volumeRatio": 1.387,
+            "atrPct": 1.499,
+            "gapPct": 0.605,
+            "relativeStrength5dPct": 5.493,
+            "relativeStrength20dPct": 9.286,
+            "avgDollarVolume10d": 926620572,
+            "maxSelectedCorrelation": 0.446
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.903,
+            "participation": -0.463,
+            "volatility": -1.05,
+            "gap": 0.821,
+            "correlation": 0.446,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "SCHW",
           "rank": 35,
-          "previousRank": 30,
-          "rankChange": -5,
-          "rankChangeLabel": "-5",
+          "previousRank": 35,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.166,
+          "quantScore": 0.174,
           "metrics": {
             "momentum5d": -3.033,
             "momentum20d": -1.4,
@@ -3354,9 +3354,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.88,
-            "participation": -1.396,
-            "volatility": -0.731,
+            "momentum": 0.877,
+            "participation": -1.3,
+            "volatility": -0.73,
             "gap": 0.816,
             "correlation": 0.592,
             "regimeFit": null
@@ -3365,11 +3365,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "GM",
           "rank": 36,
-          "previousRank": 41,
-          "rankChange": 5,
-          "rankChangeLabel": "+5",
+          "previousRank": 36,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.153,
+          "quantScore": 0.158,
           "metrics": {
             "momentum5d": -8.477,
             "momentum20d": 1.943,
@@ -3384,52 +3384,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.448,
-            "participation": -0.691,
-            "volatility": -0.213,
+            "momentum": 0.446,
+            "participation": -0.632,
+            "volatility": -0.212,
             "gap": 0.783,
             "correlation": 0.415,
             "regimeFit": null
           }
         },
         {
-          "symbol": "IWM",
-          "rank": 37,
-          "previousRank": 47,
-          "rankChange": 10,
-          "rankChangeLabel": "+10",
-          "status": "WATCH",
-          "quantScore": 0.137,
-          "metrics": {
-            "momentum5d": -7.541,
-            "momentum20d": -7.251,
-            "realizedVol10dAnnualized": 26.83,
-            "volumeRatio": 2.267,
-            "atrPct": 2.448,
-            "gapPct": -0.341,
-            "relativeStrength5dPct": 1.017,
-            "relativeStrength20dPct": 2.455,
-            "avgDollarVolume10d": 7050828944,
-            "maxSelectedCorrelation": 0.559
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0.269,
-            "participation": 1.741,
-            "volatility": -0.645,
-            "gap": 0.168,
-            "correlation": 0.559,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "USO",
-          "rank": 38,
-          "previousRank": 58,
-          "rankChange": 20,
-          "rankChangeLabel": "+20",
+          "rank": 37,
+          "previousRank": 38,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": 0.132,
+          "quantScore": 0.135,
           "metrics": {
             "momentum5d": -4.087,
             "momentum20d": -14.079,
@@ -3444,8 +3414,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.405,
-            "participation": -0.368,
+            "momentum": 0.402,
+            "participation": -0.326,
             "volatility": -0.236,
             "gap": 0.337,
             "correlation": 0.454,
@@ -3453,13 +3423,43 @@ window.PORTFOLIO_DATA = {
           }
         },
         {
+          "symbol": "IWM",
+          "rank": 38,
+          "previousRank": 37,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
+          "status": "WATCH",
+          "quantScore": 0.129,
+          "metrics": {
+            "momentum5d": -7.541,
+            "momentum20d": -7.251,
+            "realizedVol10dAnnualized": 26.83,
+            "volumeRatio": 2.267,
+            "atrPct": 2.448,
+            "gapPct": -0.341,
+            "relativeStrength5dPct": 1.017,
+            "relativeStrength20dPct": 2.455,
+            "avgDollarVolume10d": 7050828944,
+            "maxSelectedCorrelation": 0.559
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.267,
+            "participation": 1.672,
+            "volatility": -0.644,
+            "gap": 0.168,
+            "correlation": 0.559,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "KLAC",
           "rank": 39,
-          "previousRank": 45,
-          "rankChange": 6,
-          "rankChangeLabel": "+6",
+          "previousRank": 39,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.126,
+          "quantScore": 0.123,
           "metrics": {
             "momentum5d": -16.708,
             "momentum20d": -14.178,
@@ -3474,8 +3474,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.828,
-            "participation": 0.802,
+            "momentum": -0.829,
+            "participation": 0.783,
             "volatility": 1.533,
             "gap": 0.817,
             "correlation": 0.533,
@@ -3483,43 +3483,13 @@ window.PORTFOLIO_DATA = {
           }
         },
         {
-          "symbol": "ON",
-          "rank": 40,
-          "previousRank": 69,
-          "rankChange": 29,
-          "rankChangeLabel": "+29",
-          "status": "WATCH",
-          "quantScore": 0.123,
-          "metrics": {
-            "momentum5d": -14.382,
-            "momentum20d": -16.919,
-            "realizedVol10dAnnualized": 73.4,
-            "volumeRatio": 2.038,
-            "atrPct": 7.807,
-            "gapPct": -0.624,
-            "relativeStrength5dPct": -5.824,
-            "relativeStrength20dPct": -7.213,
-            "avgDollarVolume10d": 554846808,
-            "maxSelectedCorrelation": 0.425
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -0.682,
-            "participation": 1.155,
-            "volatility": 1.271,
-            "gap": 0.027,
-            "correlation": 0.425,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "MA",
-          "rank": 41,
-          "previousRank": 43,
-          "rankChange": 2,
-          "rankChangeLabel": "+2",
+          "rank": 40,
+          "previousRank": 41,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": 0.116,
+          "quantScore": 0.121,
           "metrics": {
             "momentum5d": -5.384,
             "momentum20d": -1.203,
@@ -3534,20 +3504,50 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.657,
-            "participation": -0.602,
-            "volatility": -0.732,
+            "momentum": 0.654,
+            "participation": -0.547,
+            "volatility": -0.73,
             "gap": 0.692,
             "correlation": 0.693,
             "regimeFit": null
           }
         },
         {
+          "symbol": "ON",
+          "rank": 41,
+          "previousRank": 40,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
+          "status": "WATCH",
+          "quantScore": 0.119,
+          "metrics": {
+            "momentum5d": -14.382,
+            "momentum20d": -16.919,
+            "realizedVol10dAnnualized": 73.4,
+            "volumeRatio": 2.038,
+            "atrPct": 7.807,
+            "gapPct": -0.624,
+            "relativeStrength5dPct": -5.824,
+            "relativeStrength20dPct": -7.213,
+            "avgDollarVolume10d": 554846808,
+            "maxSelectedCorrelation": 0.425
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -0.683,
+            "participation": 1.118,
+            "volatility": 1.271,
+            "gap": 0.027,
+            "correlation": 0.425,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "TSLA",
           "rank": 42,
-          "previousRank": 27,
-          "rankChange": -15,
-          "rankChangeLabel": "-15",
+          "previousRank": 42,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
           "quantScore": 0.116,
           "metrics": {
@@ -3564,20 +3564,80 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.117,
-            "participation": 0.192,
-            "volatility": 0.482,
+            "momentum": -0.119,
+            "participation": 0.205,
+            "volatility": 0.483,
             "gap": 0.331,
             "correlation": 0.453,
             "regimeFit": null
           }
         },
         {
-          "symbol": "MSFT",
+          "symbol": "XLY",
           "rank": 43,
-          "previousRank": 50,
-          "rankChange": 7,
-          "rankChangeLabel": "+7",
+          "previousRank": 44,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
+          "status": "WATCH",
+          "quantScore": 0.111,
+          "metrics": {
+            "momentum5d": -6.268,
+            "momentum20d": -2.217,
+            "realizedVol10dAnnualized": 27.41,
+            "volumeRatio": 1.474,
+            "atrPct": 2.693,
+            "gapPct": -0.216,
+            "relativeStrength5dPct": 2.29,
+            "relativeStrength20dPct": 7.489,
+            "avgDollarVolume10d": 976225891,
+            "maxSelectedCorrelation": 0.654
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.539,
+            "participation": -0.252,
+            "volatility": -0.578,
+            "gap": 0.254,
+            "correlation": 0.654,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "COP",
+          "rank": 44,
+          "previousRank": 46,
+          "rankChange": 2,
+          "rankChangeLabel": "+2",
+          "status": "WATCH",
+          "quantScore": 0.11,
+          "metrics": {
+            "momentum5d": -4.329,
+            "momentum20d": -6.53,
+            "realizedVol10dAnnualized": 25.86,
+            "volumeRatio": 1.182,
+            "atrPct": 3.101,
+            "gapPct": 0.163,
+            "relativeStrength5dPct": 4.229,
+            "relativeStrength20dPct": 3.176,
+            "avgDollarVolume10d": 1002892649,
+            "maxSelectedCorrelation": 0.609
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.6,
+            "participation": -0.961,
+            "volatility": -0.5,
+            "gap": 0.516,
+            "correlation": 0.609,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "rank": 45,
+          "previousRank": 43,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
           "status": "WATCH",
           "quantScore": 0.109,
           "metrics": {
@@ -3594,52 +3654,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.278,
-            "participation": 0.379,
-            "volatility": -0.311,
+            "momentum": 0.276,
+            "participation": 0.382,
+            "volatility": -0.31,
             "gap": 0.228,
             "correlation": 0.471,
             "regimeFit": null
           }
         },
         {
-          "symbol": "XLY",
-          "rank": 44,
-          "previousRank": 34,
-          "rankChange": -10,
-          "rankChangeLabel": "-10",
-          "status": "WATCH",
-          "quantScore": 0.108,
-          "metrics": {
-            "momentum5d": -6.268,
-            "momentum20d": -2.217,
-            "realizedVol10dAnnualized": 27.41,
-            "volumeRatio": 1.474,
-            "atrPct": 2.693,
-            "gapPct": -0.216,
-            "relativeStrength5dPct": 2.29,
-            "relativeStrength20dPct": 7.489,
-            "avgDollarVolume10d": 976225891,
-            "maxSelectedCorrelation": 0.654
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0.541,
-            "participation": -0.29,
-            "volatility": -0.578,
-            "gap": 0.254,
-            "correlation": 0.654,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "PYPL",
-          "rank": 45,
-          "previousRank": 37,
-          "rankChange": -8,
-          "rankChangeLabel": "-8",
+          "rank": 46,
+          "previousRank": 45,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
           "status": "WATCH",
-          "quantScore": 0.105,
+          "quantScore": 0.104,
           "metrics": {
             "momentum5d": -10.105,
             "momentum20d": -7.378,
@@ -3654,80 +3684,20 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.015,
-            "participation": 0.548,
-            "volatility": -0.381,
+            "momentum": 0.014,
+            "participation": 0.542,
+            "volatility": -0.38,
             "gap": 3.124,
             "correlation": 0.436,
             "regimeFit": null
           }
         },
         {
-          "symbol": "COP",
-          "rank": 46,
-          "previousRank": 54,
-          "rankChange": 8,
-          "rankChangeLabel": "+8",
-          "status": "WATCH",
-          "quantScore": 0.103,
-          "metrics": {
-            "momentum5d": -4.329,
-            "momentum20d": -6.53,
-            "realizedVol10dAnnualized": 25.86,
-            "volumeRatio": 1.182,
-            "atrPct": 3.101,
-            "gapPct": 0.163,
-            "relativeStrength5dPct": 4.229,
-            "relativeStrength20dPct": 3.176,
-            "avgDollarVolume10d": 1002892649,
-            "maxSelectedCorrelation": 0.609
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0.603,
-            "participation": -1.039,
-            "volatility": -0.501,
-            "gap": 0.516,
-            "correlation": 0.609,
-            "regimeFit": null
-          }
-        },
-        {
-          "symbol": "LRCX",
-          "rank": 47,
-          "previousRank": 70,
-          "rankChange": 23,
-          "rankChangeLabel": "+23",
-          "status": "WATCH",
-          "quantScore": 0.097,
-          "metrics": {
-            "momentum5d": -18.878,
-            "momentum20d": -20.369,
-            "realizedVol10dAnnualized": 88.62,
-            "volumeRatio": 2.152,
-            "atrPct": 9.506,
-            "gapPct": -2.273,
-            "relativeStrength5dPct": -10.32,
-            "relativeStrength20dPct": -10.663,
-            "avgDollarVolume10d": 2321189745,
-            "maxSelectedCorrelation": 0.49
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -1.221,
-            "participation": 1.446,
-            "volatility": 1.885,
-            "gap": 1.166,
-            "correlation": 0.49,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "UBER",
-          "rank": 48,
-          "previousRank": 21,
-          "rankChange": -27,
-          "rankChangeLabel": "-27",
+          "rank": 47,
+          "previousRank": 48,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
           "quantScore": 0.091,
           "metrics": {
@@ -3744,22 +3714,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.109,
-            "participation": 0.252,
-            "volatility": -0.077,
+            "momentum": 0.107,
+            "participation": 0.262,
+            "volatility": -0.076,
             "gap": 0.582,
             "correlation": 0.467,
             "regimeFit": null
           }
         },
         {
-          "symbol": "QCOM",
-          "rank": 49,
-          "previousRank": 48,
+          "symbol": "LRCX",
+          "rank": 48,
+          "previousRank": 47,
           "rankChange": -1,
           "rankChangeLabel": "-1",
           "status": "WATCH",
-          "quantScore": 0.088,
+          "quantScore": 0.091,
+          "metrics": {
+            "momentum5d": -18.878,
+            "momentum20d": -20.369,
+            "realizedVol10dAnnualized": 88.62,
+            "volumeRatio": 2.152,
+            "atrPct": 9.506,
+            "gapPct": -2.273,
+            "relativeStrength5dPct": -10.32,
+            "relativeStrength20dPct": -10.663,
+            "avgDollarVolume10d": 2321189745,
+            "maxSelectedCorrelation": 0.49
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -1.222,
+            "participation": 1.393,
+            "volatility": 1.884,
+            "gap": 1.166,
+            "correlation": 0.49,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "QCOM",
+          "rank": 49,
+          "previousRank": 49,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
+          "status": "WATCH",
+          "quantScore": 0.084,
           "metrics": {
             "momentum5d": -13.063,
             "momentum20d": -13.244,
@@ -3774,8 +3774,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.445,
-            "participation": 1.026,
+            "momentum": -0.447,
+            "participation": 0.995,
             "volatility": 0.751,
             "gap": 0.109,
             "correlation": 0.561,
@@ -3783,43 +3783,13 @@ window.PORTFOLIO_DATA = {
           }
         },
         {
-          "symbol": "QQQ",
-          "rank": 50,
-          "previousRank": 56,
-          "rankChange": 6,
-          "rankChangeLabel": "+6",
-          "status": "WATCH",
-          "quantScore": 0.088,
-          "metrics": {
-            "momentum5d": -10.508,
-            "momentum20d": -13.63,
-            "realizedVol10dAnnualized": 38.73,
-            "volumeRatio": 2.604,
-            "atrPct": 3.473,
-            "gapPct": -0.961,
-            "relativeStrength5dPct": -1.949,
-            "relativeStrength20dPct": -3.924,
-            "avgDollarVolume10d": 34571107498,
-            "maxSelectedCorrelation": 0.53
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -0.208,
-            "participation": 2.606,
-            "volatility": -0.239,
-            "gap": 0.26,
-            "correlation": 0.53,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "AMAT",
-          "rank": 51,
-          "previousRank": 52,
+          "rank": 50,
+          "previousRank": 51,
           "rankChange": 1,
           "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": 0.079,
+          "quantScore": 0.076,
           "metrics": {
             "momentum5d": -18.318,
             "momentum20d": -19.423,
@@ -3834,82 +3804,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.139,
-            "participation": 0.728,
-            "volatility": 1.839,
+            "momentum": -1.14,
+            "participation": 0.712,
+            "volatility": 1.838,
             "gap": 1.613,
             "correlation": 0.545,
             "regimeFit": null
           }
         },
         {
-          "symbol": "SPY",
-          "rank": 52,
-          "previousRank": 80,
-          "rankChange": 28,
-          "rankChangeLabel": "+28",
+          "symbol": "QQQ",
+          "rank": 51,
+          "previousRank": 50,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
           "status": "WATCH",
-          "quantScore": 0.077,
+          "quantScore": 0.075,
           "metrics": {
-            "momentum5d": -8.558,
-            "momentum20d": -9.706,
-            "realizedVol10dAnnualized": 25.46,
-            "volumeRatio": 2.452,
-            "atrPct": 2.33,
-            "gapPct": -0.323,
-            "relativeStrength5dPct": 0,
-            "relativeStrength20dPct": 0,
-            "avgDollarVolume10d": 43231234115,
-            "maxSelectedCorrelation": 0.445
+            "momentum5d": -10.508,
+            "momentum20d": -13.63,
+            "realizedVol10dAnnualized": 38.73,
+            "volumeRatio": 2.604,
+            "atrPct": 3.473,
+            "gapPct": -0.961,
+            "relativeStrength5dPct": -1.949,
+            "relativeStrength20dPct": -3.924,
+            "avgDollarVolume10d": 34571107498,
+            "maxSelectedCorrelation": 0.53
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.098,
-            "participation": 2.215,
-            "volatility": -0.692,
-            "gap": 0.181,
-            "correlation": 0.445,
-            "regimeFit": null
-          }
-        },
-        {
-          "symbol": "XLF",
-          "rank": 53,
-          "previousRank": 53,
-          "rankChange": 0,
-          "rankChangeLabel": "0",
-          "status": "WATCH",
-          "quantScore": 0.074,
-          "metrics": {
-            "momentum5d": -7.004,
-            "momentum20d": -3.672,
-            "realizedVol10dAnnualized": 18.09,
-            "volumeRatio": 1.861,
-            "atrPct": 2.058,
-            "gapPct": 0.18,
-            "relativeStrength5dPct": 1.554,
-            "relativeStrength20dPct": 6.034,
-            "avgDollarVolume10d": 2266489085,
-            "maxSelectedCorrelation": 0.606
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0.426,
-            "participation": 0.702,
-            "volatility": -0.857,
-            "gap": 0.528,
-            "correlation": 0.606,
+            "momentum": -0.21,
+            "participation": 2.491,
+            "volatility": -0.238,
+            "gap": 0.26,
+            "correlation": 0.53,
             "regimeFit": null
           }
         },
         {
           "symbol": "ABNB",
-          "rank": 54,
-          "previousRank": 40,
-          "rankChange": -14,
-          "rankChangeLabel": "-14",
+          "rank": 52,
+          "previousRank": 54,
+          "rankChange": 2,
+          "rankChangeLabel": "+2",
           "status": "WATCH",
-          "quantScore": 0.064,
+          "quantScore": 0.072,
           "metrics": {
             "momentum5d": -8.791,
             "momentum20d": -3.072,
@@ -3924,22 +3864,82 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.27,
-            "participation": -1.337,
-            "volatility": 0.035,
+            "momentum": 0.268,
+            "participation": -1.244,
+            "volatility": 0.036,
             "gap": 0.769,
             "correlation": 0.706,
             "regimeFit": null
           }
         },
         {
+          "symbol": "XLF",
+          "rank": 53,
+          "previousRank": 53,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
+          "status": "WATCH",
+          "quantScore": 0.072,
+          "metrics": {
+            "momentum5d": -7.004,
+            "momentum20d": -3.672,
+            "realizedVol10dAnnualized": 18.09,
+            "volumeRatio": 1.861,
+            "atrPct": 2.058,
+            "gapPct": 0.18,
+            "relativeStrength5dPct": 1.554,
+            "relativeStrength20dPct": 6.034,
+            "avgDollarVolume10d": 2266489085,
+            "maxSelectedCorrelation": 0.606
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.424,
+            "participation": 0.688,
+            "volatility": -0.855,
+            "gap": 0.528,
+            "correlation": 0.606,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "SPY",
+          "rank": 54,
+          "previousRank": 52,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
+          "status": "WATCH",
+          "quantScore": 0.066,
+          "metrics": {
+            "momentum5d": -8.558,
+            "momentum20d": -9.706,
+            "realizedVol10dAnnualized": 25.46,
+            "volumeRatio": 2.452,
+            "atrPct": 2.33,
+            "gapPct": -0.323,
+            "relativeStrength5dPct": 0,
+            "relativeStrength20dPct": 0,
+            "avgDollarVolume10d": 43231234115,
+            "maxSelectedCorrelation": 0.445
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.096,
+            "participation": 2.121,
+            "volatility": -0.691,
+            "gap": 0.181,
+            "correlation": 0.445,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "CVX",
           "rank": 55,
-          "previousRank": 73,
-          "rankChange": 18,
-          "rankChangeLabel": "+18",
+          "previousRank": 55,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.061,
+          "quantScore": 0.064,
           "metrics": {
             "momentum5d": -5.239,
             "momentum20d": -8.077,
@@ -3954,9 +3954,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.469,
-            "participation": -0.339,
-            "volatility": -0.607,
+            "momentum": 0.466,
+            "participation": -0.298,
+            "volatility": -0.606,
             "gap": 0.383,
             "correlation": 0.644,
             "regimeFit": null
@@ -3965,11 +3965,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "V",
           "rank": 56,
-          "previousRank": 44,
-          "rankChange": -12,
-          "rankChangeLabel": "-12",
+          "previousRank": 56,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.053,
+          "quantScore": 0.059,
           "metrics": {
             "momentum5d": -5.611,
             "momentum20d": -3.01,
@@ -3984,9 +3984,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.582,
-            "participation": -0.816,
-            "volatility": -0.722,
+            "momentum": 0.579,
+            "participation": -0.75,
+            "volatility": -0.72,
             "gap": 0.628,
             "correlation": 0.727,
             "regimeFit": null
@@ -3995,11 +3995,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "XLV",
           "rank": 57,
-          "previousRank": 49,
-          "rankChange": -8,
-          "rankChangeLabel": "-8",
+          "previousRank": 57,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.052,
+          "quantScore": 0.056,
           "metrics": {
             "momentum5d": -6.148,
             "momentum20d": -2.239,
@@ -4014,9 +4014,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.552,
-            "participation": -0.572,
-            "volatility": -0.816,
+            "momentum": 0.55,
+            "participation": -0.519,
+            "volatility": -0.814,
             "gap": 1.002,
             "correlation": 0.749,
             "regimeFit": null
@@ -4025,11 +4025,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "F",
           "rank": 58,
-          "previousRank": 38,
-          "rankChange": -20,
-          "rankChangeLabel": "-20",
+          "previousRank": 58,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.044,
+          "quantScore": 0.048,
           "metrics": {
             "momentum5d": -6.213,
             "momentum20d": -6.449,
@@ -4044,9 +4044,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.422,
-            "participation": -0.456,
-            "volatility": -0.573,
+            "momentum": 0.419,
+            "participation": -0.409,
+            "volatility": -0.572,
             "gap": 0.588,
             "correlation": 0.582,
             "regimeFit": null
@@ -4055,11 +4055,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "DE",
           "rank": 59,
-          "previousRank": 81,
-          "rankChange": 22,
-          "rankChangeLabel": "+22",
+          "previousRank": 59,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.03,
+          "quantScore": 0.027,
           "metrics": {
             "momentum5d": -9.545,
             "momentum20d": -5.34,
@@ -4074,9 +4074,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.13,
-            "participation": 0.888,
-            "volatility": -0.441,
+            "momentum": 0.128,
+            "participation": 0.864,
+            "volatility": -0.44,
             "gap": 0.051,
             "correlation": 0.574,
             "regimeFit": null
@@ -4085,11 +4085,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "EWJ",
           "rank": 60,
-          "previousRank": 92,
-          "rankChange": 32,
-          "rankChangeLabel": "+32",
+          "previousRank": 60,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": 0.02,
+          "quantScore": 0.012,
           "metrics": {
             "momentum5d": -9.078,
             "momentum20d": -11.808,
@@ -4104,9 +4104,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.015,
-            "participation": 1.657,
-            "volatility": -0.566,
+            "momentum": -0.017,
+            "participation": 1.593,
+            "volatility": -0.565,
             "gap": 0.636,
             "correlation": 0.503,
             "regimeFit": null
@@ -4115,11 +4115,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "RSP",
           "rank": 61,
-          "previousRank": 57,
-          "rankChange": -4,
-          "rankChangeLabel": "-4",
+          "previousRank": 61,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.002,
+          "quantScore": 0,
           "metrics": {
             "momentum5d": -6.204,
             "momentum20d": -4.94,
@@ -4134,9 +4134,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.467,
-            "participation": -0.145,
-            "volatility": -0.902,
+            "momentum": 0.465,
+            "participation": -0.114,
+            "volatility": -0.901,
             "gap": 0.521,
             "correlation": 0.452,
             "regimeFit": null
@@ -4145,11 +4145,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "SOXX",
           "rank": 62,
-          "previousRank": 36,
-          "rankChange": -26,
-          "rankChangeLabel": "-26",
+          "previousRank": 62,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.003,
+          "quantScore": -0.009,
           "metrics": {
             "momentum5d": -17.348,
             "momentum20d": -22.176,
@@ -4164,82 +4164,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.125,
-            "participation": 1.467,
-            "volatility": 1.392,
+            "momentum": -1.126,
+            "participation": 1.413,
+            "volatility": 1.391,
             "gap": 1.033,
             "correlation": 0.501,
             "regimeFit": null
           }
         },
         {
-          "symbol": "XLK",
+          "symbol": "XLI",
           "rank": 63,
-          "previousRank": 75,
-          "rankChange": 12,
-          "rankChangeLabel": "+12",
-          "status": "WATCH",
-          "quantScore": -0.016,
-          "metrics": {
-            "momentum5d": -12.491,
-            "momentum20d": -18.279,
-            "realizedVol10dAnnualized": 47.25,
-            "volumeRatio": 2.409,
-            "atrPct": 4.642,
-            "gapPct": -1.232,
-            "relativeStrength5dPct": -3.933,
-            "relativeStrength20dPct": -8.573,
-            "avgDollarVolume10d": 2423762298,
-            "maxSelectedCorrelation": 0.561
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -0.537,
-            "participation": 2.105,
-            "volatility": 0.157,
-            "gap": 0.447,
-            "correlation": 0.561,
-            "regimeFit": null
-          }
-        },
-        {
-          "symbol": "GLD",
-          "rank": 64,
-          "previousRank": 55,
-          "rankChange": -9,
-          "rankChangeLabel": "-9",
+          "previousRank": 65,
+          "rankChange": 2,
+          "rankChangeLabel": "+2",
           "status": "WATCH",
           "quantScore": -0.017,
-          "metrics": {
-            "momentum5d": -9.166,
-            "momentum20d": -12.501,
-            "realizedVol10dAnnualized": 26.35,
-            "volumeRatio": 2.135,
-            "atrPct": 2.419,
-            "gapPct": -2.446,
-            "relativeStrength5dPct": -0.608,
-            "relativeStrength20dPct": -2.795,
-            "avgDollarVolume10d": 3642031662,
-            "maxSelectedCorrelation": 0.44
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -0.044,
-            "participation": 1.403,
-            "volatility": -0.659,
-            "gap": 1.286,
-            "correlation": 0.44,
-            "regimeFit": null
-          }
-        },
-        {
-          "symbol": "XLI",
-          "rank": 65,
-          "previousRank": 61,
-          "rankChange": -4,
-          "rankChangeLabel": "-4",
-          "status": "WATCH",
-          "quantScore": -0.019,
           "metrics": {
             "momentum5d": -7.353,
             "momentum20d": -6.214,
@@ -4254,11 +4194,71 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.318,
-            "participation": -0.227,
-            "volatility": -0.607,
+            "momentum": 0.316,
+            "participation": -0.192,
+            "volatility": -0.606,
             "gap": 0.211,
             "correlation": 0.482,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "GLD",
+          "rank": 64,
+          "previousRank": 64,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
+          "status": "WATCH",
+          "quantScore": -0.023,
+          "metrics": {
+            "momentum5d": -9.166,
+            "momentum20d": -12.501,
+            "realizedVol10dAnnualized": 26.35,
+            "volumeRatio": 2.135,
+            "atrPct": 2.419,
+            "gapPct": -2.446,
+            "relativeStrength5dPct": -0.608,
+            "relativeStrength20dPct": -2.795,
+            "avgDollarVolume10d": 3642031662,
+            "maxSelectedCorrelation": 0.44
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -0.046,
+            "participation": 1.353,
+            "volatility": -0.658,
+            "gap": 1.286,
+            "correlation": 0.44,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "XLK",
+          "rank": 65,
+          "previousRank": 63,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
+          "status": "WATCH",
+          "quantScore": -0.025,
+          "metrics": {
+            "momentum5d": -12.491,
+            "momentum20d": -18.279,
+            "realizedVol10dAnnualized": 47.25,
+            "volumeRatio": 2.409,
+            "atrPct": 4.642,
+            "gapPct": -1.232,
+            "relativeStrength5dPct": -3.933,
+            "relativeStrength20dPct": -8.573,
+            "avgDollarVolume10d": 2423762298,
+            "maxSelectedCorrelation": 0.561
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -0.539,
+            "participation": 2.017,
+            "volatility": 0.158,
+            "gap": 0.447,
+            "correlation": 0.561,
             "regimeFit": null
           }
         },
@@ -4284,9 +4284,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.021,
-            "participation": 0.307,
-            "volatility": -0.432,
+            "momentum": 0.019,
+            "participation": 0.314,
+            "volatility": -0.431,
             "gap": 1.193,
             "correlation": 0.673,
             "regimeFit": null
@@ -4295,11 +4295,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "XLB",
           "rank": 67,
-          "previousRank": 59,
-          "rankChange": -8,
-          "rankChangeLabel": "-8",
+          "previousRank": 67,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.033,
+          "quantScore": -0.032,
           "metrics": {
             "momentum5d": -7.448,
             "momentum20d": -6.481,
@@ -4314,9 +4314,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.301,
-            "participation": 0.11,
-            "volatility": -0.765,
+            "momentum": 0.298,
+            "participation": 0.127,
+            "volatility": -0.764,
             "gap": 0.403,
             "correlation": 0.437,
             "regimeFit": null
@@ -4325,11 +4325,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "AXP",
           "rank": 68,
-          "previousRank": 65,
-          "rankChange": -3,
-          "rankChangeLabel": "-3",
+          "previousRank": 68,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.039,
+          "quantScore": -0.033,
           "metrics": {
             "momentum5d": -5.895,
             "momentum20d": -7.218,
@@ -4344,52 +4344,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.43,
-            "participation": -0.795,
-            "volatility": -0.724,
+            "momentum": 0.428,
+            "participation": -0.73,
+            "volatility": -0.723,
             "gap": 0.43,
             "correlation": 0.495,
             "regimeFit": null
           }
         },
         {
-          "symbol": "IBM",
-          "rank": 69,
-          "previousRank": 60,
-          "rankChange": -9,
-          "rankChangeLabel": "-9",
-          "status": "WATCH",
-          "quantScore": -0.039,
-          "metrics": {
-            "momentum5d": -9.181,
-            "momentum20d": -10.975,
-            "realizedVol10dAnnualized": 27.36,
-            "volumeRatio": 1.884,
-            "atrPct": 3.076,
-            "gapPct": 0.322,
-            "relativeStrength5dPct": -0.623,
-            "relativeStrength20dPct": -1.269,
-            "avgDollarVolume10d": 951885961,
-            "maxSelectedCorrelation": 0.685
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0,
-            "participation": 0.761,
-            "volatility": -0.487,
-            "gap": 0.625,
-            "correlation": 0.685,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "XOM",
-          "rank": 70,
-          "previousRank": 86,
-          "rankChange": 16,
-          "rankChangeLabel": "+16",
+          "rank": 69,
+          "previousRank": 70,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.04,
+          "quantScore": -0.035,
           "metrics": {
             "momentum5d": -6.214,
             "momentum20d": -10.234,
@@ -4404,52 +4374,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.31,
-            "participation": -0.554,
-            "volatility": -0.576,
+            "momentum": 0.308,
+            "participation": -0.502,
+            "volatility": -0.575,
             "gap": 0.36,
             "correlation": 0.645,
             "regimeFit": null
           }
         },
         {
-          "symbol": "SLB",
-          "rank": 71,
-          "previousRank": 88,
-          "rankChange": 17,
-          "rankChangeLabel": "+17",
+          "symbol": "IBM",
+          "rank": 70,
+          "previousRank": 69,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
           "status": "WATCH",
-          "quantScore": -0.04,
+          "quantScore": -0.041,
           "metrics": {
-            "momentum5d": -11.186,
-            "momentum20d": -7.386,
-            "realizedVol10dAnnualized": 30.24,
-            "volumeRatio": 1.824,
-            "atrPct": 3.787,
-            "gapPct": -1.503,
-            "relativeStrength5dPct": -2.628,
-            "relativeStrength20dPct": 2.32,
-            "avgDollarVolume10d": 423545879,
-            "maxSelectedCorrelation": 0.475
+            "momentum5d": -9.181,
+            "momentum20d": -10.975,
+            "realizedVol10dAnnualized": 27.36,
+            "volumeRatio": 1.884,
+            "atrPct": 3.076,
+            "gapPct": 0.322,
+            "relativeStrength5dPct": -0.623,
+            "relativeStrength20dPct": -1.269,
+            "avgDollarVolume10d": 951885961,
+            "maxSelectedCorrelation": 0.685
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.09,
-            "participation": 0.607,
-            "volatility": -0.277,
-            "gap": 0.634,
-            "correlation": 0.475,
+            "momentum": -0.002,
+            "participation": 0.744,
+            "volatility": -0.486,
+            "gap": 0.625,
+            "correlation": 0.685,
             "regimeFit": null
           }
         },
         {
           "symbol": "HPE",
-          "rank": 72,
+          "rank": 71,
           "previousRank": 72,
-          "rankChange": 0,
-          "rankChangeLabel": "0",
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.042,
+          "quantScore": -0.041,
           "metrics": {
             "momentum5d": -15.283,
             "momentum20d": -26.248,
@@ -4464,8 +4434,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.044,
-            "participation": 0.125,
+            "momentum": -1.045,
+            "participation": 0.141,
             "volatility": 1.427,
             "gap": 1.828,
             "correlation": 0.53,
@@ -4473,43 +4443,43 @@ window.PORTFOLIO_DATA = {
           }
         },
         {
-          "symbol": "FXI",
-          "rank": 73,
-          "previousRank": 76,
-          "rankChange": 3,
-          "rankChangeLabel": "+3",
+          "symbol": "SLB",
+          "rank": 72,
+          "previousRank": 71,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
           "status": "WATCH",
-          "quantScore": -0.045,
+          "quantScore": -0.042,
           "metrics": {
-            "momentum5d": -6.72,
-            "momentum20d": -3.76,
-            "realizedVol10dAnnualized": 8.92,
-            "volumeRatio": 1.638,
-            "atrPct": 1.709,
-            "gapPct": -0.944,
-            "relativeStrength5dPct": 1.838,
-            "relativeStrength20dPct": 5.946,
-            "avgDollarVolume10d": 690865365,
-            "maxSelectedCorrelation": 0.392
+            "momentum5d": -11.186,
+            "momentum20d": -7.386,
+            "realizedVol10dAnnualized": 30.24,
+            "volumeRatio": 1.824,
+            "atrPct": 3.787,
+            "gapPct": -1.503,
+            "relativeStrength5dPct": -2.628,
+            "relativeStrength20dPct": 2.32,
+            "avgDollarVolume10d": 423545879,
+            "maxSelectedCorrelation": 0.475
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.451,
-            "participation": 0.131,
-            "volatility": -1.063,
-            "gap": 0.248,
-            "correlation": 0.392,
+            "momentum": -0.092,
+            "participation": 0.598,
+            "volatility": -0.276,
+            "gap": 0.634,
+            "correlation": 0.475,
             "regimeFit": null
           }
         },
         {
           "symbol": "PFE",
-          "rank": 74,
-          "previousRank": 67,
-          "rankChange": -7,
-          "rankChangeLabel": "-7",
+          "rank": 73,
+          "previousRank": 74,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.051,
+          "quantScore": -0.044,
           "metrics": {
             "momentum5d": -5.157,
             "momentum20d": -9.928,
@@ -4524,22 +4494,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.422,
-            "participation": -1.186,
-            "volatility": -0.725,
+            "momentum": 0.42,
+            "participation": -1.101,
+            "volatility": -0.724,
             "gap": 1.055,
             "correlation": 0.598,
             "regimeFit": null
           }
         },
         {
+          "symbol": "FXI",
+          "rank": 74,
+          "previousRank": 73,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
+          "status": "WATCH",
+          "quantScore": -0.044,
+          "metrics": {
+            "momentum5d": -6.72,
+            "momentum20d": -3.76,
+            "realizedVol10dAnnualized": 8.92,
+            "volumeRatio": 1.638,
+            "atrPct": 1.709,
+            "gapPct": -0.944,
+            "relativeStrength5dPct": 1.838,
+            "relativeStrength20dPct": 5.946,
+            "avgDollarVolume10d": 690865365,
+            "maxSelectedCorrelation": 0.392
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.449,
+            "participation": 0.147,
+            "volatility": -1.062,
+            "gap": 0.248,
+            "correlation": 0.392,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "NFLX",
           "rank": 75,
-          "previousRank": 79,
-          "rankChange": 4,
-          "rankChangeLabel": "+4",
+          "previousRank": 75,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.055,
+          "quantScore": -0.059,
           "metrics": {
             "momentum5d": -8.721,
             "momentum20d": -15.392,
@@ -4554,9 +4554,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.085,
-            "participation": 0.972,
-            "volatility": -0.395,
+            "momentum": -0.088,
+            "participation": 0.944,
+            "volatility": -0.394,
             "gap": 0.262,
             "correlation": 0.591,
             "regimeFit": null
@@ -4565,11 +4565,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "XLE",
           "rank": 76,
-          "previousRank": 74,
-          "rankChange": -2,
-          "rankChangeLabel": "-2",
+          "previousRank": 76,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.066,
+          "quantScore": -0.063,
           "metrics": {
             "momentum5d": -6.85,
             "momentum20d": -10.448,
@@ -4584,82 +4584,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.242,
-            "participation": -0.262,
-            "volatility": -0.609,
+            "momentum": 0.24,
+            "participation": -0.225,
+            "volatility": -0.608,
             "gap": 0.199,
             "correlation": 0.715,
             "regimeFit": null
           }
         },
         {
-          "symbol": "META",
-          "rank": 77,
-          "previousRank": 63,
-          "rankChange": -14,
-          "rankChangeLabel": "-14",
-          "status": "WATCH",
-          "quantScore": -0.067,
-          "metrics": {
-            "momentum5d": -12.6,
-            "momentum20d": -13.564,
-            "realizedVol10dAnnualized": 46.55,
-            "volumeRatio": 1.954,
-            "atrPct": 4.213,
-            "gapPct": -2.065,
-            "relativeStrength5dPct": -4.041,
-            "relativeStrength20dPct": -3.858,
-            "avgDollarVolume10d": 8368967049,
-            "maxSelectedCorrelation": 0.361
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -0.409,
-            "participation": 0.939,
-            "volatility": 0.044,
-            "gap": 1.022,
-            "correlation": 0.361,
-            "regimeFit": null
-          }
-        },
-        {
-          "symbol": "BAC",
-          "rank": 78,
-          "previousRank": 82,
-          "rankChange": 4,
-          "rankChangeLabel": "+4",
-          "status": "WATCH",
-          "quantScore": -0.067,
-          "metrics": {
-            "momentum5d": -7.801,
-            "momentum20d": -7.909,
-            "realizedVol10dAnnualized": 22.83,
-            "volumeRatio": 1.544,
-            "atrPct": 2.703,
-            "gapPct": -0.247,
-            "relativeStrength5dPct": 0.757,
-            "relativeStrength20dPct": 1.797,
-            "avgDollarVolume10d": 1429560210,
-            "maxSelectedCorrelation": 0.378
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": 0.224,
-            "participation": -0.111,
-            "volatility": -0.637,
-            "gap": 0.233,
-            "correlation": 0.378,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "KRE",
-          "rank": 79,
-          "previousRank": 62,
-          "rankChange": -17,
-          "rankChangeLabel": "-17",
+          "rank": 77,
+          "previousRank": 79,
+          "rankChange": 2,
+          "rankChangeLabel": "+2",
           "status": "WATCH",
-          "quantScore": -0.07,
+          "quantScore": -0.064,
           "metrics": {
             "momentum5d": -6.076,
             "momentum20d": -5.648,
@@ -4674,22 +4614,82 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.459,
-            "participation": -0.971,
-            "volatility": -0.824,
+            "momentum": 0.456,
+            "participation": -0.897,
+            "volatility": -0.823,
             "gap": 0.433,
             "correlation": 0.494,
             "regimeFit": null
           }
         },
         {
+          "symbol": "BAC",
+          "rank": 78,
+          "previousRank": 78,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
+          "status": "WATCH",
+          "quantScore": -0.065,
+          "metrics": {
+            "momentum5d": -7.801,
+            "momentum20d": -7.909,
+            "realizedVol10dAnnualized": 22.83,
+            "volumeRatio": 1.544,
+            "atrPct": 2.703,
+            "gapPct": -0.247,
+            "relativeStrength5dPct": 0.757,
+            "relativeStrength20dPct": 1.797,
+            "avgDollarVolume10d": 1429560210,
+            "maxSelectedCorrelation": 0.378
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": 0.222,
+            "participation": -0.082,
+            "volatility": -0.636,
+            "gap": 0.233,
+            "correlation": 0.378,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "META",
+          "rank": 79,
+          "previousRank": 77,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
+          "status": "WATCH",
+          "quantScore": -0.07,
+          "metrics": {
+            "momentum5d": -12.6,
+            "momentum20d": -13.564,
+            "realizedVol10dAnnualized": 46.55,
+            "volumeRatio": 1.954,
+            "atrPct": 4.213,
+            "gapPct": -2.065,
+            "relativeStrength5dPct": -4.041,
+            "relativeStrength20dPct": -3.858,
+            "avgDollarVolume10d": 8368967049,
+            "maxSelectedCorrelation": 0.361
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -0.411,
+            "participation": 0.913,
+            "volatility": 0.045,
+            "gap": 1.022,
+            "correlation": 0.361,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "EWG",
           "rank": 80,
-          "previousRank": 100,
-          "rankChange": 20,
-          "rankChangeLabel": "+20",
+          "previousRank": 80,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.073,
+          "quantScore": -0.072,
           "metrics": {
             "momentum5d": -8.695,
             "momentum20d": -5.272,
@@ -4704,9 +4704,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.215,
-            "participation": 0.189,
-            "volatility": -0.729,
+            "momentum": 0.213,
+            "participation": 0.202,
+            "volatility": -0.728,
             "gap": 0.181,
             "correlation": 0.502,
             "regimeFit": null
@@ -4715,11 +4715,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "WFC",
           "rank": 81,
-          "previousRank": 83,
-          "rankChange": 2,
-          "rankChangeLabel": "+2",
+          "previousRank": 81,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.081,
+          "quantScore": -0.078,
           "metrics": {
             "momentum5d": -8.635,
             "momentum20d": -5.289,
@@ -4734,9 +4734,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.22,
-            "participation": -0.356,
-            "volatility": -0.636,
+            "momentum": 0.218,
+            "participation": -0.315,
+            "volatility": -0.635,
             "gap": 0.48,
             "correlation": 0.521,
             "regimeFit": null
@@ -4745,11 +4745,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "DELL",
           "rank": 82,
-          "previousRank": 68,
-          "rankChange": -14,
-          "rankChangeLabel": "-14",
+          "previousRank": 82,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.083,
+          "quantScore": -0.082,
           "metrics": {
             "momentum5d": -19.305,
             "momentum20d": -38.62,
@@ -4764,9 +4764,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.799,
-            "participation": 0.055,
-            "volatility": 2.743,
+            "momentum": -1.801,
+            "participation": 0.075,
+            "volatility": 2.741,
             "gap": 1.571,
             "correlation": 0.508,
             "regimeFit": null
@@ -4775,11 +4775,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "JPM",
           "rank": 83,
-          "previousRank": 105,
-          "rankChange": 22,
-          "rankChangeLabel": "+22",
+          "previousRank": 83,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.084,
+          "quantScore": -0.086,
           "metrics": {
             "momentum5d": -10.301,
             "momentum20d": -7.729,
@@ -4794,9 +4794,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.014,
-            "participation": 0.729,
-            "volatility": -0.553,
+            "momentum": -0.016,
+            "participation": 0.714,
+            "volatility": -0.552,
             "gap": 0.332,
             "correlation": 0.515,
             "regimeFit": null
@@ -4809,7 +4809,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.094,
+          "quantScore": -0.097,
           "metrics": {
             "momentum5d": -13.733,
             "momentum20d": -11.288,
@@ -4824,8 +4824,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.453,
-            "participation": 0.806,
+            "momentum": -0.454,
+            "participation": 0.787,
             "volatility": 0.03,
             "gap": 1.31,
             "correlation": 0.463,
@@ -4833,43 +4833,13 @@ window.PORTFOLIO_DATA = {
           }
         },
         {
-          "symbol": "SHOP",
-          "rank": 85,
-          "previousRank": 99,
-          "rankChange": 14,
-          "rankChangeLabel": "+14",
-          "status": "WATCH",
-          "quantScore": -0.101,
-          "metrics": {
-            "momentum5d": -15.888,
-            "momentum20d": -26.711,
-            "realizedVol10dAnnualized": 44.35,
-            "volumeRatio": 2.54,
-            "atrPct": 7.53,
-            "gapPct": -1.273,
-            "relativeStrength5dPct": -7.33,
-            "relativeStrength20dPct": -17.004,
-            "avgDollarVolume10d": 799676600,
-            "maxSelectedCorrelation": 0.576
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -1.116,
-            "participation": 2.441,
-            "volatility": 0.816,
-            "gap": 0.476,
-            "correlation": 0.576,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "C",
-          "rank": 86,
-          "previousRank": 91,
-          "rankChange": 5,
-          "rankChangeLabel": "+5",
+          "rank": 85,
+          "previousRank": 86,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.102,
+          "quantScore": -0.103,
           "metrics": {
             "momentum5d": -10.798,
             "momentum20d": -9.705,
@@ -4884,9 +4854,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.12,
-            "participation": 0.525,
-            "volatility": -0.357,
+            "momentum": -0.122,
+            "participation": 0.521,
+            "volatility": -0.356,
             "gap": 0.381,
             "correlation": 0.502,
             "regimeFit": null
@@ -4894,12 +4864,12 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "EEM",
-          "rank": 87,
-          "previousRank": 94,
-          "rankChange": 7,
-          "rankChangeLabel": "+7",
+          "rank": 86,
+          "previousRank": 87,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.105,
+          "quantScore": -0.11,
           "metrics": {
             "momentum5d": -11.622,
             "momentum20d": -12.767,
@@ -4914,82 +4884,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.291,
-            "participation": 1.224,
-            "volatility": -0.372,
+            "momentum": -0.293,
+            "participation": 1.182,
+            "volatility": -0.371,
             "gap": 0.874,
             "correlation": 0.507,
             "regimeFit": null
           }
         },
         {
-          "symbol": "ORCL",
-          "rank": 88,
-          "previousRank": 101,
-          "rankChange": 13,
-          "rankChangeLabel": "+13",
+          "symbol": "SHOP",
+          "rank": 87,
+          "previousRank": 85,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
           "status": "WATCH",
-          "quantScore": -0.117,
+          "quantScore": -0.113,
           "metrics": {
-            "momentum5d": -19.274,
-            "momentum20d": -19.396,
-            "realizedVol10dAnnualized": 70.11,
-            "volumeRatio": 2.116,
-            "atrPct": 7.969,
-            "gapPct": -1.89,
-            "relativeStrength5dPct": -10.716,
-            "relativeStrength20dPct": -9.69,
-            "avgDollarVolume10d": 2748835523,
-            "maxSelectedCorrelation": 0.499
+            "momentum5d": -15.888,
+            "momentum20d": -26.711,
+            "realizedVol10dAnnualized": 44.35,
+            "volumeRatio": 2.54,
+            "atrPct": 7.53,
+            "gapPct": -1.273,
+            "relativeStrength5dPct": -7.33,
+            "relativeStrength20dPct": -17.004,
+            "avgDollarVolume10d": 799676600,
+            "maxSelectedCorrelation": 0.576
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.231,
-            "participation": 1.354,
-            "volatility": 1.266,
-            "gap": 0.902,
-            "correlation": 0.499,
-            "regimeFit": null
-          }
-        },
-        {
-          "symbol": "MU",
-          "rank": 89,
-          "previousRank": 78,
-          "rankChange": -11,
-          "rankChangeLabel": "-11",
-          "status": "WATCH",
-          "quantScore": -0.12,
-          "metrics": {
-            "momentum5d": -23.615,
-            "momentum20d": -30.588,
-            "realizedVol10dAnnualized": 104.33,
-            "volumeRatio": 1.951,
-            "atrPct": 11.495,
-            "gapPct": -3.618,
-            "relativeStrength5dPct": -15.057,
-            "relativeStrength20dPct": -20.882,
-            "avgDollarVolume10d": 19946102138,
-            "maxSelectedCorrelation": 0.486
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -1.983,
-            "participation": 0.931,
-            "volatility": 2.575,
-            "gap": 2.094,
-            "correlation": 0.486,
+            "momentum": -1.118,
+            "participation": 2.335,
+            "volatility": 0.816,
+            "gap": 0.476,
+            "correlation": 0.576,
             "regimeFit": null
           }
         },
         {
           "symbol": "RIVN",
-          "rank": 90,
-          "previousRank": 64,
-          "rankChange": -26,
-          "rankChangeLabel": "-26",
+          "rank": 88,
+          "previousRank": 90,
+          "rankChange": 2,
+          "rankChangeLabel": "+2",
           "status": "WATCH",
-          "quantScore": -0.122,
+          "quantScore": -0.12,
           "metrics": {
             "momentum5d": -15.189,
             "momentum20d": -14.345,
@@ -5004,8 +4944,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.685,
-            "participation": -0.085,
+            "momentum": -0.686,
+            "participation": -0.057,
             "volatility": 0.668,
             "gap": 1.248,
             "correlation": 0.549,
@@ -5013,43 +4953,73 @@ window.PORTFOLIO_DATA = {
           }
         },
         {
-          "symbol": "SMH",
-          "rank": 91,
-          "previousRank": 87,
-          "rankChange": -4,
-          "rankChangeLabel": "-4",
+          "symbol": "ORCL",
+          "rank": 89,
+          "previousRank": 88,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
           "status": "WATCH",
-          "quantScore": -0.123,
+          "quantScore": -0.122,
           "metrics": {
-            "momentum5d": -17.81,
-            "momentum20d": -23.558,
-            "realizedVol10dAnnualized": 68.44,
-            "volumeRatio": 2.235,
-            "atrPct": 7.299,
-            "gapPct": -2.096,
-            "relativeStrength5dPct": -9.252,
-            "relativeStrength20dPct": -13.852,
-            "avgDollarVolume10d": 5063043312,
-            "maxSelectedCorrelation": 0.526
+            "momentum5d": -19.274,
+            "momentum20d": -19.396,
+            "realizedVol10dAnnualized": 70.11,
+            "volumeRatio": 2.116,
+            "atrPct": 7.969,
+            "gapPct": -1.89,
+            "relativeStrength5dPct": -10.716,
+            "relativeStrength20dPct": -9.69,
+            "avgDollarVolume10d": 2748835523,
+            "maxSelectedCorrelation": 0.499
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.211,
-            "participation": 1.661,
-            "volatility": 1.082,
-            "gap": 1.044,
-            "correlation": 0.526,
+            "momentum": -1.232,
+            "participation": 1.306,
+            "volatility": 1.266,
+            "gap": 0.902,
+            "correlation": 0.499,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "MU",
+          "rank": 90,
+          "previousRank": 89,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
+          "status": "WATCH",
+          "quantScore": -0.124,
+          "metrics": {
+            "momentum5d": -23.615,
+            "momentum20d": -30.588,
+            "realizedVol10dAnnualized": 104.33,
+            "volumeRatio": 1.951,
+            "atrPct": 11.495,
+            "gapPct": -3.618,
+            "relativeStrength5dPct": -15.057,
+            "relativeStrength20dPct": -20.882,
+            "avgDollarVolume10d": 19946102138,
+            "maxSelectedCorrelation": 0.486
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -1.984,
+            "participation": 0.905,
+            "volatility": 2.574,
+            "gap": 2.094,
+            "correlation": 0.486,
             "regimeFit": null
           }
         },
         {
           "symbol": "PLTR",
-          "rank": 92,
-          "previousRank": 97,
-          "rankChange": 5,
-          "rankChangeLabel": "+5",
+          "rank": 91,
+          "previousRank": 92,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.124,
+          "quantScore": -0.129,
           "metrics": {
             "momentum5d": -14.584,
             "momentum20d": -26.862,
@@ -5064,8 +5034,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.994,
-            "participation": 1.325,
+            "momentum": -0.995,
+            "participation": 1.279,
             "volatility": 0.737,
             "gap": 1.385,
             "correlation": 0.569,
@@ -5073,13 +5043,43 @@ window.PORTFOLIO_DATA = {
           }
         },
         {
+          "symbol": "SMH",
+          "rank": 92,
+          "previousRank": 91,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
+          "status": "WATCH",
+          "quantScore": -0.13,
+          "metrics": {
+            "momentum5d": -17.81,
+            "momentum20d": -23.558,
+            "realizedVol10dAnnualized": 68.44,
+            "volumeRatio": 2.235,
+            "atrPct": 7.299,
+            "gapPct": -2.096,
+            "relativeStrength5dPct": -9.252,
+            "relativeStrength20dPct": -13.852,
+            "avgDollarVolume10d": 5063043312,
+            "maxSelectedCorrelation": 0.526
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -1.212,
+            "participation": 1.597,
+            "volatility": 1.082,
+            "gap": 1.044,
+            "correlation": 0.526,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "EWU",
           "rank": 93,
-          "previousRank": 106,
-          "rankChange": 13,
-          "rankChangeLabel": "+13",
+          "previousRank": 93,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.136,
+          "quantScore": -0.131,
           "metrics": {
             "momentum5d": -6.733,
             "momentum20d": -6.48,
@@ -5094,9 +5094,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.37,
-            "participation": -0.791,
-            "volatility": -0.888,
+            "momentum": 0.368,
+            "participation": -0.726,
+            "volatility": -0.887,
             "gap": 0.115,
             "correlation": 0.614,
             "regimeFit": null
@@ -5105,11 +5105,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "INTC",
           "rank": 94,
-          "previousRank": 71,
-          "rankChange": -23,
-          "rankChangeLabel": "-23",
+          "previousRank": 94,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.141,
+          "quantScore": -0.145,
           "metrics": {
             "momentum5d": -14.046,
             "momentum20d": -40.016,
@@ -5124,52 +5124,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.328,
-            "participation": 0.97,
-            "volatility": 1.418,
+            "momentum": -1.33,
+            "participation": 0.942,
+            "volatility": 1.417,
             "gap": 1.344,
             "correlation": 0.59,
             "regimeFit": null
           }
         },
         {
-          "symbol": "MS",
-          "rank": 95,
-          "previousRank": 95,
-          "rankChange": 0,
-          "rankChangeLabel": "0",
-          "status": "WATCH",
-          "quantScore": -0.151,
-          "metrics": {
-            "momentum5d": -13.103,
-            "momentum20d": -9.947,
-            "realizedVol10dAnnualized": 37.52,
-            "volumeRatio": 1.864,
-            "atrPct": 3.894,
-            "gapPct": -1.092,
-            "relativeStrength5dPct": -4.544,
-            "relativeStrength20dPct": -0.241,
-            "avgDollarVolume10d": 1004892911,
-            "maxSelectedCorrelation": 0.41
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -0.352,
-            "participation": 0.709,
-            "volatility": -0.153,
-            "gap": 0.35,
-            "correlation": 0.41,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "SNOW",
-          "rank": 96,
-          "previousRank": 90,
-          "rankChange": -6,
-          "rankChangeLabel": "-6",
+          "rank": 95,
+          "previousRank": 96,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.154,
+          "quantScore": -0.149,
           "metrics": {
             "momentum5d": -12.433,
             "momentum20d": -18.837,
@@ -5184,8 +5154,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.548,
-            "participation": -0.639,
+            "momentum": -0.55,
+            "participation": -0.582,
             "volatility": 0.629,
             "gap": 0.458,
             "correlation": 0.635,
@@ -5194,12 +5164,12 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "GOOGL",
-          "rank": 97,
-          "previousRank": 51,
-          "rankChange": -46,
-          "rankChangeLabel": "-46",
+          "rank": 96,
+          "previousRank": 97,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.154,
+          "quantScore": -0.153,
           "metrics": {
             "momentum5d": -10.305,
             "momentum20d": -18.176,
@@ -5214,22 +5184,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.322,
-            "participation": 0.132,
-            "volatility": -0.113,
+            "momentum": -0.324,
+            "participation": 0.148,
+            "volatility": -0.112,
             "gap": 0.869,
             "correlation": 0.495,
             "regimeFit": null
           }
         },
         {
+          "symbol": "MS",
+          "rank": 97,
+          "previousRank": 95,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
+          "status": "WATCH",
+          "quantScore": -0.153,
+          "metrics": {
+            "momentum5d": -13.103,
+            "momentum20d": -9.947,
+            "realizedVol10dAnnualized": 37.52,
+            "volumeRatio": 1.864,
+            "atrPct": 3.894,
+            "gapPct": -1.092,
+            "relativeStrength5dPct": -4.544,
+            "relativeStrength20dPct": -0.241,
+            "avgDollarVolume10d": 1004892911,
+            "maxSelectedCorrelation": 0.41
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -0.354,
+            "participation": 0.694,
+            "volatility": -0.153,
+            "gap": 0.35,
+            "correlation": 0.41,
+            "regimeFit": null
+          }
+        },
+        {
           "symbol": "DIA",
           "rank": 98,
-          "previousRank": 77,
-          "rankChange": -21,
-          "rankChangeLabel": "-21",
+          "previousRank": 98,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.163,
+          "quantScore": -0.16,
           "metrics": {
             "momentum5d": -8.042,
             "momentum20d": -8.867,
@@ -5244,9 +5244,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.173,
-            "participation": -0.26,
-            "volatility": -0.83,
+            "momentum": 0.17,
+            "participation": -0.223,
+            "volatility": -0.829,
             "gap": 0.347,
             "correlation": 0.57,
             "regimeFit": null
@@ -5255,11 +5255,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "ISRG",
           "rank": 99,
-          "previousRank": 104,
-          "rankChange": 5,
-          "rankChangeLabel": "+5",
+          "previousRank": 99,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.176,
+          "quantScore": -0.171,
           "metrics": {
             "momentum5d": -10.041,
             "momentum20d": -10.094,
@@ -5274,9 +5274,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.058,
-            "participation": -0.708,
-            "volatility": -0.313,
+            "momentum": -0.06,
+            "participation": -0.648,
+            "volatility": -0.312,
             "gap": 0.403,
             "correlation": 0.706,
             "regimeFit": null
@@ -5285,9 +5285,9 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "BA",
           "rank": 100,
-          "previousRank": 89,
-          "rankChange": -11,
-          "rankChangeLabel": "-11",
+          "previousRank": 100,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
           "quantScore": -0.181,
           "metrics": {
@@ -5304,52 +5304,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.166,
-            "participation": 0.354,
-            "volatility": -0.519,
+            "momentum": -0.168,
+            "participation": 0.358,
+            "volatility": -0.518,
             "gap": 0.614,
             "correlation": 0.446,
             "regimeFit": null
           }
         },
         {
-          "symbol": "SMCI",
-          "rank": 101,
-          "previousRank": 96,
-          "rankChange": -5,
-          "rankChangeLabel": "-5",
-          "status": "WATCH",
-          "quantScore": -0.242,
-          "metrics": {
-            "momentum5d": -19.427,
-            "momentum20d": -35.795,
-            "realizedVol10dAnnualized": 87.84,
-            "volumeRatio": 1.248,
-            "atrPct": 11.518,
-            "gapPct": -3.104,
-            "relativeStrength5dPct": -10.869,
-            "relativeStrength20dPct": -26.089,
-            "avgDollarVolume10d": 1056322317,
-            "maxSelectedCorrelation": 0.603
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -1.728,
-            "participation": -0.87,
-            "volatility": 2.36,
-            "gap": 1.74,
-            "correlation": 0.603,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "OXY",
-          "rank": 102,
-          "previousRank": 107,
-          "rankChange": 5,
-          "rankChangeLabel": "+5",
+          "rank": 101,
+          "previousRank": 102,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.246,
+          "quantScore": -0.236,
           "metrics": {
             "momentum5d": -8.255,
             "momentum20d": -13.76,
@@ -5364,11 +5334,41 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": 0.008,
-            "participation": -1.662,
-            "volatility": -0.342,
+            "momentum": 0.006,
+            "participation": -1.551,
+            "volatility": -0.341,
             "gap": 0.365,
             "correlation": 0.554,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "SMCI",
+          "rank": 102,
+          "previousRank": 101,
+          "rankChange": -1,
+          "rankChangeLabel": "-1",
+          "status": "WATCH",
+          "quantScore": -0.237,
+          "metrics": {
+            "momentum5d": -19.427,
+            "momentum20d": -35.795,
+            "realizedVol10dAnnualized": 87.84,
+            "volumeRatio": 1.248,
+            "atrPct": 11.518,
+            "gapPct": -3.104,
+            "relativeStrength5dPct": -10.869,
+            "relativeStrength20dPct": -26.089,
+            "avgDollarVolume10d": 1056322317,
+            "maxSelectedCorrelation": 0.603
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -1.729,
+            "participation": -0.801,
+            "volatility": 2.359,
+            "gap": 1.74,
+            "correlation": 0.603,
             "regimeFit": null
           }
         },
@@ -5379,7 +5379,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.287,
+          "quantScore": -0.284,
           "metrics": {
             "momentum5d": -10.437,
             "momentum20d": -19.531,
@@ -5394,52 +5394,22 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.374,
-            "participation": -0.316,
-            "volatility": -0.21,
+            "momentum": -0.376,
+            "participation": -0.276,
+            "volatility": -0.209,
             "gap": 0.276,
             "correlation": 0.729,
             "regimeFit": null
           }
         },
         {
-          "symbol": "ETH",
-          "rank": 104,
-          "previousRank": 85,
-          "rankChange": -19,
-          "rankChangeLabel": "-19",
-          "status": "WATCH",
-          "quantScore": -0.29,
-          "metrics": {
-            "momentum5d": -7.541,
-            "momentum20d": -25.34,
-            "realizedVol10dAnnualized": 62.1,
-            "volumeRatio": 0.83,
-            "atrPct": 3.56,
-            "gapPct": 0,
-            "relativeStrength5dPct": 1.017,
-            "relativeStrength20dPct": -15.634,
-            "avgDollarVolume10d": 332335139,
-            "maxSelectedCorrelation": 0.634
-          },
-          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
-          "factors": {
-            "momentum": -0.263,
-            "participation": -1.939,
-            "volatility": 0.094,
-            "gap": 0.403,
-            "correlation": 0.634,
-            "regimeFit": null
-          }
-        },
-        {
           "symbol": "MRVL",
-          "rank": 105,
-          "previousRank": 102,
-          "rankChange": -3,
-          "rankChangeLabel": "-3",
+          "rank": 104,
+          "previousRank": 105,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.292,
+          "quantScore": -0.291,
           "metrics": {
             "momentum5d": -21.995,
             "momentum20d": -45.281,
@@ -5454,9 +5424,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -2.257,
-            "participation": 0.105,
-            "volatility": 2.733,
+            "momentum": -2.258,
+            "participation": 0.123,
+            "volatility": 2.732,
             "gap": 2.379,
             "correlation": 0.393,
             "regimeFit": null
@@ -5464,12 +5434,12 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "NKE",
-          "rank": 106,
-          "previousRank": 93,
-          "rankChange": -13,
-          "rankChangeLabel": "-13",
+          "rank": 105,
+          "previousRank": 106,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.309,
+          "quantScore": -0.3,
           "metrics": {
             "momentum5d": -13.346,
             "momentum20d": -14.092,
@@ -5484,52 +5454,52 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.498,
-            "participation": -1.38,
-            "volatility": 0.339,
+            "momentum": -0.499,
+            "participation": -1.284,
+            "volatility": 0.34,
             "gap": 0.021,
             "correlation": 0.373,
             "regimeFit": null
           }
         },
         {
-          "symbol": "BTC",
-          "rank": 107,
-          "previousRank": 98,
-          "rankChange": -9,
-          "rankChangeLabel": "-9",
+          "symbol": "ETH",
+          "rank": 106,
+          "previousRank": 104,
+          "rankChange": -2,
+          "rankChangeLabel": "-2",
           "status": "WATCH",
-          "quantScore": -0.319,
+          "quantScore": -0.324,
           "metrics": {
-            "momentum5d": -7.287,
-            "momentum20d": -22.384,
-            "realizedVol10dAnnualized": 42.69,
-            "volumeRatio": 1.042,
-            "atrPct": 2.638,
+            "momentum5d": -5.971,
+            "momentum20d": -24.596,
+            "realizedVol10dAnnualized": 64.68,
+            "volumeRatio": 0.326,
+            "atrPct": 3.162,
             "gapPct": 0,
-            "relativeStrength5dPct": 1.271,
-            "relativeStrength20dPct": -12.678,
-            "avgDollarVolume10d": 898373798,
-            "maxSelectedCorrelation": 0.657
+            "relativeStrength5dPct": 2.587,
+            "relativeStrength20dPct": -14.89,
+            "avgDollarVolume10d": 327030152,
+            "maxSelectedCorrelation": 0.639
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.151,
-            "participation": -1.398,
-            "volatility": -0.388,
+            "momentum": -0.091,
+            "participation": -3.039,
+            "volatility": 0.033,
             "gap": 0.403,
-            "correlation": 0.657,
+            "correlation": 0.639,
             "regimeFit": null
           }
         },
         {
           "symbol": "ARKK",
-          "rank": 108,
-          "previousRank": 109,
+          "rank": 107,
+          "previousRank": 108,
           "rankChange": 1,
           "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.356,
+          "quantScore": -0.351,
           "metrics": {
             "momentum5d": -14.362,
             "momentum20d": -21.549,
@@ -5544,8 +5514,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.816,
-            "participation": -0.682,
+            "momentum": -0.818,
+            "participation": -0.623,
             "volatility": 0.399,
             "gap": 0.819,
             "correlation": 0.615,
@@ -5554,12 +5524,12 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "SLV",
-          "rank": 109,
-          "previousRank": 110,
+          "rank": 108,
+          "previousRank": 109,
           "rankChange": 1,
           "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.365,
+          "quantScore": -0.369,
           "metrics": {
             "momentum5d": -16.225,
             "momentum20d": -25.071,
@@ -5574,8 +5544,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.101,
-            "participation": 1.07,
+            "momentum": -1.102,
+            "participation": 1.037,
             "volatility": 0.027,
             "gap": 2.505,
             "correlation": 0.382,
@@ -5584,12 +5554,12 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "CAT",
-          "rank": 110,
-          "previousRank": 111,
+          "rank": 109,
+          "previousRank": 110,
           "rankChange": 1,
           "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.386,
+          "quantScore": -0.385,
           "metrics": {
             "momentum5d": -14.953,
             "momentum20d": -27.498,
@@ -5604,8 +5574,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.048,
-            "participation": -0.037,
+            "momentum": -1.05,
+            "participation": -0.012,
             "volatility": 0.522,
             "gap": 0.746,
             "correlation": 0.442,
@@ -5614,12 +5584,12 @@ window.PORTFOLIO_DATA = {
         },
         {
           "symbol": "UNH",
-          "rank": 111,
-          "previousRank": 108,
-          "rankChange": -3,
-          "rankChangeLabel": "-3",
+          "rank": 110,
+          "previousRank": 111,
+          "rankChange": 1,
+          "rankChangeLabel": "+1",
           "status": "WATCH",
-          "quantScore": -0.405,
+          "quantScore": -0.398,
           "metrics": {
             "momentum5d": -16.593,
             "momentum20d": -20.032,
@@ -5634,11 +5604,41 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -0.989,
-            "participation": -0.988,
-            "volatility": 0.396,
+            "momentum": -0.99,
+            "participation": -0.913,
+            "volatility": 0.397,
             "gap": 2.38,
             "correlation": 0.724,
+            "regimeFit": null
+          }
+        },
+        {
+          "symbol": "BTC",
+          "rank": 111,
+          "previousRank": 107,
+          "rankChange": -4,
+          "rankChangeLabel": "-4",
+          "status": "WATCH",
+          "quantScore": -0.42,
+          "metrics": {
+            "momentum5d": -6.536,
+            "momentum20d": -22.494,
+            "realizedVol10dAnnualized": 43.99,
+            "volumeRatio": 0.436,
+            "atrPct": 2.56,
+            "gapPct": 0,
+            "relativeStrength5dPct": 2.022,
+            "relativeStrength20dPct": -12.788,
+            "avgDollarVolume10d": 893442336,
+            "maxSelectedCorrelation": 0.645
+          },
+          "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
+          "factors": {
+            "momentum": -0.084,
+            "participation": -2.771,
+            "volatility": -0.388,
+            "gap": 0.403,
+            "correlation": 0.645,
             "regimeFit": null
           }
         },
@@ -5649,7 +5649,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.613,
+          "quantScore": -0.614,
           "metrics": {
             "momentum5d": -22.917,
             "momentum20d": -40.846,
@@ -5664,9 +5664,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -2.216,
+            "momentum": -2.218,
             "participation": 0.443,
-            "volatility": 1.744,
+            "volatility": 1.743,
             "gap": 0.76,
             "correlation": 0.495,
             "regimeFit": null
@@ -5675,11 +5675,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "HOOD",
           "rank": 113,
-          "previousRank": 114,
-          "rankChange": 1,
-          "rankChangeLabel": "+1",
+          "previousRank": 113,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.682,
+          "quantScore": -0.676,
           "metrics": {
             "momentum5d": -20.152,
             "momentum20d": -35.628,
@@ -5694,8 +5694,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.794,
-            "participation": -0.821,
+            "momentum": -1.795,
+            "participation": -0.754,
             "volatility": 1.236,
             "gap": 0.321,
             "correlation": 0.725,
@@ -5705,11 +5705,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "COIN",
           "rank": 114,
-          "previousRank": 113,
-          "rankChange": -1,
-          "rankChangeLabel": "-1",
+          "previousRank": 114,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.694,
+          "quantScore": -0.692,
           "metrics": {
             "momentum5d": -20.118,
             "momentum20d": -39.695,
@@ -5724,8 +5724,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.91,
-            "participation": -0.158,
+            "momentum": -1.911,
+            "participation": -0.127,
             "volatility": 1.098,
             "gap": 0.859,
             "correlation": 0.503,
@@ -5735,11 +5735,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "CRM",
           "rank": 115,
-          "previousRank": 116,
-          "rankChange": 1,
-          "rankChangeLabel": "+1",
+          "previousRank": 115,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.743,
+          "quantScore": -0.734,
           "metrics": {
             "momentum5d": -17.086,
             "momentum20d": -27.836,
@@ -5754,8 +5754,8 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.266,
-            "participation": -1.441,
+            "momentum": -1.267,
+            "participation": -1.342,
             "volatility": 0.256,
             "gap": 0.403,
             "correlation": 0.634,
@@ -5765,11 +5765,11 @@ window.PORTFOLIO_DATA = {
         {
           "symbol": "NOW",
           "rank": 116,
-          "previousRank": 115,
-          "rankChange": -1,
-          "rankChangeLabel": "-1",
+          "previousRank": 116,
+          "rankChange": 0,
+          "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -0.815,
+          "quantScore": -0.808,
           "metrics": {
             "momentum5d": -14.318,
             "momentum20d": -44.197,
@@ -5784,9 +5784,9 @@ window.PORTFOLIO_DATA = {
           },
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
-            "momentum": -1.477,
-            "participation": -1.151,
-            "volatility": 0.244,
+            "momentum": -1.479,
+            "participation": -1.067,
+            "volatility": 0.245,
             "gap": 0.785,
             "correlation": 0.773,
             "regimeFit": null
@@ -5799,7 +5799,7 @@ window.PORTFOLIO_DATA = {
           "rankChange": 0,
           "rankChangeLabel": "0",
           "status": "WATCH",
-          "quantScore": -1.186,
+          "quantScore": -1.184,
           "metrics": {
             "momentum5d": -30.299,
             "momentum20d": -46.639,
@@ -5815,8 +5815,8 @@ window.PORTFOLIO_DATA = {
           "selectionReason": "Passed liquidity and correlation gates; below the 5 selection slots.",
           "factors": {
             "momentum": -3.106,
-            "participation": -0.016,
-            "volatility": 1.654,
+            "participation": 0.008,
+            "volatility": 1.653,
             "gap": 0.548,
             "correlation": 0.531,
             "regimeFit": null
