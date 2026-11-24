@@ -17341,7 +17341,8 @@ window.PORTFOLIO_DATA = {
               "d1": 0
             },
             "selectionPrice": 127.94999694824219,
-            "invalidatedAt": "2026-11-23T14:30:00.000Z"
+            "invalidatedAt": "2026-11-23T14:30:00.000Z",
+            "triggeredAt": "2026-11-23T17:30:00.000Z"
           },
           {
             "symbol": "MCD",
@@ -17455,7 +17456,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0,
-              "h4": 0
+              "h4": 0,
+              "d1": -0.584
             },
             "selectionPrice": 343.32000732421875,
             "triggeredAt": "2026-11-23T14:30:00.000Z"
@@ -17491,7 +17493,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0,
-              "h4": 0
+              "h4": 0,
+              "d1": 2.225
             },
             "selectionPrice": 10.5600004196167,
             "invalidatedAt": "2026-11-23T14:30:00.000Z"
@@ -17527,10 +17530,12 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0,
-              "h4": 0
+              "h4": 0,
+              "d1": 1.573
             },
             "selectionPrice": 127.94999694824219,
-            "invalidatedAt": "2026-11-23T14:30:00.000Z"
+            "invalidatedAt": "2026-11-23T14:30:00.000Z",
+            "triggeredAt": "2026-11-23T17:30:00.000Z"
           },
           {
             "symbol": "MCD",
@@ -17563,7 +17568,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0,
-              "h4": 0
+              "h4": 0,
+              "d1": 0.972
             },
             "selectionPrice": 273.239990234375,
             "triggeredAt": "2026-11-23T15:30:00.000Z",
@@ -17600,7 +17606,8 @@ window.PORTFOLIO_DATA = {
             },
             "outcomes": {
               "h1": 0,
-              "h4": 0
+              "h4": 0,
+              "d1": 1.132
             },
             "selectionPrice": 1102.1500244140625,
             "invalidatedAt": "2026-11-23T14:30:00.000Z"
@@ -17640,7 +17647,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2948551207,
               "maxSelectedCorrelation": 0
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.499
+            },
             "selectionPrice": 338.8450012207031
           },
           {
@@ -17672,7 +17681,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 3111657786,
               "maxSelectedCorrelation": 0.349
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0.22
+            },
             "selectionPrice": 354.8450012207031
           },
           {
@@ -17704,7 +17715,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 204653379,
               "maxSelectedCorrelation": 0.519
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 0
+            },
             "selectionPrice": 9.885000228881836
           },
           {
@@ -17736,7 +17749,9 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 2158637784,
               "maxSelectedCorrelation": 0.554
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": 1.053
+            },
             "selectionPrice": 206.9600067138672
           },
           {
@@ -17768,13 +17783,15 @@ window.PORTFOLIO_DATA = {
               "avgDollarVolume10d": 806803594,
               "maxSelectedCorrelation": 0.423
             },
-            "outcomes": {},
+            "outcomes": {
+              "h1": -0.031
+            },
             "selectionPrice": 227.13999938964844
           }
         ]
       }
     ],
-    "lastUpdatedAt": "2026-11-23T18:00:20.687Z"
+    "lastUpdatedAt": "2026-11-24T03:55:41.528Z"
   },
   "automationHealth": {
     "openai": {
