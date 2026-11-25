@@ -10341,7 +10341,8 @@
             "h4": -1.632,
             "d1": -1.142
           },
-          "selectionPrice": 354.8450012207031
+          "selectionPrice": 354.8450012207031,
+          "invalidatedAt": "2026-11-25T14:30:00.000Z"
         },
         {
           "symbol": "UNG",
@@ -10415,7 +10416,8 @@
             "d1": 3.127
           },
           "selectionPrice": 206.9600067138672,
-          "triggeredAt": "2026-11-24T14:30:00.000Z"
+          "triggeredAt": "2026-11-24T14:30:00.000Z",
+          "invalidatedAt": "2026-11-25T14:30:00.000Z"
         },
         {
           "symbol": "LOW",
@@ -10492,7 +10494,8 @@
           },
           "outcomes": {
             "h1": -0.646,
-            "h4": 0.505
+            "h4": 0.505,
+            "d1": -6.018
           },
           "selectionPrice": 165.0500030517578,
           "invalidatedAt": "2026-11-24T14:30:00.000Z"
@@ -10528,9 +10531,11 @@
           },
           "outcomes": {
             "h1": 0.421,
-            "h4": 0.499
+            "h4": 0.499,
+            "d1": -2.334
           },
-          "selectionPrice": 353.42999267578125
+          "selectionPrice": 353.42999267578125,
+          "invalidatedAt": "2026-11-25T14:30:00.000Z"
         },
         {
           "symbol": "UNG",
@@ -10563,7 +10568,8 @@
           },
           "outcomes": {
             "h1": 1.117,
-            "h4": -0.534
+            "h4": -0.534,
+            "d1": -0.583
           },
           "selectionPrice": 9.859999656677246,
           "triggeredAt": "2026-11-24T14:30:00.000Z"
@@ -10599,10 +10605,12 @@
           },
           "outcomes": {
             "h1": 0.681,
-            "h4": 1.414
+            "h4": 1.414,
+            "d1": -5.671
           },
           "selectionPrice": 208.97000122070312,
-          "triggeredAt": "2026-11-24T14:30:00.000Z"
+          "triggeredAt": "2026-11-24T14:30:00.000Z",
+          "invalidatedAt": "2026-11-25T14:30:00.000Z"
         },
         {
           "symbol": "CSCO",
@@ -10635,13 +10643,180 @@
           },
           "outcomes": {
             "h1": -0.731,
-            "h4": 0.597
+            "h4": 0.597,
+            "d1": -2.267
           },
           "selectionPrice": 96.80000305175781,
           "invalidatedAt": "2026-11-24T14:30:00.000Z"
         }
       ]
+    },
+    {
+      "selectedAt": "2026-11-25T16:04:25.477Z",
+      "method": "v2: momentum + relative strength vs SPY + ATR + realized volatility + volume expansion + gap; minimum $50m 10d dollar-volume for equities; abs 10d correlation <= 0.80",
+      "setups": [
+        {
+          "symbol": "DELL",
+          "quantScore": 0.716,
+          "entryPrice": null,
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 285.71,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 259.33,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "metrics": {
+            "momentum5d": -12.963,
+            "momentum20d": -45.709,
+            "realizedVol10dAnnualized": 139.74,
+            "volumeRatio": 0.975,
+            "atrPct": 14.071,
+            "gapPct": -9.384,
+            "relativeStrength5dPct": -8.698,
+            "relativeStrength20dPct": -36.535,
+            "avgDollarVolume10d": 2989417694,
+            "maxSelectedCorrelation": 0
+          },
+          "outcomes": {},
+          "selectionPrice": 272.70001220703125
+        },
+        {
+          "symbol": "TGT",
+          "quantScore": 0.69,
+          "entryPrice": null,
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 174.26,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 170.23,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "metrics": {
+            "momentum5d": 3.806,
+            "momentum20d": 16.374,
+            "realizedVol10dAnnualized": 33.7,
+            "volumeRatio": 0.227,
+            "atrPct": 3.5,
+            "gapPct": -0.494,
+            "relativeStrength5dPct": 8.072,
+            "relativeStrength20dPct": 25.548,
+            "avgDollarVolume10d": 891446600,
+            "maxSelectedCorrelation": 0.043
+          },
+          "outcomes": {},
+          "selectionPrice": 172.2550048828125
+        },
+        {
+          "symbol": "HD",
+          "quantScore": 0.646,
+          "entryPrice": null,
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 359.99,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 354.27,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "metrics": {
+            "momentum5d": 5.772,
+            "momentum20d": 12.129,
+            "realizedVol10dAnnualized": 20.94,
+            "volumeRatio": 0.215,
+            "atrPct": 2.533,
+            "gapPct": 0.37,
+            "relativeStrength5dPct": 10.038,
+            "relativeStrength20dPct": 21.303,
+            "avgDollarVolume10d": 1839274530,
+            "maxSelectedCorrelation": 0.357
+          },
+          "outcomes": {},
+          "selectionPrice": 357.19500732421875
+        },
+        {
+          "symbol": "DE",
+          "quantScore": 0.539,
+          "entryPrice": null,
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 641.7,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 625.1,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "metrics": {
+            "momentum5d": -1.76,
+            "momentum20d": -0.966,
+            "realizedVol10dAnnualized": 37.84,
+            "volumeRatio": 0.637,
+            "atrPct": 3.753,
+            "gapPct": -4.197,
+            "relativeStrength5dPct": 2.506,
+            "relativeStrength20dPct": 8.208,
+            "avgDollarVolume10d": 884680202,
+            "maxSelectedCorrelation": 0.594
+          },
+          "outcomes": {},
+          "selectionPrice": 635.4818115234375
+        },
+        {
+          "symbol": "MCD",
+          "quantScore": 0.5,
+          "entryPrice": null,
+          "entryRule": {
+            "operator": "ABOVE",
+            "level": 286.09,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1,
+            "requireParticipation": true
+          },
+          "invalidationRule": {
+            "operator": "BELOW",
+            "level": 281.55,
+            "timeframeMinutes": 5,
+            "requiredCloses": 1
+          },
+          "metrics": {
+            "momentum5d": 3.573,
+            "momentum20d": 13.769,
+            "realizedVol10dAnnualized": 12.84,
+            "volumeRatio": 0.207,
+            "atrPct": 2.218,
+            "gapPct": 0.26,
+            "relativeStrength5dPct": 7.839,
+            "relativeStrength20dPct": 22.943,
+            "avgDollarVolume10d": 1299807110,
+            "maxSelectedCorrelation": 0.557
+          },
+          "outcomes": {},
+          "selectionPrice": 283.82000732421875
+        }
+      ]
     }
   ],
-  "lastUpdatedAt": "2026-11-25T05:40:34.733Z"
+  "lastUpdatedAt": "2026-11-25T16:04:31.578Z"
 }
